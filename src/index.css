@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body, html, #root{
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    /* The image used */
+    background-image: url(./images/stars_space_spot_102138_2560x1600.jpg);
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
