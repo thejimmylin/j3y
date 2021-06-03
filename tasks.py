@@ -36,6 +36,7 @@ VSCODE_SETTINGS = dict(
 )
 
 SECRETS = {
+    "SECRET_KEY": "",
     "GMAIL_EMAIL_HOST_USER": "",
     "GMAIL_EMAIL_HOST_PASSWORD": "",
 }
