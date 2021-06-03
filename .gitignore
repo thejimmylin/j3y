@@ -1,0 +1,24 @@
+# Mac things
+.DS_Store
+
+# VSCode things
+/.vscode/settings.json
+
+# Python
+__pycache__/
+/.venv/
+
+# Django things
+/db.sqlite3
+/static/*
+
+# NPM stuff
+/node_modules/*
+/dist/*
+
+# Secrets
+/secrets.json
+
+# Nginx & UWSGI
+/nginx/*
+/uwsgi/*
