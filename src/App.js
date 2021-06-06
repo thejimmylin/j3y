@@ -1,7 +1,7 @@
 const App = () => {
   return (
-    <div className="header h-full">
-      <h1 className="p-5 text-5xl text-gray-500">j3y</h1>
+    <div className="h-full header">
+      <p className="p-5 text-5xl text-white">J3y Info</p>
     </div>
   );
 };
