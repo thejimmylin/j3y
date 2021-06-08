@@ -22,6 +22,3 @@ __pycache__/
 # Nginx & UWSGI
 /nginx/*
 /uwsgi/*
-
-# Node
-/build/*
