@@ -1,19 +1,23 @@
 const App = () => {
   return (
     <>
-      {/* header - A 100% height block with parallax background. */}
-      <header className="h-screen bg-scroll bg-center bg-no-repeat bg-cover md:bg-fixed header bg-one-way font-pretty">
-        <div className="animate-pulse">
-          <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
-            <a href="/">Jimmy Lin</a>
-          </p>
-          <p className="px-8 pt-2 text-xs text-white">
-            <a href="/">–PERSONAL INFO</a>
-          </p>
-        </div>
+      {/* header - A screen height block with fixed background. */}
+      <header className="h-screen bg-scroll bg-center bg-no-repeat bg-cover md:bg-fixed bg-one-way font-pretty">
+        <nav>
+          {/* brand */}
+          <div className="animate-fadein">
+            <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
+              <a href="/">Jimmy Lin</a>
+            </p>
+            <p className="px-8 pt-2 text-xs text-white animate-pulse">
+              <a href="/">–PERSONAL INFO</a>
+            </p>
+          </div>
+        </nav>
       </header>
-      {/* content - Some real content here. */}
-      <section className="bg-gray-100 content font-pretty">
+
+      {/* main - main content here. */}
+      <main className="bg-gray-100 content font-pretty">
         <div className="max-w-screen-sm mx-auto bg-gray-50">
           <p className="p-5"></p>
 
@@ -108,7 +112,7 @@ const App = () => {
 
           <p className="p-5"></p>
         </div>
-      </section>
+      </main>
 
       <footer className="flex items-center justify-center h-12 bg-gray-100 footer font-pretty">
         <div className="max-w-screen-sm mx-auto text-sm text-center text-gray-500">© 2021 All rights reserved.</div>
