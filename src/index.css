@@ -15,31 +15,18 @@ body,
   height: 100%;
 }
 
-
-/*
-Because "background-attachment: fixed;" doesn't work on Safari, we need to use this workaround to replace these CSS:
-
 .parallax {
   background-image: url(./images/one_way.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
-*/
 
-.parallax:before {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(./images/one_way.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 .bodoni-moda {
