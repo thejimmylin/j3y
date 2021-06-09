@@ -2,7 +2,7 @@ const App = () => {
   return (
     <>
       {/* header */}
-      <div className="h-full header">
+      <section className="h-full header">
         <div className="animate-pulse">
           <p className="px-8 pt-8 text-4xl text-white bodoni-moda">
             <a href="/">Jimmy Lin</a>
@@ -11,7 +11,7 @@ const App = () => {
             <a href="/">– PERSONAL INFO</a>
           </p>
         </div>
-      </div>
+      </section>
       {/* content */}
       <section className="py-12 bg-gray-100 content">
         <div className="max-w-screen-sm mx-auto bg-gray-50">
