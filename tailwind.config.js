@@ -6,7 +6,11 @@ module.exports = {
       pretty: ["Libre Caslon Text", "serif"],
       gorgeous: ["Libre Baskerville", "serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+       'one-way': "url('./images/one_way.jpg')",
+      })
+    }
   },
   variants: {
     extend: {},

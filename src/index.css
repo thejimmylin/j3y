@@ -11,20 +11,12 @@ body,
   height: 100%;
 }
 
-.parallax {
-  background-image: url(./images/one_way.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 /* Because the CSS "background-attachment: fixed;" doesn't work on some mobile device (e.g. Safari). */
-@media only screen and (max-device-width: 1366px) {
+/* @media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
   }
-}
+} */
 
 .fade-in {
   animation: fadeIn ease-out .5s;

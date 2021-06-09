@@ -2,7 +2,7 @@ const App = () => {
   return (
     <>
       {/* header - A 100% height block with parallax background. */}
-      <header className="h-screen header parallax font-pretty">
+      <header className="h-screen bg-fixed bg-center bg-no-repeat bg-cover header bg-one-way font-pretty">
         <div className="animate-pulse">
           <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
             <a href="/">Jimmy Lin</a>
