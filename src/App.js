@@ -1,8 +1,8 @@
 const App = () => {
   return (
     <>
-      {/* header */}
-      <section className="h-full header">
+      {/* header - A 100% height block with parallax background. */}
+      <section className="h-full header parallax">
         <div className="animate-pulse">
           <p className="px-8 pt-8 text-4xl text-white bodoni-moda">
             <a href="/">Jimmy Lin</a>
@@ -12,8 +12,8 @@ const App = () => {
           </p>
         </div>
       </section>
-      {/* content */}
-      <section className="py-12 bg-gray-100 content">
+      {/* content - Some real content here. */}
+      <section className="bg-gray-100 content">
         <div className="max-w-screen-sm mx-auto bg-gray-50">
           <p className="p-5"></p>
 
@@ -26,7 +26,7 @@ const App = () => {
             for 4 years. I like web development very well. I especially like to build a website with Django and react.
           </p>
 
-          <p className="p-5 text-4xl bodoni-moda">I like to create things that amazes people.</p>
+          <p className="p-5 text-4xl bodoni-moda">I like to create things that amaze people.</p>
           <p className="p-5 text-sm">
             I like to amaze people with what I've done. Creating things are incredible, and programming gives us the power to create. That is why I love
             programming so well.
