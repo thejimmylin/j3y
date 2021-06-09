@@ -17,7 +17,7 @@ const App = () => {
         <div className="max-w-screen-sm mx-auto bg-gray-50">
           <p className="p-5"></p>
 
-          <p className="p-5 text-4xl serif">I'm Jimmy Lin.</p>
+          <p className="p-5 text-4xl serif">I'm Jimmy Lin</p>
           <p className="p-5 text-sm">
             I have been working at{" "}
             <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="text-gray-500 underline hover:text-gray-600">
@@ -30,7 +30,7 @@ const App = () => {
             .
           </p>
 
-          <p className="p-5 text-4xl serif">I love programming.</p>
+          <p className="p-5 text-4xl serif">I love programming</p>
           <p className="p-5 text-sm">
             I like to impress people with what I do. Creating is an amazing thing, and programming gives us the ability to do so. I guess that's why I love
             programming so much.
@@ -84,7 +84,7 @@ const App = () => {
 
           <p className="p-5 text-sm"></p>
 
-          <p className="max-w-screen-sm p-5 mx-auto text-4xl serif">Thank you for your kind attention.</p>
+          <p className="max-w-screen-sm p-5 mx-auto text-4xl serif">Thank you</p>
           <p className="max-w-screen-sm p-5 mx-auto text-sm">
             I appreciate that you gave me sometime to introduce myself. Now, maybe you would like to know more about me with:
           </p>
