@@ -4,7 +4,7 @@ const App = () => {
       {/* header - A 100% height block with parallax background. */}
       <header className="h-screen header parallax">
         <div className="animate-pulse">
-          <p className="px-8 pt-8 text-4xl text-white bodoni-moda">
+          <p className="px-8 pt-8 text-4xl text-white serif">
             <a href="/">Jimmy Lin</a>
           </p>
           <p className="px-8 pt-2 text-xs text-white">
@@ -17,7 +17,7 @@ const App = () => {
         <div className="max-w-screen-sm mx-auto bg-gray-50">
           <p className="p-5"></p>
 
-          <p className="p-5 text-4xl bodoni-moda">Hello, I'm Jimmy Lin.</p>
+          <p className="p-5 text-4xl serif">I'm Jimmy Lin.</p>
           <p className="p-5 text-sm">
             I have worked in{" "}
             <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="text-gray-500 underline hover:text-gray-600">
@@ -26,16 +26,16 @@ const App = () => {
             for 4 years. I like web development very well. I especially like to build a website with Django and react.
           </p>
 
-          <p className="p-5 text-4xl bodoni-moda">I like to create things that amaze people.</p>
+          <p className="p-5 text-4xl serif">I like to create things that amaze people.</p>
           <p className="p-5 text-sm">
             I like to amaze people with what I've done. Creating things are incredible, and programming gives us the power to create. That is why I love
             programming so well.
           </p>
 
-          <p className="p-5 text-4xl bodoni-moda">My skills</p>
+          <p className="p-5 text-4xl serif">My skills</p>
 
           <div className="ml-5">
-          <p className="p-5 text-2xl bodoni-moda">Language</p>
+          <p className="p-5 text-2xl serif">Language</p>
           <ul className="pl-5 text-sm">
             <li className="ml-5">- Python</li>
             <li className="ml-5">- HTML</li>
@@ -43,7 +43,7 @@ const App = () => {
             <li className="ml-5">- JavaScript</li>
           </ul>
 
-          <p className="p-5 text-2xl bodoni-moda">DB</p>
+          <p className="p-5 text-2xl serif">DB</p>
           <ul className="pl-5 text-sm">
             <li className="ml-5">- MSSQL</li>
             <li className="ml-5">- MySQL</li>
@@ -51,7 +51,7 @@ const App = () => {
             <li className="ml-5">- PostgreSQL</li>
           </ul>
 
-          <p className="p-5 text-2xl bodoni-moda">Framework</p>
+          <p className="p-5 text-2xl serif">Framework</p>
           <ul className="pl-5 text-sm">
             <li className="ml-5">- Django</li>
             <li className="ml-5">- Django REST Framework</li>
@@ -61,7 +61,7 @@ const App = () => {
             <li className="ml-5">- Vue.js</li>
           </ul>
 
-          <p className="p-5 text-2xl bodoni-moda">Development</p>
+          <p className="p-5 text-2xl serif">Development</p>
           <ul className="pl-5 text-sm">
             <li className="ml-5">- Git</li>
             <li className="ml-5">- Visual Studio</li>
@@ -69,7 +69,7 @@ const App = () => {
             <li className="ml-5">- Docker</li>
           </ul>
 
-          <p className="p-5 text-2xl bodoni-moda">Other</p>
+          <p className="p-5 text-2xl serif">Other</p>
           <ul className="pl-5 text-sm">
             <li className="ml-5">- Linux</li>
             <li className="ml-5">- Cisco Command</li>
@@ -79,7 +79,7 @@ const App = () => {
 
           <p className="p-5 text-sm"></p>
 
-          <p className="max-w-screen-sm p-5 mx-auto text-4xl bodoni-moda">Thank you for watching.</p>
+          <p className="max-w-screen-sm p-5 mx-auto text-4xl serif">Thank you for watching.</p>
           <p className="max-w-screen-sm p-5 mx-auto text-sm">
             I really appreciate that you've given me sometimes to introduce myself. For now, if you are interested with me, maybe you would like to know more
             about me with:
