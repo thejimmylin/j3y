@@ -2,9 +2,9 @@ const App = () => {
   return (
     <>
       {/* header - A 100% height block with parallax background. */}
-      <header className="h-screen header parallax">
+      <header className="h-screen header parallax font-pretty">
         <div className="animate-pulse">
-          <p className="px-8 pt-8 text-4xl text-white serif">
+          <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
             <a href="/">Jimmy Lin</a>
           </p>
           <p className="px-8 pt-2 text-xs text-white">
@@ -13,11 +13,11 @@ const App = () => {
         </div>
       </header>
       {/* content - Some real content here. */}
-      <section className="bg-gray-100 content">
+      <section className="bg-gray-100 content font-pretty">
         <div className="max-w-screen-sm mx-auto bg-gray-50">
           <p className="p-5"></p>
 
-          <p className="p-5 text-4xl serif">I'm Jimmy Lin</p>
+          <p className="p-5 text-4xl font-gorgeous">I'm Jimmy Lin</p>
           <p className="p-5 text-sm">
             I have been working at{" "}
             <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="text-gray-500 underline hover:text-gray-600">
@@ -30,17 +30,17 @@ const App = () => {
             .
           </p>
 
-          <p className="p-5 text-4xl serif">I love programming</p>
+          <p className="p-5 text-4xl font-gorgeous">I love programming</p>
           <p className="p-5 text-sm">
             I like to impress people with what I do. Creating is an amazing thing, and programming gives us the ability to do so. I guess that's why I love
             programming so much.
           </p>
 
-          <p className="p-5 text-4xl serif">Skills</p>
+          <p className="p-5 text-4xl font-gorgeous">Skills</p>
           <p className="p-5 text-sm">In case you are interested, here are my skills :)</p>
 
           <div className="ml-5">
-            <p className="p-5 text-2xl serif">Language</p>
+            <p className="p-5 text-2xl font-gorgeous">Language</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Python</li>
               <li className="ml-5">- HTML</li>
@@ -48,7 +48,7 @@ const App = () => {
               <li className="ml-5">- JavaScript</li>
             </ul>
 
-            <p className="p-5 text-2xl serif">DB</p>
+            <p className="p-5 text-2xl font-gorgeous">DB</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- MSSQL</li>
               <li className="ml-5">- MySQL</li>
@@ -56,7 +56,7 @@ const App = () => {
               <li className="ml-5">- PostgreSQL</li>
             </ul>
 
-            <p className="p-5 text-2xl serif">Framework</p>
+            <p className="p-5 text-2xl font-gorgeous">Framework</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Django</li>
               <li className="ml-5">- Django REST Framework</li>
@@ -66,7 +66,7 @@ const App = () => {
               <li className="ml-5">- Vue.js</li>
             </ul>
 
-            <p className="p-5 text-2xl serif">Development</p>
+            <p className="p-5 text-2xl font-gorgeous">Development</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Git</li>
               <li className="ml-5">- Visual Studio</li>
@@ -74,7 +74,7 @@ const App = () => {
               <li className="ml-5">- Docker</li>
             </ul>
 
-            <p className="p-5 text-2xl serif">Other</p>
+            <p className="p-5 text-2xl font-gorgeous">Other</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Linux</li>
               <li className="ml-5">- Cisco Command</li>
@@ -84,7 +84,7 @@ const App = () => {
 
           <p className="p-5 text-sm"></p>
 
-          <p className="max-w-screen-sm p-5 mx-auto text-4xl serif">Thank you</p>
+          <p className="max-w-screen-sm p-5 mx-auto text-4xl font-gorgeous">Thank you</p>
           <p className="max-w-screen-sm p-5 mx-auto text-sm">
             I appreciate that you gave me sometime to introduce myself. Now, maybe you would like to know more about me with:
           </p>
@@ -110,7 +110,7 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="flex items-center justify-center h-12 bg-gray-100 footer">
+      <footer className="flex items-center justify-center h-12 bg-gray-100 footer font-pretty">
         <div className="max-w-screen-sm mx-auto text-sm text-center text-gray-500">© 2021 All rights reserved.</div>
       </footer>
     </>
