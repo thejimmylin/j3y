@@ -32,19 +32,52 @@ const App = () => {
             programming so well.
           </p>
 
-          <p className="p-5 text-4xl bodoni-moda">Lorem ipsum</p>
-          <p className="p-5 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci a scelerisque purus
-            semper eget duis at tellus. Eleifend quam adipiscing vitae proin sagittis. Auctor elit sed vulputate mi sit amet mauris commodo. Nunc vel risus
-            commodo viverra maecenas. Enim blandit volutpat maecenas volutpat.
-          </p>
+          <p className="p-5 text-4xl bodoni-moda">My skills</p>
 
-          <p className="p-5 text-4xl bodoni-moda">More Lorem ipsum</p>
-          <p className="p-5 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque
-            aliquam. Dolor sit amet consectetur adipiscing elit duis tristique. Viverra vitae congue eu consequat ac. Nisl condimentum id venenatis a
-            condimentum vitae. Cras semper auctor neque vitae tempus. Neque sodales ut etiam sit amet nisl.
-          </p>
+          <div className="ml-5">
+          <p className="p-5 text-2xl bodoni-moda">Language</p>
+          <ul className="pl-5 text-sm">
+            <li className="ml-5">- Python</li>
+            <li className="ml-5">- HTML</li>
+            <li className="ml-5">- CSS</li>
+            <li className="ml-5">- JavaScript</li>
+          </ul>
+
+          <p className="p-5 text-2xl bodoni-moda">DB</p>
+          <ul className="pl-5 text-sm">
+            <li className="ml-5">- MSSQL</li>
+            <li className="ml-5">- MySQL</li>
+            <li className="ml-5">- MariaDB</li>
+            <li className="ml-5">- PostgreSQL</li>
+          </ul>
+
+          <p className="p-5 text-2xl bodoni-moda">Framework</p>
+          <ul className="pl-5 text-sm">
+            <li className="ml-5">- Django</li>
+            <li className="ml-5">- Django REST Framework</li>
+            <li className="ml-5">- Bootstrap</li>
+            <li className="ml-5">- Tailwind CSS</li>
+            <li className="ml-5">- React.js</li>
+            <li className="ml-5">- Vue.js</li>
+          </ul>
+
+          <p className="p-5 text-2xl bodoni-moda">Development</p>
+          <ul className="pl-5 text-sm">
+            <li className="ml-5">- Git</li>
+            <li className="ml-5">- Visual Studio</li>
+            <li className="ml-5">- Draw.io</li>
+            <li className="ml-5">- Docker</li>
+          </ul>
+
+          <p className="p-5 text-2xl bodoni-moda">Other</p>
+          <ul className="pl-5 text-sm">
+            <li className="ml-5">- Linux</li>
+            <li className="ml-5">- Cisco Command</li>
+            <li className="ml-5">- FortiOS Command</li>
+          </ul>
+          </div>
+
+          <p className="p-5 text-sm"></p>
 
           <p className="max-w-screen-sm p-5 mx-auto text-4xl bodoni-moda">Thank you for watching.</p>
           <p className="max-w-screen-sm p-5 mx-auto text-sm">
@@ -52,7 +85,7 @@ const App = () => {
             about me with:
           </p>
 
-          <p className="max-w-screen-sm p-5 mx-auto text-1xl">
+          <p className="max-w-screen-sm p-5 mx-auto">
             <a href="https://github.com/j3ygithub" target="_blank" rel="noreferrer" className="pr-4 text-gray-500 underline hover:text-gray-600">
               Github
             </a>
