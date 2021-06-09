@@ -2,7 +2,7 @@ const App = () => {
   return (
     <>
       {/* header - A 100% height block with parallax background. */}
-      <section className="h-full header parallax">
+      <header className="h-full header parallax">
         <div className="animate-pulse">
           <p className="px-8 pt-8 text-4xl text-white bodoni-moda">
             <a href="/">Jimmy Lin</a>
@@ -11,7 +11,7 @@ const App = () => {
             <a href="/">– PERSONAL INFO</a>
           </p>
         </div>
-      </section>
+      </header>
       {/* content - Some real content here. */}
       <section className="bg-gray-100 content">
         <div className="max-w-screen-sm mx-auto bg-gray-50">
@@ -105,6 +105,8 @@ const App = () => {
           <p className="p-5"></p>
         </div>
       </section>
+      <footer className="h-full footer parallax">
+      </footer>
     </>
   );
 };
