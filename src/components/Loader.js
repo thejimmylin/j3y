@@ -1,11 +1,13 @@
 const Loader = () => {
   return (
-    <div className="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <main className="flex items-center justify-center h-screen bg-black">
+      <div className="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
   );
 };
 
