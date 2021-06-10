@@ -1,4 +1,15 @@
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader"
+
 const App = () => {
+  const [isLoading, setIsLoadig] = useState(true);
+  useEffect(() => {
+    console.log("I am using an effect");
+    setIsLoadig(false);
+  }, []);
+  if (isLoading) {
+    return <Loader />
+  }
   return (
     <>
       {/* header - A screen height block with fixed background. */}
