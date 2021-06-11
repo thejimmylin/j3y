@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import oneWayPixelated from "./Home/oneway_pixelated.jpg";
 import oneWay from "./Home/oneway.jpg";
-import FadeInSection from "./FadeInSection"
+import FadeInSection from "./Home/FadeInSection"
 
 const Home = () => {
   const [state, setState] = useState({ src: oneWayPixelated, blur: true });
