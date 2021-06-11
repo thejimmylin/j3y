@@ -1,11 +1,38 @@
+import { useState, useEffect } from "react";
+import oneWayPixelated from "../images/one_way_pixelated.jpg";
+import oneWay from "../images/one_way.jpg";
+
 const Home = () => {
+  const lowQualitySrc = oneWayPixelated;
+  const highQualitySrc = oneWay;
+  const [blur, setBlur] = useState(true);
+  const [src, setSrc] = useState(lowQualitySrc);
+  useEffect(() => {
+    const img = new Image();
+    img.src = highQualitySrc;
+    img.onload = () => {
+      setSrc(highQualitySrc);
+    };
+    setBlur(false);
+  }, [lowQualitySrc, highQualitySrc]);
+
   return (
     <>
       {/* header - A screen height block with fixed background. */}
-      <header className="h-screen bg-scroll bg-center bg-no-repeat bg-cover md:bg-fixed bg-one-way font-pretty">
-        <nav>
-          {/* brand */}
-          <div className="animate-fadein">
+      <header className="h-full font-pretty">
+        <nav className="relative h-full">
+          {/* Img acts as a background */}
+          <img
+            className="absolute object-cover w-full h-full -z-10"
+            src={src}
+            alt="one way"
+            style={{
+              filter: blur ? "blur(20px)" : "none",
+              transition: blur ? "none" : "filter 0.6s ease-out",
+            }}
+          />
+          {/* Brand div */}
+          <div className="z-0 animate-fadein">
             <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
               <a href="/">Jimmy Lin</a>
             </p>
@@ -121,4 +148,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
