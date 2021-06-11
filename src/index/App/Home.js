@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
-import oneWayPixelated from "../images/one_way_pixelated.jpg";
-import oneWay from "../images/one_way.jpg";
+import oneWayPixelated from "./Home/one_way_pixelated.jpg";
+import oneWay from "./Home/one_way.jpg";
 
 const Home = () => {
   const lowQualitySrc = oneWayPixelated;
   const highQualitySrc = oneWay;
   const [state, setState] = useState({ src: lowQualitySrc, blur: true });
   useEffect(() => {
-    setState({ src: highQualitySrc, blur: false });
+    const image = new Image();
+    image.onload = () => {
+      setState({ src: highQualitySrc, blur: false });
+    };
+    image.src = highQualitySrc;
   }, [lowQualitySrc, highQualitySrc]);
 
   return (
@@ -22,7 +26,7 @@ const Home = () => {
             alt="one way"
             style={{
               filter: state.blur ? "blur(80px)" : "blur(0px)",
-              transition: state.blur ? "none" : "filter 3.2s ease-out",
+              transition: state.blur ? "none" : "filter 0.6s ease-out",
             }}
           />
           {/* Brand div */}
