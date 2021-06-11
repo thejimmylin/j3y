@@ -5,11 +5,9 @@ import oneWay from "../images/one_way.jpg";
 const Home = () => {
   const lowQualitySrc = oneWayPixelated;
   const highQualitySrc = oneWay;
-  const [src, setSrc] = useState(lowQualitySrc);
-  const [blur, setBlur] = useState(true);
+  const [state, setState] = useState({ src: lowQualitySrc, blur: true });
   useEffect(() => {
-    setSrc(highQualitySrc);
-    setBlur(false);
+    setState({ src: highQualitySrc, blur: false });
   }, [lowQualitySrc, highQualitySrc]);
 
   return (
@@ -19,12 +17,12 @@ const Home = () => {
         <nav className="relative h-full">
           {/* Img acts as a background */}
           <img
-            className="fixed object-cover w-full h-full -z-10"
-            src={src}
+            className="absolute object-cover w-full h-full md:fixed -z-10"
+            src={state.src}
             alt="one way"
             style={{
-              filter: blur ? "blur(80px)" : "blur(1px)",
-              transition: "filter 1.6s ease-out",
+              filter: state.blur ? "blur(80px)" : "blur(0px)",
+              transition: state.blur ? "none" : "filter 3.2s ease-out",
             }}
           />
           {/* Brand div */}
