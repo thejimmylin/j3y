@@ -1,32 +1,30 @@
 import { useState, useEffect } from "react";
-import oneWayPixelated from "./Home/one_way_pixelated.jpg";
-import oneWay from "./Home/one_way.jpg";
+import oneWayPixelated from "./Home/oneway_pixelated.jpg";
+import oneWay from "./Home/oneway.jpg";
 
 const Home = () => {
-  const lowQualitySrc = oneWayPixelated;
-  const highQualitySrc = oneWay;
-  const [state, setState] = useState({ src: lowQualitySrc, blur: true });
+  const [state, setState] = useState({ src: oneWayPixelated, blur: true });
   useEffect(() => {
     const image = new Image();
     image.onload = () => {
-      setState({ src: highQualitySrc, blur: false });
+      setState({ src: oneWay, blur: false });
     };
-    image.src = highQualitySrc;
-  }, [lowQualitySrc, highQualitySrc]);
+    image.src = oneWay;
+  }, []);
 
   return (
     <>
       {/* header - A screen height block with fixed background. */}
       <header className="h-full font-pretty">
-        <nav className="relative h-full">
+        {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
+        <nav className="relative h-full bg-black -z-20">
           {/* Img acts as a background */}
           <img
-            className="absolute object-cover w-full h-full md:fixed -z-10"
+            className="absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
             src={state.src}
             alt="one way"
             style={{
-              filter: state.blur ? "blur(80px)" : "blur(0px)",
-              transition: state.blur ? "none" : "filter 0.6s ease-out",
+              filter: state.blur ? "blur(64px)" : "blur(0px)",
             }}
           />
           {/* Brand div */}
