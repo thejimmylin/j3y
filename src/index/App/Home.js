@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import oneWayPixelated from "./Home/oneway_pixelated.jpg";
 import oneWay from "./Home/oneway.jpg";
+import FadeInSection from "./FadeInSection"
 
 const Home = () => {
   const [state, setState] = useState({ src: oneWayPixelated, blur: true });
@@ -41,9 +42,12 @@ const Home = () => {
 
       {/* main - main content here. */}
       <main className="bg-gray-100 content font-pretty">
+
         <div className="max-w-screen-sm mx-auto bg-gray-50">
+
           <p className="p-5"></p>
 
+          <FadeInSection>
           <p className="p-5 text-4xl font-gorgeous">I'm Jimmy Lin</p>
           <p className="p-5 text-sm">
             I have been working at{" "}
@@ -56,25 +60,34 @@ const Home = () => {
             </a>
             .
           </p>
+          </FadeInSection>
 
+          <FadeInSection>
           <p className="p-5 text-4xl font-gorgeous">I love programming</p>
           <p className="p-5 text-sm">
             I like to impress people with what I do. Creating is an amazing thing, and programming gives us the ability to do so. I guess that's why I love
             programming so much.
           </p>
+          </FadeInSection>
 
+          <FadeInSection>
           <p className="p-5 text-4xl font-gorgeous">Skills</p>
           <p className="p-5 text-sm">In case you are interested, here are my skills :)</p>
+          </FadeInSection>
 
           <div className="ml-5">
-            <p className="p-5 text-2xl font-gorgeous">Language</p>
+
+          <FadeInSection>
+          <p className="p-5 text-2xl font-gorgeous">Language</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Python</li>
               <li className="ml-5">- HTML</li>
               <li className="ml-5">- CSS</li>
               <li className="ml-5">- JavaScript</li>
             </ul>
+          </FadeInSection>
 
+          <FadeInSection>
             <p className="p-5 text-2xl font-gorgeous">DB</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- MSSQL</li>
@@ -82,7 +95,9 @@ const Home = () => {
               <li className="ml-5">- MariaDB</li>
               <li className="ml-5">- PostgreSQL</li>
             </ul>
+            </FadeInSection>
 
+            <FadeInSection>
             <p className="p-5 text-2xl font-gorgeous">Framework</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Django</li>
@@ -92,7 +107,9 @@ const Home = () => {
               <li className="ml-5">- React.js</li>
               <li className="ml-5">- Vue.js</li>
             </ul>
+            </FadeInSection>
 
+            <FadeInSection>
             <p className="p-5 text-2xl font-gorgeous">Development</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Git</li>
@@ -100,17 +117,22 @@ const Home = () => {
               <li className="ml-5">- Draw.io</li>
               <li className="ml-5">- Docker</li>
             </ul>
+            </FadeInSection>
 
+            <FadeInSection>
             <p className="p-5 text-2xl font-gorgeous">Other</p>
             <ul className="pl-5 text-sm">
               <li className="ml-5">- Linux</li>
               <li className="ml-5">- Cisco Command</li>
               <li className="ml-5">- FortiOS Command</li>
             </ul>
+            </FadeInSection>
+
           </div>
 
           <p className="p-5 text-sm"></p>
 
+          <FadeInSection>
           <p className="max-w-screen-sm p-5 mx-auto text-4xl font-gorgeous">Thank you</p>
           <p className="max-w-screen-sm p-5 mx-auto text-sm">
             I appreciate that you gave me sometime to introduce myself. Now, maybe you would like to know more about me with:
@@ -132,6 +154,7 @@ const Home = () => {
               LinkedIn
             </a>
           </p>
+          </FadeInSection>
 
           <p className="p-5"></p>
         </div>
