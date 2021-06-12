@@ -18,7 +18,7 @@ const Home = () => {
       {/* header - A screen height block with fixed background. */}
       <header className="h-full font-pretty">
         {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
-        <nav className="relative h-full bg-dark-99 -z-20">
+        <nav className="relative h-full bg-graywhite-99 -z-20">
           {/* Img acts as a background */}
           <img
             className="absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
