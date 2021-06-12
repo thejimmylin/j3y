@@ -10,11 +10,30 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import json
 from pathlib import Path
+
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+# A Helper function for getting secret settings.
+def get_value(key, path=BASE_DIR / "secrets.json"):
+    with open(path) as f:
+        secrets = json.loads(f.read())
+    try:
+        value = secrets[key]
+    except KeyError:
+        raise ImproperlyConfigured(
+            f'\n\nThe value of "{key}" does not exsist in "{path}".'
+        )
+    return value
+
+
+DB_USER = get_value("DB_USER")
+DB_PASSWORD = get_value("DB_PASSWORD")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -75,8 +94,12 @@ WSGI_APPLICATION = "j3y.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "j3ydb",
+        "USER": DB_USER,
+        "PASSWORD": DB_PASSWORD,
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
