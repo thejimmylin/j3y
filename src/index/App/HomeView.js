@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import oneWayPixelated from "./Home/oneway_pixelated.jpg";
-import oneWay from "./Home/oneway.jpg";
-import FadeInSection from "./Home/FadeInSection"
+import oneWayPixelated from "./HomeView/oneway_pixelated.jpg";
+import oneWay from "./HomeView/oneway.jpg";
+import FadeInSection from "./HomeView/FadeInSection"
 
 const Home = () => {
   const [state, setState] = useState({ src: oneWayPixelated, blur: true });
@@ -18,7 +18,7 @@ const Home = () => {
       {/* header - A screen height block with fixed background. */}
       <header className="h-full font-pretty">
         {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
-        <nav className="relative h-full bg-black -z-20">
+        <nav className="relative h-full bg-dark-99 -z-20">
           {/* Img acts as a background */}
           <img
             className="absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
@@ -41,21 +41,19 @@ const Home = () => {
       </header>
 
       {/* main - main content here. */}
-      <main className="bg-gray-100 content font-pretty">
+      <main className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
 
-        <div className="max-w-screen-sm mx-auto bg-gray-50">
-
-          <p className="p-5"></p>
+        <div className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
 
           <FadeInSection>
           <p className="p-5 text-4xl font-gorgeous">I'm Jimmy Lin</p>
           <p className="p-5 text-sm">
             I have been working at{" "}
-            <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="text-gray-500 underline hover:text-gray-600">
+            <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
               Chief Telecom
             </a>{" "}
             for 4 years. I work for their cloud service department, maintaining and developing products and services about{" "}
-            <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="text-gray-500 underline hover:text-gray-600">
+            <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
               Chief Cloud
             </a>
             .
@@ -139,17 +137,17 @@ const Home = () => {
           </p>
 
           <p className="max-w-screen-sm p-5 mx-auto">
-            <a href="https://github.com/j3ygithub" target="_blank" rel="noreferrer" className="pr-4 text-gray-500 underline hover:text-gray-600">
+            <a href="https://github.com/j3ygithub" target="_blank" rel="noreferrer" className="pr-4 underline text-graywhite-495 hover:text-white">
               Github
             </a>
-            <a href="https://www.cakeresume.com/b00502013" target="_blank" rel="noreferrer" className="pr-4 text-gray-500 underline hover:text-gray-600">
+            <a href="https://www.cakeresume.com/b00502013" target="_blank" rel="noreferrer" className="pr-4 underline text-graywhite-495 hover:text-white">
               Cakeresume
             </a>
             <a
               href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-gray-500 underline hover:text-gray-600"
+              className="pr-4 underline text-graywhite-495 hover:text-white"
             >
               LinkedIn
             </a>
@@ -160,8 +158,8 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="flex items-center justify-center h-12 bg-gray-100 footer font-pretty">
-        <div className="max-w-screen-sm mx-auto text-sm text-center text-gray-500">© 2021 All rights reserved.</div>
+      <footer className="flex items-center justify-center h-12 bg-graywhite-99 text-graywhite-693 footer font-pretty">
+        <div className="max-w-screen-sm mx-auto text-sm text-center">© 2021 All rights reserved.</div>
       </footer>
     </>
   );
