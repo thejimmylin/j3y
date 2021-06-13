@@ -19,6 +19,7 @@ __pycache__/
 # Secrets
 /secrets.json
 
-# Nginx & UWSGI
+# Nginx & Gunicorn & uWSGI
 /nginx/*
+/gunicorn/*
 /uwsgi/*
