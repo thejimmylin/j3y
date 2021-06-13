@@ -3,7 +3,7 @@ import avatarPixelated from "./HomeView/avatar_pixelated.jpg";
 import oneWayPixelated from "./HomeView/oneway_pixelated.jpg";
 import oneWay from "./HomeView/oneway.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
-import ProgressiveImage from "./ProgressiveImage";
+import ProgressiveImage from "./HomeView/ProgressiveImage";
 
 const Home = () => {
   return (
