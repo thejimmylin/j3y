@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fef642f4.chunk.css",
+    "main.js": "/static/js/main.a17336db.chunk.js",
+    "main.js.map": "/static/js/main.a17336db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.68bea77f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.68bea77f.js.map",
+    "static/js/2.c7926b3b.chunk.js": "/static/js/2.c7926b3b.chunk.js",
+    "static/js/2.c7926b3b.chunk.js.map": "/static/js/2.c7926b3b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fef642f4.chunk.css.map": "/static/css/main.fef642f4.chunk.css.map",
+    "static/js/2.c7926b3b.chunk.js.LICENSE.txt": "/static/js/2.c7926b3b.chunk.js.LICENSE.txt",
+    "static/media/avatar-1440x1440.ac50e5ac.jpg": "/static/media/avatar-1440x1440.ac50e5ac.jpg",
+    "static/media/avatar-compressed-1440x1440.16208d04.jpg": "/static/media/avatar-compressed-1440x1440.16208d04.jpg",
+    "static/media/oneway-2560x1440.a9ae465d.jpg": "/static/media/oneway-2560x1440.a9ae465d.jpg",
+    "static/media/oneway-compressed-1920x1080.5e839a5f.jpg": "/static/media/oneway-compressed-1920x1080.5e839a5f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68bea77f.js",
+    "static/js/2.c7926b3b.chunk.js",
+    "static/css/main.fef642f4.chunk.css",
+    "static/js/main.a17336db.chunk.js"
+  ]
+}
