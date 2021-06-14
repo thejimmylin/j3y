@@ -3,7 +3,7 @@ import avatarPixelated from "./HomeView/avatar_pixelated.jpg";
 import oneWayPixelated from "./HomeView/oneway_pixelated.jpg";
 import oneWay from "./HomeView/oneway.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
-import ProgressiveImage from "./HomeView/ProgressiveImage";
+import SwitchingImage from "./HomeView/SwitchingImage";
 
 const Home = () => {
   return (
@@ -13,12 +13,20 @@ const Home = () => {
         {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
         <nav className="relative h-full bg-graywhite-99 -z-20">
           {/* Img acts as a background */}
-          <ProgressiveImage 
-            className="absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
-            imageSrc={oneWay}
-            imagePixelatedSrc={oneWayPixelated}
-            blurDegree="64px"
-            alt="oneway"
+          <SwitchingImage
+            common={{
+              alt: "oneway",
+              className:
+                "absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
+            }}
+            before={{
+              src: oneWayPixelated,
+              style: { filter: "blur(64px)" }
+            }}
+            after={{
+              src: oneWay,
+              style: { filter: "blur(0)" }
+            }}
           />
           {/* Brand div */}
           <div className="z-0 animate-fadein">
@@ -36,11 +44,19 @@ const Home = () => {
       <main className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
         <div className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
           <FadeInSection>
-            <ProgressiveImage 
-              className="w-full p-5 transition duration-1000 ease-out rounded-3xl"
-              imageSrc={avatar}
-              imagePixelatedSrc={avatarPixelated}
-              blurDegree="64px"
+            <SwitchingImage
+              common={{
+                alt: "avatar",
+                className: "w-full p-5 transition duration-1000 ease-out rounded-3xl"
+              }}
+              before={{
+                src: avatarPixelated,
+                style: { filter: "blur(64px)" }
+              }}
+              after={{
+                src: avatar,
+                style: { filter: "blur(0)" }
+              }}
             />
             <p className="p-5 text-sm">
               Hello world, I'm Jimmy. I have been working at{" "}
