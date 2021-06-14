@@ -1,7 +1,7 @@
-import avatar from "./HomeView/avatar.jpg";
-import avatarPixelated from "./HomeView/avatar_pixelated.jpg";
-import oneWayPixelated from "./HomeView/oneway_pixelated.jpg";
-import oneWay from "./HomeView/oneway.jpg";
+import onewayCompressed from "./HomeView/oneway-compressed-1920x1080.jpg";
+import oneway from "./HomeView/oneway-2560x1440.jpg";
+import avatarCompressed from "./HomeView/avatar-compressed-1440x1440.jpg";
+import avatar from "./HomeView/avatar-1440x1440.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
 import SwitchingImage from "./HomeView/SwitchingImage";
 
@@ -20,11 +20,11 @@ const Home = () => {
                 "absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
             }}
             before={{
-              src: oneWayPixelated,
-              style: { filter: "blur(64px)" }
+              src: onewayCompressed,
+              style: { filter: "blur(4px)" }
             }}
             after={{
-              src: oneWay,
+              src: oneway,
               style: { filter: "blur(0)" }
             }}
           />
@@ -50,8 +50,8 @@ const Home = () => {
                 className: "w-full p-5 transition duration-1000 ease-out rounded-3xl"
               }}
               before={{
-                src: avatarPixelated,
-                style: { filter: "blur(64px)" }
+                src: avatarCompressed,
+                style: { filter: "blur(4px)" }
               }}
               after={{
                 src: avatar,
