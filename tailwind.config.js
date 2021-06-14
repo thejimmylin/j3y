@@ -3,8 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      pretty: ["Libre Caslon Text", "serif"],
-      gorgeous: ["Libre Baskerville", "serif"],
+      gorgeous: ["EB Garamond", "serif"],
+      pretty: ["EB Garamond", "sans-serif"],
     },
     extend: {
       colors: {
@@ -41,6 +41,9 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+      },
+      transitionDuration: {
+        2000: "2000ms",
       },
       animation: {
         fadein: "fadein 1s ease-in-out 1",

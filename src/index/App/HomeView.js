@@ -1,6 +1,6 @@
-import onewayCompressed from "./HomeView/oneway-compressed-1920x1080.jpg";
+import onewayCompressed from "./HomeView/oneway-192x108-compressed.jpg";
 import oneway from "./HomeView/oneway-2560x1440.jpg";
-import avatarCompressed from "./HomeView/avatar-compressed-1440x1440.jpg";
+import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
 import avatar from "./HomeView/avatar-1440x1440.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
 import SwitchingImage from "./HomeView/SwitchingImage";
@@ -14,18 +14,18 @@ const Home = () => {
         <nav className="relative h-full bg-graywhite-99 -z-20">
           {/* Img acts as a background */}
           <SwitchingImage
-            common={{
-              alt: "oneway",
-              className:
-                "absolute object-cover w-full h-full transition duration-1000 ease-out md:fixed -z-10"
-            }}
             before={{
               src: onewayCompressed,
-              style: { filter: "blur(4px)" }
+              alt: "oneway",
+              className: "absolute object-cover w-full h-full md:fixed -z-10",
+              style: { filter: "blur(16px)" },
             }}
             after={{
               src: oneway,
-              style: { filter: "blur(0)" }
+              alt: "oneway",
+              className:
+                "absolute object-cover w-full h-full transition duration-2000 ease-out md:fixed -z-10",
+              style: { filter: "blur(0)" },
             }}
           />
           {/* Brand div */}
@@ -45,17 +45,18 @@ const Home = () => {
         <div className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
           <FadeInSection>
             <SwitchingImage
-              common={{
-                alt: "avatar",
-                className: "w-full p-5 transition duration-1000 ease-out rounded-3xl"
-              }}
+              common={{}}
               before={{
                 src: avatarCompressed,
-                style: { filter: "blur(4px)" }
+                alt: "avatar",
+                className: "w-full p-5 rounded-3xl",
+                style: { filter: "blur(4px)" },
               }}
               after={{
                 src: avatar,
-                style: { filter: "blur(0)" }
+                alt: "avatar",
+                className: "w-full p-5 transition duration-1000 ease-out rounded-3xl",
+                style: { filter: "blur(0)" },
               }}
             />
             <p className="p-5 text-sm">
