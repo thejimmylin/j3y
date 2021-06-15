@@ -9,10 +9,10 @@ import SwitchingImage from "./HomeView/SwitchingImage";
 const Home = () => {
   const [state, setState] = useState({ y: window.scrollY });
   const updateY = () => {
-    setState({ ...state, y: window.scrollY })
-  }
+    setState({ ...state, y: window.scrollY });
+  };
   const handleScroll = () => {
-    updateY()
+    updateY();
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -26,29 +26,31 @@ const Home = () => {
     <>
       {/* header - A screen height block with fixed background. */}
       <header
-        className="h-full font-pretty"
+        className="relative h-screen font-pretty"
         onScroll={handleScroll}
         onClick={handleScroll}
       >
-        {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
-        <nav className="relative h-full bg-graywhite-99 -z-20">
-          {/* Img acts as a background */}
+        <div className="absolute w-full h-screen bg-graywhite-99 -z-10">
           <SwitchingImage
             before={{
               src: onewayCompressed,
               alt: "oneway",
-              className: "absolute object-cover w-full h-full -z-10 filter blur-lg",
+              className: "object-cover w-full h-screen filter blur-2xl",
             }}
             after={{
               src: oneway,
               alt: "oneway",
               className:
-                "absolute object-cover w-full h-full transition-filter duration-2000 ease-out -z-10",
-              style: { top: state.y/2 },
+                "object-cover w-full h-screen transition-filter duration-2000 ease-out ",
+              style: { top: state.y / 2 },
             }}
           />
+        </div>
+        {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
+        <nav>
+          {/* Img acts as a background */}
           {/* Brand div */}
-          <div className="z-0 animate-fadein">
+          <div className="animate-fadein">
             <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
               <a href="/">Jimmy Lin</a>
             </p>
