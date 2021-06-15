@@ -42,6 +42,9 @@ module.exports = {
           "100%": { opacity: 1 },
         },
       },
+      transitionProperty: {
+        filter: "filter",
+      },
       transitionDuration: {
         2000: "2000ms",
       },

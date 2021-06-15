@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import onewayCompressed from "./HomeView/oneway-192x108-compressed.jpg";
 import oneway from "./HomeView/oneway-2560x1440.jpg";
 import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
@@ -6,10 +7,29 @@ import FadeInSection from "./HomeView/FadeInSection";
 import SwitchingImage from "./HomeView/SwitchingImage";
 
 const Home = () => {
+  const [state, setState] = useState({ y: window.scrollY });
+  const updateY = () => {
+    setState({ ...state, y: window.scrollY })
+  }
+  const handleScroll = () => {
+    updateY()
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    const cleanup = () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+    return cleanup;
+  });
+
   return (
     <>
       {/* header - A screen height block with fixed background. */}
-      <header className="h-full font-pretty">
+      <header
+        className="h-full font-pretty"
+        onScroll={handleScroll}
+        onClick={handleScroll}
+      >
         {/* Background color of nav itself is black, which prevents the white border due to the CSS blur. */}
         <nav className="relative h-full bg-graywhite-99 -z-20">
           {/* Img acts as a background */}
@@ -17,15 +37,14 @@ const Home = () => {
             before={{
               src: onewayCompressed,
               alt: "oneway",
-              className: "absolute object-cover w-full h-full md:fixed -z-10",
-              style: { filter: "blur(16px)" },
+              className: "absolute object-cover w-full h-full -z-10 filter blur-lg",
             }}
             after={{
               src: oneway,
               alt: "oneway",
               className:
-                "absolute object-cover w-full h-full transition duration-2000 ease-out md:fixed -z-10",
-              style: { filter: "blur(0)" },
+                "absolute object-cover w-full h-full transition-filter duration-2000 ease-out -z-10",
+              style: { top: state.y/2 },
             }}
           />
           {/* Brand div */}
@@ -49,14 +68,12 @@ const Home = () => {
               before={{
                 src: avatarCompressed,
                 alt: "avatar",
-                className: "w-full p-5 rounded-3xl",
-                style: { filter: "blur(4px)" },
+                className: "w-full p-5 rounded-3xl filter blur-sm",
               }}
               after={{
                 src: avatar,
                 alt: "avatar",
                 className: "w-full p-5 transition duration-1000 ease-out rounded-3xl",
-                style: { filter: "blur(0)" },
               }}
             />
             <p className="p-5 text-sm">
