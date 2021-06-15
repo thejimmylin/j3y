@@ -30,7 +30,10 @@ const Home = () => {
         onScroll={handleScroll}
         onClick={handleScroll}
       >
-        <div className="absolute w-full h-screen bg-graywhite-99 -z-10">
+        <div 
+          className="absolute w-full h-screen bg-graywhite-99 -z-10"
+          style={{ top: state.y / 2 }}
+        >
           <SwitchingImage
             before={{
               src: onewayCompressed,
@@ -42,7 +45,6 @@ const Home = () => {
               alt: "oneway",
               className:
                 "object-cover w-full h-screen transition-filter duration-2000 ease-out ",
-              style: { top: state.y / 2 },
             }}
           />
         </div>
