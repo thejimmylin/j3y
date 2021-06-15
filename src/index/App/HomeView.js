@@ -95,7 +95,7 @@ const Home = () => {
           <FadeInSection>
             <p className="p-5 text-4xl font-gorgeous">Skills</p>
             <p className="p-5 text-sm">
-              In case you are interested, here are my skills :)
+              Here are my skills, just in case you're interested :)
             </p>
           </FadeInSection>
 
