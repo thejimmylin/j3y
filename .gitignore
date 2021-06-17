@@ -15,11 +15,15 @@ __pycache__/
 # NPM stuff
 /node_modules/*
 /dist/*
+/build/*
 
 # Secrets
 /secrets.json
 
-# Nginx & Gunicorn & uWSGI
+# Nginx & UWSGI & Gunicorn
 /nginx/*
-/gunicorn/*
 /uwsgi/*
+/gunicorn/*
+
+# PostgreSQL
+/postgresql/*
