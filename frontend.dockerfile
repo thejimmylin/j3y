@@ -1,5 +1,5 @@
 # Use node as the base image we build on.
-FROM node as builder
+FROM node AS builder
 
 # Use `/app` as the directory we work in. This is not a special path though,
 # you just don't want everything created in the root ('/') directory.
