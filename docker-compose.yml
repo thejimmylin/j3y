@@ -1,9 +1,11 @@
 version: "3.9"
+
 services:
-  frontend:
-    build:
-      context: .
-      dockerfile: ./frontend.dockerfile
+  web:
+    image: j3ydocker/j3y-frontend
+    volumes:
+      - ./docker/volumes/etc/nginx/sites-enabled:/etc/nginx/sites-enabled
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
+    command: nginx -g "daemon off;"
