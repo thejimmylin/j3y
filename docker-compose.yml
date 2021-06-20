@@ -4,6 +4,8 @@ services:
   proxy:
     build:
       dockerfile: ./dockerfiles/proxy.dockerfile
+    volumes:
+      - ./dockerfiles/html:/usr/share/nginx/html:ro
     ports:
       - 80:80
       - 443:443
