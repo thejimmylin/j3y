@@ -3,14 +3,12 @@ version: "3.9"
 services:
   proxy:
     build:
-      context: .
-      dockerfile: dockerfiles/proxy/Dockerfile
+      dockerfile: ./dockerfiles/proxy.dockerfile
     ports:
       - 80:80
       - 443:443
   frontend:
     build:
-      context: .
-      dockerfile: dockerfiles/frontend/Dockerfile
+      dockerfile: ./dockerfiles/frontend.dockerfile
     ports:
       - 3000:80
