@@ -1,10 +1,18 @@
 version: "3.9"
 
 services:
-  web:
+  proxy:
+    image: j3ydocker/j3y-proxy
+    volumes:
+      - ./docker/volumes/proxy/etc/nginx/sites-enabled:/etc/nginx/sites-enabled
+    ports:
+      - 80:80
+      - 443:443
+    command: nginx -g "daemon off;"
+  frontend:
     image: j3ydocker/j3y-frontend
     volumes:
-      - ./docker/volumes/etc/nginx/sites-enabled:/etc/nginx/sites-enabled
+      - ./docker/volumes/web/etc/nginx/sites-enabled:/etc/nginx/sites-enabled
     ports:
       - 80:80
       - 443:443
