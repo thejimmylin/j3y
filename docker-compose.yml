@@ -1,8 +1,16 @@
 version: "3.9"
 
 services:
-  frontend:
-    image: j3ydocker/j3y-frontend
+  proxy:
+    build:
+      context: .
+      dockerfile: dockerfiles/proxy/Dockerfile
     ports:
       - 80:80
-    command: nginx -g "daemon off;"
+      - 443:443
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfiles/frontend/Dockerfile
+    ports:
+      - 3000:80
