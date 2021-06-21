@@ -3,14 +3,12 @@ version: "3.9"
 services:
   proxy:
     build:
-      dockerfile: ./dockerfiles/proxy.dockerfile
+      dockerfile: ./dockerfiles/proxy/Dockerfile
     volumes:
-      - ./dockerfiles/html:/usr/share/nginx/html:ro
+      - ./dockerfiles/proxy/conf.d:/etc/nginx/conf.d:ro
     ports:
       - 80:80
       - 443:443
   frontend:
     build:
-      dockerfile: ./dockerfiles/frontend.dockerfile
-    ports:
-      - 3000:80
+      dockerfile: ./dockerfiles/frontend/Dockerfile
