@@ -27,3 +27,6 @@ __pycache__/
 
 # PostgreSQL
 /postgresql/*
+
+# Docker
+/dockerfiles/shared/*

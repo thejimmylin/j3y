@@ -20,6 +20,3 @@ FROM nginx:alpine
 
 # Take files which we have built from previous stage with `npm run build` to serve.
 COPY --from=builder /root/repos/j3y/build /usr/share/nginx/html
-
-# Run Nginx service.
-CMD nginx -g "daemon off;"

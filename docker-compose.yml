@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: ./dockerfiles/frontend/Dockerfile
   proxy:
-    build:
-      context: .
-      dockerfile: ./dockerfiles/proxy/Dockerfile
+    # Use official Nginx base image to serve. The `alpine` version make the container smaller.
+    # https://hub.docker.com/_/nginx
+    image: nginx:alpine
     volumes:
       - ./dockerfiles/proxy/conf.d:/etc/nginx/conf.d:ro
       - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt:ro
@@ -16,6 +16,8 @@ services:
       - 80:80
       - 443:443
   letsencrypt:
+    # Use official certbot base image to serve.
+    # https://hub.docker.com/r/certbot/certbot/
     image: certbot/certbot
     volumes:
       - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt
