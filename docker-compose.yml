@@ -14,3 +14,9 @@ services:
     build:
       context: .
       dockerfile: ./dockerfiles/frontend/Dockerfile
+  letsencrypt:
+    image: certbot/certbot
+    volumes:
+      - ./dockerfiles/letsencrypt/etc/letsencrypt:/etc/letsencrypt
+      - ./dockerfiles/letsencrypt/var/lib/letsencrypt:/var/lib/letsencrypt
+    command: certonly --standalone --domains jimmylin.org --email b00502013@gmail.com --agree-tos --dry-run
