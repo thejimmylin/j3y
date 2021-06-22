@@ -7,7 +7,7 @@ services:
       dockerfile: ./dockerfiles/proxy/Dockerfile
     volumes:
       - ./dockerfiles/proxy/conf.d:/etc/nginx/conf.d:ro
-      - ./dockerfiles.shared/letsencrypt:/etc/letsencrypt:ro
+      - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt:ro
     ports:
       - 80:80
       - 443:443
@@ -20,5 +20,5 @@ services:
     volumes:
       - ./dockerfiles/letsencrypt/etc/letsencrypt:/etc/letsencrypt
       - ./dockerfiles/letsencrypt/var/lib/letsencrypt:/var/lib/letsencrypt
-      - ./dockerfiles.shared/letsencrypt:/etc/letsencrypt
+      - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt
     command: certonly --standalone --domains jimmylin.org --email b00502013@gmail.com --agree-tos --no-eff-email --keep-until-expiring
