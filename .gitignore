@@ -27,6 +27,3 @@ __pycache__/
 
 # Docker
 /dockerfiles/shared/*
-
-# Environment variable file
-.env
