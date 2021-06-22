@@ -10,7 +10,10 @@ services:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
     volumes:
+      # Nginx `includes` all configs in `/etc/nginx/conf.d`.
+      # We want to our configs here.
       - ./dockerfiles/proxy/conf.d:/etc/nginx/conf.d:ro
+      # We want share this folder with certbot to get SSL certificates files.
       - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt:ro
     ports:
       - 80:80
@@ -20,5 +23,18 @@ services:
     # https://hub.docker.com/r/certbot/certbot/
     image: certbot/certbot
     volumes:
+      # Certbot put SSL certificate files in `/etc/letsencrypt`.
+      # We want share this folder with our host & other containers.
       - ./dockerfiles/shared/letsencrypt:/etc/letsencrypt
-    command: certonly --standalone --domains jimmylin.org --email b00502013@gmail.com --agree-tos --no-eff-email --keep-until-expiring
+    # We want certbot to run as `standalone` mode, which deal with `challange` with its own
+    # built-in web server, instead of ours. And we pass all necessary arguments to run it
+    # without console interactive. To learn more about these arguments:
+    # https://certbot.eff.org/docs/using.html#certbot-command-line-options
+    command: >
+      certonly
+      --standalone 
+      --domains jimmylin.org
+      --email b00502013@gmail.com
+      --agree-tos
+      --no-eff-email
+      --keep-until-expiring
