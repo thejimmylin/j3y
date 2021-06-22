@@ -4,10 +4,10 @@ server {
     # Forward Requests about `HTTP-01 challenge` to `certbot` container.
     # https://letsencrypt.org/zh-tw/docs/challenge-types/
     location /.well-known/acme-challenge {
-        proxy_pass http://letsencrypt;
+        proxy_pass ${CERBOT_HOST};
     }
 
-    # Redirect the other requests to `HTTPS`.
+    # Redirect the other requests to be sent with HTTPS.
     location / {
         return 301 https://$host$request_uri;
     }
@@ -16,11 +16,11 @@ server {
 server {
     listen 443 ssl;
 
-    ssl_certificate /etc/letsencrypt/live/jimmylin.org/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/jimmylin.org/privkey.pem;
+    ssl_certificate ${SSL_CERTIFICATE_PATH};
+    ssl_certificate_key ${SSL_CERTIFICATE_KEY_PATH};
 
     # Forward requests to `frontend` container.
     location / {
-        proxy_pass http://frontend;
+        proxy_pass ${OTHER_HOST};
     }
 }
