@@ -11,6 +11,7 @@ COPY package.json .
 COPY package-lock.json .
 
 RUN npm ci
+# Docker like to `cache` during building. So we respectively copy packages file and others source code.
 COPY . .
 RUN npm run build
 
