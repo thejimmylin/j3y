@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: ../
+      dockerfile: ./docker/frontend/Dockerfile
+    volumes:
+      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
+      - ./frontend/templates:/etc/nginx/templates:ro
+    ports:
+      - 80:80

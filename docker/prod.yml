@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      # Use repo's root as `context` because docker can't do COPY from parent directory.
+      context: ../
+      # Specify the location of `Dockerfile`, because it is not in the `context`.
+      dockerfile: ./docker/frontend/Dockerfile
+    volumes:
+      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
+      - ./frontend/templates:/etc/nginx/templates:ro
+  proxy:
+    # Use official Nginx base image to serve. The `alpine` version make the container smaller.
+    # https://hub.docker.com/_/nginx
+    image: nginx:alpine
+    volumes:
+      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
+      - ./proxy/templates:/etc/nginx/templates:ro
+      # We want share this folder with certbot to get SSL certificates files.
+      - ./shared/letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - 80:80
+      - 443:443
+      # We pass these environment variables as is. You can just declare them on your host,
+      # but usually you want to do this with a `./.env` beside this file.
+    environment:
+      - SSL_CERTIFICATE_PATH
+      - SSL_CERTIFICATE_KEY_PATH
+      - CERBOT_HOST
+      - OTHER_HOST
+  certbot:
+    extends:
+      file: ./certbot.yml
+      service: certbot

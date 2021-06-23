@@ -3,9 +3,9 @@
 # https://hub.docker.com/_/node
 FROM node:latest AS builder
 
-# We want to put our codes in `~/repos/{repo_name}`, but Dockerfile accepts only absolute path.
-# Container usually run as `root` user. and root user's `~` path is `/root`.
-WORKDIR /root/repos/j3y
+# We want to put our codes in `/workdir`. This path is not anything special.
+# We just don't want anything put in `/`.
+WORKDIR /workdir
 
 COPY package.json .
 COPY package-lock.json .
@@ -20,4 +20,4 @@ RUN npm run build
 FROM nginx:alpine
 
 # Take files which we have built from previous stage with `npm run build` to serve.
-COPY --from=builder /root/repos/j3y/build /usr/share/nginx/html
+COPY --from=builder /workdir/build /usr/share/nginx/html

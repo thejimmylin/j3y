@@ -1,3 +1,6 @@
+"""
+Here are some scripts used package `invoke` about management.
+"""
 import sys
 from pathlib import Path
 
