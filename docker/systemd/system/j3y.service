@@ -1,6 +1,5 @@
 [Unit]
 Description=j3y web service with docker compose
-Requires=docker.service
 After=docker.service
 
 [Service]
