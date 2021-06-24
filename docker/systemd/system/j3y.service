@@ -5,8 +5,8 @@ After=docker.service
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml up --remove-orphans
-ExecStop=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml down
+ExecStart=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml up --remove-orphans
+ExecStop=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml down
 
 [Install]
 WantedBy=multi-user.target
