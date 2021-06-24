@@ -18,7 +18,7 @@ services:
       # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
       - ./proxy/templates:/etc/nginx/templates:ro
       # We want share this folder with certbot to get SSL certificates files.
-      - ./shared/letsencrypt:/etc/letsencrypt:ro
+      - letsencrypt:/etc/letsencrypt:ro
     ports:
       - 80:80
       - 443:443
@@ -33,3 +33,6 @@ services:
     extends:
       file: ./certbot.yml
       service: certbot
+
+volumes:
+  letsencrypt:

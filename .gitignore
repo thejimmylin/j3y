@@ -24,6 +24,3 @@ __pycache__/
 /nginx/*
 /uwsgi/*
 /gunicorn/*
-
-# Docker
-/docker/shared/*
