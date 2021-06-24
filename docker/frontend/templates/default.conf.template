@@ -1,3 +1,7 @@
+# This file is expected to be read as a template by Nginx official docker image.
+# Its result should be be outputs to `/etc/nginx/conf.d`.
+# https://hub.docker.com/_/nginx
+
 server {
     listen 80;
 
