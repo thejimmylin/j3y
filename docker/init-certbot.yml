@@ -25,7 +25,6 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
-      - --dry-run
 
 volumes:
   letsencrypt:
