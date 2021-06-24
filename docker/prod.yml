@@ -30,9 +30,30 @@ services:
       - CERBOT_HOST
       - OTHER_HOST
   certbot:
-    extends:
-      file: ./certbot.yml
-      service: certbot
+    # Use official certbot base image to serve.
+    # https://hub.docker.com/r/certbot/certbot/
+    image: certbot/certbot
+    # Certbot put SSL certificate files in `/etc/letsencrypt`.
+    # We want share this folder with our host & other containers.
+    volumes:
+      - letsencrypt:/etc/letsencrypt
+    # We want certbot to run as `standalone` mode, which deal with `challange` with its own
+    # built-in web server, instead of ours. And we pass all necessary arguments to run it
+    # without console interactive. To learn more about these arguments:
+    # https://certbot.eff.org/docs/using.html#certbot-command-line-options
+    ports:
+      - 80:80
+    command:
+      - certonly
+      - --standalone
+      - --domains
+      - ${MY_DOMAINS}
+      - --email
+      - ${MY_EMAIL}
+      - --agree-tos
+      - --no-eff-email
+      - --keep-until-expiring
+      - --dry-run
 
 volumes:
   letsencrypt:
