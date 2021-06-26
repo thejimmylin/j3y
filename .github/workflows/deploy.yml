@@ -1,4 +1,4 @@
-name: Script with SSH
+name: Scripts with SSH
 
 on:
   push:
@@ -6,22 +6,16 @@ on:
     - main
 
 jobs:
-  deploy:
-    name: Script with SSH
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Script with SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
-        script: |
-          cd ~/repos/j3y
-          pwd
-          ls -al
-
-    - name: SSH script
-      run: ssh -i ${{ secrets.KEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} ls -al
+    - name: Create SSH key
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$KEY" > ../private.key
+        sudo chmod 600 ../private.key
+        echo "$HOST" > ~/.ssh/known_hosts
+      env:
+        SSH_PRIVATE_KEY: ${{secrets.KEY}}
+        SSH_KNOWN_HOSTS: ${{secrets.HOST}}
+        SSH_KEY_PATH: ${{ github.workspace }}/../private.key
