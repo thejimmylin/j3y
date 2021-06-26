@@ -14,8 +14,8 @@ jobs:
         echo $HOST
         echo $USERNAME
         echo $KEY
-        echo $KEY > private
-        ssh -i ./private $USERNAME@$HOST pwd
+        echo $KEY > ~/.ssh/private.key
+        ssh -i ~/.ssh/private.key -o UserKnownHostsFile=/github/home/.ssh/known_hosts -tt $USERNAME@$HOST "echo test > testfile1"
       shell: bash
       env:
         HOST: ${{ secrets.HOST }}
