@@ -14,10 +14,14 @@ jobs:
         echo $HOST
         echo $USERNAME
         echo $KEY
+        pwd
+        cd ~/
+        ls -al
+        mkdir -p ~/.ssh
         echo $KEY > ~/.ssh/private.key
         ssh -i ~/.ssh/private.key -o UserKnownHostsFile=/github/home/.ssh/known_hosts -tt $USERNAME@$HOST "echo test > testfile1"
       shell: bash
       env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.KEY }}
+        USERNAME: ${{ secrets.USERNAME }}
+        HOST: ${{ secrets.HOST }}
