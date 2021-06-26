@@ -11,17 +11,13 @@ jobs:
     steps:
     - name: Create SSH key
       run: |
-        echo $HOST
-        echo $USERNAME
-        echo $KEY
-        pwd
-        cd ~/
-        ls -al
-        mkdir -p ~/.ssh
-        echo $KEY > ~/.ssh/private.key
-        ssh -i ~/.ssh/private.key -o UserKnownHostsFile=~/.ssh/known_hosts -tt $USERNAME@$HOST "echo test > testfile1"
+        mkdir -p ~/.ssh/
+        echo "$SSH_PRIVATE_KEY" > ../private.key
+        sudo chmod 600 ../private.key
+        echo "$SSH_KNOWN_HOSTS_PROD" > ~/.ssh/known_hosts
+        ssh -i ../private.key -tt $USERNAME@$SSH_KNOWN_HOSTS ls -al
       shell: bash
       env:
-        KEY: ${{ secrets.KEY }}
-        USERNAME: ${{ secrets.USERNAME }}
-        HOST: ${{ secrets.HOST }}
+        SSH_PRIVATE_KEY: ${{secrets.KEY}}
+        SSH_KNOWN_HOSTS: ${{secrets.HOST}}
+        USERNAME: ${{secrets.USERNAME}}
