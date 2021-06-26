@@ -12,16 +12,16 @@ jobs:
     - name: Create SSH key
       run: |
         mkdir -p ~/.ssh/
-        echo "$KEY" > ../private.key
+        echo "$SSH_PRIVATE_KEY" > ../private.key
         sudo chmod 600 ../private.key
-        echo "$HOST" > ~/.ssh/known_hosts
+        echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
       env:
         SSH_PRIVATE_KEY: ${{secrets.KEY}}
         SSH_KNOWN_HOSTS: ${{secrets.HOST}}
         SSH_KEY_PATH: ${{ github.workspace }}/../private.key
     - name: Scripts
       run: |
-        ssh -i ../private.key $USERNAME@$HOST ls -al
+        ssh -i ../private.key "$USERNAME@$HOST" ls -al
       env:
         USERNAME: ${{ secrets.USERNAME }}
         HOST: ${{ secrets.HOST }}
