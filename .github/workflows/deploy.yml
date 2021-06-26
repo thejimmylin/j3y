@@ -22,3 +22,6 @@ jobs:
           cd ~/repos/j3y
           pwd
           ls -al
+
+    - name: SSH script
+      run: ssh -i ${{ secrets.KEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} ls -al
