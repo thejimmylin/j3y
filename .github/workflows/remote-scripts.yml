@@ -20,4 +20,3 @@ jobs:
           cd ~/repos/j3y
           git pull
           sudo systemctl restart j3y.service
-          sudo reboot
