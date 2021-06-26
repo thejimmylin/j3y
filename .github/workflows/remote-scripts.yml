@@ -1,4 +1,4 @@
-name: Scripts with SSH
+name: Remote scripts with SSH
 
 on:
   push:
@@ -19,3 +19,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{secrets.KEY}}
         SSH_KNOWN_HOSTS: ${{secrets.HOST}}
         SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+    - name: Scripts
+      run: |
+        ssh -i ../private.key 
+        ssh -i ../private.key ${{ secrets.USERNAME }}@${{ secrets.HOST }} ls -al
