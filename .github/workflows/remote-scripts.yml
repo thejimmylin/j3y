@@ -17,4 +17,4 @@ jobs:
         cat myfile
       shell: bash
       env:
-        HOST: {{ secrets.HOST }}
+        HOST: ${{ secrets.HOST }}
