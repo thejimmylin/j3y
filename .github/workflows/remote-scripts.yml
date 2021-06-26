@@ -12,7 +12,7 @@ jobs:
     - name: Create SSH key
       run: |
         echo "$SSH_PRIVATE_KEY" > ../private.key
-        rm -f /home/phpini/.ssh/known_hosts
+        rm -f ~/.ssh/known_hosts
         ssh -i ../private.key jimub@jimmylin.org ls -al
       shell: bash
       env:
