@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Create SSH key
       run: |
-        mkdir -p ~/.ssh/
         echo "$SSH_PRIVATE_KEY" > ../private.key
+        rm -f /home/phpini/.ssh/known_hosts
         ssh -i ../private.key jimub@jimmylin.org ls -al
       shell: bash
       env:
