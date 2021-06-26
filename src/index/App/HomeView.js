@@ -54,7 +54,7 @@ const Home = () => {
           {/* Brand div */}
           <div className="animate-fadein">
             <p className="px-8 pt-8 text-4xl text-white font-gorgeous">
-              <a href="/">Jimmy</a>
+              <a href="/">Jimmy Lin</a>
             </p>
             <p className="px-8 pt-2 text-xs text-white animate-pulse">
               <a href="/">–PERSONAL INFO</a>
