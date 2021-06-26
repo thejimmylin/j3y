@@ -11,10 +11,13 @@ jobs:
     steps:
     - name: Create SSH key
       run: |
-        echo 123
         echo $HOST
-        echo 123 > myfile
-        cat myfile
+        echo $USERNAME
+        echo $KEY
+        echo $KEY > private
+        ssh -i ./private $USERNAME@$HOST pwd
       shell: bash
       env:
         HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        KEY: ${{ secrets.KEY }}
