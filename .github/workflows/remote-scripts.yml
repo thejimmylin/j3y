@@ -19,7 +19,7 @@ jobs:
         ls -al
         mkdir -p ~/.ssh
         echo $KEY > ~/.ssh/private.key
-        ssh -i ~/.ssh/private.key -o UserKnownHostsFile=/github/home/.ssh/known_hosts -tt $USERNAME@$HOST "echo test > testfile1"
+        ssh -i ~/.ssh/private.key -o UserKnownHostsFile=~/.ssh/known_hosts -tt $USERNAME@$HOST "echo test > testfile1"
       shell: bash
       env:
         KEY: ${{ secrets.KEY }}
