@@ -19,4 +19,5 @@ jobs:
         script: |
           cd ~/repos/j3y
           git pull
-          sudo systemctl restart j3y.service
+          sudo systemctl stop j3y.service
+          sudo systemctl start j3y.service
