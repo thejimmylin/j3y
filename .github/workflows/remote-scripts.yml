@@ -21,5 +21,4 @@ jobs:
         SSH_KEY_PATH: ${{ github.workspace }}/../private.key
     - name: Scripts
       run: |
-        ssh -i ../private.key 
         ssh -i ../private.key ${{ secrets.USERNAME }}@${{ secrets.HOST }} ls -al
