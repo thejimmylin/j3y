@@ -9,15 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Create SSH key
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$SSH_PRIVATE_KEY" > ../private.key
-        sudo chmod 600 ../private.key
-        echo "$SSH_KNOWN_HOSTS_PROD" > ~/.ssh/known_hosts
-        ssh -i ../private.key -tt $USERNAME@$SSH_KNOWN_HOSTS ls -al
-      shell: bash
-      env:
-        SSH_PRIVATE_KEY: ${{secrets.KEY}}
-        SSH_KNOWN_HOSTS: ${{secrets.HOST}}
-        USERNAME: ${{secrets.USERNAME}}
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          pwd
+          ls -al
