@@ -13,10 +13,6 @@ jobs:
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_PRIVATE_KEY" > ../private.key
-        sudo chmod 600 ../private.key
-        echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
         ssh -i ../private.key jimub@jimmylin.org ls -al
       env:
         SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-        SSH_KNOWN_HOSTS: ${{ secrets.HOST }}
-        SSH_KEY_PATH: ${{ github.workspace }}/../private.key
