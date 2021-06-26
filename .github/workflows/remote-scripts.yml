@@ -14,5 +14,6 @@ jobs:
         mkdir -p ~/.ssh/
         echo "$SSH_PRIVATE_KEY" > ../private.key
         ssh -i ../private.key jimub@jimmylin.org ls -al
+      shell: bash
       env:
         SSH_PRIVATE_KEY: ${{ secrets.KEY }}
