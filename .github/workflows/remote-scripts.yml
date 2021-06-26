@@ -11,9 +11,6 @@ jobs:
     steps:
     - name: Create SSH key
       run: |
-        echo "$SSH_PRIVATE_KEY" > ../private.key
-        rm -f ~/.ssh/known_hosts
-        ssh -i ../private.key jimub@jimmylin.org ls -al
+        ls -al
+        pwd
       shell: bash
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.KEY }}
