@@ -28,7 +28,6 @@ jobs:
           END
       - name: Remote commands
         run: |
-          ssh d git -C ~/repos/j3y pull
           ssh d sudo systemctl stop j3y.service
           ssh d sudo docker-compose -f ~/repos/j3y/docker/prod.yml build
           ssh d sudo systemctl start j3y.service
