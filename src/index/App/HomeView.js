@@ -8,11 +8,8 @@ import SwitchingImage from "./HomeView/SwitchingImage";
 
 const Home = () => {
   const [state, setState] = useState({ y: window.scrollY });
-  const updateY = () => {
-    setState({ ...state, y: window.scrollY });
-  };
   const handleScroll = () => {
-    updateY();
+    setState({ ...state, y: window.scrollY });
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -32,7 +29,7 @@ const Home = () => {
       >
         <div 
           className="absolute w-full h-screen bg-graywhite-99 -z-10"
-          style={{ top: state.y / 2 }}
+          style={{ transform: `translateY(${state.y/2}px)` }}
         >
           <SwitchingImage
             before={{
