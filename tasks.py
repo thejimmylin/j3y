@@ -14,6 +14,7 @@ class JsonConfigAdmin:
     This class provide some helper function to do the
     `update` & `setdefault` of JSON-based configs.
     """
+
     def __init__(self, path=Path(), options={}, encoding="utf-8", empty="{}"):
         self.path = path
         self.options = options
