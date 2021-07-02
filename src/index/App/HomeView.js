@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import onewayCompressed from "./HomeView/wall.jpg";
-import oneway from "./HomeView/wall.jpg";
+import wall from "./HomeView/wall-1440x810.jpg";
+import wallCompressed from "./HomeView/wall-144x81-compressed.jpg";
 import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
 import avatar from "./HomeView/avatar-1440x1440.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
@@ -26,13 +26,13 @@ const Home = () => {
         <div className="absolute w-full h-screen bg-graywhite-99 -z-10" style={{ transform: `translateY(${state.y / 2}px)` }}>
           <SwitchingImage
             before={{
-              src: onewayCompressed,
-              alt: "oneway",
+              src: wallCompressed,
+              alt: "wallCompressed",
               className: "object-cover w-full h-screen filter blur-2xl",
             }}
             after={{
-              src: oneway,
-              alt: "oneway",
+              src: wall,
+              alt: "wall",
               className: "object-cover w-full h-screen transition-filter duration-2000 ease-out ",
             }}
           />
