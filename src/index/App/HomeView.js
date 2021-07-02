@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import onewayCompressed from "./HomeView/oneway-192x108-compressed.jpg";
-import oneway from "./HomeView/oneway-2560x1440.jpg";
+import oneway from "./HomeView/wall.jpg";
 import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
 import avatar from "./HomeView/avatar-1440x1440.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
