@@ -36,11 +36,9 @@ module.exports = {
           759: "#fdfdfd",
         },
       },
-      keyframes: {
-        fadein: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
+      zIndex: {
+        "-10": "-10",
+        "-20": "-20",
       },
       transitionProperty: {
         filter: "filter",
@@ -48,12 +46,27 @@ module.exports = {
       transitionDuration: {
         2000: "2000ms",
       },
-      animation: {
-        fadein: "fadein 1s ease-in-out 1",
+      keyframes: {
+        fadein: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
-      zIndex: {
-        "-10": "-10",
-        "-20": "-20",
+      animation: {
+        "fadein-1000-0": "fadein 1000ms 0ms ease-in-out 1 both",
+        "fadein-1000-100": "fadein 1000ms 100ms ease-in-out 1 both",
+        "fadein-1000-200": "fadein 1000ms 200ms ease-in-out 1 both",
+        "fadein-1000-300": "fadein 1000ms 300ms ease-in-out 1 both",
+        "fadein-1000-400": "fadein 1000ms 400ms ease-in-out 1 both",
+        "fadein-1000-500": "fadein 1000ms 500ms ease-in-out 1 both",
+        "fadein-1000-600": "fadein 1000ms 600ms ease-in-out 1 both",
+        "fadein-1000-700": "fadein 1000ms 700ms ease-in-out 1 both",
+        "fadein-1000-800": "fadein 1000ms 800ms ease-in-out 1 both",
+        "fadein-1000-900": "fadein 1000ms 900ms ease-in-out 1 both",
+        "fadein-1000-1000": "fadein 1000ms 1000ms ease-in-out 1 both",
+        "fadein-1000-1100": "fadein 1000ms 1100ms ease-in-out 1 both",
+        "fadein-1000-1200": "fadein 1000ms 1200ms ease-in-out 1 both",
+        "fadein-1000-1300": "fadein 1000ms 1300ms ease-in-out 1 both",
       },
     },
   },
