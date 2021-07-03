@@ -37,8 +37,23 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 font-gorgeous animate-fadein whitespace-nowrap">
-          <p className="mb-8 text-6xl">I'm Jimmy Lin.</p>
+        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 font-gorgeous whitespace-nowrap">
+          <p className="mb-8 text-6xl">
+            <span className="animate-fadein-1000-0">I</span>
+            <span className="animate-fadein-1000-100">'</span>
+            <span className="animate-fadein-1000-200">m</span>
+            <span className="animate-fadein-1000-300"> </span>
+            <span className="animate-fadein-1000-400">J</span>
+            <span className="animate-fadein-1000-500">i</span>
+            <span className="animate-fadein-1000-600">m</span>
+            <span className="animate-fadein-1000-700">m</span>
+            <span className="animate-fadein-1000-800">y</span>
+            <span className="animate-fadein-1000-900"> </span>
+            <span className="animate-fadein-1000-1000">L</span>
+            <span className="animate-fadein-1000-1100">i</span>
+            <span className="animate-fadein-1000-1200">n</span>
+            <span className="animate-fadein-1000-1300">.</span>
+          </p>
         </div>
       </header>
 
