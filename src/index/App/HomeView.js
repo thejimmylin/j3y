@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import wall from "./HomeView/wall-1440x810.jpg";
 import wallCompressed from "./HomeView/wall-144x81-compressed.jpg";
 import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
@@ -8,21 +8,30 @@ import SwitchingImage from "./HomeView/SwitchingImage";
 
 const Home = () => {
   const [state, setState] = useState({ y: window.scrollY });
+
   const handleScroll = () => {
     setState({ ...state, y: window.scrollY });
   };
-  useEffect(() => {
+  const addHandleScroll = () => {
     window.addEventListener("scroll", handleScroll);
-    const cleanup = () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-    return cleanup;
+  };
+  const removeHandleScroll = () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+  useEffect(() => {
+    addHandleScroll();
+    return removeHandleScroll;
   });
+
+  const ref = useRef(null);
+  const executeScroll = () => {
+    console.log("exe scroll");
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
-      {/* header - A screen height block with fixed background. */}
-      <header className="relative h-screen font-pretty" onScroll={handleScroll} onClick={handleScroll}>
+      <header className="relative h-screen font-pretty">
         <div className="absolute w-full h-screen bg-graywhite-99 -z-10" style={{ transform: `translateY(${state.y / 2}px)` }}>
           <SwitchingImage
             before={{
@@ -37,7 +46,7 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
+        <div className="absolute text-white hover:text-graywhite-693 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
           <p className="mb-8 text-5xl">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-100">'</span>
@@ -55,14 +64,18 @@ const Home = () => {
             <span className="animate-fadein-1000-1300">.</span>
           </p>
         </div>
+        <button
+          onClick={executeScroll}
+          className="absolute focus:outline-none text-white hover:text-graywhite-693 border-white hover:border-graywhite-693 text-1xl border  left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 px-4 py-1.5 animate-fadein-1000-1500"
+        >
+          About
+        </button>
       </header>
 
-      {/* main - main content here. */}
-      <main className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
+      <main ref={ref} className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
         <div className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
           <FadeInSection>
             <SwitchingImage
-              common={{}}
               before={{
                 src: avatarCompressed,
                 alt: "avatar",
