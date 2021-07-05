@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -7,6 +8,9 @@ module.exports = {
       pretty: ["EB Garamond", "sans-serif"],
     },
     extend: {
+      inset: {
+        "2/5": "40%",
+      },
       colors: {
         graywhite: {
           33: "#0b0b0b",

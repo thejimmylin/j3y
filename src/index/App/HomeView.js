@@ -37,8 +37,8 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 font-gorgeous whitespace-nowrap">
-          <p className="mb-8 text-6xl">
+        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
+          <p className="mb-8 text-5xl">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-100">'</span>
             <span className="animate-fadein-1000-200">m</span>
