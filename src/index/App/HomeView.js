@@ -25,7 +25,6 @@ const Home = () => {
 
   const ref = useRef(null);
   const executeScroll = () => {
-    console.log("exe scroll");
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
