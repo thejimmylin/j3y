@@ -86,7 +86,7 @@ const Home = () => {
                 className: "w-full p-5 transition duration-1000 ease-out rounded-3xl",
               }}
             />
-            <p className="p-5 text-sm">
+            <p className="p-5 text-md">
               Hello world, I'm Jimmy. I have been working at{" "}
               <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
                 Chief Telecom
@@ -101,7 +101,7 @@ const Home = () => {
 
           <FadeInSection>
             <p className="p-5 text-4xl font-gorgeous">I love programming</p>
-            <p className="p-5 text-sm">
+            <p className="p-5 text-md">
               I like to impress people with what I do. Creating is an amazing thing, and programming gives us the ability to do so. I guess that's why I love
               programming so much.
             </p>
@@ -109,13 +109,13 @@ const Home = () => {
 
           <FadeInSection>
             <p className="p-5 text-4xl font-gorgeous">Skills</p>
-            <p className="p-5 text-sm">Here are my skills, just in case you're interested :)</p>
+            <p className="p-5 text-md">Here are my skills, just in case you're interested :)</p>
           </FadeInSection>
 
           <div className="ml-5">
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">Language</p>
-              <ul className="pl-5 text-sm">
+              <ul className="pl-5 text-md">
                 <li className="ml-5">- Python</li>
                 <li className="ml-5">- HTML</li>
                 <li className="ml-5">- CSS</li>
@@ -125,7 +125,7 @@ const Home = () => {
 
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">DB</p>
-              <ul className="pl-5 text-sm">
+              <ul className="pl-5 text-md">
                 <li className="ml-5">- MSSQL</li>
                 <li className="ml-5">- MySQL</li>
                 <li className="ml-5">- MariaDB</li>
@@ -135,7 +135,7 @@ const Home = () => {
 
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">Framework</p>
-              <ul className="pl-5 text-sm">
+              <ul className="pl-5 text-md">
                 <li className="ml-5">- Django</li>
                 <li className="ml-5">- Django REST Framework</li>
                 <li className="ml-5">- Vue.js</li>
@@ -146,7 +146,7 @@ const Home = () => {
 
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">Development</p>
-              <ul className="pl-5 text-sm">
+              <ul className="pl-5 text-md">
                 <li className="ml-5">- Git</li>
                 <li className="ml-5">- Linux</li>
                 <li className="ml-5">- Docker</li>
@@ -156,18 +156,18 @@ const Home = () => {
 
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">Other</p>
-              <ul className="pl-5 text-sm">
+              <ul className="pl-5 text-md">
                 <li className="ml-5">- Cisco Command</li>
                 <li className="ml-5">- FortiOS Command</li>
               </ul>
             </FadeInSection>
           </div>
 
-          <p className="p-5 text-sm"></p>
+          <p className="p-5 text-md"></p>
 
           <FadeInSection>
             <p className="max-w-screen-sm p-5 mx-auto text-4xl font-gorgeous">Thank you</p>
-            <p className="max-w-screen-sm p-5 mx-auto text-sm">
+            <p className="max-w-screen-sm p-5 mx-auto text-md">
               I appreciate that you gave me sometime to introduce myself. Now, maybe you would like to know more about me with:
             </p>
 
@@ -194,7 +194,7 @@ const Home = () => {
       </main>
 
       <footer className="flex items-center justify-center h-12 bg-graywhite-99 text-graywhite-693 footer font-pretty">
-        <div className="max-w-screen-sm mx-auto text-sm text-center">© 2021 All rights reserved.</div>
+        <div className="max-w-screen-sm mx-auto text-md text-center">© 2021 All rights reserved.</div>
       </footer>
     </>
   );
