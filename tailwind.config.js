@@ -4,8 +4,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      gorgeous: ["EB Garamond", "serif"],
-      pretty: ["EB Garamond", "sans-serif"],
+      gorgeous: ["poppins", "serif"],
+      pretty: ["poppins", "sans-serif"],
     },
     extend: {
       inset: {
@@ -58,7 +58,7 @@ module.exports = {
       },
       animation: {
         "fadein-1000-0": "fadein 1000ms 0ms ease-in-out 1 both",
-        "fadein-1000-50": "fadein 1000ms 150ms ease-in-out 1 both",
+        "fadein-1000-50": "fadein 1000ms 50ms ease-in-out 1 both",
         "fadein-1000-100": "fadein 1000ms 100ms ease-in-out 1 both",
         "fadein-1000-150": "fadein 1000ms 150ms ease-in-out 1 both",
         "fadein-1000-200": "fadein 1000ms 200ms ease-in-out 1 both",
@@ -70,10 +70,20 @@ module.exports = {
         "fadein-1000-500": "fadein 1000ms 500ms ease-in-out 1 both",
         "fadein-1000-550": "fadein 1000ms 550ms ease-in-out 1 both",
         "fadein-1000-600": "fadein 1000ms 600ms ease-in-out 1 both",
-        "fadein-1000-1100": "fadein 1000ms 1100ms ease-in-out 1 both",
-        "fadein-1000-1200": "fadein 1000ms 1200ms ease-in-out 1 both",
-        "fadein-1000-1300": "fadein 1000ms 1300ms ease-in-out 1 both",
+        "fadein-1000-650": "fadein 1000ms 650ms ease-in-out 1 both",
+        "fadein-1000-800": "fadein 1000ms 800ms ease-in-out 1 both",
+        "fadein-1000-900": "fadein 1000ms 900ms ease-in-out 1 both",
+        "fadein-1000-1400": "fadein 1000ms 1400ms ease-in-out 1 both",
+        "fadein-1000-1450": "fadein 1000ms 1450ms ease-in-out 1 both",
         "fadein-1000-1500": "fadein 1000ms 1500ms ease-in-out 1 both",
+        "fadein-1000-1550": "fadein 1000ms 1550ms ease-in-out 1 both",
+        "fadein-1000-1600": "fadein 1000ms 1600ms ease-in-out 1 both",
+        "fadein-1000-1650": "fadein 1000ms 1650ms ease-in-out 1 both",
+        "fadein-1000-1700": "fadein 1000ms 1700ms ease-in-out 1 both",
+        "fadein-1000-1750": "fadein 1000ms 1750ms ease-in-out 1 both",
+        "fadein-1000-1800": "fadein 1000ms 1800ms ease-in-out 1 both",
+        "fadein-1000-1850": "fadein 1000ms 1850ms ease-in-out 1 both",
+        "fadein-1000-1900": "fadein 1000ms 1900ms ease-in-out 1 both",
       },
     },
   },

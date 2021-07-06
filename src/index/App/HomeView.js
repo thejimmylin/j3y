@@ -23,9 +23,13 @@ const Home = () => {
     return removeHandleScroll;
   });
 
-  const ref = useRef(null);
-  const executeScroll = () => {
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const refAboutMe = useRef(null);
+  const scrollToAboutMe = () => {
+    refAboutMe.current.scrollIntoView();
+  };
+  const refContactMe = useRef(null);
+  const scrollToContactMe = () => {
+    refContactMe.current.scrollIntoView();
   };
 
   return (
@@ -45,8 +49,8 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="absolute text-white hover:text-graywhite-693 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
-          <p className="mb-8 text-5xl">
+        <div className="absolute text-graywhite-693 hover:text-white  transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
+          <p className="mb-4 text-5xl">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -60,19 +64,42 @@ const Home = () => {
             <span className="animate-fadein-1000-500">L</span>
             <span className="animate-fadein-1000-550">i</span>
             <span className="animate-fadein-1000-600">n</span>
-            <span className="animate-fadein-1000-1100">.</span>
+            <span className="animate-fadein-1000-650">.</span>
+          </p>
+          <p className="text-xs text-center">
+            <span className="animate-fadein-1000-1400">Welcome</span>
+            <span className="animate-fadein-1000-1450"> </span>
+            <span className="animate-fadein-1000-1500">to</span>
+            <span className="animate-fadein-1000-1550"> </span>
+            <span className="animate-fadein-1000-1600">my</span>
+            <span className="animate-fadein-1000-1650"> </span>
+            <span className="animate-fadein-1000-1700">personal</span>
+            <span className="animate-fadein-1000-1750"> </span>
+            <span className="animate-fadein-1000-1800">page</span>
+            <span className="animate-fadein-1000-1850">.</span>
           </p>
         </div>
+        <div
+          className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2"
+        >
         <button
-          onClick={executeScroll}
-          className="absolute focus:outline-none text-white hover:text-graywhite-693 border-white hover:border-graywhite-693 text-1xl border  left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 px-4 py-1.5 animate-fadein-1000-1500"
+          onClick={scrollToAboutMe}
+          className="block mb-2 w-28 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border px-4 py-1.5 animate-fadein-1000-800"
         >
           About
         </button>
+        <button
+          onClick={scrollToContactMe}
+          className="block w-28 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border px-4 py-1.5 animate-fadein-1000-900"
+        >
+          Contact
+        </button>
+        </div>
+
       </header>
 
-      <main ref={ref} className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
-        <div className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
+      <main className="pt-20 content font-pretty bg-graywhite-99 text-graywhite-693">
+        <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
           <FadeInSection>
             <SwitchingImage
               before={{
@@ -86,12 +113,30 @@ const Home = () => {
                 className: "w-full p-5 transition duration-1000 ease-out rounded-3xl",
               }}
             />
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="p-5 text-4xl font-gorgeous">Hello world 😊</p>
             <p className="p-5 text-md">
-              Hello world, I'm Jimmy. I have been working at{" "}
+              I'm Jimmy. I love programming.
+            </p>
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="p-5 text-4xl font-gorgeous">Why?</p>
+            <p className="p-5 text-md">
+              I like to create things. Programming gives me the chance to do so.
+            </p>
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="p-5 text-4xl font-gorgeous">My job</p>
+            <p className="p-5 text-md">
+              I have been working at{" "}
               <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
                 Chief Telecom
               </a>{" "}
-              for 4 years. I work for their cloud service department, maintaining and developing products and services about{" "}
+              for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
               <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
                 Chief Cloud
               </a>
@@ -100,19 +145,11 @@ const Home = () => {
           </FadeInSection>
 
           <FadeInSection>
-            <p className="p-5 text-4xl font-gorgeous">I love programming</p>
-            <p className="p-5 text-md">
-              I like to impress people with what I do. Creating is an amazing thing, and programming gives us the ability to do so. I guess that's why I love
-              programming so much.
-            </p>
+            <p className="p-5 text-4xl font-gorgeous">My Skills</p>
+            <p className="p-5 text-md">Here are my skills, just in case you're interested:</p>
           </FadeInSection>
 
-          <FadeInSection>
-            <p className="p-5 text-4xl font-gorgeous">Skills</p>
-            <p className="p-5 text-md">Here are my skills, just in case you're interested :)</p>
-          </FadeInSection>
-
-          <div className="ml-5">
+          <div className="ml-5 mb-5">
             <FadeInSection>
               <p className="p-5 text-2xl font-gorgeous">Language</p>
               <ul className="pl-5 text-md">
@@ -163,14 +200,16 @@ const Home = () => {
             </FadeInSection>
           </div>
 
-          <p className="p-5 text-md"></p>
-
           <FadeInSection>
             <p className="max-w-screen-sm p-5 mx-auto text-4xl font-gorgeous">Thank you</p>
             <p className="max-w-screen-sm p-5 mx-auto text-md">
-              I appreciate that you gave me sometime to introduce myself. Now, maybe you would like to know more about me with:
+              I appreciate that you gave me sometime to introduce myself.
             </p>
+          </FadeInSection>
 
+          <FadeInSection>
+            <p ref={refContactMe} className="p-5 text-4xl font-gorgeous">Contact me</p>
+            <p className="p-5 text-md">b00502013@gmail.com</p>
             <p className="max-w-screen-sm p-5 mx-auto">
               <a href="https://github.com/j3ygithub" target="_blank" rel="noreferrer" className="pr-4 underline text-graywhite-495 hover:text-white">
                 Github
@@ -189,7 +228,6 @@ const Home = () => {
             </p>
           </FadeInSection>
 
-          <p className="p-5"></p>
         </div>
       </main>
 
