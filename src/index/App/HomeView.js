@@ -116,7 +116,7 @@ const Home = () => {
           </FadeInSection>
 
           <FadeInSection>
-            <p className="p-5 text-4xl font-gorgeous">Hello world 😊</p>
+            <p className="p-5 text-4xl font-gorgeous">Hello world :)</p>
             <p className="p-5 text-md">
               I'm Jimmy. I love programming.
             </p>
