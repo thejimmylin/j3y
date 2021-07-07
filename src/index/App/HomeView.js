@@ -138,12 +138,12 @@ const Home = () => {
                 before={{
                   src: ntuCompressed,
                   alt: "ntuCompressed",
-                  className: "w-24 mx-4 filter blur-1xl",
+                  className: "w-24 h-auto mx-4 filter blur-1xl",
                 }}
                 after={{
                   src: ntu,
                   alt: "ntu",
-                  className: "w-24 mx-4 transition-filter duration-2000 ease-out ",
+                  className: "w-24 h-auto mx-4 transition-filter duration-2000 ease-out ",
                 }}
               />
             </div>
@@ -166,11 +166,11 @@ const Home = () => {
                 before={{
                   src: chiefCompressed,
                   alt: "chiefCompressed",
-                  className: "w-36 filter blur-1xl",
+                  className: "w-36 h-auto filter blur-1xl",
                 }}
                 after={{
                   src: chief,
-                  className: "w-36 transition-filter duration-2000 ease-out ",
+                  className: "w-36 h-auto transition-filter duration-2000 ease-out ",
                 }}
               />
             </div>
