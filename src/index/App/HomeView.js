@@ -5,6 +5,8 @@ import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
 import avatar from "./HomeView/avatar-1440x1440.jpg";
 import FadeInSection from "./HomeView/FadeInSection";
 import SwitchingImage from "./HomeView/SwitchingImage";
+import ntu from "./HomeView/ntu-1200x1200.jpg"
+import chief from "./HomeView/chief.png"
 
 const Home = () => {
   const [state, setState] = useState({ y: window.scrollY });
@@ -124,22 +126,57 @@ const Home = () => {
           </FadeInSection>
 
           <FadeInSection>
-            <p className="p-5 text-4xl font-gorgeous">My job</p>
-            <p className="p-5 text-md">
-              I have been working at{" "}
-              <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
-                Chief Telecom
-              </a>{" "}
-              for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
-              <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
-                Chief Cloud
-              </a>
-              .
-            </p>
+            <p className="p-5 text-4xl font-gorgeous">Education</p>
+            <div className="p-5 flex justify-between">
+              <p className="pr-5 text-md">
+                <a className="underline text-graywhite-495 hover:text-white" href="https://www.ntu.edu.tw/">National Taiwan University</a>
+                , Taipei, Mechanical engineering, September 2011-July 2016.
+              </p>
+              <SwitchingImage
+                before={{
+                  src: ntu,
+                  alt: "ntuCompressed",
+                  className: "w-36 filter blur-2xl",
+                }}
+                after={{
+                  src: ntu,
+                  alt: "ntu",
+                  className: "w-36 transition-filter duration-2000 ease-out ",
+                }}
+              />
+            </div>
           </FadeInSection>
 
           <FadeInSection>
-            <p className="p-5 text-4xl font-gorgeous">My Skills</p>
+            <p className="p-5 text-4xl font-gorgeous">Experience</p>
+            <div className="p-5 flex justify-between">
+              <p className="pr-5 text-md">
+                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
+                  Chief Telecom
+                </a>{" "}
+                for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
+                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
+                  Chief Cloud
+                </a>
+                .
+              </p>
+              <SwitchingImage
+                before={{
+                  src: chief,
+                  alt: "ntuCompressed",
+                  className: "w-36 filter blur-2xl",
+                }}
+                after={{
+                  src: chief,
+                  alt: "ntu",
+                  className: "w-36 transition-filter duration-2000 ease-out ",
+                }}
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="p-5 text-4xl font-gorgeous">Skills</p>
             <p className="p-5 text-md">Here are my skills, just in case you're interested:</p>
           </FadeInSection>
 
