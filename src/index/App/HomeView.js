@@ -129,12 +129,12 @@ const Home = () => {
 
           <FadeInSection>
             <p className="p-5 text-4xl font-gorgeous">Education</p>
-            <div className="p-5 flex justify-between">
-              <p className="pr-5 text-md">
+            <div className="p-5 grid grid-cols-12">
+              <p className="col-span-9 text-md pr-2">
                 <a className="underline text-graywhite-495 hover:text-white" href="https://www.ntu.edu.tw/">National Taiwan University</a>
                 , Taipei, Mechanical engineering, September 2011-July 2016.
               </p>
-              <div className="w-24 h-auto mx-3">
+              <div className="col-span-3 p-4">
                 <SwitchingImage
                   before={{
                     src: ntuCompressed,
@@ -153,31 +153,31 @@ const Home = () => {
 
           <FadeInSection>
             <p className="p-5 text-4xl font-gorgeous">Experience</p>
-            <div className="p-5 flex justify-between">
-              <p className="pr-5 text-md">
-                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
-                  Chief Telecom
-                </a>{" "}
-                for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
-                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
-                  Chief Cloud
-                </a>
-                .
-              </p>
-              <div className="w-64 h-auto">
-                <SwitchingImage
-                  before={{
-                    src: chiefCompressed,
-                    alt: "chiefCompressed",
-                    className: "filter blur-1xl",
-                  }}
-                  after={{
-                    src: chief,
-                    className: "transition-filter duration-2000 ease-out ",
-                  }}
-                />
+              <div className="p-5 grid grid-cols-12">
+                <p className="col-span-9 text-md pr-2">
+                  <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
+                    Chief Telecom
+                  </a>{" "}
+                  for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
+                  <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline text-graywhite-495 hover:text-white">
+                    Chief Cloud
+                  </a>
+                  .
+                </p>
+                <div className="col-span-3">
+                  <SwitchingImage
+                    before={{
+                      src: chiefCompressed,
+                      alt: "chiefCompressed",
+                      className: "filter blur-1xl",
+                    }}
+                    after={{
+                      src: chief,
+                      className: "transition-filter duration-2000 ease-out",
+                    }}
+                  />
+                </div>
               </div>
-            </div>
           </FadeInSection>
 
           <FadeInSection>
