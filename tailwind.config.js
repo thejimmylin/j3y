@@ -85,6 +85,7 @@ module.exports = {
         "fadein-1000-1800": "fadein 1000ms 1800ms ease-in-out 1 both",
         "fadein-1000-1850": "fadein 1000ms 1850ms ease-in-out 1 both",
         "fadein-1000-1900": "fadein 1000ms 1900ms ease-in-out 1 both",
+        "fadein-2000-1500": "fadein 2000ms 1500ms ease-in-out 1 both",
       },
     },
   },
