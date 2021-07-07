@@ -134,18 +134,20 @@ const Home = () => {
                 <a className="underline text-graywhite-495 hover:text-white" href="https://www.ntu.edu.tw/">National Taiwan University</a>
                 , Taipei, Mechanical engineering, September 2011-July 2016.
               </p>
-              <SwitchingImage
-                before={{
-                  src: ntuCompressed,
-                  alt: "ntuCompressed",
-                  className: "w-24 h-auto mx-4 filter blur-1xl",
-                }}
-                after={{
-                  src: ntu,
-                  alt: "ntu",
-                  className: "w-24 h-auto mx-4 transition-filter duration-2000 ease-out ",
-                }}
-              />
+              <div className="w-24 h-auto mx-3">
+                <SwitchingImage
+                  before={{
+                    src: ntuCompressed,
+                    alt: "ntuCompressed",
+                    className: "filter blur-1xl",
+                  }}
+                  after={{
+                    src: ntu,
+                    alt: "ntu",
+                    className: "transition-filter duration-2000 ease-out",
+                  }}
+                />
+              </div>
             </div>
           </FadeInSection>
 
@@ -162,17 +164,19 @@ const Home = () => {
                 </a>
                 .
               </p>
-              <SwitchingImage
-                before={{
-                  src: chiefCompressed,
-                  alt: "chiefCompressed",
-                  className: "w-36 h-auto filter blur-1xl",
-                }}
-                after={{
-                  src: chief,
-                  className: "w-36 h-auto transition-filter duration-2000 ease-out ",
-                }}
-              />
+              <div className="w-64 h-auto">
+                <SwitchingImage
+                  before={{
+                    src: chiefCompressed,
+                    alt: "chiefCompressed",
+                    className: "filter blur-1xl",
+                  }}
+                  after={{
+                    src: chief,
+                    className: "transition-filter duration-2000 ease-out ",
+                  }}
+                />
+              </div>
             </div>
           </FadeInSection>
 
