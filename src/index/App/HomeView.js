@@ -71,20 +71,11 @@ const Home = () => {
             <span className="animate-fadein-1000-650">.</span>
           </p>
           <p className="text-xs text-center">
-            <span className="animate-fadein-1000-1400">Welcome</span>
-            <span className="animate-fadein-1000-1450"> </span>
-            <span className="animate-fadein-1000-1500">to</span>
-            <span className="animate-fadein-1000-1550"> </span>
-            <span className="animate-fadein-1000-1600">my</span>
-            <span className="animate-fadein-1000-1650"> </span>
-            <span className="animate-fadein-1000-1700">personal</span>
-            <span className="animate-fadein-1000-1750"> </span>
-            <span className="animate-fadein-1000-1800">page</span>
-            <span className="animate-fadein-1000-1850">.</span>
+            <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
           </p>
         </div>
         <div className="absolute right-8 top-5 h-12 flex align-top">
-          <a href="https://github.com/j3ygithub/j3y" target="_blank" rel="noreferrer"  className="bg-graywhite-693 hover:bg-white flex items-center px-4 mr-3 animate-fadein-1000-900">
+          <a href="https://github.com/j3ygithub/j3y" target="_blank" rel="noreferrer"  className="rounded bg-graywhite-693 hover:bg-white flex items-center px-4 mr-3 animate-fadein-1000-900">
             <span className="mr-1">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
@@ -94,7 +85,7 @@ const Home = () => {
           </a>
           <button
               onClick={scrollToContactMe}
-              className="block w-28 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 px-4 py-1.5 animate-fadein-1000-800"
+              className="rounded block w-28 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 px-4 py-1.5 animate-fadein-1000-800"
           >
             Contact
           </button>
