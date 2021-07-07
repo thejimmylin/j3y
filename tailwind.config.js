@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       inset: {
         "2/5": "40%",
+        "4/5": "80%",
       },
       colors: {
         graywhite: {
