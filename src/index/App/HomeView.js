@@ -62,7 +62,7 @@ const Home = () => {
             <span className="animate-fadein-1000-650">.</span>
           </p>
           <p className="text-xs text-center">
-            <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
+            <span className="animate-fadein-2000-1500">Welcome to my personal website.</span>
           </p>
         </div>
         <div className="absolute right-8 top-5 h-12 flex align-top">
