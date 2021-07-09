@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 
-/**A Wrapper that wrap its children with a `div` and makes them fade in. */
+/**
+ * This component wraps its `children` with a `div`.
+ */
 const FadeinWrapper = ({ children }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
