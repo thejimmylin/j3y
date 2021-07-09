@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
-const FadeInSection = (props) => {
+/**A Wrapper that wrap its children with a `div` and makes them fade in. */
+const FadeinWrapper = ({ children }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
   useEffect(() => {
@@ -16,9 +17,9 @@ const FadeInSection = (props) => {
       }`}
       ref={ref}
     >
-      {props.children}
+      {children}
     </div>
   );
 };
 
-export default FadeInSection;
+export default FadeinWrapper;
