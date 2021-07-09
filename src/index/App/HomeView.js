@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import wall from "./HomeView/wall-1440x810.jpg";
-import wallCompressed from "./HomeView/wall-144x81-compressed.jpg";
-import avatarCompressed from "./HomeView/avatar-144x144-compressed.jpg";
+import wallCompressed from "./HomeView/wall-144x81.jpg";
 import avatar from "./HomeView/avatar-1440x1440.jpg";
-import FadeInSection from "./HomeView/FadeInSection";
-import SwitchingImage from "./HomeView/SwitchingImage";
+import avatarCompressed from "./HomeView/avatar-144x144.jpg";
 import ntu from "./HomeView/ntu-360x360.png"
 import ntuCompressed from "./HomeView/ntu-36x36.png"
 import chief from "./HomeView/chief-500x300.png"
 import chiefCompressed from "./HomeView/chief-50x30.png"
+import FadeinWrapper from "./HomeView/FadeinWrapper";
+import SwitchingImage from "./HomeView/SwitchingImage";
 
 const Home = () => {
   const [state, setState] = useState({ y: window.scrollY });
@@ -104,7 +104,7 @@ const Home = () => {
 
       <main className="py-20 content font-pretty bg-graywhite-99 text-graywhite-594">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
-          <FadeInSection>
+          <FadeinWrapper>
             <SwitchingImage
               before={{
                 src: avatarCompressed,
@@ -117,16 +117,16 @@ const Home = () => {
                 className: "w-full p-5 transition duration-1000 ease-out rounded-3xl",
               }}
             />
-          </FadeInSection>
+          </FadeinWrapper>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p className="p-5 text-4xl font-gorgeous">Hello world</p>
             <p className="p-5 text-md">
               I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.
             </p>
-          </FadeInSection>
+          </FadeinWrapper>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p className="p-5 text-4xl font-gorgeous">Education</p>
             <div className="p-5 grid grid-cols-12">
               <p className="col-span-9 text-md pr-2">
@@ -148,9 +148,9 @@ const Home = () => {
                 />
               </div>
             </div>
-          </FadeInSection>
+          </FadeinWrapper>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p className="p-5 text-4xl font-gorgeous">Experience</p>
               <div className="p-5 grid grid-cols-12">
                 <p className="col-span-9 text-md pr-2">
@@ -177,15 +177,15 @@ const Home = () => {
                   />
                 </div>
               </div>
-          </FadeInSection>
+          </FadeinWrapper>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p className="p-5 text-4xl font-gorgeous">Skills</p>
             <p className="p-5 text-md">Here are my skills, just in case you're interested:</p>
-          </FadeInSection>
+          </FadeinWrapper>
 
           <div className="ml-5 mb-5">
-            <FadeInSection>
+            <FadeinWrapper>
               <p className="p-5 text-2xl font-gorgeous">Language</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Python</li>
@@ -193,9 +193,9 @@ const Home = () => {
                 <li className="ml-5">- CSS</li>
                 <li className="ml-5">- JavaScript</li>
               </ul>
-            </FadeInSection>
+            </FadeinWrapper>
 
-            <FadeInSection>
+            <FadeinWrapper>
               <p className="p-5 text-2xl font-gorgeous">DB</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- MSSQL</li>
@@ -203,9 +203,9 @@ const Home = () => {
                 <li className="ml-5">- MariaDB</li>
                 <li className="ml-5">- PostgreSQL</li>
               </ul>
-            </FadeInSection>
+            </FadeinWrapper>
 
-            <FadeInSection>
+            <FadeinWrapper>
               <p className="p-5 text-2xl font-gorgeous">Framework</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Django</li>
@@ -214,9 +214,9 @@ const Home = () => {
                 <li className="ml-5">- React.js</li>
                 <li className="ml-5">- Tailwind CSS</li>
               </ul>
-            </FadeInSection>
+            </FadeinWrapper>
 
-            <FadeInSection>
+            <FadeinWrapper>
               <p className="p-5 text-2xl font-gorgeous">Development</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Git</li>
@@ -224,18 +224,18 @@ const Home = () => {
                 <li className="ml-5">- Docker</li>
                 <li className="ml-5">- GCP</li>
               </ul>
-            </FadeInSection>
+            </FadeinWrapper>
 
-            <FadeInSection>
+            <FadeinWrapper>
               <p className="p-5 text-2xl font-gorgeous">Other</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Cisco Command</li>
                 <li className="ml-5">- FortiOS Command</li>
               </ul>
-            </FadeInSection>
+            </FadeinWrapper>
           </div>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p ref={refContactMe} className="p-5 text-4xl font-gorgeous">Contact</p>
             <p className="p-5 text-md">
               Contact me with <a href="mailto:b00502013@gmail.com" className="underline text-graywhite-495 hover:text-white">Email</a> or{" "}
@@ -244,9 +244,9 @@ const Home = () => {
               </a>
               .
             </p>
-          </FadeInSection>
+          </FadeinWrapper>
 
-          <FadeInSection>
+          <FadeinWrapper>
             <p className="p-5 pb-10 flex">
               <a href="https://github.com/j3ygithub" target="_blank" rel="noreferrer" className="pr-4 underline text-graywhite-495 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -279,7 +279,7 @@ const Home = () => {
                 </svg>
               </a>
             </p>
-          </FadeInSection>
+          </FadeinWrapper>
         </div>
       </main>
 
