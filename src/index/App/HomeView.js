@@ -11,7 +11,7 @@ import FadeinWrapper from "./HomeView/FadeinWrapper";
 import ProgressiveImgWrapper from "./HomeView/ProgressiveImgWrapper";
 
 const Home = () => {
-  const [state, setState] = useState({ y: window.scrollY });
+  const [state, setState] = useState({ y: window.scrollY, isDark: false });
 
   const handleScroll = () => {
     setState({ ...state, y: window.scrollY });
@@ -34,6 +34,10 @@ const Home = () => {
   const refContactMe = useRef(null);
   const scrollToContactMe = () => {
     refContactMe.current.scrollIntoView();
+  };
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("dark");
+    setState({...state, isDark: !(state.isDark)})
   };
 
   return (
@@ -59,8 +63,8 @@ const Home = () => {
             />
           </ProgressiveImgWrapper>
         </div>
-        <div className="absolute text-graywhite-693 hover:text-white  transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
-          <p className="mb-4 text-5xl">
+        <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
+          <p className="mb-4 text-5xl text-graywhite-693 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -76,40 +80,71 @@ const Home = () => {
             <span className="animate-fadein-1000-600">n</span>
             <span className="animate-fadein-1000-650">.</span>
           </p>
-          <p className="text-xs text-center">
+          <p className="mb-16 text-xs text-center text-graywhite-693 hover:text-white">
             <span className="animate-fadein-2000-1500">
               Welcome to my personal website.
             </span>
           </p>
-        </div>
-        <div className="absolute right-8 top-5 h-12 flex align-top">
-          <a
-            href="https://github.com/j3ygithub/j3y"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-graywhite-693 hover:bg-white flex items-center px-4 mr-3 animate-fadein-1000-900"
-          >
-            <span className="mr-1 text-2xl">
-              <i class="bi bi-github"></i>
-            </span>
-            Github
-          </a>
-          <button
-            onClick={scrollToContactMe}
-            className="block w-28 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 px-4 py-1.5 animate-fadein-1000-800"
-          >
-            Contact
-          </button>
+          <div className="flex">
+            <a
+              href="https://github.com/j3ygithub/j3y"
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 m-1 w-32 h-12 bg-graywhite-693 hover:bg-white flex items-center animate-fadein-1000-900"
+            >
+              <span className="mr-1 text-2xl">
+                <i className="bi bi-github"></i>
+              </span>
+              Github
+            </a>
+            <button
+              onClick={scrollToContactMe}
+              className="px-4 m-1 w-32 h-12 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 animate-fadein-1000-800"
+            >
+              Contact
+            </button>
+          </div>
         </div>
         <div className="absolute left-1/2 top-4/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-          <span onClick={scrollToAboutMe} className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5">
-            <i class="bi bi-chevron-compact-down"></i>
+          <span
+            onClick={scrollToAboutMe}
+            className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+          >
+            <i className="bi bi-chevron-compact-down"></i>
+          </span>
+        </div>
+        <div className="absolute right-8 top-5 h-12 flex align-top">
+          <div className="self-center animate-fadein-1000-700 flex items-center">
+            <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+              <input
+                type="checkbox"
+                name="toggle"
+                id="toggle"
+                className="focus:outline-none checked:right-0 checked:bg-graywhite-198 absolute block w-6 h-6 rounded-full bg-white border-4 border-graywhite-594 appearance-none cursor-pointer"
+                onClick={toggleDarkMode}
+              />
+              <label
+                htmlFor="toggle"
+                className="block overflow-hidden h-6 rounded-full bg-graywhite-594 cursor-pointer"
+              ></label>
+            </div>
+            <label htmlFor="toggle" className="text-white text-xl">
+              {state.isDark ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-fill"></i>}
+            </label>
+          </div>
+        </div>
+        <div className="absolute left-1/2 top-4/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <span
+            onClick={scrollToAboutMe}
+            className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+          >
+            <i className="bi bi-chevron-compact-down"></i>
           </span>
         </div>
       </header>
 
-      <main className="py-20 content font-pretty bg-graywhite-99 text-graywhite-594">
-        <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto bg-graywhite-105">
+      <main className="py-20 content font-pretty text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693">
+        <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto bg-graywhite-105 dark:bg-graywhite-660">
           <FadeinWrapper>
             <ProgressiveImgWrapper
               thumbnail={
@@ -141,7 +176,7 @@ const Home = () => {
             <div className="p-5 grid grid-cols-12">
               <p className="col-span-9 text-md pr-2">
                 <a
-                  className="underline text-graywhite-495 hover:text-white"
+                  className="underline hover:text-white dark:hover:text-graywhite-396"
                   href="https://www.ntu.edu.tw/"
                 >
                   National Taiwan University
@@ -176,7 +211,7 @@ const Home = () => {
                   href="https://www.chief.com.tw"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline text-graywhite-495 hover:text-white"
+                  className="underline hover:text-white dark:hover:text-graywhite-396"
                 >
                   Chief Telecom
                 </a>{" "}
@@ -186,7 +221,7 @@ const Home = () => {
                   href="https://www.chief.com.tw/cloud/"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline text-graywhite-495 hover:text-white"
+                  className="underline hover:text-white dark:hover:text-graywhite-396"
                 >
                   Chief Cloud
                 </a>
@@ -278,7 +313,7 @@ const Home = () => {
               Contact me with{" "}
               <a
                 href="mailto:b00502013@gmail.com"
-                className="underline text-graywhite-495 hover:text-white"
+                className="underline hover:text-white dark:hover:text-graywhite-396"
               >
                 Email
               </a>{" "}
@@ -287,7 +322,7 @@ const Home = () => {
                 href="https://www.cakeresume.com/b00502013"
                 target="_blank"
                 rel="noreferrer"
-                className="underline text-graywhite-495 hover:text-white"
+                className="underline hover:text-white dark:hover:text-graywhite-396"
               >
                 cakeresume
               </a>
@@ -301,48 +336,48 @@ const Home = () => {
                 href="https://github.com/j3ygithub"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline text-graywhite-495 hover:text-white"
+                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
               >
-                <i class="bi bi-github"></i>
+                <i className="bi bi-github"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline text-graywhite-495 hover:text-white"
+                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
               >
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </a>
               <a
                 href="https://www.instagram.com/j3y.ig/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline text-graywhite-495 hover:text-white"
+                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
               >
-                <i class="bi bi-instagram"></i>
+                <i className="bi bi-instagram"></i>
               </a>
               <a
                 href="https://www.facebook.com/j3y.fb"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline text-graywhite-495 hover:text-white"
+                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
               >
-                <i class="bi bi-facebook"></i>
+                <i className="bi bi-facebook"></i>
               </a>
               <a
                 href="https://twitter.com/j3ytweeting"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline text-graywhite-495 hover:text-white"
+                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
               >
-                <i class="bi bi-twitter"></i>
+                <i className="bi bi-twitter"></i>
               </a>
             </p>
           </FadeinWrapper>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center h-12 bg-graywhite-99 text-graywhite-693 footer font-pretty">
+      <footer className="flex items-center justify-center h-12 font-pretty text-graywhite-693 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693">
         <div className="max-w-screen-sm mx-auto text-md text-center">
           © 2021 All rights reserved.
         </div>

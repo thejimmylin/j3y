@@ -1,7 +1,7 @@
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class",
   theme: {
     fontFamily: {
       gorgeous: ["poppins", "serif"],
@@ -72,6 +72,7 @@ module.exports = {
         "fadein-1000-550": "fadein 1000ms 550ms ease-in-out 1 both",
         "fadein-1000-600": "fadein 1000ms 600ms ease-in-out 1 both",
         "fadein-1000-650": "fadein 1000ms 650ms ease-in-out 1 both",
+        "fadein-1000-700": "fadein 1000ms 700ms ease-in-out 1 both",
         "fadein-1000-800": "fadein 1000ms 800ms ease-in-out 1 both",
         "fadein-1000-900": "fadein 1000ms 900ms ease-in-out 1 both",
         "fadein-1000-1400": "fadein 1000ms 1400ms ease-in-out 1 both",
