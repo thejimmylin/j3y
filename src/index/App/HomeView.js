@@ -90,7 +90,7 @@ const Home = () => {
               href="https://github.com/j3ygithub/j3y"
               target="_blank"
               rel="noreferrer"
-              className="px-4 m-1 w-32 h-12 bg-graywhite-693 hover:bg-white flex items-center animate-fadein-1000-900"
+              className="m-1 w-32 h-12 bg-graywhite-693 hover:bg-white flex justify-center items-center animate-fadein-1000-900"
             >
               <span className="mr-1 text-2xl">
                 <i className="bi bi-github"></i>
@@ -99,7 +99,7 @@ const Home = () => {
             </a>
             <button
               onClick={scrollToContactMe}
-              className="px-4 m-1 w-32 h-12 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 animate-fadein-1000-800"
+              className="m-1 w-32 h-12 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 animate-fadein-1000-800"
             >
               Contact
             </button>
@@ -120,7 +120,7 @@ const Home = () => {
                 type="checkbox"
                 name="toggle"
                 id="toggle"
-                className="focus:outline-none checked:right-0 checked:bg-graywhite-198 absolute block w-6 h-6 rounded-full bg-white border-4 border-graywhite-594 appearance-none cursor-pointer"
+                className="focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white absolute block w-6 h-6 rounded-full border-4 border-graywhite-594 appearance-none cursor-pointer"
                 onClick={toggleDarkMode}
               />
               <label
@@ -144,7 +144,7 @@ const Home = () => {
       </header>
 
       <main className="py-20 content font-pretty text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693">
-        <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto bg-graywhite-105 dark:bg-graywhite-660">
+        <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
             <ProgressiveImgWrapper
               thumbnail={
