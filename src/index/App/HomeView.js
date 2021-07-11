@@ -44,6 +44,11 @@ const Home = () => {
     <>
       <header className="relative h-screen font-pretty">
         <div
+          className="absolute w-full h-screen bg-graywhite-99 z-20"
+          style={{ opacity: `${state.y / window.innerHeight * 100}%` }}
+        >
+        </div>
+        <div
           className="absolute w-full h-screen bg-graywhite-99 -z-10"
           style={{ transform: `translateY(${state.y / 2}px)` }}
         >
