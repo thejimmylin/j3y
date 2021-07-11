@@ -44,12 +44,12 @@ const Home = () => {
     <>
       <header className="relative h-screen font-pretty">
         <div
-          className="absolute w-full h-screen bg-graywhite-99 z-20"
+          className="absolute w-full h-screen bg-graywhite-99"
           style={{ opacity: `${state.y / window.innerHeight * 100}%` }}
         >
         </div>
         <div
-          className="absolute w-full h-screen bg-graywhite-99 -z-10"
+          className="absolute -z-10 w-full h-screen bg-graywhite-99"
           style={{ transform: `translateY(${state.y / 2}px)` }}
         >
           <ProgressiveImgWrapper
@@ -68,7 +68,27 @@ const Home = () => {
             />
           </ProgressiveImgWrapper>
         </div>
-        <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 font-gorgeous whitespace-nowrap">
+        <div className="absolute right-8 top-5 h-12">
+          <div className="self-center animate-fadein-1000-700 flex items-center">
+            <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+              <input
+                type="checkbox"
+                name="toggle"
+                id="toggle"
+                className="focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white absolute block w-6 h-6 rounded-full border-4 border-graywhite-594 appearance-none cursor-pointer"
+                onClick={toggleDarkMode}
+              />
+              <label
+                htmlFor="toggle"
+                className="block overflow-hidden h-6 rounded-full bg-graywhite-594 cursor-pointer"
+              ></label>
+            </div>
+            <label htmlFor="toggle" className="text-white text-xl">
+              {state.isDark ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-fill"></i>}
+            </label>
+          </div>
+        </div>
+        <div className="absolute left-1/2 top-2/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center whitespace-nowrap">
           <p className="mb-4 text-5xl text-graywhite-693 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
@@ -118,37 +138,9 @@ const Home = () => {
             <i className="bi bi-chevron-compact-down"></i>
           </span>
         </div>
-        <div className="absolute right-8 top-5 h-12 flex align-top">
-          <div className="self-center animate-fadein-1000-700 flex items-center">
-            <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
-              <input
-                type="checkbox"
-                name="toggle"
-                id="toggle"
-                className="focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white absolute block w-6 h-6 rounded-full border-4 border-graywhite-594 appearance-none cursor-pointer"
-                onClick={toggleDarkMode}
-              />
-              <label
-                htmlFor="toggle"
-                className="block overflow-hidden h-6 rounded-full bg-graywhite-594 cursor-pointer"
-              ></label>
-            </div>
-            <label htmlFor="toggle" className="text-white text-xl">
-              {state.isDark ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-fill"></i>}
-            </label>
-          </div>
-        </div>
-        <div className="absolute left-1/2 top-4/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-          <span
-            onClick={scrollToAboutMe}
-            className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
-          >
-            <i className="bi bi-chevron-compact-down"></i>
-          </span>
-        </div>
       </header>
 
-      <main className="py-20 content font-pretty text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693">
+      <main className="py-20 text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693 font-pretty">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
             <ProgressiveImgWrapper
@@ -169,7 +161,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl font-gorgeous">Hello world</p>
+            <p className="p-5 text-4xl">Hello world</p>
             <p className="p-5 text-md">
               I'm Jimmy. I love programming. I like to create things and programming
               gives me the chance to do so.
@@ -177,7 +169,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl font-gorgeous">Education</p>
+            <p className="p-5 text-4xl">Education</p>
             <div className="p-5 grid grid-cols-12">
               <p className="col-span-9 text-md pr-2">
                 <a
@@ -209,7 +201,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl font-gorgeous">Experience</p>
+            <p className="p-5 text-4xl">Experience</p>
             <div className="p-5 grid grid-cols-12">
               <p className="col-span-9 text-md pr-2">
                 <a
@@ -253,7 +245,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl font-gorgeous">Skills</p>
+            <p className="p-5 text-4xl">Skills</p>
             <p className="p-5 text-md">
               Here are my skills, just in case you're interested:
             </p>
@@ -261,7 +253,7 @@ const Home = () => {
 
           <div className="ml-5 mb-5">
             <FadeinWrapper>
-              <p className="p-5 text-2xl font-gorgeous">Language</p>
+              <p className="p-5 text-2xl">Language</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Python</li>
                 <li className="ml-5">- HTML</li>
@@ -271,7 +263,7 @@ const Home = () => {
             </FadeinWrapper>
 
             <FadeinWrapper>
-              <p className="p-5 text-2xl font-gorgeous">DB</p>
+              <p className="p-5 text-2xl">DB</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- MSSQL</li>
                 <li className="ml-5">- MySQL</li>
@@ -281,7 +273,7 @@ const Home = () => {
             </FadeinWrapper>
 
             <FadeinWrapper>
-              <p className="p-5 text-2xl font-gorgeous">Framework</p>
+              <p className="p-5 text-2xl">Framework</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Django</li>
                 <li className="ml-5">- Django REST Framework</li>
@@ -292,7 +284,7 @@ const Home = () => {
             </FadeinWrapper>
 
             <FadeinWrapper>
-              <p className="p-5 text-2xl font-gorgeous">Development</p>
+              <p className="p-5 text-2xl">Development</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Git</li>
                 <li className="ml-5">- Linux</li>
@@ -302,7 +294,7 @@ const Home = () => {
             </FadeinWrapper>
 
             <FadeinWrapper>
-              <p className="p-5 text-2xl font-gorgeous">Other</p>
+              <p className="p-5 text-2xl">Other</p>
               <ul className="pl-5 text-md">
                 <li className="ml-5">- Cisco Command</li>
                 <li className="ml-5">- FortiOS Command</li>
@@ -311,7 +303,7 @@ const Home = () => {
           </div>
 
           <FadeinWrapper>
-            <p ref={refContactMe} className="p-5 text-4xl font-gorgeous">
+            <p ref={refContactMe} className="p-5 text-4xl">
               Contact
             </p>
             <p className="p-5 text-md">

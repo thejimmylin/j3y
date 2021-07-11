@@ -4,7 +4,6 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      gorgeous: ["poppins", "serif"],
       pretty: ["poppins", "sans-serif"],
     },
     extend: {
@@ -43,7 +42,6 @@ module.exports = {
       },
       zIndex: {
         "-10": "-10",
-        "-20": "-20",
       },
       transitionProperty: {
         filter: "filter",
