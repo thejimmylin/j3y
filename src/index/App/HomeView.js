@@ -11,10 +11,10 @@ import FadeinWrapper from "./HomeView/FadeinWrapper";
 import ProgressiveImgWrapper from "./HomeView/ProgressiveImgWrapper";
 
 const Home = () => {
-  const [state, setState] = useState({ y: window.scrollY, isDark: false });
+  const [state, setState] = useState({ scrollY: window.scrollY, isDark: true });
 
   const handleScroll = () => {
-    setState({ ...state, y: window.scrollY });
+    setState({ ...state, scrollY: window.scrollY });
   };
   const addHandleScroll = () => {
     window.addEventListener("scroll", handleScroll);
@@ -37,20 +37,30 @@ const Home = () => {
   };
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
-    setState({...state, isDark: !(state.isDark)})
+    setState({ ...state, isDark: !state.isDark });
+  };
+  const getFilterStyle = () => {
+    if (state.isDark) {
+      console.log(state.isDark)
+      return {
+        backgroundColor: "rgb(33, 33, 33)",
+        opacity: `${state.scrollY / window.innerHeight * 100}%`
+      }
+    } else {
+      return {
+        backgroundColor: "rgb(220, 220, 220)",
+        opacity: `${10 + state.scrollY / window.innerHeight * 90}%`
+      }
+    }
   };
 
   return (
     <>
       <header className="relative h-screen font-pretty">
-        <div
-          className="absolute w-full h-screen bg-graywhite-99"
-          style={{ opacity: `${state.y / window.innerHeight * 100}%` }}
-        >
-        </div>
+        <div className="absolute w-full h-screen" style={getFilterStyle()}></div>
         <div
           className="absolute -z-10 w-full h-screen bg-graywhite-99"
-          style={{ transform: `translateY(${state.y / 2}px)` }}
+          style={{ transform: `translateY(${state.scrollY / 2}px)` }}
         >
           <ProgressiveImgWrapper
             thumbnail={
@@ -84,12 +94,16 @@ const Home = () => {
               ></label>
             </div>
             <label htmlFor="toggle" className="text-white text-xl">
-              {state.isDark ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-fill"></i>}
+              {state.isDark ? (
+                <i className="bi bi-moon-fill"></i>
+              ) : (
+                <i className="bi bi-sun-fill"></i>
+              )}
             </label>
           </div>
         </div>
         <div className="absolute left-1/2 top-2/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center whitespace-nowrap">
-          <p className="mb-4 text-5xl text-graywhite-693 hover:text-white">
+          <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -105,7 +119,7 @@ const Home = () => {
             <span className="animate-fadein-1000-600">n</span>
             <span className="animate-fadein-1000-650">.</span>
           </p>
-          <p className="mb-16 text-xs text-center text-graywhite-693 hover:text-white">
+          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
             <span className="animate-fadein-2000-1500">
               Welcome to my personal website.
             </span>
@@ -115,7 +129,7 @@ const Home = () => {
               href="https://github.com/j3ygithub/j3y"
               target="_blank"
               rel="noreferrer"
-              className="m-1 w-32 h-12 bg-graywhite-693 hover:bg-white flex justify-center items-center animate-fadein-1000-900"
+              className="m-1 w-32 h-12 bg-graywhite-660 hover:bg-white flex justify-center items-center animate-fadein-1000-900"
             >
               <span className="mr-1 text-2xl">
                 <i className="bi bi-github"></i>
@@ -124,7 +138,7 @@ const Home = () => {
             </a>
             <button
               onClick={scrollToContactMe}
-              className="m-1 w-32 h-12 focus:outline-none text-graywhite-693 hover:text-white border-graywhite-693 hover:border-white text-md border-2 animate-fadein-1000-800"
+              className="m-1 w-32 h-12 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md border-2 animate-fadein-1000-800"
             >
               Contact
             </button>
@@ -140,7 +154,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main className="py-20 text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693 font-pretty">
+      <main className="py-20 text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660 font-pretty">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
             <ProgressiveImgWrapper
@@ -374,7 +388,7 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="flex items-center justify-center h-12 font-pretty text-graywhite-693 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-693">
+      <footer className="flex items-center justify-center h-12 font-pretty text-graywhite-660 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660">
         <div className="max-w-screen-sm mx-auto text-md text-center">
           © 2021 All rights reserved.
         </div>
