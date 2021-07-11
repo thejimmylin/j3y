@@ -9,6 +9,7 @@ import chief from "./HomeView/chief-500x300.png";
 import chiefCompressed from "./HomeView/chief-50x30.png";
 import FadeinWrapper from "./HomeView/FadeinWrapper";
 import ProgressiveImgWrapper from "./HomeView/ProgressiveImgWrapper";
+import LightFilter from "./HomeView/LightFilter";
 
 const Home = () => {
   const [state, setState] = useState({ scrollY: window.scrollY, isDark: true });
@@ -39,25 +40,10 @@ const Home = () => {
     document.documentElement.classList.toggle("dark");
     setState({ ...state, isDark: !state.isDark });
   };
-  const getFilterStyle = () => {
-    if (state.isDark) {
-      console.log(state.isDark)
-      return {
-        backgroundColor: "rgb(33, 33, 33)",
-        opacity: `${state.scrollY / window.innerHeight * 100}%`
-      }
-    } else {
-      return {
-        backgroundColor: "rgb(220, 220, 220)",
-        opacity: `${10 + state.scrollY / window.innerHeight * 90}%`
-      }
-    }
-  };
-
   return (
     <>
       <header className="relative h-screen font-pretty">
-        <div className="absolute w-full h-screen" style={getFilterStyle()}></div>
+        <LightFilter scrollY={state.scrollY} isDark={state.isDark} />
         <div
           className="absolute -z-10 w-full h-screen bg-graywhite-99"
           style={{ transform: `translateY(${state.scrollY / 2}px)` }}
