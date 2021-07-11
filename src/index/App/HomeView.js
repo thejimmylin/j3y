@@ -45,7 +45,7 @@ const Home = () => {
       <header className="relative h-screen font-pretty">
         <LightFilter scrollY={state.scrollY} isDark={state.isDark} />
         <div
-          className="absolute -z-10 w-full h-screen bg-graywhite-99"
+          className="absolute w-full h-screen -z-10 bg-graywhite-99"
           style={{ transform: `translateY(${state.scrollY / 2}px)` }}
         >
           <ProgressiveImgWrapper
@@ -60,26 +60,26 @@ const Home = () => {
             <img
               src={wall}
               alt="wall"
-              className="object-cover w-full h-screen transition-filter duration-2000 ease-out"
+              className="object-cover w-full h-screen ease-out transition-filter duration-2000"
             />
           </ProgressiveImgWrapper>
         </div>
-        <div className="absolute right-8 top-5 h-12">
-          <div className="self-center animate-fadein-1000-700 flex items-center">
-            <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+        <div className="absolute h-12 right-8 top-5">
+          <div className="flex items-center self-center animate-fadein-1000-700">
+            <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
               <input
                 type="checkbox"
                 name="toggle"
                 id="toggle"
-                className="focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white absolute block w-6 h-6 rounded-full border-4 border-graywhite-594 appearance-none cursor-pointer"
+                className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white border-graywhite-594"
                 onClick={toggleDarkMode}
               />
               <label
                 htmlFor="toggle"
-                className="block overflow-hidden h-6 rounded-full bg-graywhite-594 cursor-pointer"
+                className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
               ></label>
             </div>
-            <label htmlFor="toggle" className="text-white text-xl">
+            <label htmlFor="toggle" className="text-xl text-white">
               {state.isDark ? (
                 <i className="bi bi-moon-fill"></i>
               ) : (
@@ -88,7 +88,7 @@ const Home = () => {
             </label>
           </div>
         </div>
-        <div className="absolute left-1/2 top-2/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center whitespace-nowrap">
+        <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
           <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
@@ -115,7 +115,7 @@ const Home = () => {
               href="https://github.com/j3ygithub/j3y"
               target="_blank"
               rel="noreferrer"
-              className="m-1 w-32 h-12 bg-graywhite-660 hover:bg-white flex justify-center items-center animate-fadein-1000-900"
+              className="flex items-center justify-center w-32 h-12 m-1 bg-graywhite-660 hover:bg-white animate-fadein-1000-900"
             >
               <span className="mr-1 text-2xl">
                 <i className="bi bi-github"></i>
@@ -124,13 +124,13 @@ const Home = () => {
             </a>
             <button
               onClick={scrollToContactMe}
-              className="m-1 w-32 h-12 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md border-2 animate-fadein-1000-800"
+              className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
             >
               Contact
             </button>
           </div>
         </div>
-        <div className="absolute left-1/2 top-4/5 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+        <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
           <span
             onClick={scrollToAboutMe}
             className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main className="py-20 text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660 font-pretty">
+      <main className="py-20 font-light text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660 font-pretty">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
             <ProgressiveImgWrapper
@@ -155,7 +155,7 @@ const Home = () => {
               <img
                 src={avatar}
                 alt="avatar"
-                className="w-full p-5 rounded-3xl transition-filter duration-1000 ease-out"
+                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
               />
             </ProgressiveImgWrapper>
           </FadeinWrapper>
@@ -170,8 +170,8 @@ const Home = () => {
 
           <FadeinWrapper>
             <p className="p-5 text-4xl">Education</p>
-            <div className="p-5 grid grid-cols-12">
-              <p className="col-span-9 text-md pr-2">
+            <div className="grid grid-cols-12 p-5">
+              <p className="col-span-9 pr-2 text-md">
                 <a
                   className="underline hover:text-white dark:hover:text-graywhite-396"
                   href="https://www.ntu.edu.tw/"
@@ -193,7 +193,7 @@ const Home = () => {
                   <img
                     src={ntu}
                     alt="ntu"
-                    className="transition-filter duration-1000 ease-out"
+                    className="duration-1000 ease-out transition-filter"
                   />
                 </ProgressiveImgWrapper>
               </div>
@@ -202,8 +202,8 @@ const Home = () => {
 
           <FadeinWrapper>
             <p className="p-5 text-4xl">Experience</p>
-            <div className="p-5 grid grid-cols-12">
-              <p className="col-span-9 text-md pr-2">
+            <div className="grid grid-cols-12 p-5">
+              <p className="col-span-9 pr-2 text-md">
                 <a
                   href="https://www.chief.com.tw"
                   target="_blank"
@@ -237,7 +237,7 @@ const Home = () => {
                   <img
                     src={chief}
                     alt="chief"
-                    className="transition-filter duration-1000 ease-out"
+                    className="duration-1000 ease-out transition-filter"
                   />
                 </ProgressiveImgWrapper>
               </div>
@@ -251,7 +251,7 @@ const Home = () => {
             </p>
           </FadeinWrapper>
 
-          <div className="ml-5 mb-5">
+          <div className="mb-5 ml-5">
             <FadeinWrapper>
               <p className="p-5 text-2xl">Language</p>
               <ul className="pl-5 text-md">
@@ -307,33 +307,22 @@ const Home = () => {
               Contact
             </p>
             <p className="p-5 text-md">
-              Contact me with{" "}
               <a
-                href="mailto:b00502013@gmail.com"
+                href="mailto:contact@jimmylin.org"
                 className="underline hover:text-white dark:hover:text-graywhite-396"
               >
-                Email
-              </a>{" "}
-              or{" "}
-              <a
-                href="https://www.cakeresume.com/b00502013"
-                target="_blank"
-                rel="noreferrer"
-                className="underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                cakeresume
+                contact@jimmylin.org
               </a>
-              .
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 pb-10 flex">
+            <p className="flex p-5 pb-10">
               <a
                 href="https://github.com/j3ygithub"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
               >
                 <i className="bi bi-github"></i>
               </a>
@@ -341,7 +330,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
@@ -349,7 +338,7 @@ const Home = () => {
                 href="https://www.instagram.com/j3y.ig/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
               >
                 <i className="bi bi-instagram"></i>
               </a>
@@ -357,7 +346,7 @@ const Home = () => {
                 href="https://www.facebook.com/j3y.fb"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
               >
                 <i className="bi bi-facebook"></i>
               </a>
@@ -365,7 +354,7 @@ const Home = () => {
                 href="https://twitter.com/j3ytweeting"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl pr-4 underline hover:text-white dark:hover:text-graywhite-396"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
               >
                 <i className="bi bi-twitter"></i>
               </a>
@@ -375,7 +364,7 @@ const Home = () => {
       </main>
 
       <footer className="flex items-center justify-center h-12 font-pretty text-graywhite-660 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660">
-        <div className="max-w-screen-sm mx-auto text-md text-center">
+        <div className="max-w-screen-sm mx-auto text-center text-md">
           © 2021 All rights reserved.
         </div>
       </footer>
