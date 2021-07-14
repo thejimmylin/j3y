@@ -25,7 +25,6 @@ const Home = () => {
   };
   useEffect(() => {
     addHandleScroll();
-    document.documentElement.classList.add("dark");
     return removeHandleScroll;
   });
 
@@ -42,6 +41,9 @@ const Home = () => {
     document.documentElement.classList.toggle("dark");
     setState({ ...state, isDark: !state.isDark });
   };
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, [])
 
   return (
     <>
