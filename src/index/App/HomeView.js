@@ -72,7 +72,7 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
-          <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
+          <p className="mb-4 text-5xl text-graywhite-660 hover:text-graywhite-330">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -88,8 +88,8 @@ const Home = () => {
             <span className="animate-fadein-1000-600">n</span>
             <span className="animate-fadein-1000-650">.</span>
           </p>
-          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
-            <span className="animate-fadein-2000-1500">Welcome to my personal website.</span>
+          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-graywhite-330">
+            <span className="font-extralight animate-fadein-2000-1500">Welcome to my personal website.</span>
           </p>
           <div className="flex">
             <a
@@ -105,7 +105,7 @@ const Home = () => {
             </a>
             <button
               onClick={scrollToFooter}
-              className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
+              className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-graywhite-330 border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
             >
               Contact
             </button>
@@ -114,7 +114,7 @@ const Home = () => {
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
           <span
             onClick={scrollToAboutMe}
-            className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+            className="text-4xl text-graywhite-594 hover:text-graywhite-330 cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
           >
             <i className="bi bi-chevron-compact-down"></i>
           </span>
@@ -138,7 +138,7 @@ const Home = () => {
             <p className="p-5 text-4xl">Education</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
-                <a className="underline hover:text-white dark:hover:text-graywhite-396" href="https://www.ntu.edu.tw/">
+                <a className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396" href="https://www.ntu.edu.tw/">
                   National Taiwan University
                 </a>
                 , Taipei, Mechanical engineering, September 2011-July 2016.
@@ -155,11 +155,11 @@ const Home = () => {
             <p className="p-5 text-4xl">Experience</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
-                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline hover:text-white dark:hover:text-graywhite-396">
+                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
                   Chief Telecom
                 </a>{" "}
                 for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
-                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline hover:text-white dark:hover:text-graywhite-396">
+                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
                   Chief Cloud
                 </a>
                 .
@@ -230,21 +230,21 @@ const Home = () => {
         </div>
       </main>
 
-      <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-99 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
-        <div className="max-w-screen-sm p-12 mx-auto">
-          <p className="p-4 pb-8 text-6xl font-semibold">Jimmy Lin</p>
-          <p className="pb-4 pl-8 pr-4">
+      <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-198 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
+        <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
+          <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
+          <p className="pb-8 text-sm">
             E-mail:{" "}
-            <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
+            <a href="mailto:contact@jimmylin.org" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
               contact@jimmylin.org
             </a>
           </p>
-          <p className="pl-8 pr-4">
+          <p className="-mr-4">
             <a
               href="https://github.com/j3ygithub"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
             >
               <i className="bi bi-github"></i>
             </a>
@@ -252,7 +252,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
             >
               <i className="bi bi-linkedin"></i>
             </a>
@@ -260,7 +260,7 @@ const Home = () => {
               href="https://www.instagram.com/j3y.ig/"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
             >
               <i className="bi bi-instagram"></i>
             </a>
@@ -268,7 +268,7 @@ const Home = () => {
               href="https://www.facebook.com/j3y.fb"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
             >
               <i className="bi bi-facebook"></i>
             </a>
@@ -276,7 +276,7 @@ const Home = () => {
               href="https://twitter.com/j3ytweeting"
               target="_blank"
               rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
             >
               <i className="bi bi-twitter"></i>
             </a>
