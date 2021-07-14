@@ -230,7 +230,7 @@ const Home = () => {
         </div>
       </main>
 
-      <footer ref={refFooter} className="font-pretty text-graywhite-87 dark:text-graywhite-660 bg-graywhite-660 dark:bg-graywhite-87">
+      <footer ref={refFooter} className="font-pretty text-graywhite-99 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
         <div className="max-w-screen-sm p-12 mx-auto">
           <p className="p-4 pb-8 text-5xl">Jimmy Lin</p>
           <p className="px-4 pb-4">
