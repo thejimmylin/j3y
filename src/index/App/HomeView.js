@@ -44,24 +44,9 @@ const Home = () => {
     <>
       <header className="relative h-screen font-pretty">
         <LightFilter scrollY={state.scrollY} isDark={state.isDark} />
-        <div
-          className="absolute w-full h-screen -z-10 bg-graywhite-99"
-          style={{ transform: `translateY(${state.scrollY / 2}px)` }}
-        >
-          <ProgressiveImgWrapper
-            thumbnail={
-              <img
-                src={wallCompressed}
-                alt="wallCompressed"
-                className="object-cover w-full h-screen filter blur-2xl"
-              />
-            }
-          >
-            <img
-              src={wall}
-              alt="wall"
-              className="object-cover w-full h-screen ease-out transition-filter duration-2000"
-            />
+        <div className="absolute w-full h-screen -z-10 bg-graywhite-99" style={{ transform: `translateY(${state.scrollY / 2}px)` }}>
+          <ProgressiveImgWrapper thumbnail={<img src={wallCompressed} alt="wallCompressed" className="object-cover w-full h-screen filter blur-2xl" />}>
+            <img src={wall} alt="wall" className="object-cover w-full h-screen ease-out transition-filter duration-2000" />
           </ProgressiveImgWrapper>
         </div>
         <div className="absolute h-12 right-8 top-5">
@@ -74,17 +59,10 @@ const Home = () => {
                 className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white border-graywhite-594"
                 onClick={toggleDarkMode}
               />
-              <label
-                htmlFor="toggle"
-                className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
-              ></label>
+              <label htmlFor="toggle" className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"></label>
             </div>
             <label htmlFor="toggle" className="text-xl text-white">
-              {state.isDark ? (
-                <i className="bi bi-moon-fill"></i>
-              ) : (
-                <i className="bi bi-sun-fill"></i>
-              )}
+              {state.isDark ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
             </label>
           </div>
         </div>
@@ -106,9 +84,7 @@ const Home = () => {
             <span className="animate-fadein-1000-650">.</span>
           </p>
           <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
-            <span className="animate-fadein-2000-1500">
-              Welcome to my personal website.
-            </span>
+            <span className="animate-fadein-2000-1500">Welcome to my personal website.</span>
           </p>
           <div className="flex">
             <a
@@ -143,58 +119,28 @@ const Home = () => {
       <main className="py-20 font-light text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660 font-pretty">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src={avatarCompressed}
-                  alt="avatar"
-                  className="w-full p-5 rounded-3xl filter blur-md"
-                />
-              }
-            >
-              <img
-                src={avatar}
-                alt="avatar"
-                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
-              />
+            <ProgressiveImgWrapper thumbnail={<img src={avatarCompressed} alt="avatar" className="w-full p-5 rounded-3xl filter blur-md" />}>
+              <img src={avatar} alt="avatar" className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter" />
             </ProgressiveImgWrapper>
           </FadeinWrapper>
 
           <FadeinWrapper>
             <p className="p-5 text-4xl">Hello world</p>
-            <p className="p-5 text-md">
-              I'm Jimmy. I love programming. I like to create things and programming
-              gives me the chance to do so.
-            </p>
+            <p className="p-5 text-md">I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.</p>
           </FadeinWrapper>
 
           <FadeinWrapper>
             <p className="p-5 text-4xl">Education</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
-                <a
-                  className="underline hover:text-white dark:hover:text-graywhite-396"
-                  href="https://www.ntu.edu.tw/"
-                >
+                <a className="underline hover:text-white dark:hover:text-graywhite-396" href="https://www.ntu.edu.tw/">
                   National Taiwan University
                 </a>
                 , Taipei, Mechanical engineering, September 2011-July 2016.
               </p>
               <div className="col-span-3 px-4">
-                <ProgressiveImgWrapper
-                  thumbnail={
-                    <img
-                      src={ntuCompressed}
-                      alt="ntuCompressed"
-                      className="filter blur-md"
-                    />
-                  }
-                >
-                  <img
-                    src={ntu}
-                    alt="ntu"
-                    className="duration-1000 ease-out transition-filter"
-                  />
+                <ProgressiveImgWrapper thumbnail={<img src={ntuCompressed} alt="ntuCompressed" className="filter blur-md" />}>
+                  <img src={ntu} alt="ntu" className="duration-1000 ease-out transition-filter" />
                 </ProgressiveImgWrapper>
               </div>
             </div>
@@ -204,41 +150,18 @@ const Home = () => {
             <p className="p-5 text-4xl">Experience</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
-                <a
-                  href="https://www.chief.com.tw"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline hover:text-white dark:hover:text-graywhite-396"
-                >
+                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline hover:text-white dark:hover:text-graywhite-396">
                   Chief Telecom
                 </a>{" "}
-                for 4 years. I work for their cloud service department. I maintain and
-                develop products and services about{" "}
-                <a
-                  href="https://www.chief.com.tw/cloud/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline hover:text-white dark:hover:text-graywhite-396"
-                >
+                for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
+                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline hover:text-white dark:hover:text-graywhite-396">
                   Chief Cloud
                 </a>
                 .
               </p>
               <div className="col-span-3">
-                <ProgressiveImgWrapper
-                  thumbnail={
-                    <img
-                      src={chiefCompressed}
-                      alt="chiefCompressed"
-                      className="filter blur-md"
-                    />
-                  }
-                >
-                  <img
-                    src={chief}
-                    alt="chief"
-                    className="duration-1000 ease-out transition-filter"
-                  />
+                <ProgressiveImgWrapper thumbnail={<img src={chiefCompressed} alt="chiefCompressed" className="filter blur-md" />}>
+                  <img src={chief} alt="chief" className="duration-1000 ease-out transition-filter" />
                 </ProgressiveImgWrapper>
               </div>
             </div>
@@ -246,9 +169,7 @@ const Home = () => {
 
           <FadeinWrapper>
             <p className="p-5 text-4xl">Skills</p>
-            <p className="p-5 text-md">
-              Here are my skills, just in case you're interested:
-            </p>
+            <p className="p-5 text-md">Here are my skills, just in case you're interested:</p>
           </FadeinWrapper>
 
           <div className="mb-5 ml-5">
@@ -307,10 +228,7 @@ const Home = () => {
               Contact
             </p>
             <p className="p-5 text-md">
-              <a
-                href="mailto:contact@jimmylin.org"
-                className="underline hover:text-white dark:hover:text-graywhite-396"
-              >
+              <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
                 contact@jimmylin.org
               </a>
             </p>
@@ -363,9 +281,64 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="flex items-center justify-center h-12 font-pretty text-graywhite-660 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660">
-        <div className="max-w-screen-sm mx-auto text-center text-md">
-          © 2021 All rights reserved.
+      <footer className="font-pretty text-graywhite-660 dark:text-graywhite-66 bg-graywhite-66 dark:bg-graywhite-660">
+        <div className="flex flex-wrap items-center justify-center">
+          <div className="max-w-screen-sm p-8">
+            <p className="p-4 text-4xl">Jimmy Lin</p>
+            <p className="p-4">
+              Email:{" "}
+              <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
+                contact@jimmylin.org
+              </a>
+            </p>
+          </div>
+          <div className="self-end max-w-screen-sm p-8">
+            <p className="p-4">
+            <a
+                href="https://github.com/j3ygithub"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/j3y.ig/"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/j3y.fb"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/j3ytweeting"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-twitter"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center h-24">
+          <div className="max-w-screen-sm mx-auto text-sm text-center">© 2021 All rights reserved.</div>
         </div>
       </footer>
     </>
