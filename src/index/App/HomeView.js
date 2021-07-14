@@ -230,15 +230,16 @@ const Home = () => {
         </div>
       </main>
 
-      <footer ref={refFooter} className="font-pretty text-graywhite-99 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
+      <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-99 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
         <div className="max-w-screen-sm p-12 mx-auto">
-          <p className="p-4 pb-8 text-5xl">Jimmy Lin</p>
-          <p className="px-4 pb-4">
-            <a href="mailto:contact@jimmylin.org" className="underline font-extralight hover:text-white dark:hover:text-graywhite-396">
+          <p className="p-4 pb-8 text-6xl font-semibold">Jimmy Lin</p>
+          <p className="pb-4 pl-8 pr-4">
+            E-mail:{" "}
+            <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
               contact@jimmylin.org
             </a>
           </p>
-          <p className="px-4">
+          <p className="pl-8 pr-4">
             <a
               href="https://github.com/j3ygithub"
               target="_blank"
