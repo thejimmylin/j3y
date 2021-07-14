@@ -25,6 +25,7 @@ const Home = () => {
   };
   useEffect(() => {
     addHandleScroll();
+    document.documentElement.classList.add("dark");
     return removeHandleScroll;
   });
 
@@ -32,14 +33,16 @@ const Home = () => {
   const scrollToAboutMe = () => {
     refAboutMe.current.scrollIntoView();
   };
-  const refContactMe = useRef(null);
-  const scrollToContactMe = () => {
-    refContactMe.current.scrollIntoView();
+  const refFooter = useRef(null);
+  const scrollToFooter = () => {
+    refFooter.current.scrollIntoView();
   };
+
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
     setState({ ...state, isDark: !state.isDark });
   };
+
   return (
     <>
       <header className="relative h-screen font-pretty">
@@ -99,7 +102,7 @@ const Home = () => {
               Github
             </a>
             <button
-              onClick={scrollToContactMe}
+              onClick={scrollToFooter}
               className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
             >
               Contact
@@ -116,7 +119,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main className="py-20 font-light text-graywhite-594 dark:text-graywhite-99 bg-graywhite-99 dark:bg-graywhite-660 font-pretty">
+      <main className="py-20 font-extralight text-graywhite-99 dark:text-graywhite-594 bg-graywhite-660 dark:bg-graywhite-99 font-pretty">
         <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
           <FadeinWrapper>
             <ProgressiveImgWrapper thumbnail={<img src={avatarCompressed} alt="avatar" className="w-full p-5 rounded-3xl filter blur-md" />}>
@@ -222,123 +225,62 @@ const Home = () => {
               </ul>
             </FadeinWrapper>
           </div>
-
-          <FadeinWrapper>
-            <p ref={refContactMe} className="p-5 text-4xl">
-              Contact
-            </p>
-            <p className="p-5 text-md">
-              <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
-                contact@jimmylin.org
-              </a>
-            </p>
-          </FadeinWrapper>
-
-          <FadeinWrapper>
-            <p className="flex p-5 pb-10">
-              <a
-                href="https://github.com/j3ygithub"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-linkedin"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/j3y.ig/"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/j3y.fb"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a
-                href="https://twitter.com/j3ytweeting"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-twitter"></i>
-              </a>
-            </p>
-          </FadeinWrapper>
         </div>
       </main>
 
-      <footer className="font-pretty text-graywhite-660 dark:text-graywhite-66 bg-graywhite-66 dark:bg-graywhite-660">
-        <div className="flex flex-wrap items-center justify-center">
-          <div className="max-w-screen-sm p-8">
-            <p className="p-4 text-4xl">Jimmy Lin</p>
-            <p className="p-4">
-              Email:{" "}
-              <a href="mailto:contact@jimmylin.org" className="underline hover:text-white dark:hover:text-graywhite-396">
-                contact@jimmylin.org
-              </a>
-            </p>
-          </div>
-          <div className="self-end max-w-screen-sm p-8">
-            <p className="p-4">
+      <footer ref={refFooter} className="font-pretty text-graywhite-87 dark:text-graywhite-660 bg-graywhite-660 dark:bg-graywhite-87">
+        <div className="max-w-screen-sm p-12 mx-auto">
+          <p className="p-4 pb-8 text-5xl">Jimmy Lin</p>
+          <p className="px-4 pb-4">
+            <a href="mailto:contact@jimmylin.org" className="underline font-extralight hover:text-white dark:hover:text-graywhite-396">
+              contact@jimmylin.org
+            </a>
+          </p>
+          <p className="px-4">
             <a
-                href="https://github.com/j3ygithub"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-linkedin"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/j3y.ig/"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/j3y.fb"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a
-                href="https://twitter.com/j3ytweeting"
-                target="_blank"
-                rel="noreferrer"
-                className="pr-4 text-4xl underline hover:text-white dark:hover:text-graywhite-396"
-              >
-                <i className="bi bi-twitter"></i>
-              </a>
-            </p>
-          </div>
+              href="https://github.com/j3ygithub"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+            >
+              <i className="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+            >
+              <i className="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/j3y.ig/"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/j3y.fb"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+            >
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://twitter.com/j3ytweeting"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-4 text-3xl underline hover:text-white dark:hover:text-graywhite-396"
+            >
+              <i className="bi bi-twitter"></i>
+            </a>
+          </p>
         </div>
-        <div className="flex items-center justify-center h-24">
-          <div className="max-w-screen-sm mx-auto text-sm text-center">© 2021 All rights reserved.</div>
+        <div className="flex items-center justify-center h-16">
+          <div className="max-w-screen-sm mx-auto text-sm text-center font-extralight">© 2021 All rights reserved.</div>
         </div>
       </footer>
     </>
