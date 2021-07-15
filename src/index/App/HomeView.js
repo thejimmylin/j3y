@@ -72,7 +72,7 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
-          <p className="mb-4 text-5xl text-graywhite-660 hover:text-graywhite-330">
+          <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -88,8 +88,8 @@ const Home = () => {
             <span className="animate-fadein-1000-600">n</span>
             <span className="animate-fadein-1000-650">.</span>
           </p>
-          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-graywhite-330">
-            <span className="font-extralight animate-fadein-2000-1500">Welcome to my personal website.</span>
+          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
+            <span className="font-extralight animate-fadein-2000-1500">Welcome to my personal page.</span>
           </p>
           <div className="flex">
             <a
@@ -105,7 +105,7 @@ const Home = () => {
             </a>
             <button
               onClick={scrollToFooter}
-              className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-graywhite-330 border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
+              className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
             >
               Contact
             </button>
@@ -114,7 +114,7 @@ const Home = () => {
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
           <span
             onClick={scrollToAboutMe}
-            className="text-4xl text-graywhite-594 hover:text-graywhite-330 cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+            className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
           >
             <i className="bi bi-chevron-compact-down"></i>
           </span>
