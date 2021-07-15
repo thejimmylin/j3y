@@ -43,7 +43,7 @@ const Home = () => {
   };
   useEffect(() => {
     document.documentElement.classList.add("dark");
-  }, [])
+  }, []);
 
   return (
     <>
@@ -155,11 +155,21 @@ const Home = () => {
             <p className="p-5 text-4xl">Experience</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
-                <a href="https://www.chief.com.tw" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                <a
+                  href="https://www.chief.com.tw"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+                >
                   Chief Telecom
                 </a>{" "}
                 for 4 years. I work for their cloud service department. I maintain and develop products and services about{" "}
-                <a href="https://www.chief.com.tw/cloud/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                <a
+                  href="https://www.chief.com.tw/cloud/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+                >
                   Chief Cloud
                 </a>
                 .
@@ -227,64 +237,150 @@ const Home = () => {
               </ul>
             </FadeinWrapper>
           </div>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Python</p>
+            <p className="p-5 text-md">
+              Python is my primary programming language. I am familiar with{" "}
+              <a
+                href="https://www.python.org/dev/peps/pep-0008/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                PEP 8
+              </a>{" "}
+              and other code style convention. I aim to write clean, modular, reusable code with Python.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Django</p>
+            <p className="p-5 text-md">
+              I've spent most of my time doing web development, so I'm particularly familiar with Python's web framework, Django. I've been doing web
+              development with Django for over 5 years and can build modern, well-tested web application.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">SQL</p>
+            <p className="p-5 text-md">
+              Django has a great model/ORM system, which makes it possible to creating a web application without writing SQL. But sometimes SQL knowledge is important, too.
+              It is true especially when it comes to a extremely complicated queriy or some performance issue.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Django REST Framwork</p>
+            <p className="p-5 text-md">
+              Django is already pretty good, but when you combine it with the Django REST Framework, it gets even better. Modern web applications often require
+              REST APIs, and this is where the Django REST Framework comes in.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">React.js</p>
+            <p className="p-5 text-md">
+              Django is a backend framework I use a lot, and when it comes to frontend things, React.js is my favorite because its philosophy is so graceful,
+              making you enjoy coding and building things with it. This website is built with React.js, too.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Tailwind CSS</p>
+            <p className="p-5 text-md">
+              Tailwind is another tool that I love and use a lot. It is similar to Bootstrap, but it is much more flexible and easy to customize, which prevents
+              you from building a lot of similar web.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">CI/CD</p>
+            <p className="p-5 text-md">
+              I use Github action to handle CI/CD things. I believe that deployment is just as important as development. If a feature can't be delivered to the
+              users, the resources spent on development will be wasted.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Docker/GCP</p>
+            <p className="p-5 text-md">
+              I mostly run my services in Docker and host them by GCP. This website is such a example. With Docker I won't be worried about many environment things.
+              With GCP, I can focus on my developing.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-3xl">Thank you</p>
+            <p className="p-5 text-md">
+              thank you for giving a chance to introduce myself. I really apprecicate that.
+            </p>
+            <p className="p-5 text-md">
+              Feel free to contact me if you want. :)
+            </p>
+            
+          </FadeinWrapper>
+
         </div>
       </main>
 
       <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-198 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
-        <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
-          <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
-          <p className="pb-8 text-sm">
-            E-mail:{" "}
-            <a href="mailto:contact@jimmylin.org" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
-              contact@jimmylin.org
-            </a>
-          </p>
-          <p className="-mr-4">
-            <a
-              href="https://github.com/j3ygithub"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-            >
-              <i className="bi bi-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/j3y.ig/"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-            >
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/j3y.fb"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-            >
-              <i className="bi bi-facebook"></i>
-            </a>
-            <a
-              href="https://twitter.com/j3ytweeting"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-            >
-              <i className="bi bi-twitter"></i>
-            </a>
-          </p>
-        </div>
-        <div className="flex items-center justify-center h-16">
-          <div className="max-w-screen-sm mx-auto text-sm text-center font-extralight">© 2021 All rights reserved.</div>
-        </div>
+        <FadeinWrapper>
+          <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
+            <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
+            <p className="pb-8 text-sm">
+              E-mail:{" "}
+              <a href="mailto:contact@jimmylin.org" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                contact@jimmylin.org
+              </a>
+            </p>
+            <p className="-mr-4">
+              <a
+                href="https://github.com/j3ygithub"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/j3y.ig/"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/j3y.fb"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/j3ytweeting"
+                target="_blank"
+                rel="noreferrer"
+                className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                <i className="bi bi-twitter"></i>
+              </a>
+            </p>
+          </div>
+          <div className="flex items-center justify-center h-16">
+            <div className="max-w-screen-sm mx-auto text-sm text-center font-extralight">© 2021 All rights reserved.</div>
+          </div>
+        </FadeinWrapper>
       </footer>
     </>
   );
