@@ -72,7 +72,7 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
-          <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
+          <p className="mb-4 text-5xl font-medium text-graywhite-660 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -89,7 +89,7 @@ const Home = () => {
             <span className="animate-fadein-1000-650">.</span>
           </p>
           <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
-            <span className="font-extralight animate-fadein-2000-1500">Welcome to my personal page.</span>
+            <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
           </p>
           <div className="flex">
             <a
@@ -130,12 +130,12 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl">Hello world</p>
+            <p className="p-5 text-4xl font-normal">Hello world</p>
             <p className="p-5 text-md">I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.</p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl">Education</p>
+            <p className="p-5 text-4xl font-normal">Education</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
                 <a className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396" href="https://www.ntu.edu.tw/">
@@ -152,7 +152,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl">Experience</p>
+            <p className="p-5 text-4xl font-normal">Experience</p>
             <div className="grid grid-cols-12 p-5">
               <p className="col-span-9 pr-2 text-md">
                 <a
@@ -183,65 +183,41 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-4xl">Skills</p>
-            <p className="p-5 text-md">Here are my skills, just in case you're interested:</p>
+            <p className="p-5 text-4xl font-normal">Skills</p>
+            <p className="p-5 text-md">Here are my skills and the techniques I use.</p>
           </FadeinWrapper>
 
-          <div className="mb-5 ml-5">
-            <FadeinWrapper>
-              <p className="p-5 text-2xl">Language</p>
-              <ul className="pl-5 text-md">
-                <li className="ml-5">- Python</li>
-                <li className="ml-5">- HTML</li>
-                <li className="ml-5">- CSS</li>
-                <li className="ml-5">- JavaScript</li>
-              </ul>
-            </FadeinWrapper>
-
-            <FadeinWrapper>
-              <p className="p-5 text-2xl">DB</p>
-              <ul className="pl-5 text-md">
-                <li className="ml-5">- MSSQL</li>
-                <li className="ml-5">- MySQL</li>
-                <li className="ml-5">- MariaDB</li>
-                <li className="ml-5">- PostgreSQL</li>
-              </ul>
-            </FadeinWrapper>
-
-            <FadeinWrapper>
-              <p className="p-5 text-2xl">Framework</p>
-              <ul className="pl-5 text-md">
-                <li className="ml-5">- Django</li>
-                <li className="ml-5">- Django REST Framework</li>
-                <li className="ml-5">- Vue.js</li>
-                <li className="ml-5">- React.js</li>
-                <li className="ml-5">- Tailwind CSS</li>
-              </ul>
-            </FadeinWrapper>
-
-            <FadeinWrapper>
-              <p className="p-5 text-2xl">Development</p>
-              <ul className="pl-5 text-md">
-                <li className="ml-5">- Git</li>
-                <li className="ml-5">- Linux</li>
-                <li className="ml-5">- Docker</li>
-                <li className="ml-5">- GCP</li>
-              </ul>
-            </FadeinWrapper>
-
-            <FadeinWrapper>
-              <p className="p-5 text-2xl">Other</p>
-              <ul className="pl-5 text-md">
-                <li className="ml-5">- Cisco Command</li>
-                <li className="ml-5">- FortiOS Command</li>
-              </ul>
-            </FadeinWrapper>
-          </div>
-
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Python</p>
-            <p className="p-5 text-md">
-              Python is my primary programming language. I am familiar with{" "}
+            <p className="p-5 ml-8 text-2xl">Python</p>
+            <p className="p-5 ml-16 text-md">
+              Python is my primary programming language. I am familiar with Python's language features and many of its standard libraries such as{" "}
+              <a
+                href="https://docs.python.org/3/library/unittest.html"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                unittest
+              </a>
+              ,{" "}
+              <a
+                href="https://docs.python.org/3/library/logging.html"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                logging
+              </a>
+              , and{" "}
+              <a
+                href="https://docs.python.org/3/library/shlex.html"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                shlex
+              </a>
+              , etc. I care about code quality, following{" "}
               <a
                 href="https://www.python.org/dev/peps/pep-0008/"
                 target="_blank"
@@ -250,84 +226,153 @@ const Home = () => {
               >
                 PEP 8
               </a>{" "}
-              and other code style convention. I aim to write clean, modular, reusable code with Python.
+              and many other code style conventions. I follow the{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/KISS_principle"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                KISS principle
+              </a>
+              . I keep my code clean, modular and reusable.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Django</p>
-            <p className="p-5 text-md">
-              I've spent most of my time doing web development, so I'm particularly familiar with Python's web framework, Django. I've been doing web
-              development with Django for over 5 years and can build modern, well-tested web application.
+            <p className="p-5 ml-8 text-2xl">Django</p>
+            <p className="p-5 ml-16 text-md">
+              I've spent most of my time doing web development, so I'm particularly familiar with Python's web framework,{" "}
+              <a
+                href="https://www.djangoproject.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                Django
+              </a>
+              . I've been doing web development with Django for over 5 years and can build modern, well-tested web application.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">SQL</p>
-            <p className="p-5 text-md">
-              Django has a great model/ORM system, which makes it possible to creating a web application without writing SQL. But sometimes SQL knowledge is important, too.
-              It is true especially when it comes to a extremely complicated queriy or some performance issue.
+            <p className="p-5 ml-8 text-2xl">Django REST Framwork</p>
+            <p className="p-5 ml-16 text-md">
+              Django is already pretty good, but when you combine it with the{" "}
+              <a
+                href="https://www.django-rest-framework.org/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                Django REST Framework
+              </a>
+              , it gets even better. Modern web applications often require REST APIs, and this is where the Django REST Framework comes in.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Django REST Framwork</p>
-            <p className="p-5 text-md">
-              Django is already pretty good, but when you combine it with the Django REST Framework, it gets even better. Modern web applications often require
-              REST APIs, and this is where the Django REST Framework comes in.
+            <p className="p-5 ml-8 text-2xl">SQL</p>
+            <p className="p-5 ml-16 text-md">
+              Django has a great model/ORM system, which makes it possible to creating a web application without writing SQL. But sometimes SQL knowledge is
+              important, too. It is true especially when it comes to a extremely complicated queriy or some performance issue.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">React.js</p>
-            <p className="p-5 text-md">
-              Django is a backend framework I use a lot, and when it comes to frontend things, React.js is my favorite because its philosophy is so graceful,
-              making you enjoy coding and building things with it. This website is built with React.js, too.
+            <p className="p-5 ml-8 text-2xl">React.js</p>
+            <p className="p-5 ml-16 text-md">
+              Django is a backend framework I use a lot, and when it comes to frontend things,{" "}
+              <a href="https://reactjs.org/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                React.js
+              </a>{" "}
+              is my favorite because its philosophy is so graceful, making you enjoy coding and building things with it. This website is built with React.js,
+              too.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Tailwind CSS</p>
-            <p className="p-5 text-md">
-              Tailwind is another tool that I love and use a lot. It is similar to Bootstrap, but it is much more flexible and easy to customize, which prevents
-              you from building a lot of similar web.
+            <p className="p-5 ml-8 text-2xl">Vue.js</p>
+            <p className="p-5 ml-16 text-md">
+              In addition to React.js, I also use{" "}
+              <a href="https://vuejs.org" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                Vue.js
+              </a>
+              . I personally like React.js more, but they are both very powerful andd reliable frameworks.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">CI/CD</p>
-            <p className="p-5 text-md">
-              I use Github action to handle CI/CD things. I believe that deployment is just as important as development. If a feature can't be delivered to the
-              users, the resources spent on development will be wasted.
+            <p className="p-5 ml-8 text-2xl">Tailwind CSS</p>
+            <p className="p-5 ml-16 text-md">
+              <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                Tailwind CSS
+              </a>{" "}
+              is another tool that I love and use a lot. It is similar to{" "}
+              <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
+                Bootstrap
+              </a>
+              , but it is much more flexible and easy to customize, which prevents you from building a lot of similar web.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Docker/GCP</p>
-            <p className="p-5 text-md">
-              I mostly run my services in Docker and host them by GCP. This website is such a example. With Docker I won't be worried about many environment things.
-              With GCP, I can focus on my developing.
+            <p className="p-5 ml-8 text-2xl">HTML/CSS/JavaScript</p>
+            <p className="p-5 ml-16 text-md">
+              In addition to developing with frontend frameworks, I also know about HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
+              elements, so it is important to have a solid understanding of them.
             </p>
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 text-3xl">Thank you</p>
-            <p className="p-5 text-md">
-              thank you for giving a chance to introduce myself. I really apprecicate that.
+            <p className="p-5 ml-8 text-2xl">CI/CD</p>
+            <p className="p-5 ml-16 text-md">
+              I use{" "}
+              <a
+                href="https://docs.github.com/en/actions"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+              >
+                Github action
+              </a>{" "}
+              to handle CI/CD things. I believe that deployment is just as important as development. If a feature can't be delivered to the users, the resources
+              spent on development will be wasted.
             </p>
-            <p className="p-5 text-md">
-              Feel free to contact me if you want. :)
-            </p>
-            
           </FadeinWrapper>
 
+          <FadeinWrapper>
+            <p className="p-5 ml-8 text-2xl">Docker</p>
+            <p className="p-5 ml-16 text-md">
+              I mostly run my services in{" "}
+              <a href="https://www.docker.com/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite dark:hover:text-graywhite-396">
+                Docker
+              </a>
+              , which frees me from a lot of environment and compatibility concerns. Docker greatly increases the portability and flexibility of the services.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 ml-8 text-2xl">GCP</p>
+            <p className="p-5 ml-16 text-md">
+              <a href="https://cloud.google.com/gcp" target="_blank" rel="noreferrer" className="underline hover:text-graywhite dark:hover:text-graywhite-396">
+                GCP
+              </a>{" "}
+              is where most of my services are hosted. This website is such a example. I usually use their compute engines with Docker.
+            </p>
+          </FadeinWrapper>
+
+          <FadeinWrapper>
+            <p className="p-5 text-4xl font-normal">Thank you</p>
+            <p className="p-5 text-md">thank you for giving a chance to introduce myself. I really apprecicate that. Feel free to contact me if you want.</p>
+          </FadeinWrapper>
         </div>
       </main>
 
       <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-198 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
         <FadeinWrapper>
           <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
-            <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
+            <p className="pb-4 text-5xl font-medium">Jimmy Lin</p>
             <p className="pb-8 text-sm">
               E-mail:{" "}
               <a href="mailto:contact@jimmylin.org" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
