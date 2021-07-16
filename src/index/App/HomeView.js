@@ -93,7 +93,7 @@ const Home = () => {
           </p>
           <div className="flex">
             <a
-              href="https://github.com/j3ygithub/j3y"
+              href="https://github.com/j3ygithub"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-center w-32 h-12 m-1 bg-graywhite-660 hover:bg-white animate-fadein-1000-900"
