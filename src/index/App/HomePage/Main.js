@@ -75,27 +75,49 @@ const Main = ({ refMain }) => {
         <FadeinWrapper>
           <p className="p-5 text-4xl font-normal">Experience</p>
           <div className="grid grid-cols-12 p-5">
-            <p className="col-span-9 pr-2 text-md">
-              <a
-                href="https://www.chief.com.tw"
-                target="_blank"
-                rel="noreferrer"
-                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-              >
-                Chief Telecom
-              </a>{" "}
-              for 4 years. I work for their cloud service department. I maintain and
-              develop products and services about{" "}
-              <a
-                href="https://www.chief.com.tw/cloud/"
-                target="_blank"
-                rel="noreferrer"
-                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-              >
-                Chief Cloud
-              </a>
-              .
-            </p>
+            <div className="col-span-9 pr-2 text-md">
+              <p className="pb-5">
+                <a
+                  href="https://www.chief.com.tw"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+                >
+                  Chief Telecom
+                </a>{" "}
+                for 4 years. I work for their cloud service department. I maintain and
+                develop products and services about{" "}
+                <a
+                  href="https://www.chief.com.tw/cloud/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+                >
+                  Chief Cloud
+                </a>
+                .
+              </p>
+              <p className="pb-5">Major Achievements:</p>
+              <p className="pb-5 ml-8 text-2xl font-normal">FortiAdmin</p>
+              <p className="pb-5 ml-8">
+                FortiAdmin is a multi-tenant portal for Fortigate/Fortios.
+              </p>
+              <p className="pb-5 ml-16 text-lg font-normal">Value</p>
+              <p className="pb-5 ml-16">
+                Self-service & multi-tenant, which allow multiple customers on the same firewall setting
+                their own config, without interfere with each other.
+              </p>
+              <p className="pb-5 ml-16 text-lg font-normal">Challenge</p>
+              <p className="pb-5 ml-16">
+                Developing module FortiapiUsage & Fortiate.
+              </p>
+              <p className="pb-5 ml-16 text-lg font-normal">Stack</p>
+              <p className="pb-5 ml-16">
+                Linux, VMware, Python, Django, PostgreSQL, HTML,
+                CSS, JavaScript, Vue.js, Git, Nginx, uWSGI, Forti REST API, TDD.
+              </p>
+            </div>
+
             <div className="col-span-3">
               <ProgressiveImgWrapper
                 thumbnail={
@@ -118,12 +140,12 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 text-4xl font-normal">Skills</p>
-          <p className="p-5 text-md">Here are my skills and the techniques I use.</p>
+          <p className="p-5 text-md">Here are my skills and the techniques I use:</p>
         </FadeinWrapper>
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Python</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             Python is my primary programming language. I am familiar with Python's
             language features and many of its standard libraries such as{" "}
             <a
@@ -176,7 +198,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Django</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             I've spent most of my time doing web development, so I'm particularly
             familiar with Python's web framework,{" "}
             <a
@@ -194,7 +216,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Django REST Framwork</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             Django is already pretty good, but when you combine it with the{" "}
             <a
               href="https://www.django-rest-framework.org/"
@@ -211,7 +233,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">SQL</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             Django has a great model/ORM system, which makes it possible to creating a
             web application without writing SQL. But sometimes SQL knowledge is
             important, too. It is true especially when it comes to a extremely
@@ -221,7 +243,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">React.js</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             Django is a backend framework I use a lot, and when it comes to frontend
             things,{" "}
             <a
@@ -240,7 +262,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Vue.js</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             In addition to React.js, I also use{" "}
             <a
               href="https://vuejs.org"
@@ -257,7 +279,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Tailwind CSS</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             <a
               href="https://tailwindcss.com/"
               target="_blank"
@@ -282,7 +304,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">HTML/CSS/JavaScript</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             In addition to developing with frontend frameworks, I also know about
             HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
             elements, so it is important to have a solid understanding of them.
@@ -291,7 +313,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">CI/CD</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             I use{" "}
             <a
               href="https://docs.github.com/en/actions"
@@ -309,7 +331,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Docker</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             I mostly run my services in{" "}
             <a
               href="https://www.docker.com/"
@@ -326,7 +348,7 @@ const Main = ({ refMain }) => {
 
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">GCP</p>
-          <p className="p-5 ml-16 text-md">
+          <p className="p-5 ml-8 text-md">
             <a
               href="https://cloud.google.com/gcp"
               target="_blank"
