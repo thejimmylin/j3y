@@ -3,17 +3,38 @@ import wall from "./Header/wall-1440x810.jpg";
 import wallCompressed from "./Header/wall-144x81.jpg";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
 
-const Header = ({ scrollY, isDark, setIsDark, scrollToAboutMe, scrollToFooter }) => {
+const Header = ({
+  isDark,
+  setIsDark,
+  windowScrollY,
+  scrollIntoMain,
+  scrollIntoFooter,
+}) => {
   const toggleDarkMode = () => {
     setIsDark(!isDark);
   };
 
   return (
     <header className="relative h-screen font-pretty">
-      <LightFilter scrollY={scrollY} isDark={isDark} />
-      <div className="absolute w-full h-screen -z-10 bg-graywhite-99" style={{ transform: `translateY(${scrollY / 2}px)` }}>
-        <ProgressiveImgWrapper thumbnail={<img src={wallCompressed} alt="wallCompressed" className="object-cover w-full h-screen filter blur-2xl" />}>
-          <img src={wall} alt="wall" className="object-cover w-full h-screen ease-out transition-filter duration-2000" />
+      <LightFilter isDark={isDark} windowScrollY={windowScrollY} />
+      <div
+        className="absolute w-full h-screen -z-10 bg-graywhite-99"
+        style={{ transform: `translateY(${windowScrollY / 2}px)` }}
+      >
+        <ProgressiveImgWrapper
+          thumbnail={
+            <img
+              src={wallCompressed}
+              alt="wallCompressed"
+              className="object-cover w-full h-screen filter blur-2xl"
+            />
+          }
+        >
+          <img
+            src={wall}
+            alt="wall"
+            className="object-cover w-full h-screen ease-out transition-filter duration-2000"
+          />
         </ProgressiveImgWrapper>
       </div>
       <div className="absolute h-12 right-8 top-5">
@@ -26,10 +47,17 @@ const Header = ({ scrollY, isDark, setIsDark, scrollToAboutMe, scrollToFooter })
               className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white border-graywhite-594"
               onClick={toggleDarkMode}
             />
-            <label htmlFor="toggle" className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"></label>
+            <label
+              htmlFor="toggle"
+              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
+            ></label>
           </div>
           <label htmlFor="toggle" className="text-xl text-white">
-            {isDark ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
+            {isDark ? (
+              <i className="bi bi-moon-fill"></i>
+            ) : (
+              <i className="bi bi-sun-fill"></i>
+            )}
           </label>
         </div>
       </div>
@@ -66,7 +94,7 @@ const Header = ({ scrollY, isDark, setIsDark, scrollToAboutMe, scrollToFooter })
             Github
           </a>
           <button
-            onClick={scrollToFooter}
+            onClick={scrollIntoFooter}
             className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
           >
             Contact
@@ -75,7 +103,7 @@ const Header = ({ scrollY, isDark, setIsDark, scrollToAboutMe, scrollToFooter })
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
         <span
-          onClick={scrollToAboutMe}
+          onClick={scrollIntoMain}
           className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
           <i className="bi bi-chevron-compact-down"></i>

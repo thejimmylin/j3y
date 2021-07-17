@@ -6,29 +6,35 @@ import Footer from "./HomePage/Footer";
 
 const HomePage = () => {
   const [isDark, setIsDark] = useState(true);
-  const [scrollY, setScrollY] = useState(window.scrollY);
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
+  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const handleWindowScroll = () => {
+    setWindowScrollY(window.scrollY);
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleWindowScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleWindowScroll);
     };
   }, []);
-  const refAboutMe = useRef(null);
-  const scrollToAboutMe = () => {
-    refAboutMe.current.scrollIntoView();
+  const refMain = useRef(null);
+  const scrollIntoMain = () => {
+    refMain.current.scrollIntoView();
   };
   const refFooter = useRef(null);
-  const scrollToFooter = () => {
+  const scrollIntoFooter = () => {
     refFooter.current.scrollIntoView();
   };
 
   return (
     <section id="HomePage" className={isDark ? "dark" : ""}>
-      <Header isDark={isDark} scrollY={scrollY} setIsDark={setIsDark} scrollToAboutMe={scrollToAboutMe} scrollToFooter={scrollToFooter} />
-      <Main refAboutMe={refAboutMe} />
+      <Header
+        isDark={isDark}
+        setIsDark={setIsDark}
+        windowScrollY={windowScrollY}
+        scrollIntoMain={scrollIntoMain}
+        scrollIntoFooter={scrollIntoFooter}
+      />
+      <Main refMain={refMain} />
       <Footer refFooter={refFooter} />
     </section>
   );

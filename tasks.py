@@ -103,7 +103,7 @@ VSCODE_SETTINGS_REACT = {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
     "prettier.tabWidth": 2,
-    "prettier.printWidth": 160,
+    "prettier.printWidth": 88,
 }
 
 VSCODE_SETTINGS = dict(
