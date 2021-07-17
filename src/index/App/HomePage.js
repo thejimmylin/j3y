@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import wall from "./HomeView/wall-1440x810.jpg";
-import wallCompressed from "./HomeView/wall-144x81.jpg";
-import avatar from "./HomeView/avatar-1440x1440.jpg";
-import avatarCompressed from "./HomeView/avatar-144x144.jpg";
-import ntu from "./HomeView/ntu-360x360.png";
-import ntuCompressed from "./HomeView/ntu-36x36.png";
-import chief from "./HomeView/chief-500x300.png";
-import chiefCompressed from "./HomeView/chief-50x30.png";
-import FadeinWrapper from "./HomeView/FadeinWrapper";
-import ProgressiveImgWrapper from "./HomeView/ProgressiveImgWrapper";
-import LightFilter from "./HomeView/LightFilter";
+import wall from "./HomePage/wall-1440x810.jpg";
+import wallCompressed from "./HomePage/wall-144x81.jpg";
+import avatar from "./HomePage/avatar-1440x1440.jpg";
+import avatarCompressed from "./HomePage/avatar-144x144.jpg";
+import ntu from "./HomePage/ntu-360x360.png";
+import ntuCompressed from "./HomePage/ntu-36x36.png";
+import chief from "./HomePage/chief-500x300.png";
+import chiefCompressed from "./HomePage/chief-50x30.png";
+import FadeinWrapper from "./HomePage/FadeinWrapper";
+import ProgressiveImgWrapper from "./HomePage/ProgressiveImgWrapper";
+import LightFilter from "./HomePage/LightFilter";
 
-const Home = () => {
+const HomePage = () => {
   const [state, setState] = useState({ scrollY: window.scrollY, isDark: true });
 
   const handleScroll = () => {
@@ -38,15 +38,11 @@ const Home = () => {
   };
 
   const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark");
     setState({ ...state, isDark: !state.isDark });
   };
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
 
   return (
-    <>
+    <div className={state.isDark ? "dark" : ""}>
       <header className="relative h-screen font-pretty">
         <LightFilter scrollY={state.scrollY} isDark={state.isDark} />
         <div className="absolute w-full h-screen -z-10 bg-graywhite-99" style={{ transform: `translateY(${state.scrollY / 2}px)` }}>
@@ -427,8 +423,8 @@ const Home = () => {
           </div>
         </FadeinWrapper>
       </footer>
-    </>
+    </div>
   );
 };
 
-export default Home;
+export default HomePage;
