@@ -1,7 +1,7 @@
-import LightFilter from "./LightFilter";
-import wall from "./wall-1440x810.jpg";
-import wallCompressed from "./wall-144x81.jpg";
-import ProgressiveImgWrapper from "./ProgressiveImgWrapper";
+import LightFilter from "./Header/LightFilter";
+import wall from "./Header/wall-1440x810.jpg";
+import wallCompressed from "./Header/wall-144x81.jpg";
+import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
 
 const Header = ({ scrollY, isDark, setIsDark, scrollToAboutMe, scrollToFooter }) => {
   const toggleDarkMode = () => {
