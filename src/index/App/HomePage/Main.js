@@ -7,10 +7,10 @@ import chiefCompressed from "./Main/chief-50x30.png";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
 
-const Main = ({ refAboutMe }) => {
+const Main = ({ refMain }) => {
   return (
-    <main className="py-20 font-extralight text-graywhite-99 dark:text-graywhite-594 bg-graywhite-660 dark:bg-graywhite-99 font-pretty">
-      <div ref={refAboutMe} className="max-w-screen-sm p-3 mx-auto">
+    <main ref={refMain} className="py-20 font-extralight text-graywhite-99 dark:text-graywhite-594 bg-graywhite-660 dark:bg-graywhite-99 font-pretty">
+      <div className="max-w-screen-sm p-3 mx-auto">
         <FadeinWrapper>
           <ProgressiveImgWrapper thumbnail={<img src={avatarCompressed} alt="avatar" className="w-full p-5 rounded-3xl filter blur-md" />}>
             <img src={avatar} alt="avatar" className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter" />
