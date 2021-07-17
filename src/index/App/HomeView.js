@@ -72,7 +72,7 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
-          <p className="mb-4 text-5xl font-medium text-graywhite-660 hover:text-white">
+          <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
             <span className="animate-fadein-1000-0">I</span>
             <span className="animate-fadein-1000-50">'</span>
             <span className="animate-fadein-1000-100">m</span>
@@ -88,7 +88,7 @@ const Home = () => {
             <span className="animate-fadein-1000-600">n</span>
             <span className="animate-fadein-1000-650">.</span>
           </p>
-          <p className="mb-16 text-xs text-center text-graywhite-660 hover:text-white">
+          <p className="mb-16 text-xs text-center font-extralight text-graywhite-660 hover:text-white">
             <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
           </p>
           <div className="flex">
@@ -188,7 +188,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Python</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Python</p>
             <p className="p-5 ml-16 text-md">
               Python is my primary programming language. I am familiar with Python's language features and many of its standard libraries such as{" "}
               <a
@@ -240,7 +240,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Django</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Django</p>
             <p className="p-5 ml-16 text-md">
               I've spent most of my time doing web development, so I'm particularly familiar with Python's web framework,{" "}
               <a
@@ -256,7 +256,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Django REST Framwork</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Django REST Framwork</p>
             <p className="p-5 ml-16 text-md">
               Django is already pretty good, but when you combine it with the{" "}
               <a
@@ -272,7 +272,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">SQL</p>
+            <p className="p-5 ml-8 text-2xl font-normal">SQL</p>
             <p className="p-5 ml-16 text-md">
               Django has a great model/ORM system, which makes it possible to creating a web application without writing SQL. But sometimes SQL knowledge is
               important, too. It is true especially when it comes to a extremely complicated queriy or some performance issue.
@@ -280,7 +280,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">React.js</p>
+            <p className="p-5 ml-8 text-2xl font-normal">React.js</p>
             <p className="p-5 ml-16 text-md">
               Django is a backend framework I use a lot, and when it comes to frontend things,{" "}
               <a href="https://reactjs.org/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
@@ -292,7 +292,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Vue.js</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Vue.js</p>
             <p className="p-5 ml-16 text-md">
               In addition to React.js, I also use{" "}
               <a href="https://vuejs.org" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
@@ -303,7 +303,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Tailwind CSS</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Tailwind CSS</p>
             <p className="p-5 ml-16 text-md">
               <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
                 Tailwind CSS
@@ -317,7 +317,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">HTML/CSS/JavaScript</p>
+            <p className="p-5 ml-8 text-2xl font-normal">HTML/CSS/JavaScript</p>
             <p className="p-5 ml-16 text-md">
               In addition to developing with frontend frameworks, I also know about HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
               elements, so it is important to have a solid understanding of them.
@@ -325,7 +325,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">CI/CD</p>
+            <p className="p-5 ml-8 text-2xl font-normal">CI/CD</p>
             <p className="p-5 ml-16 text-md">
               I use{" "}
               <a
@@ -342,7 +342,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">Docker</p>
+            <p className="p-5 ml-8 text-2xl font-normal">Docker</p>
             <p className="p-5 ml-16 text-md">
               I mostly run my services in{" "}
               <a href="https://www.docker.com/" target="_blank" rel="noreferrer" className="underline hover:text-graywhite dark:hover:text-graywhite-396">
@@ -353,7 +353,7 @@ const Home = () => {
           </FadeinWrapper>
 
           <FadeinWrapper>
-            <p className="p-5 ml-8 text-2xl">GCP</p>
+            <p className="p-5 ml-8 text-2xl font-normal">GCP</p>
             <p className="p-5 ml-16 text-md">
               <a href="https://cloud.google.com/gcp" target="_blank" rel="noreferrer" className="underline hover:text-graywhite dark:hover:text-graywhite-396">
                 GCP
@@ -372,7 +372,7 @@ const Home = () => {
       <footer ref={refFooter} className="font-pretty font-extralight text-graywhite-198 dark:text-graywhite-630 bg-graywhite-630 dark:bg-graywhite-87">
         <FadeinWrapper>
           <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
-            <p className="pb-4 text-5xl font-medium">Jimmy Lin</p>
+            <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
             <p className="pb-8 text-sm">
               E-mail:{" "}
               <a href="mailto:contact@jimmylin.org" className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396">
