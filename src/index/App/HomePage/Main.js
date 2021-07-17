@@ -76,7 +76,7 @@ const Main = ({ refMain }) => {
           <p className="p-5 text-4xl font-normal">Experience</p>
           <div className="grid grid-cols-12 p-5">
             <div className="col-span-9 pr-2 text-md">
-              <p className="pb-5">
+              <p>
                 <a
                   href="https://www.chief.com.tw"
                   target="_blank"
@@ -95,26 +95,7 @@ const Main = ({ refMain }) => {
                 >
                   Chief Cloud
                 </a>
-                .
-              </p>
-              <p className="pb-5">Major Achievements:</p>
-              <p className="pb-5 ml-8 text-2xl font-normal">FortiAdmin</p>
-              <p className="pb-5 ml-8">
-                FortiAdmin is a multi-tenant portal for Fortigate/Fortios.
-              </p>
-              <p className="pb-5 ml-16 text-lg font-normal">Value</p>
-              <p className="pb-5 ml-16">
-                Self-service & multi-tenant, which allow multiple customers on the same firewall setting
-                their own config, without interfere with each other.
-              </p>
-              <p className="pb-5 ml-16 text-lg font-normal">Challenge</p>
-              <p className="pb-5 ml-16">
-                Developing module FortiapiUsage & Fortiate.
-              </p>
-              <p className="pb-5 ml-16 text-lg font-normal">Stack</p>
-              <p className="pb-5 ml-16">
-                Linux, VMware, Python, Django, PostgreSQL, HTML,
-                CSS, JavaScript, Vue.js, Git, Nginx, uWSGI, Forti REST API, TDD.
+                . Major Achievements:
               </p>
             </div>
 
@@ -136,6 +117,23 @@ const Main = ({ refMain }) => {
               </ProgressiveImgWrapper>
             </div>
           </div>
+
+          <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
+          <p className="p-5 ml-8">
+            FortiAdmin is a multi-tenant portal for Fortigate/Fortios.
+          </p>
+          <p className="p-5 ml-16 text-lg font-normal">Value</p>
+          <p className="p-5 ml-16">
+            Self-service & multi-tenant, which allow multiple customers on the same
+            firewall setting their own config, without interfere with each other.
+          </p>
+          <p className="p-5 ml-16 text-lg font-normal">Challenge</p>
+          <p className="p-5 ml-16">Developing module FortiapiUsage & Fortiate.</p>
+          <p className="p-5 ml-16 text-lg font-normal">Stack</p>
+          <p className="p-5 ml-16">
+            Linux, VMware, Python, Django, PostgreSQL, HTML, CSS, JavaScript, Vue.js,
+            Git, Nginx, uWSGI, Forti REST API, TDD.
+          </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
