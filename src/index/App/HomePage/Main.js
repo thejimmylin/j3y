@@ -120,19 +120,18 @@ const Main = ({ refMain }) => {
 
           <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
           <p className="p-5 ml-8">
-            FortiAdmin is a multi-tenant portal for Fortigate/Fortios.
+            FortiAdmin is a multi-tenant portal for Fortigate/Fortios, built with{" "}
+            <span className="font-medium">Forti REST API</span>. It allows multiple
+            customers on the same firewall setting their own config, without interfere
+            with each other.
           </p>
-          <p className="p-5 ml-16 text-lg font-normal">Value</p>
-          <p className="p-5 ml-16">
-            Self-service & multi-tenant, which allow multiple customers on the same
-            firewall setting their own config, without interfere with each other.
-          </p>
-          <p className="p-5 ml-16 text-lg font-normal">Challenge</p>
-          <p className="p-5 ml-16">Developing module FortiapiUsage & Fortiate.</p>
-          <p className="p-5 ml-16 text-lg font-normal">Stack</p>
-          <p className="p-5 ml-16">
-            Linux, VMware, Python, Django, PostgreSQL, HTML, CSS, JavaScript, Vue.js,
-            Git, Nginx, uWSGI, Forti REST API, TDD.
+
+          <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
+          <p className="p-5 ml-8">
+            CTDB is a GUI about several utilities, including{" "}
+            <span className="font-medium">Diary</span>,{" "}
+            <span className="font-medium">Reminder</span>, etc. It has its own log
+            system and scheduler.
           </p>
         </FadeinWrapper>
 
