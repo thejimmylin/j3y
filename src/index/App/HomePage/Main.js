@@ -6,6 +6,10 @@ import chief from "./Main/chief-500x300.png";
 import chiefCompressed from "./Main/chief-50x30.png";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
+import login from "./Main/login.png";
+import example from "./Main/example.png";
+import i18n from "./Main/i18n.png";
+import log from "./Main/log.png";
 
 const Main = ({ refMain }) => {
   return (
@@ -129,13 +133,17 @@ const Main = ({ refMain }) => {
             own config without interfere with each other for different users.
           </p>
           <p className="p-5 ml-8">
-            Tech stack:<br/>
-            <span className="font-medium">Django</span> / {" "}
-            <span className="font-medium">shelx</span> / {" "}
-            <span className="font-medium">Forti REST API</span> / {" "}
-            <span className="font-medium">MySQL</span> / {" "}
-            <span className="font-medium">uWSGI</span> /{" "}
-            <span className="font-medium">Nginx</span>
+            Features:
+            <br />
+            <span className="font-medium">Multi-tenant</span> /{" "}
+            <span className="font-medium">Forti REST API</span>
+          </p>
+          <p className="p-5 ml-8">
+            Tech stack:
+            <br />
+            <span className="font-medium">Django</span> /{" "}
+            <span className="font-medium">shelx</span> /{" "}
+            <span className="font-medium">Forti REST API</span> /{" "}
           </p>
 
           <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
@@ -143,8 +151,7 @@ const Main = ({ refMain }) => {
             <span className="font-medium">CTDB</span> is mainly built with{" "}
             <span className="font-medium">Django</span>,{" "}
             <span className="font-medium">Django REST Framework</span>,{" "}
-            <span className="font-medium">Vue.js</span>,{" "}
-            containing several useful
+            <span className="font-medium">Vue.js</span>, containing several useful
             applications, such as <span className="font-medium">Diary</span>,{" "}
             <span className="font-medium">Reminder</span>,{" "}
             <span className="font-medium">Telecom</span>,{" "}
@@ -154,13 +161,17 @@ const Main = ({ refMain }) => {
             company.
           </p>
           <p className="p-5 ml-8">
-            Tech stack:<br/>
-            <span className="font-medium">Django</span> / {" "}
-            <span className="font-medium">Django REST framework</span> / {" "}
-            <span className="font-medium">Vue.js</span> / {" "}
-            <span className="font-medium">MySQL</span> / {" "}
-            <span className="font-medium">uWSGI</span> /{" "}
-            <span className="font-medium">Nginx</span>
+            Features:
+            <br />
+            <span className="font-medium">i18n</span> /{" "}
+            <span className="font-medium">Log system</span>
+          </p>
+          <p className="p-5 ml-8">
+            Tech stack:
+            <br />
+            <span className="font-medium">Django</span> /{" "}
+            <span className="font-medium">Django REST framework</span> /{" "}
+            <span className="font-medium">Vue.js</span>
           </p>
         </FadeinWrapper>
 
@@ -385,6 +396,76 @@ const Main = ({ refMain }) => {
             </a>{" "}
             is where most of my services are hosted. This website is such a example. I
             usually use their compute engines with Docker.
+          </p>
+        </FadeinWrapper>
+
+        <FadeinWrapper>
+          <p className="p-5 text-4xl font-normal">Portfolios</p>
+          <p className="p-5 ml-8 text-2xl font-normal">
+            FortiAdmin
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src={login}
+                  alt="login"
+                  className="w-full p-5 rounded-3xl filter blur-md"
+                />
+              }
+            >
+              <img
+                src={login}
+                alt="login"
+                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+              />
+            </ProgressiveImgWrapper>
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src={example}
+                  alt="example"
+                  className="w-full p-5 rounded-3xl filter blur-md"
+                />
+              }
+            >
+              <img
+                src={example}
+                alt="example"
+                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+              />
+            </ProgressiveImgWrapper>
+          </p>
+          <p className="p-5 ml-8 text-2xl font-normal">
+            CTDB
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src={i18n}
+                  alt="i18n"
+                  className="w-full p-5 rounded-3xl filter blur-md"
+                />
+              }
+            >
+              <img
+                src={i18n}
+                alt="i18n"
+                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+              />
+            </ProgressiveImgWrapper>
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src={log}
+                  alt="log"
+                  className="w-full p-5 rounded-3xl filter blur-md"
+                />
+              }
+            >
+              <img
+                src={log}
+                alt="log"
+                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+              />
+            </ProgressiveImgWrapper>
           </p>
         </FadeinWrapper>
 
