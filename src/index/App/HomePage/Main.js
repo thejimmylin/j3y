@@ -6,10 +6,14 @@ import chief from "./Main/chief-500x300.png";
 import chiefCompressed from "./Main/chief-50x30.png";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
-import login from "./Main/login.png";
-import example from "./Main/example.png";
-import i18n from "./Main/i18n.png";
-import log from "./Main/log.png";
+import fortiadminLogin from "./Main/fortiadmin-login-1920x1080.png";
+import fortiadminLoginCompressed from "./Main/fortiadmin-login-192x108.png";
+import fortiadminExample from "./Main/fortiadmin-example-1920x1080.png";
+import fortiadminExampleCompressed from "./Main/fortiadmin-example-192x108.png";
+import ctdbI18n from "./Main/ctdb-i18n-1920x1080.png";
+import ctdbI18nCompressed from "./Main/ctdb-i18n-192x108.png";
+import ctdbLog from "./Main/ctdb-log-1920x1080.png";
+import ctdbLogCompressed from "./Main/ctdb-log-192x108.png";
 
 const Main = ({ refMain }) => {
   return (
@@ -121,7 +125,9 @@ const Main = ({ refMain }) => {
               </ProgressiveImgWrapper>
             </div>
           </div>
+        </FadeinWrapper>
 
+        <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
           <p className="p-5 ml-8">
             <span className="font-medium">FortiAdmin</span> is mainly built with{" "}
@@ -145,7 +151,9 @@ const Main = ({ refMain }) => {
             <span className="font-medium">shelx</span> /{" "}
             <span className="font-medium">Forti REST API</span> /{" "}
           </p>
+        </FadeinWrapper>
 
+        <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
           <p className="p-5 ml-8">
             <span className="font-medium">CTDB</span> is mainly built with{" "}
@@ -406,64 +414,66 @@ const Main = ({ refMain }) => {
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={login}
-                  alt="login"
-                  className="w-full p-5 rounded-3xl filter blur-md"
+                  src={fortiadminLoginCompressed}
+                  alt="fortiadminLoginCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={login}
-                alt="login"
-                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+                src={fortiadminLogin}
+                alt="fortiadminLogin"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
             </ProgressiveImgWrapper>
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={example}
-                  alt="example"
-                  className="w-full p-5 rounded-3xl filter blur-md"
+                  src={fortiadminExampleCompressed}
+                  alt="fortiadminExampleCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={example}
-                alt="example"
-                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+                src={fortiadminExample}
+                alt="fortiadminExample"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
             </ProgressiveImgWrapper>
           </p>
+        </FadeinWrapper>
+        <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">
             CTDB
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={i18n}
-                  alt="i18n"
-                  className="w-full p-5 rounded-3xl filter blur-md"
+                  src={ctdbI18nCompressed}
+                  alt="ctdbI18nCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={i18n}
-                alt="i18n"
-                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+                src={ctdbI18n}
+                alt="ctdbI18n"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
             </ProgressiveImgWrapper>
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={log}
-                  alt="log"
-                  className="w-full p-5 rounded-3xl filter blur-md"
+                  src={ctdbLogCompressed}
+                  alt="ctdbLogCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={log}
-                alt="log"
-                className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
+                src={ctdbLog}
+                alt="ctdbLog"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
             </ProgressiveImgWrapper>
           </p>
