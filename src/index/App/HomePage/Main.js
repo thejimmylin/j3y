@@ -120,18 +120,47 @@ const Main = ({ refMain }) => {
 
           <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
           <p className="p-5 ml-8">
-            FortiAdmin is a multi-tenant portal for Fortigate/Fortios, built with{" "}
-            <span className="font-medium">Forti REST API</span>. It allows multiple
-            customers on the same firewall setting their own config, without interfere
-            with each other.
+            <span className="font-medium">FortiAdmin</span> is mainly built with{" "}
+            <span className="font-medium">Django</span>, and{" "}
+            <span className="font-medium">shlex</span>,{" "}
+            <span className="font-medium">Forti REST API</span> which is a multi-tenant
+            portal for Fortigate/Fortios. With{" "}
+            <span className="font-medium">FortiAdmin</span>, It is possible to set their
+            own config without interfere with each other for different users.
+          </p>
+          <p className="p-5 ml-8">
+            Tech stack:<br/>
+            <span className="font-medium">Django</span> / {" "}
+            <span className="font-medium">shelx</span> / {" "}
+            <span className="font-medium">Forti REST API</span> / {" "}
+            <span className="font-medium">MySQL</span> / {" "}
+            <span className="font-medium">uWSGI</span> /{" "}
+            <span className="font-medium">Nginx</span>
           </p>
 
           <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
           <p className="p-5 ml-8">
-            CTDB is a GUI about several utilities, including{" "}
-            <span className="font-medium">Diary</span>,{" "}
-            <span className="font-medium">Reminder</span>, etc. It has its own log
-            system and scheduler.
+            <span className="font-medium">CTDB</span> is mainly built with{" "}
+            <span className="font-medium">Django</span>,{" "}
+            <span className="font-medium">Django REST Framework</span>,{" "}
+            <span className="font-medium">Vue.js</span>,{" "}
+            containing several useful
+            applications, such as <span className="font-medium">Diary</span>,{" "}
+            <span className="font-medium">Reminder</span>,{" "}
+            <span className="font-medium">Telecom</span>,{" "}
+            <span className="font-medium">News</span>,{" "}
+            <span className="font-medium">Archive</span>, etc. It also has its own log
+            system. It is mainly used by engineers in the technical department of the
+            company.
+          </p>
+          <p className="p-5 ml-8">
+            Tech stack:<br/>
+            <span className="font-medium">Django</span> / {" "}
+            <span className="font-medium">Django REST framework</span> / {" "}
+            <span className="font-medium">Vue.js</span> / {" "}
+            <span className="font-medium">MySQL</span> / {" "}
+            <span className="font-medium">uWSGI</span> /{" "}
+            <span className="font-medium">Nginx</span>
           </p>
         </FadeinWrapper>
 
