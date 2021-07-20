@@ -21,7 +21,7 @@ const Main = ({ refMain }) => {
       ref={refMain}
       className="py-20 font-extralight text-graywhite-99 dark:text-graywhite-594 bg-graywhite-660 dark:bg-graywhite-99 font-pretty"
     >
-      <div className="max-w-screen-sm p-3 mx-auto">
+      <div className="max-w-screen-md p-3 mx-auto">
         <FadeinWrapper>
           <ProgressiveImgWrapper
             thumbnail={
