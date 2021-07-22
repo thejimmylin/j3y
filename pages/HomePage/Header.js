@@ -1,6 +1,4 @@
 import LightFilter from "./Header/LightFilter";
-import wall from "./Header/wall-1440x810.jpg";
-import wallCompressed from "./Header/wall-144x81.jpg";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
 
 const Header = ({
@@ -24,14 +22,14 @@ const Header = ({
         <ProgressiveImgWrapper
           thumbnail={
             <img
-              src={wallCompressed}
+              src="/wall-144x81.jpg"
               alt="wallCompressed"
               className="object-cover w-full h-screen filter blur-2xl"
             />
           }
         >
           <img
-            src={wall}
+            src="/wall-1440x810.jpg"
             alt="wall"
             className="object-cover w-full h-screen ease-out transition-filter duration-2000"
           />

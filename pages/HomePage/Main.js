@@ -1,19 +1,5 @@
-import avatar from "./Main/avatar-1440x1440.jpg";
-import avatarCompressed from "./Main/avatar-144x144.jpg";
-import ntu from "./Main/ntu-360x360.png";
-import ntuCompressed from "./Main/ntu-36x36.png";
-import chief from "./Main/chief-500x300.png";
-import chiefCompressed from "./Main/chief-50x30.png";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
-import fortiadminLogin from "./Main/fortiadmin-login-1920x1080.png";
-import fortiadminLoginCompressed from "./Main/fortiadmin-login-192x108.png";
-import fortiadminExample from "./Main/fortiadmin-example-1920x1080.png";
-import fortiadminExampleCompressed from "./Main/fortiadmin-example-192x108.png";
-import ctdbI18n from "./Main/ctdb-i18n-1920x1080.png";
-import ctdbI18nCompressed from "./Main/ctdb-i18n-192x108.png";
-import ctdbLog from "./Main/ctdb-log-1920x1080.png";
-import ctdbLogCompressed from "./Main/ctdb-log-192x108.png";
 
 const Main = ({ refMain }) => {
   return (
@@ -26,14 +12,14 @@ const Main = ({ refMain }) => {
           <ProgressiveImgWrapper
             thumbnail={
               <img
-                src={avatarCompressed}
-                alt="avatar"
+                src="/avatar-144x144.jpg"
+                alt="avatarCompressed"
                 className="w-full p-5 rounded-3xl filter blur-md"
               />
             }
           >
             <img
-              src={avatar}
+              src="/avatar-1440x1440.jpg"
               alt="avatar"
               className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
             />
@@ -64,14 +50,14 @@ const Main = ({ refMain }) => {
               <ProgressiveImgWrapper
                 thumbnail={
                   <img
-                    src={ntuCompressed}
+                    src="/ntu-36x36.png"
                     alt="ntuCompressed"
                     className="filter blur-md"
                   />
                 }
               >
                 <img
-                  src={ntu}
+                  src="/ntu-360x360.png"
                   alt="ntu"
                   className="duration-1000 ease-out transition-filter"
                 />
@@ -111,14 +97,14 @@ const Main = ({ refMain }) => {
               <ProgressiveImgWrapper
                 thumbnail={
                   <img
-                    src={chiefCompressed}
+                    src="/chief-50x30.png"
                     alt="chiefCompressed"
                     className="filter blur-md"
                   />
                 }
               >
                 <img
-                  src={chief}
+                  src="/chief-500x300.png"
                   alt="chief"
                   className="duration-1000 ease-out transition-filter"
                 />
@@ -414,14 +400,14 @@ const Main = ({ refMain }) => {
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={fortiadminLoginCompressed}
+                  src="/fortiadmin-login-192x108.png"
                   alt="fortiadminLoginCompressed"
                   className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={fortiadminLogin}
+                src="/fortiadmin-login-1920x1080.png"
                 alt="fortiadminLogin"
                 className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
@@ -429,14 +415,14 @@ const Main = ({ refMain }) => {
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={fortiadminExampleCompressed}
+                  src="/fortiadmin-example-192x108.png"
                   alt="fortiadminExampleCompressed"
                   className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={fortiadminExample}
+                src="/fortiadmin-example-1920x1080.png"
                 alt="fortiadminExample"
                 className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
@@ -449,14 +435,14 @@ const Main = ({ refMain }) => {
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={ctdbI18nCompressed}
+                  src="/ctdb-i18n-192x108.png"
                   alt="ctdbI18nCompressed"
                   className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={ctdbI18n}
+                src="/ctdb-i18n-1920x1080.png"
                 alt="ctdbI18n"
                 className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
@@ -464,14 +450,14 @@ const Main = ({ refMain }) => {
             <ProgressiveImgWrapper
               thumbnail={
                 <img
-                  src={ctdbLogCompressed}
+                  src="/ctdb-log-192x108.png"
                   alt="ctdbLogCompressed"
                   className="w-full my-10 rounded-sm filter blur-md"
                 />
               }
             >
               <img
-                src={ctdbLog}
+                src="/ctdb-log-1920x1080.png"
                 alt="ctdbLog"
                 className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />

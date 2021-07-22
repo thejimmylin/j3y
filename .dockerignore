@@ -1,9 +1,0 @@
-# We want ignore everthing and then add them back one by one to
-# avoid building docker image with our credentials accidentally.
-*
-!package.json
-!package-lock.json
-!src
-!public
-!tailwind.config.js
-!craco.config.js

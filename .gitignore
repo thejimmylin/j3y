@@ -17,6 +17,9 @@ __pycache__/
 /dist/*
 /build/*
 
+# Next.js
+/.next/
+
 # Secrets
 /secrets.json
 
