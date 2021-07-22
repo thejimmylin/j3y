@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 
-import Header from "./HomePage/Header";
-import Main from "./HomePage/Main";
-import Footer from "./HomePage/Footer";
+import Header from "../components/HomePage/Header";
+import Main from "../components/HomePage/Main";
+import Footer from "../components/HomePage/Footer";
 
 const HomePage = () => {
   const [isDark, setIsDark] = useState(true);
