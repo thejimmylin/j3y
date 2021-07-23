@@ -27,7 +27,7 @@ const HomePage = () => {
   };
 
   return (
-    <section id="HomePage" className={isDark ? "dark" : ""}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Jimmy Lin</title>
@@ -37,16 +37,18 @@ const HomePage = () => {
         <meta property="og:description" content="Welcome to my personal website." />
         <meta property="og:image" content="https://jimmylin.org/avatar-1440x1440.jpg" />
       </Head>
-      <Header
-        isDark={isDark}
-        setIsDark={setIsDark}
-        windowScrollY={windowScrollY}
-        scrollIntoMain={scrollIntoMain}
-        scrollIntoFooter={scrollIntoFooter}
-      />
-      <Main refMain={refMain} />
-      <Footer refFooter={refFooter} />
-    </section>
+      <section id="HomePage" className={isDark ? "dark" : ""}>
+        <Header
+          isDark={isDark}
+          setIsDark={setIsDark}
+          windowScrollY={windowScrollY}
+          scrollIntoMain={scrollIntoMain}
+          scrollIntoFooter={scrollIntoFooter}
+        />
+        <Main refMain={refMain} />
+        <Footer refFooter={refFooter} />
+      </section>
+    </>
   );
 };
 
