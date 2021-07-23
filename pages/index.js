@@ -29,9 +29,7 @@ const HomePage = () => {
   return (
     <section id="HomePage" className={isDark ? "dark" : ""}>
       <Head>
-        <meta charset="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jimmy Lin</title>
         <meta name="title" content="I'm Jimmy Lin." />
         <meta name="description" content="Welcome to my personal website." />
