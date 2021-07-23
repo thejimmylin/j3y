@@ -13,6 +13,12 @@ const components = {
   ol: (props) => <ol className="m-4 list-decimal" {...props} />,
   li: (props) => <li className="m-4" {...props} />,
   inlineCode: (props) => <code className="text-white bg-gray-700" {...props} />,
+  code: (props) => (
+    <code
+      className="block p-4 m-4 overflow-x-scroll text-white whitespace-pre bg-gray-700"
+      {...props}
+    />
+  ),
 };
 
 function MyApp({ Component, pageProps }) {
