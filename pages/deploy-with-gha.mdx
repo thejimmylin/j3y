@@ -1,0 +1,15 @@
+# Deployment with Github action & GCP
+
+Reference:
+
+[https://github.com/google-github-actions/setup-gcloud/tree/master/example-workflows/gce](https://github.com/google-github-actions/setup-gcloud/tree/master/example-workflows/gce)
+
+Note:
+
+1. If you don't have clicked in into container registry once, you don't have API enabled. The github action will fail.
+2. The `.yml` given is out of date. The brand `master` should be `main`.
+3. Line 24 `GCE_INSTANCE` and line 25 `GCE_INSTANCE_ZONE` should be updated to yours.
+4. When you create VM on GCP compute engine, you have to choose `Container: Deploy a container image to this VM instance` or the Github action would fail at build step.
+5. More guess about `4.` May be you can deploy a container image later. But you just need to deploy it before you take the github action. The github action is about to update the image/container running ont the VM instance, not including create, so you have to run one already.
+
+Note: I don't use this method now. This method use the API GCP give us, it give the permission of controlling VM to GCP service account, and use GCP container registry, GCP container-optimized OS. It uses too many GCP things, which make it difficult to reuse these things in a different situation. If we are working with a different environment, say, AWS, then everything is broken.
