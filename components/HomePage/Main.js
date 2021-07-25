@@ -135,7 +135,7 @@ const Main = ({ refMain }) => {
             <br />
             <span className="font-medium">Django</span> /{" "}
             <span className="font-medium">shelx</span> /{" "}
-            <span className="font-medium">Forti REST API</span> /{" "}
+            <span className="font-medium">Forti REST API</span>
           </p>
         </FadeinWrapper>
 
