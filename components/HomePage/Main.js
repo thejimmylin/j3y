@@ -114,32 +114,6 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
-          <p className="p-5 ml-8">
-            <span className="font-medium">FortiAdmin</span> is mainly built with{" "}
-            <span className="font-medium">Django</span>, and{" "}
-            <span className="font-medium">shlex</span>,{" "}
-            <span className="font-medium">Forti REST API</span> which is a multi-tenant
-            portal for Fortigate/Fortios. With{" "}
-            <span className="font-medium">FortiAdmin</span>, It is possible to set their
-            own config without interfere with each other for different users.
-          </p>
-          <p className="p-5 ml-8">
-            Features:
-            <br />
-            <span className="font-medium">Multi-tenant</span> /{" "}
-            <span className="font-medium">Forti REST API</span>
-          </p>
-          <p className="p-5 ml-8">
-            Tech stack:
-            <br />
-            <span className="font-medium">Django</span> /{" "}
-            <span className="font-medium">shelx</span> /{" "}
-            <span className="font-medium">Forti REST API</span>
-          </p>
-        </FadeinWrapper>
-
-        <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
           <p className="p-5 ml-8">
             <span className="font-medium">CTDB</span> is mainly built with{" "}
@@ -166,6 +140,32 @@ const Main = ({ refMain }) => {
             <span className="font-medium">Django</span> /{" "}
             <span className="font-medium">Django REST framework</span> /{" "}
             <span className="font-medium">Vue.js</span>
+          </p>
+        </FadeinWrapper>
+
+        <FadeinWrapper>
+          <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
+          <p className="p-5 ml-8">
+            <span className="font-medium">FortiAdmin</span> is mainly built with{" "}
+            <span className="font-medium">Django</span>, and{" "}
+            <span className="font-medium">shlex</span>,{" "}
+            <span className="font-medium">Forti REST API</span> which is a multi-tenant
+            portal for Fortigate/Fortios. With{" "}
+            <span className="font-medium">FortiAdmin</span>, It is possible to set their
+            own config without interfere with each other for different users.
+          </p>
+          <p className="p-5 ml-8">
+            Features:
+            <br />
+            <span className="font-medium">Multi-tenant</span> /{" "}
+            <span className="font-medium">Forti REST API</span>
+          </p>
+          <p className="p-5 ml-8">
+            Tech stack:
+            <br />
+            <span className="font-medium">Django</span> /{" "}
+            <span className="font-medium">shelx</span> /{" "}
+            <span className="font-medium">Forti REST API</span>
           </p>
         </FadeinWrapper>
 
