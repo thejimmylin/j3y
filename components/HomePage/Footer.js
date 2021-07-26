@@ -8,7 +8,7 @@ const Footer = ({ refFooter }) => {
     >
       <FadeinWrapper>
         <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
-          <p className="pb-4 text-5xl font-normal">Jimmy Lin</p>
+          <p className="pb-4 text-6xl font-medium text-graywhite-660 hover:text-white">Jimmy Lin</p>
           <p className="pb-8 text-sm">
             E-mail:{" "}
             <a
