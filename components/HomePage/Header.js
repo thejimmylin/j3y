@@ -60,7 +60,7 @@ const Header = ({
         </div>
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5 whitespace-nowrap">
-        <p className="mb-4 text-5xl text-graywhite-660 hover:text-white">
+        <p className="mb-4 text-6xl font-medium text-graywhite-660 hover:text-white">
           <span className="animate-fadein-1000-0">I</span>
           <span className="animate-fadein-1000-50">'</span>
           <span className="animate-fadein-1000-100">m</span>
@@ -76,7 +76,7 @@ const Header = ({
           <span className="animate-fadein-1000-600">n</span>
           <span className="animate-fadein-1000-650">.</span>
         </p>
-        <p className="mb-16 text-xs text-center font-extralight text-graywhite-660 hover:text-white">
+        <p className="mb-16 text-sm text-center text-graywhite-660 hover:text-white">
           <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
         </p>
         <div className="flex">
