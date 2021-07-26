@@ -1,5 +1,7 @@
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
+import Image from 'next/image'
+import fortiadminExample from "../../public/fortiadmin-example-1920x1080.png"
 
 const Main = ({ refMain }) => {
   return (
@@ -457,21 +459,11 @@ const Main = ({ refMain }) => {
                 className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
               />
             </ProgressiveImgWrapper>
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/fortiadmin-example-192x108.png"
-                  alt="fortiadminExampleCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
-              }
-            >
-              <img
-                src="/fortiadmin-example-1920x1080.png"
-                alt="fortiadminExample"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
+            <Image
+              src={fortiadminExample}
+              alt="fortiadminExample"
+              className="rounded-sm"
+            />
           </p>
         </FadeinWrapper>
 
