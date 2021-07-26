@@ -27,7 +27,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Hello world</p>
+          <p className="p-5 text-4xl font-medium">Hello world</p>
           <p className="p-5 text-md">
             I'm Jimmy. I love programming. I like to create things and programming gives
             me the chance to do so.
@@ -35,17 +35,23 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Education</p>
+          <p className="p-5 text-4xl font-medium">Education</p>
           <div className="grid grid-cols-12 p-5">
-            <p className="col-span-9 pr-2 text-md">
-              <a
-                className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-                href="https://www.ntu.edu.tw/"
-              >
-                National Taiwan University
-              </a>
-              , Taipei, Mechanical engineering, September 2011-July 2016.
-            </p>
+            <div className="col-span-9 pr-2">
+              <p className="mb-10 ml-8 text-2xl font-light">
+                <a
+                  href="https://www.ntu.edu.tw/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+                >
+                  National Taiwan University
+                </a>
+                , Taipei, Mechanical engineering.{" "}
+                <span className="whitespace-nowrap">(2011/09 ~ 2016/06)</span>
+              </p>
+            </div>
+
             <div className="col-span-3 px-4">
               <ProgressiveImgWrapper
                 thumbnail={
@@ -67,10 +73,10 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Experience</p>
+          <p className="p-5 text-4xl font-medium">Experience</p>
           <div className="grid grid-cols-12 p-5">
             <div className="col-span-9 pr-2 text-md">
-              <p>
+              <p className="mb-10 ml-8 text-2xl font-normal">
                 <a
                   href="https://www.chief.com.tw"
                   target="_blank"
@@ -79,8 +85,11 @@ const Main = ({ refMain }) => {
                 >
                   Chief Telecom
                 </a>{" "}
-                for 4 years. I work for their cloud service department. I maintain and
-                develop products and services about{" "}
+                <span className="whitespace-nowrap">(2017/06 ~ )</span>
+              </p>
+              <p className="ml-8">
+                I work for their cloud service department. I maintain and develop
+                products and services about{" "}
                 <a
                   href="https://www.chief.com.tw/cloud/"
                   target="_blank"
@@ -114,8 +123,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">CTDB</p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16 text-lg font-medium">CTDB</p>
+          <p className="p-5 ml-16">
             <span className="font-medium">CTDB</span> is mainly built with{" "}
             <span className="font-medium">Django</span>,{" "}
             <span className="font-medium">Django REST Framework</span>,{" "}
@@ -128,13 +137,13 @@ const Main = ({ refMain }) => {
             system. It is mainly used by engineers in the technical department of the
             company.
           </p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16">
             Features:
             <br />
             <span className="font-medium">i18n</span> /{" "}
             <span className="font-medium">Log system</span>
           </p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16">
             Tech stack:
             <br />
             <span className="font-medium">Django</span> /{" "}
@@ -144,8 +153,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">FortiAdmin</p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16 text-lg font-normal">FortiAdmin</p>
+          <p className="p-5 ml-16">
             <span className="font-medium">FortiAdmin</span> is mainly built with{" "}
             <span className="font-medium">Django</span>, and{" "}
             <span className="font-medium">shlex</span>,{" "}
@@ -154,13 +163,13 @@ const Main = ({ refMain }) => {
             <span className="font-medium">FortiAdmin</span>, It is possible to set their
             own config without interfere with each other for different users.
           </p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16">
             Features:
             <br />
             <span className="font-medium">Multi-tenant</span> /{" "}
             <span className="font-medium">Forti REST API</span>
           </p>
-          <p className="p-5 ml-8">
+          <p className="p-5 ml-16">
             Tech stack:
             <br />
             <span className="font-medium">Django</span> /{" "}
@@ -170,7 +179,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Skills</p>
+          <p className="p-5 text-4xl font-medium">Skills</p>
           <p className="p-5 text-md">Here are my skills and the techniques I use:</p>
         </FadeinWrapper>
 
@@ -394,42 +403,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Portfolios</p>
-          <p className="p-5 ml-8 text-2xl font-normal">
-            FortiAdmin
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/fortiadmin-login-192x108.png"
-                  alt="fortiadminLoginCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
-              }
-            >
-              <img
-                src="/fortiadmin-login-1920x1080.png"
-                alt="fortiadminLogin"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/fortiadmin-example-192x108.png"
-                  alt="fortiadminExampleCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
-              }
-            >
-              <img
-                src="/fortiadmin-example-1920x1080.png"
-                alt="fortiadminExample"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
-          </p>
-        </FadeinWrapper>
-        <FadeinWrapper>
+          <p className="p-5 text-4xl font-medium">Portfolios</p>
           <p className="p-5 ml-8 text-2xl font-normal">
             CTDB
             <ProgressiveImgWrapper
@@ -466,7 +440,43 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-normal">Thank you</p>
+          <p className="p-5 ml-8 text-2xl font-normal">
+            FortiAdmin
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src="/fortiadmin-login-192x108.png"
+                  alt="fortiadminLoginCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
+                />
+              }
+            >
+              <img
+                src="/fortiadmin-login-1920x1080.png"
+                alt="fortiadminLogin"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
+              />
+            </ProgressiveImgWrapper>
+            <ProgressiveImgWrapper
+              thumbnail={
+                <img
+                  src="/fortiadmin-example-192x108.png"
+                  alt="fortiadminExampleCompressed"
+                  className="w-full my-10 rounded-sm filter blur-md"
+                />
+              }
+            >
+              <img
+                src="/fortiadmin-example-1920x1080.png"
+                alt="fortiadminExample"
+                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
+              />
+            </ProgressiveImgWrapper>
+          </p>
+        </FadeinWrapper>
+
+        <FadeinWrapper>
+          <p className="p-5 text-4xl font-medium">Thank you</p>
           <p className="p-5 text-md">
             thank you for giving a chance to introduce myself. I really apprecicate
             that. Feel free to contact me if you want.
