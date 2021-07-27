@@ -3,6 +3,8 @@ import Image from "next/image";
 import classNames from "classnames";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
+import ctdbI18n from "../../public/ctdb-i18n-1920x1080.png";
+import ctdbLog from "../../public/ctdb-log-1920x1080.png";
 import fortiadminLogin from "../../public/fortiadmin-login-1920x1080.png";
 import fortiadminExample from "../../public/fortiadmin-example-1920x1080.png";
 
@@ -533,40 +535,41 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Portfolios</p>
-          <p className="p-5 ml-8 text-2xl font-normal">
-            CTDB
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/ctdb-i18n-192x108.png"
-                  alt="ctdbI18nCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
+          <p className="my-8 mx-4 text-4xl font-medium">Portfolios</p>
+        </FadeinWrapper>
+
+        <FadeinWrapper>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">CTDB</p>
+          <div
+            className={classNames(
+              "my-8",
+              "mr-4",
+              "ml-12",
+              "transition-filter",
+              "ease-out",
+              "duration-1000",
+              {
+                "blur-md": !loaded,
               }
-            >
-              <img
-                src="/ctdb-i18n-1920x1080.png"
-                alt="ctdbI18n"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/ctdb-log-192x108.png"
-                  alt="ctdbLogCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
+            )}
+          >
+            <Image src={ctdbI18n} alt="ctdbI18n" className="rounded-sm" />
+          </div>
+          <div
+            className={classNames(
+              "my-8",
+              "mr-4",
+              "ml-12",
+              "transition-filter",
+              "ease-out",
+              "duration-1000",
+              {
+                "blur-md": !loaded,
               }
-            >
-              <img
-                src="/ctdb-log-1920x1080.png"
-                alt="ctdbLog"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
-          </p>
+            )}
+          >
+            <Image src={ctdbLog} alt="ctdbLog" className="rounded-sm" />
+          </div>
         </FadeinWrapper>
 
         <FadeinWrapper>
