@@ -1,5 +1,9 @@
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import classNames from "classnames";
 import LightFilter from "./Header/LightFilter";
-import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
+import wallCompressed from "../../public/wall-144x81.jpg";
+import wall from "../../public/wall-1440x810.jpg";
 
 const Header = ({
   isDark,
@@ -11,6 +15,10 @@ const Header = ({
   const toggleDarkMode = () => {
     setIsDark(!isDark);
   };
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  });
 
   return (
     <header className="relative h-screen font-pretty">
@@ -19,21 +27,26 @@ const Header = ({
         className="absolute w-full h-screen -z-10 bg-graywhite-99"
         style={{ transform: `translateY(${windowScrollY / 2}px)` }}
       >
-        <ProgressiveImgWrapper
-          thumbnail={
-            <img
-              src="/wall-144x81.jpg"
-              alt="wallCompressed"
-              className="object-cover w-full h-screen filter blur-2xl"
-            />
-          }
+        <div
+          className={classNames(
+            "relative",
+            "w-full",
+            "h-screen",
+            "transition-filter",
+            "ease-out",
+            "duration-2000",
+            { "blur-2xl": !loaded }
+          )}
         >
-          <img
-            src="/wall-1440x810.jpg"
+          <Image
+            src={wall}
             alt="wall"
-            className="object-cover w-full h-screen ease-out transition-filter duration-2000"
+            layout="fill"
+            objectFit="cover"
+            blurDataURL={wallCompressed}
+            placeholder="blur"
           />
-        </ProgressiveImgWrapper>
+        </div>
       </div>
       <div className="absolute h-12 right-8 top-5">
         <div className="flex items-center self-center animate-fadein-1000-700">
