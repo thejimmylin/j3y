@@ -40,7 +40,7 @@ const Main = ({ refMain }) => {
           <p className="p-5 text-4xl font-medium">Education</p>
           <div className="grid grid-cols-12 p-5">
             <div className="col-span-9 pr-2">
-              <p className="mb-10 ml-8 text-2xl font-light">
+              <p className="mb-10 ml-8 text-xl font-light">
                 <a
                   href="https://www.ntu.edu.tw/"
                   target="_blank"
