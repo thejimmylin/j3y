@@ -34,7 +34,7 @@ const Main = ({ refMain }) => {
               }
             )}
           >
-            <Image src={avatar} alt="avatar" className="rounded-lg" />
+            <Image src={avatar} alt="avatar" className="rounded-sm" />
           </div>
         </FadeinWrapper>
 
