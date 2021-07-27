@@ -362,7 +362,7 @@ const Main = ({ refMain }) => {
         <FadeinWrapper>
           <p className="p-5 ml-8 text-2xl font-normal">Django REST Framwork</p>
           <p className="p-5 ml-8 text-md">
-            Django is already pretty good, but when you combine it with the{" "}
+            Django is pretty good, but when you combine it with{" "}
             <a
               href="https://www.django-rest-framework.org/"
               target="_blank"
@@ -387,10 +387,9 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">React.js</p>
+          <p className="p-5 ml-8 text-2xl font-normal">React.js/Next.js</p>
           <p className="p-5 ml-8 text-md">
-            Django is a backend framework I use a lot, and when it comes to frontend
-            things,{" "}
+            Now, when it comes to frontend things,{" "}
             <a
               href="https://reactjs.org/"
               target="_blank"
@@ -399,9 +398,29 @@ const Main = ({ refMain }) => {
             >
               React.js
             </a>{" "}
-            is my favorite because its philosophy is so graceful, making you enjoy
-            coding and building things with it. This website is built with React.js,
-            too.
+            is my favorite. Its philosophy is so graceful, making you enjoy coding and
+            building things with it. This website is built with React.js, too.
+          </p>
+          <p className="p-5 ml-8 text-md">
+            <a
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+            >
+              Next.js
+            </a>{" "}
+            gives me a lot of things out of the box. It lets me not worry about the
+            {" "}
+            <a
+              href="https://nextjs.org/docs/basic-features/data-fetching"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+            >
+              SSG/SSR
+            </a>{" "}
+            things, which is pretty annoying to implement on our own.
           </p>
         </FadeinWrapper>
 
