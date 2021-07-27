@@ -1,9 +1,16 @@
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import classNames from "classnames";
 import FadeinWrapper from "./shared/FadeinWrapper";
 import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
-import Image from "next/image";
+import fortiadminLogin from "../../public/fortiadmin-login-1920x1080.png";
 import fortiadminExample from "../../public/fortiadmin-example-1920x1080.png";
 
 const Main = ({ refMain }) => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  });
   return (
     <main
       ref={refMain}
@@ -410,8 +417,7 @@ const Main = ({ refMain }) => {
             >
               Next.js
             </a>{" "}
-            gives me a lot of things out of the box. It lets me not worry about the
-            {" "}
+            gives me a lot of things out of the box. It lets me not worry about the{" "}
             <a
               href="https://nextjs.org/docs/basic-features/data-fetching"
               target="_blank"
@@ -564,34 +570,46 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">
-            FortiAdmin
-            <ProgressiveImgWrapper
-              thumbnail={
-                <img
-                  src="/fortiadmin-login-192x108.png"
-                  alt="fortiadminLoginCompressed"
-                  className="w-full my-10 rounded-sm filter blur-md"
-                />
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">FortiAdmin</p>
+          <div
+            className={classNames(
+              "my-8",
+              "mr-4",
+              "ml-12",
+              "transition-filter",
+              "ease-out",
+              "duration-1000",
+              {
+                "blur-md": !loaded,
               }
-            >
-              <img
-                src="/fortiadmin-login-1920x1080.png"
-                alt="fortiadminLogin"
-                className="w-full my-10 duration-1000 ease-out rounded-sm transition-filter"
-              />
-            </ProgressiveImgWrapper>
+            )}
+          >
+            <Image src={fortiadminLogin} alt="fortiadminLogin" className="rounded-sm" />
+          </div>
+          <div
+            className={classNames(
+              "my-8",
+              "mr-4",
+              "ml-12",
+              "transition-filter",
+              "ease-out",
+              "duration-1000",
+              {
+                "blur-md": !loaded,
+              }
+            )}
+          >
             <Image
               src={fortiadminExample}
               alt="fortiadminExample"
               className="rounded-sm"
             />
-          </p>
+          </div>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Thank you</p>
-          <p className="p-5 text-md">
+          <p className="my-8 mx-4 text-4xl font-medium">Thank you</p>
+          <p className="my-8 mx-4">
             thank you for giving a chance to introduce myself. I really apprecicate
             that. Feel free to contact me if you want.
           </p>
