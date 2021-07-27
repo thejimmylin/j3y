@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import FadeinWrapper from "./shared/FadeinWrapper";
-import ProgressiveImgWrapper from "./shared/ProgressiveImgWrapper";
+import avatar from "../../public/avatar-1440x1440.jpg";
+import ntu from "../../public/ntu-360x360.png";
+import chief from "../../public/chief-500x300.png";
 import ctdbI18n from "../../public/ctdb-i18n-1920x1080.png";
 import ctdbLog from "../../public/ctdb-log-1920x1080.png";
 import fortiadminLogin from "../../public/fortiadmin-login-1920x1080.png";
@@ -18,38 +20,37 @@ const Main = ({ refMain }) => {
       ref={refMain}
       className="py-20 font-extralight text-graywhite-99 dark:text-graywhite-594 bg-graywhite-660 dark:bg-graywhite-99 font-pretty"
     >
-      <div className="max-w-screen-md p-3 mx-auto">
+      <div className="max-w-screen-md p-4 mx-auto">
         <FadeinWrapper>
-          <ProgressiveImgWrapper
-            thumbnail={
-              <img
-                src="/avatar-144x144.jpg"
-                alt="avatarCompressed"
-                className="w-full p-5 rounded-3xl filter blur-md"
-              />
-            }
+          <div
+            className={classNames(
+              "my-8",
+              "mx-4",
+              "transition-filter",
+              "ease-out",
+              "duration-1000",
+              {
+                "blur-md": !loaded,
+              }
+            )}
           >
-            <img
-              src="/avatar-1440x1440.jpg"
-              alt="avatar"
-              className="w-full p-5 duration-1000 ease-out rounded-3xl transition-filter"
-            />
-          </ProgressiveImgWrapper>
+            <Image src={avatar} alt="avatar" className="rounded-lg" />
+          </div>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Hello world</p>
-          <p className="p-5 text-md">
+          <p className="my-8 mx-4 text-4xl font-medium">Hello world</p>
+          <p className="my-8 mx-4">
             I'm Jimmy. I love programming. I like to create things and programming gives
             me the chance to do so.
           </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Education</p>
-          <div className="grid grid-cols-12 p-5">
-            <div className="col-span-9 pr-2">
-              <p className="mb-10 ml-8 text-xl font-light">
+          <p className="my-8 mx-4 text-4xl font-medium">Education</p>
+          <div className="my-8 mr-4 ml-12 grid grid-cols-12 gap-x-3">
+            <div className="col-span-9">
+              <p className="text-xl font-light">
                 <a
                   href="https://www.ntu.edu.tw/"
                   target="_blank"
@@ -62,32 +63,28 @@ const Main = ({ refMain }) => {
                 <span className="text-lg whitespace-nowrap">(2011/09 ~ 2016/06)</span>
               </p>
             </div>
-
-            <div className="col-span-3 px-4">
-              <ProgressiveImgWrapper
-                thumbnail={
-                  <img
-                    src="/ntu-36x36.png"
-                    alt="ntuCompressed"
-                    className="filter blur-md"
-                  />
-                }
+            <div className="col-span-3">
+              <div
+                className={classNames(
+                  "transition-filter",
+                  "ease-out",
+                  "duration-1000",
+                  {
+                    "blur-md": !loaded,
+                  }
+                )}
               >
-                <img
-                  src="/ntu-360x360.png"
-                  alt="ntu"
-                  className="duration-1000 ease-out transition-filter"
-                />
-              </ProgressiveImgWrapper>
+                <Image src={ntu} alt="ntu" />
+              </div>
             </div>
           </div>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Experience</p>
-          <div className="grid grid-cols-12 p-5">
-            <div className="col-span-9 pr-2 text-md">
-              <p className="mb-10 ml-8 text-2xl font-normal">
+          <p className="my-8 mx-4 text-4xl font-medium">Experience</p>
+          <div className="my-8 mr-4 ml-12 grid grid-cols-12 gap-x-3">
+            <div className="col-span-9">
+              <p className="text-2xl font-normal">
                 <a
                   href="https://www.chief.com.tw"
                   target="_blank"
@@ -98,7 +95,7 @@ const Main = ({ refMain }) => {
                 </a>{" "}
                 <span className="text-xl whitespace-nowrap">(2017/06 ~ )</span>
               </p>
-              <p className="ml-8">
+              <p className="mt-8">
                 I work for their cloud service department. I maintain and develop
                 products and services about{" "}
                 <a
@@ -112,30 +109,26 @@ const Main = ({ refMain }) => {
                 . Major Achievements:
               </p>
             </div>
-
             <div className="col-span-3">
-              <ProgressiveImgWrapper
-                thumbnail={
-                  <img
-                    src="/chief-50x30.png"
-                    alt="chiefCompressed"
-                    className="filter blur-md"
-                  />
-                }
+              <div
+                className={classNames(
+                  "transition-filter",
+                  "ease-out",
+                  "duration-1000",
+                  {
+                    "blur-md": !loaded,
+                  }
+                )}
               >
-                <img
-                  src="/chief-500x300.png"
-                  alt="chief"
-                  className="duration-1000 ease-out transition-filter"
-                />
-              </ProgressiveImgWrapper>
+                <Image src={chief} alt="chief" />
+              </div>
             </div>
           </div>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-16 text-lg font-medium">CTDB</p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20 text-lg font-medium">CTDB</p>
+          <p className="my-8 mr-4 ml-20">
             CTDB is mainly built with{" "}
             <a
               href="https://www.djangoproject.com/"
@@ -167,12 +160,12 @@ const Main = ({ refMain }) => {
             News, Archive, etc. It also has its own log system. It is mainly used by
             engineers in the technical department of the company.
           </p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20">
             Features:
             <br />
             i18n / Log system
           </p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20">
             Tech stack:
             <br />
             <a
@@ -205,8 +198,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-16 text-lg font-normal">FortiAdmin</p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20 text-lg font-normal">FortiAdmin</p>
+          <p className="my-8 mr-4 ml-20">
             FortiAdmin is mainly built with{" "}
             <a
               href="https://www.djangoproject.com/"
@@ -238,7 +231,7 @@ const Main = ({ refMain }) => {
             FortiAdmin, It is possible to set their own config without interfere with
             each other for different users.
           </p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20">
             Features:
             <br />
             Multi-tenant /{" "}
@@ -252,7 +245,7 @@ const Main = ({ refMain }) => {
             </a>{" "}
             REST API{" "}
           </p>
-          <p className="p-5 ml-16">
+          <p className="my-8 mr-4 ml-20">
             Tech stack:
             <br />
             <a
@@ -286,13 +279,15 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 text-4xl font-medium">Skills</p>
-          <p className="p-5 text-md">Here are my skills and the techniques I use:</p>
+          <p className="my-8 mx-4 text-4xl font-medium">Skills</p>
+          <p className="my-8 mx-4 text-md">
+            Here are my skills and the techniques I use:
+          </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Python</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Python</p>
+          <p className="my-8 mr-4 ml-12">
             <a
               href="https://www.python.org/"
               target="_blank"
@@ -352,8 +347,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Django</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Django</p>
+          <p className="my-8 mr-4 ml-12">
             <a
               href="https://www.djangoproject.com/"
               target="_blank"
@@ -369,8 +364,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Django REST Framwork</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Django REST Framwork</p>
+          <p className="my-8 mr-4 ml-12">
             Django is pretty good, but when you combine it with{" "}
             <a
               href="https://www.django-rest-framework.org/"
@@ -386,8 +381,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">SQL</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">SQL</p>
+          <p className="my-8 mr-4 ml-12">
             Django has a great model/ORM system, which makes it possible to creating a
             web application without writing SQL. But sometimes SQL knowledge is
             important, too. It is true especially when it comes to a extremely
@@ -396,8 +391,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">React.js/Next.js</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">React.js/Next.js</p>
+          <p className="my-8 mr-4 ml-12">
             Now, when it comes to frontend things,{" "}
             <a
               href="https://reactjs.org/"
@@ -410,7 +405,7 @@ const Main = ({ refMain }) => {
             is my favorite. Its philosophy is so graceful, making you enjoy coding and
             building things with it. This website is built with React.js, too.
           </p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12">
             <a
               href="https://nextjs.org/"
               target="_blank"
@@ -433,8 +428,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Vue.js</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Vue.js</p>
+          <p className="my-8 mr-4 ml-12">
             In addition to React.js, I also use{" "}
             <a
               href="https://vuejs.org"
@@ -450,8 +445,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Tailwind CSS</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Tailwind CSS</p>
+          <p className="my-8 mr-4 ml-12">
             <a
               href="https://tailwindcss.com/"
               target="_blank"
@@ -475,8 +470,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">HTML/CSS/JavaScript</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">HTML/CSS/JavaScript</p>
+          <p className="my-8 mr-4 ml-12">
             In addition to developing with frontend frameworks, I also know about
             HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
             elements, so it is important to have a solid understanding of them.
@@ -484,8 +479,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">CI/CD</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">CI/CD</p>
+          <p className="my-8 mr-4 ml-12">
             I use{" "}
             <a
               href="https://docs.github.com/en/actions"
@@ -502,8 +497,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">Docker</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Docker</p>
+          <p className="my-8 mr-4 ml-12">
             I mostly run my services in{" "}
             <a
               href="https://www.docker.com/"
@@ -519,8 +514,8 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="p-5 ml-8 text-2xl font-normal">GCP</p>
-          <p className="p-5 ml-8 text-md">
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">GCP</p>
+          <p className="my-8 mr-4 ml-12">
             <a
               href="https://cloud.google.com/gcp"
               target="_blank"
