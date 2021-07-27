@@ -50,7 +50,7 @@ const Main = ({ refMain }) => {
                   National Taiwan University
                 </a>
                 , Taipei, Mechanical engineering.{" "}
-                <span className="whitespace-nowrap">(2011/09 ~ 2016/06)</span>
+                <span className="text-lg whitespace-nowrap">(2011/09 ~ 2016/06)</span>
               </p>
             </div>
 
@@ -87,7 +87,7 @@ const Main = ({ refMain }) => {
                 >
                   Chief Telecom
                 </a>{" "}
-                <span className="whitespace-nowrap">(2017/06 ~ )</span>
+                <span className="text-xl whitespace-nowrap">(2017/06 ~ )</span>
               </p>
               <p className="ml-8">
                 I work for their cloud service department. I maintain and
