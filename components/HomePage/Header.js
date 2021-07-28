@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import LightFilter from "./Header/LightFilter";
-import wallCompressed from "../../public/wall-144x81.jpg";
 import wall from "../../public/wall-1440x810.jpg";
 
 const Header = ({
@@ -16,9 +15,6 @@ const Header = ({
     setIsDark(!isDark);
   };
   const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    setLoaded(true);
-  });
 
   return (
     <header className="relative h-screen font-pretty">
@@ -43,8 +39,8 @@ const Header = ({
             alt="wall"
             layout="fill"
             objectFit="cover"
-            blurDataURL={wallCompressed}
             placeholder="blur"
+            onLoad={() => setLoaded(true)}
           />
         </div>
       </div>
@@ -90,7 +86,9 @@ const Header = ({
           <span className="animate-fadein-1000-650">.</span>
         </p>
         <p className="mb-16 text-sm text-center text-graywhite-660 hover:text-white">
-          <span className="animate-fadein-2000-1500">Welcome to my personal page.</span>
+          <span className="animate-fadein-2000-1500">
+            Welcome to my personal page.
+          </span>
         </p>
         <div className="flex">
           <a
