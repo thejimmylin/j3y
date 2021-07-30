@@ -6,7 +6,7 @@ import classNames from "classnames";
  */
 const FadeinWrapper = ({ children }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef();
+  const ref = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => setIsIntersecting(entry.isIntersecting));
@@ -16,12 +16,11 @@ const FadeinWrapper = ({ children }) => {
   return (
     <div
       className={classNames(
-        "transition",
+        "transition-opacity",
         "duration-1000",
         "ease-out",
         {
           "opacity-0": !isIntersecting,
-          "translate-y-8": !isIntersecting,
         }
       )}
       ref={ref}
