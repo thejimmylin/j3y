@@ -20,7 +20,7 @@ const Footer = ({ refFooter }) => {
             href="https://github.com/j3ygithub"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+            className="pr-4 text-4xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
           >
             <i className="bi bi-github"></i>
           </a>
@@ -28,33 +28,17 @@ const Footer = ({ refFooter }) => {
             href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+            className="pr-4 text-4xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
           >
             <i className="bi bi-linkedin"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/j3y.ig/"
-            target="_blank"
-            rel="noreferrer"
-            className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-          >
-            <i className="bi bi-instagram"></i>
           </a>
           <a
             href="https://www.facebook.com/j3y.fb"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
+            className="pr-4 text-4xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
           >
             <i className="bi bi-facebook"></i>
-          </a>
-          <a
-            href="https://twitter.com/j3ytweeting"
-            target="_blank"
-            rel="noreferrer"
-            className="pr-4 text-3xl underline hover:text-graywhite-330 dark:hover:text-graywhite-396"
-          >
-            <i className="bi bi-twitter"></i>
           </a>
         </p>
       </div>
