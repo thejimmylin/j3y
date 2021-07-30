@@ -39,10 +39,13 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mx-4 text-4xl font-medium">Hello world</p>
-          <p className="my-8 mx-4">
+          <p className="mx-4 my-8 text-4xl font-medium">Hello world</p>
+          <p className="mx-4 my-8">
             I'm Jimmy. I love programming. I like to create things and programming gives
             me the chance to do so.
+          </p>
+          <p className="mx-4 my-8">
+            I have five years of programming experience, mostly in Python.
           </p>
         </FadeinWrapper>
 
