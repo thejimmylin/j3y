@@ -394,7 +394,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">React.js/Next.js</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">React.js / Next.js</p>
           <p className="my-8 mr-4 ml-12">
             Now, when it comes to frontend things,{" "}
             <a
@@ -473,7 +473,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">HTML/CSS/JavaScript</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">HTML / CSS / JavaScript</p>
           <p className="my-8 mr-4 ml-12">
             In addition to developing with frontend frameworks, I also know about
             HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
@@ -482,7 +482,7 @@ const Main = ({ refMain }) => {
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">CI/CD</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">CI / CD</p>
           <p className="my-8 mr-4 ml-12">
             I use{" "}
             <a

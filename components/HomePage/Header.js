@@ -69,7 +69,7 @@ const Header = ({
         </div>
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5">
-        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium text-graywhite-660 hover:text-white text-center whitespace-nowrap">
+        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-medium text-graywhite-660 hover:text-white text-center whitespace-nowrap">
           <span className="animate-fadein-1000-0">I</span>
           <span className="animate-fadein-1000-50">'</span>
           <span className="animate-fadein-1000-100">m</span>
