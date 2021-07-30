@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -5,6 +7,10 @@ module.exports = {
   theme: {
     fontFamily: {
       pretty: ["poppins", "sans-serif"],
+    },
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
     },
     extend: {
       inset: {
