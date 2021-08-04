@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import classNames from "classnames";
 import LightFilter from "./Header/LightFilter";
 import wall from "../../public/wall-1440x810.jpg";
@@ -91,17 +92,14 @@ const Header = ({
           </span>
         </p>
         <div className="flex">
+          <Link href="/posts">
           <a
-            href="https://github.com/j3ygithub"
-            target="_blank"
-            rel="noreferrer"
             className="flex items-center justify-center w-32 h-12 m-1 bg-graywhite-660 hover:bg-white animate-fadein-1000-900"
           >
-            <span className="mr-1 text-2xl">
-              <i className="bi bi-github"></i>
-            </span>
-            Github
+             Posts
           </a>
+          </Link>
+
           <button
             onClick={scrollIntoFooter}
             className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"

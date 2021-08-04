@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
-import Header from "../components/HomePage/Header";
-import Main from "../components/HomePage/Main";
-import Footer from "../components/HomePage/Footer";
+import Header from "../../components/Posts/Header";
+import Main from "../../components/Posts/Main";
+import Footer from "../../components/Posts/Footer";
 
-const HomePage = ({ isDark, setIsDark }) => {
+const Posts = ({ isDark, setIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);
   const handleWindowScroll = () => {
     setWindowScrollY(window.scrollY);
@@ -46,18 +46,18 @@ const HomePage = ({ isDark, setIsDark }) => {
         />
       </Head>
       <section id="HomePage" className={isDark ? "dark" : ""}>
-        <Header
+        <Header 
           isDark={isDark}
           setIsDark={setIsDark}
           windowScrollY={windowScrollY}
           scrollIntoMain={scrollIntoMain}
           scrollIntoFooter={scrollIntoFooter}
         />
-        <Main refMain={refMain} />
-        <Footer refFooter={refFooter} />
+        <Main />
+        <Footer />
       </section>
     </>
   );
 };
 
-export default HomePage;
+export default Posts

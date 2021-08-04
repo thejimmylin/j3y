@@ -41,8 +41,8 @@ const Main = ({ refMain }) => {
         <FadeinWrapper>
           <p className="mx-4 my-8 text-4xl font-medium">Hello world</p>
           <p className="mx-4 my-8">
-            I'm Jimmy. I love programming. I like to create things and programming gives
-            me the chance to do so.
+            I'm Jimmy. I love programming. I like to create things and
+            programming gives me the chance to do so.
           </p>
           <p className="mx-4 my-8">
             I have five years of programming experience, mostly in Python.
@@ -63,7 +63,9 @@ const Main = ({ refMain }) => {
                   National Taiwan University
                 </a>
                 , Taipei, Mechanical engineering.{" "}
-                <span className="text-lg whitespace-nowrap">(2011/09 ~ 2016/06)</span>
+                <span className="text-lg whitespace-nowrap">
+                  (2011/09 ~ 2016/06)
+                </span>
               </p>
             </div>
             <div className="col-span-3">
@@ -99,8 +101,8 @@ const Main = ({ refMain }) => {
                 <span className="text-xl whitespace-nowrap">(2017/06 ~ )</span>
               </p>
               <p className="mt-8">
-                I work for their cloud service department. I maintain and develop
-                products and services about{" "}
+                I work for their cloud service department. I maintain and
+                develop products and services about{" "}
                 <a
                   href="https://www.chief.com.tw/cloud/"
                   target="_blank"
@@ -159,9 +161,9 @@ const Main = ({ refMain }) => {
             >
               Vue.js
             </a>
-            , containing several useful applications, such as Diary, Reminder, Telecom,
-            News, Archive, etc. It also has its own log system. It is mainly used by
-            engineers in the technical department of the company.
+            , containing several useful applications, such as Diary, Reminder,
+            Telecom, News, Archive, etc. It also has its own log system. It is
+            mainly used by engineers in the technical department of the company.
           </p>
           <p className="my-8 mr-4 ml-20">
             Features:
@@ -231,8 +233,8 @@ const Main = ({ refMain }) => {
               Forti
             </a>{" "}
             REST API which is a multi-tenant portal for Fortigate/Fortios. With{" "}
-            FortiAdmin, It is possible to set their own config without interfere with
-            each other for different users.
+            FortiAdmin, It is possible to set their own config without interfere
+            with each other for different users.
           </p>
           <p className="my-8 mr-4 ml-20">
             Features:
@@ -299,8 +301,8 @@ const Main = ({ refMain }) => {
             >
               Python
             </a>{" "}
-            is my primary programming language. I am familiar with Python's language
-            features and many of its standard libraries such as{" "}
+            is my primary programming language. I am familiar with Python's
+            language features and many of its standard libraries such as{" "}
             <a
               href="https://docs.python.org/3/library/unittest.html"
               target="_blank"
@@ -360,14 +362,16 @@ const Main = ({ refMain }) => {
             >
               Django
             </a>{" "}
-            is a Python's web framework I've spent most of my time with. I've been doing
-            web development with Django for over 5 years. I can build modern,
-            well-tested web application with it.
+            is a Python's web framework I've spent most of my time with. I've
+            been doing web development with Django for over 5 years. I can build
+            modern, well-tested web application with it.
           </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">Django REST Framwork</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">
+            Django REST Framwork
+          </p>
           <p className="my-8 mr-4 ml-12">
             Django is pretty good, but when you combine it with{" "}
             <a
@@ -378,23 +382,25 @@ const Main = ({ refMain }) => {
             >
               Django REST Framework
             </a>
-            , it gets even better. Modern web applications often require REST APIs, and
-            this is where the Django REST Framework comes in.
+            , it gets even better. Modern web applications often require REST
+            APIs, and this is where the Django REST Framework comes in.
           </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
           <p className="my-8 mr-4 ml-12 text-2xl font-normal">SQL</p>
           <p className="my-8 mr-4 ml-12">
-            Django has a great model/ORM system, which makes it possible to creating a
-            web application without writing SQL. But sometimes SQL knowledge is
-            important, too. It is true especially when it comes to a extremely
-            complicated queriy or some performance issue.
+            Django has a great model/ORM system, which makes it possible to
+            creating a web application without writing SQL. But sometimes SQL
+            knowledge is important, too. It is true especially when it comes to
+            a extremely complicated queriy or some performance issue.
           </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">React.js / Next.js</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">
+            React.js / Next.js
+          </p>
           <p className="my-8 mr-4 ml-12">
             Now, when it comes to frontend things,{" "}
             <a
@@ -405,8 +411,9 @@ const Main = ({ refMain }) => {
             >
               React.js
             </a>{" "}
-            is my favorite. Its philosophy is so graceful, making you enjoy coding and
-            building things with it. This website is built with React.js, too.
+            is my favorite. Its philosophy is so graceful, making you enjoy
+            coding and building things with it. This website is built with
+            React.js, too.
           </p>
           <p className="my-8 mr-4 ml-12">
             <a
@@ -417,7 +424,8 @@ const Main = ({ refMain }) => {
             >
               Next.js
             </a>{" "}
-            gives me a lot of things out of the box. It lets me not worry about the{" "}
+            gives me a lot of things out of the box. It lets me not worry about
+            the{" "}
             <a
               href="https://nextjs.org/docs/basic-features/data-fetching"
               target="_blank"
@@ -442,8 +450,8 @@ const Main = ({ refMain }) => {
             >
               Vue.js
             </a>
-            . I personally like React.js more, but they are both very powerful andd
-            reliable frameworks.
+            . I personally like React.js more, but they are both very powerful
+            andd reliable frameworks.
           </p>
         </FadeinWrapper>
 
@@ -467,17 +475,20 @@ const Main = ({ refMain }) => {
             >
               Bootstrap
             </a>
-            , but it is much more flexible and easy to customize, which prevents you
-            from building a lot of similar web.
+            , but it is much more flexible and easy to customize, which prevents
+            you from building a lot of similar web.
           </p>
         </FadeinWrapper>
 
         <FadeinWrapper>
-          <p className="my-8 mr-4 ml-12 text-2xl font-normal">HTML / CSS / JavaScript</p>
+          <p className="my-8 mr-4 ml-12 text-2xl font-normal">
+            HTML / CSS / JavaScript
+          </p>
           <p className="my-8 mr-4 ml-12">
-            In addition to developing with frontend frameworks, I also know about
-            HTML/CSS/JavaScript. I think, after all, frameworks are based on these three
-            elements, so it is important to have a solid understanding of them.
+            In addition to developing with frontend frameworks, I also know
+            about HTML/CSS/JavaScript. I think, after all, frameworks are based
+            on these three elements, so it is important to have a solid
+            understanding of them.
           </p>
         </FadeinWrapper>
 
@@ -493,9 +504,9 @@ const Main = ({ refMain }) => {
             >
               Github action
             </a>{" "}
-            to handle CI/CD things. I believe that deployment is just as important as
-            development. If a feature can't be delivered to the users, the resources
-            spent on development will be wasted.
+            to handle CI/CD things. I believe that deployment is just as
+            important as development. If a feature can't be delivered to the
+            users, the resources spent on development will be wasted.
           </p>
         </FadeinWrapper>
 
@@ -511,8 +522,9 @@ const Main = ({ refMain }) => {
             >
               Docker
             </a>
-            , which frees me from a lot of environment and compatibility concerns.
-            Docker greatly increases the portability and flexibility of the services.
+            , which frees me from a lot of environment and compatibility
+            concerns. Docker greatly increases the portability and flexibility
+            of the services.
           </p>
         </FadeinWrapper>
 
@@ -527,8 +539,8 @@ const Main = ({ refMain }) => {
             >
               GCP
             </a>{" "}
-            is where most of my services are hosted. This website is such a example. I
-            usually use their compute engines with Docker.
+            is where most of my services are hosted. This website is such a
+            example. I usually use their compute engines with Docker.
           </p>
         </FadeinWrapper>
 
@@ -585,7 +597,11 @@ const Main = ({ refMain }) => {
               }
             )}
           >
-            <Image src={fortiadminLogin} alt="fortiadminLogin" className="rounded-sm" />
+            <Image
+              src={fortiadminLogin}
+              alt="fortiadminLogin"
+              className="rounded-sm"
+            />
           </div>
           <div
             className={classNames(
@@ -611,8 +627,8 @@ const Main = ({ refMain }) => {
         <FadeinWrapper>
           <p className="my-8 mx-4 text-4xl font-medium">Thank you</p>
           <p className="my-8 mx-4">
-            thank you for giving a chance to introduce myself. I really apprecicate
-            that. Feel free to contact me if you want.
+            thank you for giving a chance to introduce myself. I really
+            apprecicate that. Feel free to contact me if you want.
           </p>
         </FadeinWrapper>
       </div>
