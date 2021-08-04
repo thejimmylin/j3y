@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Header from "../../components/Posts/Header";
+import Main from "../../components/Posts/Main";
 import Footer from "../../components/Posts/Footer";
 
 const Posts = ({ isDark, setIsDark }) => {
@@ -52,6 +53,7 @@ const Posts = ({ isDark, setIsDark }) => {
           scrollIntoMain={scrollIntoMain}
           scrollIntoFooter={scrollIntoFooter}
         />
+        <Main />
         <Footer />
       </section>
     </>
