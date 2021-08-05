@@ -7,9 +7,9 @@ const Header = ({
   };
 
   return (
-    <header className="font-pretty bg-graywhite-99">
+    <header className="font-pretty font-extralight text-ink bg-paper dark:text-light dark:bg-night">
       <div className="flex items-center">
-        <p className="my-5 ml-8 text-2xl xs:text-3xl sm:text-4xl font-medium text-graywhite-660 hover:text-white text-center whitespace-nowrap">
+        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl xs:text-3xl sm:text-4xl">
           <span className="animate-fadein-1000-200">J</span>
           <span className="animate-fadein-1000-250">i</span>
           <span className="animate-fadein-1000-300">m</span>
@@ -35,7 +35,7 @@ const Header = ({
               className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
             ></label>
           </div>
-          <label htmlFor="toggle" className="text-xl text-white">
+          <label htmlFor="toggle" className="text-x">
             {isDark ? (
               <i className="bi bi-moon-fill"></i>
             ) : (

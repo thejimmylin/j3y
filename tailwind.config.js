@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -9,15 +9,22 @@ module.exports = {
       pretty: ["poppins", "sans-serif"],
     },
     screens: {
-      'xs': '475px',
+      xs: "475px",
       ...defaultTheme.screens,
     },
     extend: {
       inset: {
+        "1/5": "20%",
         "2/5": "40%",
+        "3/5": "60%",
         "4/5": "80%",
+        "5/5": "100%",
       },
       colors: {
+        ink: "#161616",
+        light: "#efefef",
+        night: "#0f171f",
+        paper: "#fdf6e3",
         graywhite: {
           33: "#0b0b0b",
           66: "#161616",
