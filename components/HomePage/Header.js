@@ -21,7 +21,7 @@ const Header = ({
     <header className="relative h-screen font-pretty">
       <LightFilter isDark={isDark} windowScrollY={windowScrollY} />
       <div
-        className="absolute w-full h-screen -z-10 bg-graywhite-99"
+        className="absolute w-full h-screen -z-10 bg-black"
         style={{ transform: `translateY(${windowScrollY / 2}px)` }}
       >
         <div
@@ -52,12 +52,12 @@ const Header = ({
               type="checkbox"
               name="toggle"
               id="toggle"
-              className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white border-graywhite-594"
+              className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-gray-500 checked:bg-white border-gray-300"
               onClick={toggleDarkMode}
             />
             <label
               htmlFor="toggle"
-              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
+              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-gray-300"
             ></label>
           </div>
           <label htmlFor="toggle" className="text-xl text-white">
@@ -70,7 +70,7 @@ const Header = ({
         </div>
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5">
-        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-medium text-graywhite-660 hover:text-white text-center whitespace-nowrap">
+        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-medium text-light text-center whitespace-nowrap">
           <span className="animate-fadein-1000-0">I</span>
           <span className="animate-fadein-1000-50">'</span>
           <span className="animate-fadein-1000-100">m</span>
@@ -86,7 +86,7 @@ const Header = ({
           <span className="animate-fadein-1000-600">n</span>
           <span className="animate-fadein-1000-650">.</span>
         </p>
-        <p className="mb-16 text-sm text-center text-graywhite-660 hover:text-white">
+        <p className="mb-16 text-sm text-center text-light">
           <span className="animate-fadein-2000-1500">
             Welcome to my personal page.
           </span>
@@ -94,7 +94,7 @@ const Header = ({
         <div className="flex">
           <Link href="/posts">
           <a
-            className="flex items-center justify-center w-32 h-12 m-1 bg-graywhite-660 hover:bg-white animate-fadein-1000-900"
+            className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
           >
              Posts
           </a>
@@ -102,7 +102,7 @@ const Header = ({
 
           <button
             onClick={scrollIntoFooter}
-            className="w-32 h-12 m-1 border-2 focus:outline-none text-graywhite-660 hover:text-white border-graywhite-660 hover:border-white text-md animate-fadein-1000-800"
+            className="w-32 h-12 m-1 border-2 focus:outline-none text-light hover:text-white border-light hover:border-white text-md animate-fadein-1000-800"
           >
             Contact
           </button>
@@ -111,7 +111,7 @@ const Header = ({
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
         <span
           onClick={scrollIntoMain}
-          className="text-4xl text-graywhite-594 hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+          className="text-4xl text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
           <i className="bi bi-chevron-compact-down"></i>
         </span>

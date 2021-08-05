@@ -8,16 +8,14 @@ const LightFilter = ({ isDark, windowScrollY }) => {
   return (
     <>
       <div
-        className="absolute w-full h-screen"
+        className="absolute w-full h-screen bg-paper"
         style={{
-          backgroundColor: "rgb(220, 220, 220)",
-          opacity: isDark ? "0%" : `${10 - (windowScrollY / innerHeight) * 10}%`,
+          opacity: isDark ? "0%" : `${5 - (windowScrollY / innerHeight) * 5}%`,
         }}
       ></div>
       <div
-        className="absolute w-full h-screen"
+        className="absolute w-full h-screen bg-night"
         style={{
-          backgroundColor: "rgb(33, 33, 33)",
           opacity: `${(windowScrollY / innerHeight) * 100}%`,
         }}
       ></div>
