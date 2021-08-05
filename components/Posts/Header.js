@@ -19,7 +19,6 @@ const Header = ({
           <span className="animate-fadein-1000-500">L</span>
           <span className="animate-fadein-1000-550">i</span>
           <span className="animate-fadein-1000-600">n</span>
-          <span className="animate-fadein-1000-650">.</span>
         </p>
         <div className="flex items-center self-center animate-fadein-1000-700 my-5 mr-8 ml-auto">
           <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
@@ -27,12 +26,12 @@ const Header = ({
               type="checkbox"
               name="toggle"
               id="toggle"
-              className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-graywhite-198 checked:bg-white border-graywhite-594"
+              className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-gray-500 checked:bg-white border-gray-300"
               onClick={toggleDarkMode}
             />
             <label
               htmlFor="toggle"
-              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-graywhite-594"
+              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-gray-300"
             ></label>
           </div>
           <label htmlFor="toggle" className="text-x">

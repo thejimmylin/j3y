@@ -21,8 +21,10 @@ module.exports = {
         "5/5": "100%",
       },
       colors: {
-        ink: "#161616",
+        ink: "#2c2c2c",
+        pencil: "#636363",
         light: "#efefef",
+        moonlight: "#c6c6c6",
         night: "#0f171f",
         paper: "#fdf6e3",
         graywhite: {
