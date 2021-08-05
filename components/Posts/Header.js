@@ -1,7 +1,6 @@
-const Header = ({
-  isDark,
-  setIsDark,
-}) => {
+import Link from "next/link";
+
+const Header = ({ isDark, setIsDark }) => {
   const toggleDarkMode = () => {
     setIsDark(!isDark);
   };
@@ -10,15 +9,19 @@ const Header = ({
     <header className="font-pretty font-extralight text-ink bg-paper dark:text-light dark:bg-night">
       <div className="flex items-center">
         <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl xs:text-3xl sm:text-4xl">
-          <span className="animate-fadein-1000-200">J</span>
-          <span className="animate-fadein-1000-250">i</span>
-          <span className="animate-fadein-1000-300">m</span>
-          <span className="animate-fadein-1000-350">m</span>
-          <span className="animate-fadein-1000-400">y</span>
-          <span className="animate-fadein-1000-450"> </span>
-          <span className="animate-fadein-1000-500">L</span>
-          <span className="animate-fadein-1000-550">i</span>
-          <span className="animate-fadein-1000-600">n</span>
+          <Link href="/">
+            <a>
+              <span className="animate-fadein-1000-200">J</span>
+              <span className="animate-fadein-1000-250">i</span>
+              <span className="animate-fadein-1000-300">m</span>
+              <span className="animate-fadein-1000-350">m</span>
+              <span className="animate-fadein-1000-400">y</span>
+              <span className="animate-fadein-1000-450"> </span>
+              <span className="animate-fadein-1000-500">L</span>
+              <span className="animate-fadein-1000-550">i</span>
+              <span className="animate-fadein-1000-600">n</span>
+            </a>
+          </Link>
         </p>
         <div className="flex items-center self-center animate-fadein-1000-700 my-5 mr-8 ml-auto">
           <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
