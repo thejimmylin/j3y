@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
-import LightFilter from "./Header/LightFilter";
+import LightFilter from "./LightFilter";
 import wall from "../../public/wall-1440x810.jpg";
 
 const Header = ({

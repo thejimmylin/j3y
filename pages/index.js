@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
-import Header from "../components/HomePage/Header";
-import Main from "../components/HomePage/Main";
-import Footer from "../components/HomePage/Footer";
+import Header from "../components/index/Header";
+import Main from "../components/index/Main";
+import Footer from "../components/index/Footer";
 
 const HomePage = ({ isDark, setIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);

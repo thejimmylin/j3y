@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import FadeinWrapper from "./shared/FadeinWrapper";
+import FadeinWrapper from "./FadeinWrapper";
 import avatar from "../../public/avatar-1440x1440.jpg";
 import ntu from "../../public/ntu-360x360.png";
 import chief from "../../public/chief-500x300.png";
