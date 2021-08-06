@@ -4,6 +4,7 @@ import Custom404 from "../404.js"
 import Header from "../../components/shared/Header";
 import Main from "../../components/posts/[pid]/Main";
 import Footer from "../../components/shared/Footer";
+import classNames from "classnames";
 
 const Post = ({ isDark, setIsDark }) => {
   const router = useRouter()
@@ -33,7 +34,7 @@ const Post = ({ isDark, setIsDark }) => {
           rel="stylesheet"
         />
       </Head>
-      <section id="HomePage" className={isDark ? "dark" : ""}>
+      <section className={classNames({ dark: isDark })}>
         <Header 
           isDark={isDark}
           setIsDark={setIsDark}

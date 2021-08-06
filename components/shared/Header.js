@@ -1,12 +1,18 @@
 import Link from "next/link";
+import classNames from "classnames";
 
-const Header = ({ isDark, setIsDark }) => {
+const Header = ({ isDark, setIsDark, extraClassNames }) => {
   const toggleDarkMode = () => {
     setIsDark(!isDark);
   };
 
   return (
-    <header className="font-pretty font-extralight text-ink bg-paper dark:text-light dark:bg-night">
+    <header
+      className={classNames(
+        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        extraClassNames
+      )}
+    >
       <div className="flex items-center">
         <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl xs:text-3xl sm:text-4xl">
           <Link href="/">
