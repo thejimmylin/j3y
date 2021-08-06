@@ -7,9 +7,14 @@ import Footer from "../../components/shared/Footer";
 import classNames from "classnames";
 
 const Post = ({ isDark, setIsDark }) => {
+
   const router = useRouter()
   const { pid } = router.query
-  const pids = []
+  const pids = [
+    "how-to-create-a-docker-image",
+    "docker-introduction",
+    "what-should-we-care-about-cicd",
+  ] 
   if (!pids.includes(pid)) {
     return <Custom404 isDark={isDark} setIsDark={setIsDark} />
   }
@@ -39,7 +44,7 @@ const Post = ({ isDark, setIsDark }) => {
           isDark={isDark}
           setIsDark={setIsDark}
         />
-        <Main />
+        <Main pid={pid} />
         <Footer />
       </section>
     </>
