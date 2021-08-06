@@ -53,7 +53,8 @@ const Header = ({
               name="toggle"
               id="toggle"
               className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-gray-500 checked:bg-white border-gray-300"
-              onClick={toggleDarkMode}
+              onChange={toggleDarkMode}
+              checked={!isDark}
             />
             <label
               htmlFor="toggle"
