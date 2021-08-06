@@ -1,12 +1,9 @@
 
 # j3y
 
-A repo of a website about myself.
+https://www.jimmylin.org
 
-
-## Demo
-
-https://jimmylin.org
+This is a personal website/blog about me.
 
 ## Authors
 
