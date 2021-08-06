@@ -1,7 +1,12 @@
-const Footer = () => {
+import classNames from "classnames";
+
+const Footer = ({ extraClassNames }) => {
   return (
     <footer
-      className="font-pretty text-ink bg-paper dark:text-light dark:bg-night"
+      className={classNames(
+        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        extraClassNames
+      )}
     >
       <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
         <p className="pb-4 text-5xl font-medium">Jimmy Lin</p>

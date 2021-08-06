@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/shared/Header";
 import Main from "../components/posts/Main";
 import Footer from "../components/shared/Footer";
+import classNames from "classnames";
 
 const Posts = ({ isDark, setIsDark }) => {
   return (
@@ -25,7 +26,7 @@ const Posts = ({ isDark, setIsDark }) => {
           rel="stylesheet"
         />
       </Head>
-      <section id="HomePage" className={isDark ? "dark" : ""}>
+      <section className={classNames({ dark: isDark })}>
         <Header 
           isDark={isDark}
           setIsDark={setIsDark}

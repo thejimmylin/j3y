@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/index/Header";
 import Main from "../components/index/Main";
 import Footer from "../components/index/Footer";
+import classNames from "classnames";
 
 const HomePage = ({ isDark, setIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);
@@ -45,7 +46,7 @@ const HomePage = ({ isDark, setIsDark }) => {
           rel="stylesheet"
         />
       </Head>
-      <section id="HomePage" className={isDark ? "dark" : ""}>
+      <section className={classNames({ dark: isDark })}>
         <Header
           isDark={isDark}
           setIsDark={setIsDark}
