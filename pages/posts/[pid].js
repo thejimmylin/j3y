@@ -1,29 +1,17 @@
-import { useState, useEffect, useRef } from "react";
+import { useRouter } from 'next/router'
 import Head from "next/head";
-import Header from "../../components/Posts/Header";
-import Main from "../../components/Posts/Main";
-import Footer from "../../components/Posts/Footer";
+import Custom404 from "../404.js"
+import Header from "../../components/shared/Header";
+import Main from "../../components/postsa/[pid]/Main";
+import Footer from "../../components/shared/Footer";
 
-const Posts = ({ isDark, setIsDark }) => {
-  const [windowScrollY, setWindowScrollY] = useState(0);
-  const handleWindowScroll = () => {
-    setWindowScrollY(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleWindowScroll);
-    return () => {
-      window.removeEventListener("scroll", handleWindowScroll);
-    };
-  }, []);
-  const refMain = useRef(null);
-  const scrollIntoMain = () => {
-    refMain.current.scrollIntoView();
-  };
-  const refFooter = useRef(null);
-  const scrollIntoFooter = () => {
-    refFooter.current.scrollIntoView();
-  };
-
+const Post = ({ isDark, setIsDark }) => {
+  const router = useRouter()
+  const { pid } = router.query
+  const pids = []
+  if (!pids.includes(pid)) {
+    return <Custom404 isDark={isDark} setIsDark={setIsDark} />
+  }
   return (
     <>
       <Head>
@@ -49,9 +37,6 @@ const Posts = ({ isDark, setIsDark }) => {
         <Header 
           isDark={isDark}
           setIsDark={setIsDark}
-          windowScrollY={windowScrollY}
-          scrollIntoMain={scrollIntoMain}
-          scrollIntoFooter={scrollIntoFooter}
         />
         <Main />
         <Footer />
@@ -60,4 +45,4 @@ const Posts = ({ isDark, setIsDark }) => {
   );
 };
 
-export default Posts
+export default Post

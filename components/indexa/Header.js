@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
-import LightFilter from "./Header/LightFilter";
+import LightFilter from "./LightFilter";
 import wall from "../../public/wall-1440x810.jpg";
 
 const Header = ({
@@ -53,7 +53,8 @@ const Header = ({
               name="toggle"
               id="toggle"
               className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-gray-500 checked:bg-white border-gray-300"
-              onClick={toggleDarkMode}
+              onChange={toggleDarkMode}
+              checked={!isDark}
             />
             <label
               htmlFor="toggle"
