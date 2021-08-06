@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Head from "next/head";
 import Custom404 from "../404.js"
 import Header from "../../components/shared/Header";
-import Main from "../../components/postsa/[pid]/Main";
+import Main from "../../components/posts/[pid]/Main";
 import Footer from "../../components/shared/Footer";
 
 const Post = ({ isDark, setIsDark }) => {
