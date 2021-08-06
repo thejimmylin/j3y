@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/shared/Header";
-import Main from "../components/posts/Main";
+import Main from "../components/postsa/Main";
 import Footer from "../components/shared/Footer";
 
 const Posts = ({ isDark, setIsDark }) => {

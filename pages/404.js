@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/shared/Header";
-import Main from "../components/404/Main";
+import Main from "../components/404a/Main";
 import Footer from "../components/shared/Footer";
 
 const Custom404 = ({ isDark, setIsDark }) => {
