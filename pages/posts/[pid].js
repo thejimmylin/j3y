@@ -9,7 +9,7 @@ import classNames from "classnames";
 const Post = ({ isDark, setIsDark }) => {
   const router = useRouter();
   const { pid } = router.query;
-  const pids = ["1", "2"];
+  const pids = ["1", "2", "3"];
   if (!pids.includes(pid)) {
     return <Custom404 isDark={isDark} setIsDark={setIsDark} />;
   }
