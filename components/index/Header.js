@@ -89,7 +89,7 @@ const Header = ({
         </p>
         <p className="mb-16 text-sm text-center text-light">
           <span className="animate-fadein-2000-1500">
-            Welcome to my personal page.
+            Welcome to my personal website.
           </span>
         </p>
         <div className="flex">
