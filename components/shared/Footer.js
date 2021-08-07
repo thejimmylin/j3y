@@ -1,24 +1,25 @@
 import classNames from "classnames";
 
-const Footer = ({ extraClassNames }) => {
+const Footer = ({ extraClassNames, refFooter }) => {
   return (
     <footer
+      ref={refFooter}
       className={classNames(
         "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
       )}
     >
-      <div className="max-w-screen-sm mx-auto flex flex-col flex-wrap items-end content-start p-4">
-        <p className="text-5xl font-medium hover:text-black dark:hover:text-white mb-4 cursor-default">Jimmy Lin</p>
-        <p className="mb-4">
-          <a
-            href="mailto:contact@jimmylin.org"
-            className="underline hover:text-black dark:hover:text-white"
-          >
-            contact@jimmylin.org
-          </a>
+      <div className="flex flex-col flex-wrap items-end content-end gap-2 pt-36 px-8 pb-8">
+        <p className="text-5xl font-medium hover:text-black dark:hover:text-white cursor-default">
+          Jimmy Lin
         </p>
-        <p className="text-ink dark:text-light text-4xl mb-4 flex gap-2">
+        <a
+          href="mailto:contact@jimmylin.org"
+          className="underline hover:text-black dark:hover:text-white"
+        >
+          contact@jimmylin.org
+        </a>
+        <p className="text-ink dark:text-light text-4xl flex gap-2">
           <a
             href="https://github.com/j3ygithub"
             target="_blank"
@@ -44,11 +45,9 @@ const Footer = ({ extraClassNames }) => {
             <i className="bi bi-facebook"></i>
           </a>
         </p>
-      </div>
-      <div className="flex items-center justify-center h-16">
-        <div className="max-w-screen-sm mx-auto text-sm text-center font-extralight">
+        <p className="text-xs font-extralight mt-8">
           © 2021 All rights reserved.
-        </div>
+        </p>
       </div>
     </footer>
   );
