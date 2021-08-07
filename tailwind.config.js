@@ -89,7 +89,6 @@ module.exports = {
         },
         dark: {
           css: {
-            fontFamily: theme("fontFamily.pretty"),
             color: theme("colors.light"),
             h1: {
               color: theme("colors.light"),
