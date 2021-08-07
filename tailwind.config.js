@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       pretty: ["poppins", "sans-serif"],
-      code: ["poppins", "sans-serif"],
+      code: ["Roboto Mono", "monospace"],
     },
     screens: {
       xs: "475px",
@@ -60,7 +60,9 @@ module.exports = {
         "fadein-1000-600": "fadein 1000ms 600ms ease-in-out 1 both",
         "fadein-1000-650": "fadein 1000ms 650ms ease-in-out 1 both",
         "fadein-1000-700": "fadein 1000ms 700ms ease-in-out 1 both",
+        "fadein-1000-750": "fadein 1000ms 750ms ease-in-out 1 both",
         "fadein-1000-800": "fadein 1000ms 800ms ease-in-out 1 both",
+        "fadein-1000-850": "fadein 1000ms 850ms ease-in-out 1 both",
         "fadein-1000-900": "fadein 1000ms 900ms ease-in-out 1 both",
         "fadein-1000-1400": "fadein 1000ms 1400ms ease-in-out 1 both",
         "fadein-1000-1450": "fadein 1000ms 1450ms ease-in-out 1 both",

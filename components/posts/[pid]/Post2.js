@@ -13,7 +13,7 @@ const Post1 = () => {
             npm run build
           </code>
           .
-          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm whitespace-pre break-words decoration-clone">
+          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm overflow-x-scroll">
             <code className="font-code">
               # Use Ubuntu 20.04 as the base image we build on.
               <br />

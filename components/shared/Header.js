@@ -13,8 +13,8 @@ const Header = ({ isDark, setIsDark, extraClassNames }) => {
         extraClassNames
       )}
     >
-      <div className="flex items-center">
-        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl xs:text-3xl sm:text-4xl">
+      <div className="flex items-baseline">
+        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-3xl">
           <Link href="/">
             <a>
               <span className="animate-fadein-1000-200">J</span>
@@ -26,6 +26,17 @@ const Header = ({ isDark, setIsDark, extraClassNames }) => {
               <span className="animate-fadein-1000-500">L</span>
               <span className="animate-fadein-1000-550">i</span>
               <span className="animate-fadein-1000-600">n</span>
+            </a>
+          </Link>
+        </p>
+        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl text-yellow-500 dark:text-indigo-600">
+          <Link href="/posts">
+            <a>
+              <span className="animate-fadein-1000-650">P</span>
+              <span className="animate-fadein-1000-700">o</span>
+              <span className="animate-fadein-1000-750">s</span>
+              <span className="animate-fadein-1000-800">t</span>
+              <span className="animate-fadein-1000-850">s</span>
             </a>
           </Link>
         </p>
