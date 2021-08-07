@@ -43,18 +43,18 @@ const Post1 = () => {
         </li>
         <li className="m-4">
           Build the image with the finished Dockerfile by these commands:
-          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm">
+          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm overflow-x-scroll">
             <code className="font-code">docker build .</code>
           </pre>
           If you use the custom file name, like web.dockerfile:{" "}
-          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm">
+          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm overflow-x-scroll">
             <code className="font-code">docker build -f web.dockerfile .</code>
           </pre>
         </li>
         <li className="m-4">
           If everything is fine, your image would be created. You may want to use these
           commands to check it:{" "}
-          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm">
+          <pre className="-mx-4 my-4 p-4 bg-yellow-200 dark:bg-gray-800 rounded-sm overflow-x-scroll">
             <code className="font-code">docker image ls</code>
           </pre>
         </li>
