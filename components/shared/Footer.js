@@ -1,29 +1,30 @@
 import classNames from "classnames";
 
-const Footer = ({ extraClassNames }) => {
+const Footer = ({ extraClassNames, refFooter }) => {
   return (
     <footer
+      ref={refFooter}
       className={classNames(
         "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
       )}
     >
-      <div className="flex flex-col flex-wrap items-end content-start max-w-screen-sm p-12 mx-auto">
-        <p className="pb-4 text-5xl font-medium">Jimmy Lin</p>
-        <p className="pb-8">
-          <a
-            href="mailto:contact@jimmylin.org"
-            className="underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light"
-          >
-            contact@jimmylin.org
-          </a>
+      <div className="flex flex-col flex-wrap items-end content-end gap-2 pt-36 px-8 pb-8">
+        <p className="text-5xl font-medium hover:text-black dark:hover:text-white cursor-default">
+          Jimmy Lin
         </p>
-        <p className="-mr-4">
+        <a
+          href="mailto:contact@jimmylin.org"
+          className="underline hover:text-black dark:hover:text-white"
+        >
+          contact@jimmylin.org
+        </a>
+        <p className="text-ink dark:text-light text-4xl flex gap-2">
           <a
             href="https://github.com/j3ygithub"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-4xl underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light"
+            className="transform hover:scale-110"
           >
             <i className="bi bi-github"></i>
           </a>
@@ -31,7 +32,7 @@ const Footer = ({ extraClassNames }) => {
             href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-4xl underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light"
+            className="transform hover:scale-110"
           >
             <i className="bi bi-linkedin"></i>
           </a>
@@ -39,16 +40,14 @@ const Footer = ({ extraClassNames }) => {
             href="https://www.facebook.com/j3y.fb"
             target="_blank"
             rel="noreferrer"
-            className="pr-4 text-4xl underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light"
+            className="transform hover:scale-110"
           >
             <i className="bi bi-facebook"></i>
           </a>
         </p>
-      </div>
-      <div className="flex items-center justify-center h-16">
-        <div className="max-w-screen-sm mx-auto text-sm text-center font-extralight">
+        <p className="text-xs font-extralight mt-8">
           © 2021 All rights reserved.
-        </div>
+        </p>
       </div>
     </footer>
   );

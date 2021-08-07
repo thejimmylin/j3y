@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Header from "../components/index/Header";
 import Main from "../components/index/Main";
-import Footer from "../components/index/Footer";
+import Footer from "../components/shared/Footer";
 import classNames from "classnames";
 
 const HomePage = ({ isDark, setIsDark }) => {
