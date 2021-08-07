@@ -9,7 +9,7 @@ const Footer = ({ extraClassNames, refFooter }) => {
         extraClassNames
       )}
     >
-      <div className="flex flex-col flex-wrap items-end content-end gap-2 pt-36 px-8 pb-8">
+      <div className="flex flex-col flex-wrap items-end content-end gap-2 pt-36 px-8 pb-4">
         <p className="text-5xl font-medium hover:text-black dark:hover:text-white cursor-default">
           Jimmy Lin
         </p>
