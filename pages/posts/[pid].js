@@ -1,22 +1,17 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import Head from "next/head";
-import Custom404 from "../404.js"
+import Custom404 from "../404.js";
 import Header from "../../components/shared/Header";
 import Main from "../../components/posts/[pid]/Main";
 import Footer from "../../components/shared/Footer";
 import classNames from "classnames";
 
 const Post = ({ isDark, setIsDark }) => {
-
-  const router = useRouter()
-  const { pid } = router.query
-  const pids = [
-    "how-to-create-a-docker-image",
-    "docker-introduction",
-    "what-should-we-care-about-cicd",
-  ] 
+  const router = useRouter();
+  const { pid } = router.query;
+  const pids = ["1", "2"];
   if (!pids.includes(pid)) {
-    return <Custom404 isDark={isDark} setIsDark={setIsDark} />
+    return <Custom404 isDark={isDark} setIsDark={setIsDark} />;
   }
   return (
     <>
@@ -26,24 +21,15 @@ const Post = ({ isDark, setIsDark }) => {
         <meta name="title" content="I'm Jimmy Lin." />
         <meta name="description" content="Welcome to my personal website." />
         <meta property="og:title" content="I'm Jimmy Lin." />
-        <meta
-          property="og:description"
-          content="Welcome to my personal website."
-        />
-        <meta
-          property="og:image"
-          content="https://jimmylin.org/avatar-1440x1440.jpg"
-        />
+        <meta property="og:description" content="Welcome to my personal website." />
+        <meta property="og:image" content="https://jimmylin.org/avatar-1440x1440.jpg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         />
       </Head>
       <section className={classNames({ dark: isDark })}>
-        <Header 
-          isDark={isDark}
-          setIsDark={setIsDark}
-        />
+        <Header isDark={isDark} setIsDark={setIsDark} />
         <Main pid={pid} />
         <Footer />
       </section>
@@ -51,4 +37,4 @@ const Post = ({ isDark, setIsDark }) => {
   );
 };
 
-export default Post
+export default Post;

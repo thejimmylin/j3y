@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       pretty: ["poppins", "sans-serif"],
+      code: ["poppins", "sans-serif"],
     },
     screens: {
       xs: "475px",
