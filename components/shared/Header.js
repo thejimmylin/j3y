@@ -29,7 +29,7 @@ const Header = ({ isDark, setIsDark, extraClassNames }) => {
             </a>
           </Link>
         </p>
-        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl text-yellow-500 dark:text-indigo-600">
+        <p className="font-medium text-center whitespace-nowrap my-5 ml-4 text-2xl text-yellow-500 dark:text-indigo-600">
           <Link href="/posts">
             <a>
               <span className="animate-fadein-1000-650">P</span>
