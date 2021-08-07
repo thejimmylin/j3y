@@ -64,23 +64,49 @@ module.exports = {
         "fadein-1000-800": "fadein 1000ms 800ms ease-in-out 1 both",
         "fadein-1000-850": "fadein 1000ms 850ms ease-in-out 1 both",
         "fadein-1000-900": "fadein 1000ms 900ms ease-in-out 1 both",
-        "fadein-1000-1400": "fadein 1000ms 1400ms ease-in-out 1 both",
-        "fadein-1000-1450": "fadein 1000ms 1450ms ease-in-out 1 both",
-        "fadein-1000-1500": "fadein 1000ms 1500ms ease-in-out 1 both",
-        "fadein-1000-1550": "fadein 1000ms 1550ms ease-in-out 1 both",
-        "fadein-1000-1600": "fadein 1000ms 1600ms ease-in-out 1 both",
-        "fadein-1000-1650": "fadein 1000ms 1650ms ease-in-out 1 both",
-        "fadein-1000-1700": "fadein 1000ms 1700ms ease-in-out 1 both",
-        "fadein-1000-1750": "fadein 1000ms 1750ms ease-in-out 1 both",
-        "fadein-1000-1800": "fadein 1000ms 1800ms ease-in-out 1 both",
-        "fadein-1000-1850": "fadein 1000ms 1850ms ease-in-out 1 both",
-        "fadein-1000-1900": "fadein 1000ms 1900ms ease-in-out 1 both",
+        "fadein-1000-950": "fadein 1000ms 950ms ease-in-out 1 both",
+        "fadein-1000-1000": "fadein 1000ms 1000ms ease-in-out 1 both",
         "fadein-2000-1500": "fadein 2000ms 1500ms ease-in-out 1 both",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            fontFamily: theme("fontFamily.pretty"),
+            color: theme("colors.ink"),
+            h1: {
+              color: theme("colors.ink"),
+            },
+            a: {
+              color: theme("colors.pencil"),
+              "&:hover": {
+                color: theme("colors.ink"),
+              },
+            },
+            ul: {
+              color: "red"
+            },
+          },
+        },
+        dark: {
+          css: {
+            fontFamily: theme("fontFamily.pretty"),
+            color: theme("colors.light"),
+            h1: {
+              color: theme("colors.light"),
+            },
+            a: {
+              color: theme("colors.moonlight"),
+              "&:hover": {
+                color: theme("colors.light"),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
