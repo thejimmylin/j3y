@@ -68,44 +68,10 @@ module.exports = {
         "fadein-1000-1000": "fadein 1000ms 1000ms ease-in-out 1 both",
         "fadein-2000-1500": "fadein 2000ms 1500ms ease-in-out 1 both",
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            fontFamily: theme("fontFamily.pretty"),
-            color: theme("colors.ink"),
-            h1: {
-              color: theme("colors.ink"),
-            },
-            a: {
-              color: theme("colors.pencil"),
-              "&:hover": {
-                color: theme("colors.ink"),
-              },
-            },
-            ul: {
-              color: "red"
-            },
-          },
-        },
-        dark: {
-          css: {
-            color: theme("colors.light"),
-            h1: {
-              color: theme("colors.light"),
-            },
-            a: {
-              color: theme("colors.moonlight"),
-              "&:hover": {
-                color: theme("colors.light"),
-              },
-            },
-          },
-        },
-      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 };
