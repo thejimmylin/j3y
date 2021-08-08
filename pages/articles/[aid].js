@@ -1,11 +1,16 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/image";
 import { MDXProvider } from "@mdx-js/react";
-import { Paragraph } from "../components/MarkdownComponents";
+
+const Paragraph = (props) => {
+  <p className="my-8">{children}</p>;
+};
 
 const components = {
   img: Image,
   p: Paragraph,
+  a: Link,
 };
 
 const Post = (props) => {

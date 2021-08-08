@@ -28,9 +28,9 @@ const Post = ({ isDark, setIsDark }) => {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <section className={classNames({ dark: isDark })}>
         <Header isDark={isDark} setIsDark={setIsDark} />

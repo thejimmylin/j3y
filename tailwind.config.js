@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       pretty: ["poppins", "sans-serif"],
-      code: ["Roboto Mono", "monospace"],
+      code: ["Fira Code", "monospace"],
     },
     screens: {
       xs: "475px",
@@ -68,10 +68,90 @@ module.exports = {
         "fadein-1000-1000": "fadein 1000ms 1000ms ease-in-out 1 both",
         "fadein-2000-1500": "fadein 2000ms 1500ms ease-in-out 1 both",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            fontFamily: theme("fontFamily.pretty").join(", "),
+            color: theme("colors.ink"),
+            fontWeight: 300,
+            "h1, h2, h3": {
+              color: theme("colors.ink"),
+              fontWeight: 600,
+            },
+            "h4, h5, h6": {
+              color: theme("colors.ink"),
+              fontWeight: 500,
+            },
+            ol: {
+              li: {
+                "&:before": { color: theme("colors.ink") },
+              },
+            },
+            ul: {
+              li: {
+                "&:before": { backgroundColor: theme("colors.ink") },
+              },
+            },
+            a: {
+              color: theme("colors.pencil"),
+              "&:hover": { color: theme("colors.ink") },
+            },
+            pre: {
+              fontFamily: theme("fontFamily.code").join(", "),
+              color: theme("colors.light"),
+              backgroundColor: theme("colors.night")
+            },
+            blockquote: {
+              color: theme("colors.ink"),
+            },
+            hr: {
+              borderColor: theme("colors.moonlight"),
+            },
+          },
+        },
+        dark: {
+          css: {
+            fontFamily: theme("fontFamily.pretty").join(", "),
+            color: theme("colors.light"),
+            fontWeight: 300,
+            "h1, h2, h3": {
+              color: theme("colors.light"),
+            },
+            "h4, h5, h6": {
+              color: theme("colors.light"),
+            },
+            a: {
+              color: theme("colors.moonlight"),
+              "&:hover": { color: theme("colors.light") },
+            },
+            ol: {
+              li: {
+                "&:before": { color: theme("colors.light") },
+              },
+            },
+            ul: {
+              li: {
+                "&:before": { backgroundColor: theme("colors.light") },
+              },
+            },
+            blockquote: {
+              color: theme("colors.light"),
+            },
+            hr: {
+              borderColor: theme("colors.pencil"),
+            },
+            pre: {
+              fontFamily: theme("fontFamily.code").join(", "),
+              color: theme("colors.light"),
+              backgroundColor: theme("colors.gray.800")
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
