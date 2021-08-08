@@ -8,7 +8,7 @@ const Main = ({ pid }) => {
   posts.set("2", <Post2 />);
   posts.set(
     "3",
-    <article className="prose dark:prose-dark">
+    <article className="prose dark:prose-dark p-4">
       <Post3 />
     </article>
   );
