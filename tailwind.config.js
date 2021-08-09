@@ -154,7 +154,7 @@ module.exports = {
               borderColor: theme("colors.pencil"),
             },
             code: {
-              color: theme("colors.yellow.500"),
+              color: theme("colors.pink.500"),
             },
             pre: {
               color: theme("colors.moonlight"),

@@ -2,7 +2,8 @@ import Post1 from "./Post1.mdx";
 import Post2 from "./Post2.mdx";
 import Post3 from "./Post3.mdx";
 
-const Main = ({ pid }) => {
+const Main = ({ pid, msg }) => {
+  console.log(msg)
   const posts = new Map();
   posts.set("1", Post1);
   posts.set("2", Post2);
@@ -19,4 +20,12 @@ const Main = ({ pid }) => {
   );
 };
 
-export default Main;
+export async function getStaticProps() {
+  return {
+    props: {
+      msg: "hello",
+    },
+  }
+}
+
+export default Main
