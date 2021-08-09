@@ -1,3 +1,4 @@
+const { boxShadow } = require("tailwindcss/defaultTheme");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -114,7 +115,8 @@ module.exports = {
             pre: {
               fontFamily: theme("fontFamily.code").join(", "),
               color: theme("colors.ink"),
-              backgroundColor: theme("colors.gray.200")
+              backgroundColor: theme("colors.gray.200"),
+              boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
             },
           },
         },
@@ -153,7 +155,8 @@ module.exports = {
             },
             pre: {
               color: theme("colors.light"),
-              backgroundColor: theme("colors.gray.700")
+              backgroundColor: theme("colors.gray.700"),
+              boxShadow: "0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06)"
             },
           },
         },
