@@ -6,10 +6,12 @@ import Main from "../../components/posts/[pid]/Main";
 import Footer from "../../components/shared/Footer";
 import classNames from "classnames";
 
+const postNumber = 3;
+
 const Post = ({ isDark, setIsDark }) => {
   const router = useRouter();
   const { pid } = router.query;
-  const pids = ["1", "2"];
+  const pids = [...Array(postNumber).keys()].map((i) => (i + 1).toString());
   if (!pids.includes(pid)) {
     return <Custom404 isDark={isDark} setIsDark={setIsDark} />;
   }
@@ -28,9 +30,9 @@ const Post = ({ isDark, setIsDark }) => {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <section className={classNames({ dark: isDark })}>
         <Header isDark={isDark} setIsDark={setIsDark} />
