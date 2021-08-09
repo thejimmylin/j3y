@@ -1,20 +1,13 @@
-import { useRouter } from "next/router";
 import Head from "next/head";
-import Custom404 from "../404.js";
-import Header from "../../components/shared/Header";
-import Main from "../../components/posts/[pid]/Main";
-import Footer from "../../components/shared/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import classNames from "classnames";
+import React from "react";
+import { getMDXComponent } from "mdx-bundler/client";
+import { getAllPosts, getSinglePost } from "../../helpers/mdx";
 
-const postNumber = 3;
-
-const Post = ({ isDark, setIsDark }) => {
-  const router = useRouter();
-  const { pid } = router.query;
-  const pids = [...Array(postNumber).keys()].map((i) => (i + 1).toString());
-  if (!pids.includes(pid)) {
-    return <Custom404 isDark={isDark} setIsDark={setIsDark} />;
-  }
+const Post = ({ isDark, setIsDark, code, frontmatter }) => {
+  const Component = React.useMemo(() => getMDXComponent(code), [code]);
   return (
     <>
       <Head>
@@ -36,11 +29,33 @@ const Post = ({ isDark, setIsDark }) => {
       </Head>
       <section className={classNames({ dark: isDark })}>
         <Header isDark={isDark} setIsDark={setIsDark} />
-        <Main pid={pid} />
+        <main className="font-pretty py-20 min-h-screen text-ink bg-paper dark:text-light dark:bg-night">
+          <div className="max-w-screen-md p-4 mx-auto">
+            <article className="prose dark:prose-dark p-4">
+              <h1>{frontmatter.title}</h1>
+              <Component />
+            </article>
+          </div>
+        </main>
         <Footer />
       </section>
     </>
   );
+};
+
+export const getStaticProps = async ({ params }) => {
+  const post = await getSinglePost(params.slug);
+  return {
+    props: { ...post },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }));
+  return {
+    paths,
+    fallback: false,
+  };
 };
 
 export default Post;
