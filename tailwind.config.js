@@ -74,13 +74,17 @@ module.exports = {
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.ink"),
             fontWeight: 300,
-            "h1, h2, h3": {
+            "h1, h2": {
               color: theme("colors.ink"),
               fontWeight: 600,
             },
-            "h4, h5, h6": {
+            "h3, h4": {
               color: theme("colors.ink"),
               fontWeight: 500,
+            },
+            "h5, h6": {
+              color: theme("colors.ink"),
+              fontWeight: 400,
             },
             ol: {
               li: {
@@ -93,18 +97,9 @@ module.exports = {
               },
             },
             a: {
+              fontWeight: 300,
               color: theme("colors.pencil"),
               "&:hover": { color: theme("colors.ink") },
-            },
-            code: {
-              fontFamily: theme("fontFamily.code").join(", "),
-              color: theme("colors.light"),
-              backgroundColor: theme("colors.night")
-            },
-            pre: {
-              fontFamily: theme("fontFamily.code").join(", "),
-              color: theme("colors.light"),
-              backgroundColor: theme("colors.night")
             },
             blockquote: {
               color: theme("colors.ink"),
@@ -112,13 +107,21 @@ module.exports = {
             hr: {
               borderColor: theme("colors.moonlight"),
             },
+            code: {
+              fontFamily: theme("fontFamily.code").join(", "),
+              color: theme("colors.ink"),
+            },
+            pre: {
+              fontFamily: theme("fontFamily.code").join(", "),
+              color: theme("colors.ink"),
+              backgroundColor: theme("colors.gray.200")
+            },
           },
         },
         dark: {
           css: {
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.light"),
-            fontWeight: 300,
             "h1, h2, h3": {
               color: theme("colors.light"),
             },
@@ -145,10 +148,12 @@ module.exports = {
             hr: {
               borderColor: theme("colors.pencil"),
             },
-            pre: {
-              fontFamily: theme("fontFamily.code").join(", "),
+            code: {
               color: theme("colors.light"),
-              backgroundColor: theme("colors.gray.800")
+            },
+            pre: {
+              color: theme("colors.light"),
+              backgroundColor: theme("colors.gray.700")
             },
           },
         },
