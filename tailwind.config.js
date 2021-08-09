@@ -110,13 +110,16 @@ module.exports = {
             },
             code: {
               fontFamily: theme("fontFamily.code").join(", "),
-              color: theme("colors.ink"),
+              color: theme("colors.purple.600"),
             },
             pre: {
-              fontFamily: theme("fontFamily.code").join(", "),
-              color: theme("colors.ink"),
+              color: theme("colors.pencil"),
+              code: {
+                color: theme("colors.pencil"),
+              },
               backgroundColor: theme("colors.gray.200"),
-              boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+              boxShadow:
+                "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
             },
           },
         },
@@ -151,12 +154,16 @@ module.exports = {
               borderColor: theme("colors.pencil"),
             },
             code: {
-              color: theme("colors.light"),
+              color: theme("colors.yellow.500"),
             },
             pre: {
-              color: theme("colors.light"),
-              backgroundColor: theme("colors.gray.700"),
-              boxShadow: "0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06)"
+              color: theme("colors.moonlight"),
+              code: {
+                color: theme("colors.moonlight"),
+              },
+              backgroundColor: theme("colors.gray.800"),
+              boxShadow:
+                "0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06)",
             },
           },
         },
