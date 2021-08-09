@@ -6,10 +6,12 @@ import Main from "../../components/posts/[pid]/Main";
 import Footer from "../../components/shared/Footer";
 import classNames from "classnames";
 
+const postNumber = 3;
+
 const Post = ({ isDark, setIsDark }) => {
   const router = useRouter();
   const { pid } = router.query;
-  const pids = ["1", "2", "3"];
+  const pids = [...Array(postNumber).keys()].map((i) => (i + 1).toString());
   if (!pids.includes(pid)) {
     return <Custom404 isDark={isDark} setIsDark={setIsDark} />;
   }

@@ -96,6 +96,11 @@ module.exports = {
               color: theme("colors.pencil"),
               "&:hover": { color: theme("colors.ink") },
             },
+            code: {
+              fontFamily: theme("fontFamily.code").join(", "),
+              color: theme("colors.light"),
+              backgroundColor: theme("colors.night")
+            },
             pre: {
               fontFamily: theme("fontFamily.code").join(", "),
               color: theme("colors.light"),
