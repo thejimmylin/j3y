@@ -624,7 +624,7 @@ const Resume = () => {
       <FadeinWrapper>
         <p className="my-8 mx-4 text-4xl font-medium">Thank you</p>
         <p className="my-8 mx-4">
-          thank you for giving a chance to introduce myself. I really apprecicate that.
+          thank you for giving me a chance to introduce myself. I really appreciate that.
           Feel free to contact me if you want.
         </p>
       </FadeinWrapper>
