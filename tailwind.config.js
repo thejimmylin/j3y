@@ -74,16 +74,19 @@ module.exports = {
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.ink"),
             fontWeight: 300,
-            "h1, h2": {
+            "h1, h2, h3, h4, h5, h6, blockquote": {
               color: theme("colors.ink"),
+              bold: {
+                color: theme("colors.ink")
+              },
+            },
+            "h1, h2": {
               fontWeight: 600,
             },
             "h3, h4": {
-              color: theme("colors.ink"),
               fontWeight: 500,
             },
             "h5, h6": {
-              color: theme("colors.ink"),
               fontWeight: 400,
             },
             ol: {
@@ -100,9 +103,6 @@ module.exports = {
               fontWeight: 300,
               color: theme("colors.pencil"),
               "&:hover": { color: theme("colors.ink") },
-            },
-            blockquote: {
-              color: theme("colors.ink"),
             },
             hr: {
               borderColor: theme("colors.moonlight"),
@@ -126,11 +126,11 @@ module.exports = {
           css: {
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.light"),
-            "h1, h2, h3": {
+            "h1, h2, h3, h4, h5, h6": {
               color: theme("colors.light"),
-            },
-            "h4, h5, h6": {
-              color: theme("colors.light"),
+              strong: {
+                color: theme("colors.light")
+              },
             },
             a: {
               color: theme("colors.moonlight"),
