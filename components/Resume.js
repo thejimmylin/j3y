@@ -611,7 +611,6 @@ const Resume = () => {
             }
           )}
         >
-          {/* <img src="/fortiadmin-example-1920x1080.png" alt="fortiadminExample" /> */}
           <Image
             src={fortiadminExample}
             alt="fortiadminExample"
