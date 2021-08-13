@@ -124,8 +124,7 @@ module.exports = {
               code: {
                 color: theme("colors.pencil"),
               },
-              backgroundColor: theme("colors.paper.light"),
-              border: `1px solid ${theme("colors.light")}`
+              backgroundColor: theme("colors.paper.dark"),
             },
           },
         },
@@ -167,8 +166,7 @@ module.exports = {
               code: {
                 color: theme("colors.moonlight"),
               },
-              backgroundColor: theme("colors.night.dark"),
-              border: `1px solid ${theme("colors.ink")}`
+              backgroundColor: theme("colors.night.light"),
             },
           },
         },
