@@ -26,8 +26,16 @@ module.exports = {
         pencil: "#636363",
         light: "#efefef",
         moonlight: "#c6c6c6",
-        night: "#0f171f",
-        paper: "#fdf6e3",
+        night: {
+          light: "#111922",
+          DEFAULT: "#0f171f",
+          dark: "#0d141c",
+        },
+        paper: {
+          light: "#fef9ec",
+          DEFAULT: "#fdf6e3",
+          dark: "#fcf3d9",
+        },
       },
       zIndex: {
         "-10": "-10",
@@ -77,7 +85,7 @@ module.exports = {
             "h1, h2, h3, h4, h5, h6, blockquote": {
               color: theme("colors.ink"),
               bold: {
-                color: theme("colors.ink")
+                color: theme("colors.ink"),
               },
             },
             "h1, h2": {
@@ -116,9 +124,7 @@ module.exports = {
               code: {
                 color: theme("colors.pencil"),
               },
-              backgroundColor: theme("colors.gray.200"),
-              boxShadow:
-                "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+              backgroundColor: theme("colors.paper.light"),
             },
           },
         },
@@ -129,7 +135,7 @@ module.exports = {
             "h1, h2, h3, h4, h5, h6": {
               color: theme("colors.light"),
               strong: {
-                color: theme("colors.light")
+                color: theme("colors.light"),
               },
             },
             a: {
@@ -160,9 +166,7 @@ module.exports = {
               code: {
                 color: theme("colors.moonlight"),
               },
-              backgroundColor: theme("colors.gray.800"),
-              boxShadow:
-                "0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06)",
+              backgroundColor: theme("colors.night.dark"),
             },
           },
         },
