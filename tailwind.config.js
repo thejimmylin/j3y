@@ -27,9 +27,9 @@ module.exports = {
         light: "#efefef",
         moonlight: "#c6c6c6",
         night: {
-          light: "#111922",
+          light: "#121c26",
           DEFAULT: "#0f171f",
-          dark: "#0d141c",
+          dark: "#0c1218",
         },
         paper: {
           light: "#fef9ec",
@@ -124,7 +124,8 @@ module.exports = {
               code: {
                 color: theme("colors.pencil"),
               },
-              backgroundColor: theme("colors.paper.dark"),
+              backgroundColor: theme("colors.paper.light"),
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
             },
           },
         },
@@ -166,7 +167,7 @@ module.exports = {
               code: {
                 color: theme("colors.moonlight"),
               },
-              backgroundColor: theme("colors.night.light"),
+              backgroundColor: theme("colors.night.dark"),
             },
           },
         },
