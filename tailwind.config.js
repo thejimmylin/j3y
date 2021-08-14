@@ -125,7 +125,7 @@ module.exports = {
                 color: theme("colors.pencil"),
               },
               backgroundColor: theme("colors.paper.light"),
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
             },
           },
         },
@@ -167,7 +167,8 @@ module.exports = {
               code: {
                 color: theme("colors.moonlight"),
               },
-              backgroundColor: theme("colors.night.dark"),
+              backgroundColor: theme("colors.night.light"),
+              boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
             },
           },
         },
