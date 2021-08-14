@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
+import gfm from 'remark-gfm'
 
 export const POSTS_PATH = path.join(process.cwd(), "posts");
 
@@ -29,6 +30,10 @@ export const getSinglePost = async (slug) => {
   const source = getSourceOfFile(slug + ".mdx");
   const { code, frontmatter } = await bundleMDX(source, {
     cwd: POSTS_PATH,
+    xdmOptions: (options) => {
+      options.remarkPlugins = [...(options.remarkPlugins ?? []), gfm];
+      return options;
+    },
   });
 
   return {
