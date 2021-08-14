@@ -21,7 +21,7 @@ const Header = ({
     <header className="relative h-screen font-pretty">
       <LightFilter isDark={isDark} windowScrollY={windowScrollY} />
       <div
-        className="absolute w-full h-screen -z-10 bg-black"
+        className="absolute w-full h-screen -z-10 bg-night"
         style={{ transform: `translateY(${windowScrollY / 2}px)` }}
       >
         <div

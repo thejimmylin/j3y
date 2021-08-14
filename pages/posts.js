@@ -11,7 +11,7 @@ const Posts = ({ isDark, setIsDark, posts }) => {
         {posts.map((post, index) => (
           <div
             key={index}
-            className="max-w-screen-md p-4 mx-auto bg-paper-dark dark:bg-gray-900 my-8 rounded-md dark:border-pencil"
+            className="max-w-screen-md p-4 mx-auto bg-paper-dark dark:bg-night-light my-8 rounded-md dark:border-pencil"
           >
             <p className="mx-4 my-8 text-4xl font-medium">{post.frontmatter.title}</p>
             <p className="mx-4 my-8">{post.frontmatter.subtitle}</p>
