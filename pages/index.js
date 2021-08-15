@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import HeroHeader from "../components/HeroHeader";
-import Resume from "../components/Resume";
 import Footer from "../components/Footer";
+import About from "../components/About.mdx";
 
 const HomePage = ({ isDark, setIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);
@@ -36,7 +36,9 @@ const HomePage = ({ isDark, setIsDark }) => {
         ref={refMain}
         className="font-pretty font-extralight text-ink bg-paper dark:text-light dark:bg-night py-20"
       >
-        <Resume />
+        <article className="max-w-screen-md p-8 mx-auto prose dark:prose-dark">
+          <About />
+        </article>
       </main>
       <Footer refFooter={refFooter} />
     </>
