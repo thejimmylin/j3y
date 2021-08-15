@@ -120,11 +120,11 @@ module.exports = {
               color: theme("colors.purple.600"),
             },
             pre: {
-              color: theme("colors.pencil"),
+              color: theme("colors.moonlight"),
               code: {
-                color: theme("colors.pencil"),
+                color: theme("colors.moonlight"),
               },
-              backgroundColor: theme("colors.paper.light"),
+              backgroundColor: theme("colors.night.light"),
               boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
             },
           },
@@ -161,14 +161,6 @@ module.exports = {
             },
             code: {
               color: theme("colors.pink.500"),
-            },
-            pre: {
-              color: theme("colors.moonlight"),
-              code: {
-                color: theme("colors.moonlight"),
-              },
-              backgroundColor: theme("colors.night.light"),
-              boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
             },
           },
         },
