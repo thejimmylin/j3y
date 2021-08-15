@@ -32,6 +32,10 @@ export const metadatas = [
     slug: "javascript-5-ways-to-define-a-function",
     title: "JavaScript 5 ways to define a function",
   },
+  {
+    slug: "about-me",
+    title: "About me"
+  }
 ];
 
 export default metadatas;
