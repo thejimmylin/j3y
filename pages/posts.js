@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { metadatas } from "../data/_posts";
+import { metadatas } from "../_data/posts";
 
 const Posts = ({ isDark, setIsDark, metadatas }) => {
   return (

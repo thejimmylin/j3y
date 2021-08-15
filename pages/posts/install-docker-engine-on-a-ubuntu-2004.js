@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Article from "../../data/_posts/install-docker-engine-on-a-ubuntu-2004.mdx"
+import Article from "../../_data/posts/install-docker-engine-on-a-ubuntu-2004.mdx"
 
 const Post = ({ isDark, setIsDark }) => {
   return (

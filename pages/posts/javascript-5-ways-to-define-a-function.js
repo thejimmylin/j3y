@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Article from "../../data/_posts/javascript-5-ways-to-define-a-function.mdx"
+import Article from "../../_data/posts/javascript-5-ways-to-define-a-function.mdx"
 
 const Post = ({ isDark, setIsDark }) => {
   return (

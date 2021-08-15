@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Article from "../../data/_posts/ubuntu-db-odbc-issues.mdx"
+import Article from "../../_data/posts/ubuntu-db-odbc-issues.mdx"
 
 const Post = ({ isDark, setIsDark }) => {
   return (
