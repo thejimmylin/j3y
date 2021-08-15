@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import HeroHeader from "../components/HeroHeader";
 import Footer from "../components/Footer";
-import About from "../components/About.mdx";
+import AboutMe from "../_data/posts/about-me.mdx";
 
 const HomePage = ({ isDark, setIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);
@@ -38,7 +38,7 @@ const HomePage = ({ isDark, setIsDark }) => {
       >
         <div className="max-w-screen-md p-4 mx-auto">
           <article className="prose dark:prose-dark p-4">
-            <About />
+            <AboutMe />
           </article>
         </div>
       </main>
