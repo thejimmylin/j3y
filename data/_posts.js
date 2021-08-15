@@ -28,6 +28,10 @@ export const metadatas = [
     subtitle:
       "ODBC could be annoying, these article list out some ODBC issues I got.",
   },
+  {
+    slug: "javascript-5-ways-to-define-a-function",
+    title: "JavaScript 5 ways to define a function",
+  },
 ];
 
 export default metadatas;

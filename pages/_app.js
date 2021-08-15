@@ -4,8 +4,11 @@ import { useState } from "react";
 import Head from "next/head";
 import classNames from "classnames";
 import { MDXProvider } from "@mdx-js/react";
+import CodeBlock from "../components/CodeBlock";
 
-const components = {};
+const components = {
+  pre: props => <CodeBlock {...props} />,
+}
 
 const App = ({ Component, pageProps }) => {
   const [isDark, setIsDark] = useState(true);

@@ -12,6 +12,7 @@
     "bootstrap-icons": "^1.5.0",
     "classnames": "^2.3.1",
     "next": "^11.1.0",
+    "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
