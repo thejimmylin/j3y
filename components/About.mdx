@@ -1,5 +1,5 @@
-import avatar from "../public/avatar-1440x1440.jpg";
 import Image from "next/image";
+import avatar from "../public/avatar-1440x1440.jpg";
 import ntu from "../public/ntu-360x360.png";
 import chief from "../public/chief-500x300.png";
 import ctdbI18n from "../public/ctdb-i18n-1920x1080.png";
@@ -7,7 +7,7 @@ import ctdbLog from "../public/ctdb-log-1920x1080.png";
 import fortiadminLogin from "../public/fortiadmin-login-1920x1080.png";
 import fortiadminExample from "../public/fortiadmin-example-1920x1080.png";
 
-<div className="my-8">
+<div className="my-10">
   <Image src={avatar} alt="avatar" className="rounded-sm" />
 </div>
 
@@ -19,11 +19,27 @@ I have five years of programming experience, mostly in Python.
 
 # Education
 
-[National Taiwan University](https://www.ntu.edu.tw/) (2011/09 ~ 2016/06)
+<div className="flex justify-between my-5 gap-4">
+  <div>
+    <p><a href="https://www.ntu.edu.tw/">National Taiwan University</a></p>
+    <p className="text-sm">Sep. 2011 - Jun. 2016</p>
+  </div>
+  <div className="w-24">
+    <Image src={ntu} alt="ntu" />
+  </div>
+</div>
 
 # Experience
 
-[Chief Telecom](https://www.chief.com.tw/) (2017/06 ~ 2021/06)
+<div className="flex justify-between my-5">
+  <div>
+    <p><a href="https://www.chief.com.tw/">Chief Telecom</a></p>
+    <p className="text-sm">Jun. 2017 - Jun. 2021</p>
+  </div>
+  <div className="w-48">
+    <Image src={chief} alt="chief" />
+  </div>
+</div>
 
 I work for their cloud service department. I maintain and develop products and services about [Chief Cloud](https://www.chief.com.tw/cloud/).
 
@@ -83,11 +99,11 @@ Here are some screenshots of them:
 
 ## CTDB
 
-<div className="my-8">
+<div className="my-10">
   <Image src={ctdbI18n} alt="ctdbI18n" className="rounded-sm" />
 </div>
 
-<div className="my-8">
+<div className="my-10">
   <Image src={ctdbLog} alt="ctdbLog" className="rounded-sm" />
 </div>
 
@@ -103,11 +119,11 @@ i18n / Log system
 
 ## FortiAdmin
 
-<div className="my-8">
+<div className="my-10">
   <Image src={fortiadminExample} alt="fortiadminExample" className="rounded-sm" />
 </div>
 
-<div className="my-8">
+<div className="my-10">
   <Image src={fortiadminLogin} alt="fortiadminLogin" className="rounded-sm" />
 </div>
 

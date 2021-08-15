@@ -34,11 +34,13 @@ const HomePage = ({ isDark, setIsDark }) => {
       />
       <main
         ref={refMain}
-        className="font-pretty font-extralight text-ink bg-paper dark:text-light dark:bg-night py-20"
+        className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20"
       >
-        <article className="max-w-screen-md p-8 mx-auto prose dark:prose-dark">
-          <About />
-        </article>
+        <div className="max-w-screen-md p-4 mx-auto">
+          <article className="prose dark:prose-dark p-4">
+            <About />
+          </article>
+        </div>
       </main>
       <Footer refFooter={refFooter} />
     </>

@@ -7,7 +7,7 @@ const Posts = ({ isDark, setIsDark, metadatas }) => {
   return (
     <>
       <Header isDark={isDark} setIsDark={setIsDark} />
-      <main className="font-pretty py-20 min-h-screen text-ink bg-paper dark:text-light dark:bg-night">
+      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20">
         {metadatas.map((metadata) => (
           <div
             key={metadata.slug}
