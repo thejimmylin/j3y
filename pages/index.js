@@ -31,8 +31,8 @@ const HomePage = ({ isDark, setIsDark }) => {
       <main
         className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20"
       >
-        <div className="max-w-screen-md p-4 mx-auto">
-          <article className="prose dark:prose-dark p-4">
+        <div className="max-w-screen-md mx-auto">
+          <article className="prose dark:prose-dark p-8">
             <AboutMe />
           </article>
         </div>
