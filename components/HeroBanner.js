@@ -8,8 +8,7 @@ import wall from "../public/wall-1440x810.jpg";
 const HeroBanner = ({
   isDark,
   windowScrollY,
-  scrollIntoMain,
-  scrollIntoFooter,
+  scrollIntoHeader,
 }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -68,21 +67,21 @@ const HeroBanner = ({
           <a
             className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
           >
-             My Posts
+            My posts
           </a>
           </Link>
 
           <button
-            onClick={scrollIntoFooter}
+            onClick={scrollIntoHeader}
             className="w-32 h-12 m-1 border-2 focus:outline-none text-light hover:text-white border-light hover:border-white text-md animate-fadein-1000-800"
           >
-            Contact
+            About me
           </button>
         </div>
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
         <span
-          onClick={scrollIntoMain}
+          onClick={scrollIntoHeader}
           className="text-4xl text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
           <i className="bi bi-chevron-compact-down"></i>
