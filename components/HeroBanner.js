@@ -5,16 +5,12 @@ import classNames from "classnames";
 import LightFilter from "./LightFilter";
 import wall from "../public/wall-1440x810.jpg";
 
-const Header = ({
+const HeroBanner = ({
   isDark,
-  setIsDark,
   windowScrollY,
   scrollIntoMain,
   scrollIntoFooter,
 }) => {
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-  };
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -45,31 +41,6 @@ const Header = ({
           />
         </div>
       </div>
-      <div className="absolute h-12 right-8 top-5">
-        <div className="flex items-center self-center animate-fadein-1000-700">
-          <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
-            <input
-              type="checkbox"
-              name="toggle"
-              id="toggle"
-              className="absolute block w-6 h-6 border-4 rounded-full appearance-none cursor-pointer focus:outline-none checked:right-0 bg-gray-500 checked:bg-white border-gray-300"
-              onChange={toggleDarkMode}
-              checked={!isDark}
-            />
-            <label
-              htmlFor="toggle"
-              className="block h-6 overflow-hidden rounded-full cursor-pointer bg-gray-300"
-            ></label>
-          </div>
-          <label htmlFor="toggle" className="text-xl text-white">
-            {isDark ? (
-              <i className="bi bi-moon-fill"></i>
-            ) : (
-              <i className="bi bi-sun-fill"></i>
-            )}
-          </label>
-        </div>
-      </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5">
         <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-medium text-light text-center whitespace-nowrap">
           <span className="animate-fadein-1000-0">I</span>
@@ -89,7 +60,7 @@ const Header = ({
         </p>
         <p className="mb-16 text-sm text-center text-light">
           <span className="animate-fadein-2000-1500">
-            Welcome to my personal website.
+            Welcome to my blog.
           </span>
         </p>
         <div className="flex">
@@ -97,7 +68,7 @@ const Header = ({
           <a
             className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
           >
-             Posts
+             My Posts
           </a>
           </Link>
 
@@ -121,4 +92,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export default HeroBanner;

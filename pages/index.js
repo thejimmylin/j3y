@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import HeroHeader from "../components/HeroHeader";
+import HeroBanner from "../components/HeroBanner";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AboutMe from "../_data/posts/about-me.mdx";
 
@@ -25,13 +26,13 @@ const HomePage = ({ isDark, setIsDark }) => {
 
   return (
     <>
-      <HeroHeader
+      <HeroBanner
         isDark={isDark}
-        setIsDark={setIsDark}
         windowScrollY={windowScrollY}
         scrollIntoMain={scrollIntoMain}
         scrollIntoFooter={scrollIntoFooter}
       />
+      <Header isDark={isDark} setIsDark={setIsDark} />
       <main
         ref={refMain}
         className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20"

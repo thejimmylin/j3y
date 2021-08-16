@@ -13,8 +13,8 @@ const Header = ({ isDark, setIsDark, extraClassNames }) => {
         extraClassNames
       )}
     >
-      <div className="flex items-baseline">
-        <p className="font-medium text-center whitespace-nowrap my-5 ml-8 text-2xl transform hover:scale-105">
+      <div className="flex items-baseline gap-4 px-8 justify-between">
+        <p className="font-medium text-center whitespace-nowrap my-5 text-2xl transform hover:scale-105">
           <Link href="/">
             <a>
               <span className="animate-fadein-1000-200">J</span>
@@ -29,18 +29,14 @@ const Header = ({ isDark, setIsDark, extraClassNames }) => {
             </a>
           </Link>
         </p>
-        <p className="font-medium text-center whitespace-nowrap my-5 ml-4 text-xl text-indigo-600 dark:text-yellow-500 transform hover:scale-105">
+        <p className="font-medium text-center whitespace-nowrap my-5 text-xl text-indigo-600 dark:text-yellow-500 transform hover:scale-105">
           <Link href="/posts">
-            <a>
-              <span className="animate-fadein-1000-650">P</span>
-              <span className="animate-fadein-1000-700">o</span>
-              <span className="animate-fadein-1000-750">s</span>
-              <span className="animate-fadein-1000-800">t</span>
-              <span className="animate-fadein-1000-850">s</span>
+            <a className="animate-fadein-1000-1000">
+              Posts
             </a>
           </Link>
         </p>
-        <div className="flex items-center self-center animate-fadein-1000-700 my-5 mr-8 ml-auto">
+        <div className="flex items-center self-center animate-fadein-1000-700 my-5 ml-auto">
           <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
             <input
               type="checkbox"
