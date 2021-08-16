@@ -4,11 +4,18 @@ https://www.jimmylin.org
 
 A personal website/blog about me, built with `Next.js` and `MDX`.
 
+
+## Screenshots
+
+![index](https://github.com/j3ygithub/j3y/blob/main/docs/images/index.png)
+
+![post](https://github.com/j3ygithub/j3y/blob/main/docs/images/post.png)
+
 ## Installation
 
 You can install `j3y` with `npm`.
 
-```bash
+```
   git clone https://github.com/j3ygithub/j3y
   cd j3y
   npm ci
@@ -18,7 +25,7 @@ You can install `j3y` with `npm`.
 
 You can run it locally.
 
-```bash
+```
   npm run dev
 ```
 
