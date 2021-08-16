@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
         <title>Jimmy Lin</title>
         <meta name="title" content="I'm Jimmy Lin." />
-        <meta name="description" content="Welcome to my personal website." />
+        <meta name="description" content="Welcome to my blog." />
         <meta property="og:title" content="I'm Jimmy Lin." />
         <meta property="og:description" content="Welcome to my personal website." />
         <meta property="og:image" content="https://jimmylin.org/avatar-1440x1440.jpg" />

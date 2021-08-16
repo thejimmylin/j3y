@@ -5,12 +5,12 @@ export const metadatas = [
     subtitle: "Sometimes you want to customize your own base image",
   },
   {
-    slug: "how-to-create-a-docker-image",
-    title: "How to create a Docker image?",
-  },
-  {
     slug: "how-to-push-a-docker-image",
     title: "How to push a docker image?",
+  },
+  {
+    slug: "how-to-create-a-docker-image",
+    title: "How to create a Docker image?",
   },
   {
     slug: "install-docker-engine-on-a-ubuntu-2004",
@@ -19,14 +19,14 @@ export const metadatas = [
       "You need docker engine to build docker image, run image as a container and so on.",
   },
   {
-    slug: "tar-things",
-    title: "Tar things",
-  },
-  {
     slug: "ubuntu-db-odbc-issues",
     title: "Ubuntu DB ODBC issues",
     subtitle:
       "ODBC could be annoying, these article list out some ODBC issues I got.",
+  },
+  {
+    slug: "tar-things",
+    title: "Tar things",
   },
   {
     slug: "javascript-5-ways-to-define-a-function",
