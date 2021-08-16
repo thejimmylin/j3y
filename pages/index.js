@@ -15,13 +15,9 @@ const HomePage = ({ isDark, setIsDark }) => {
       window.removeEventListener("scroll", handleWindowScroll);
     };
   }, []);
-  const refMain = useRef(null);
-  const scrollIntoMain = () => {
-    refMain.current.scrollIntoView();
-  };
-  const refFooter = useRef(null);
-  const scrollIntoFooter = () => {
-    refFooter.current.scrollIntoView();
+  const refHeader = useRef(null);
+  const scrollIntoHeader = () => {
+    refHeader.current.scrollIntoView();
   };
 
   return (
@@ -29,12 +25,10 @@ const HomePage = ({ isDark, setIsDark }) => {
       <HeroBanner
         isDark={isDark}
         windowScrollY={windowScrollY}
-        scrollIntoMain={scrollIntoMain}
-        scrollIntoFooter={scrollIntoFooter}
+        scrollIntoHeader={scrollIntoHeader}
       />
-      <Header isDark={isDark} setIsDark={setIsDark} />
+      <Header isDark={isDark} setIsDark={setIsDark} refHeader={refHeader}/>
       <main
-        ref={refMain}
         className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20"
       >
         <div className="max-w-screen-md p-4 mx-auto">
@@ -43,7 +37,7 @@ const HomePage = ({ isDark, setIsDark }) => {
           </article>
         </div>
       </main>
-      <Footer refFooter={refFooter} />
+      <Footer />
     </>
   );
 };

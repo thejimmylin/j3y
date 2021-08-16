@@ -1,9 +1,8 @@
 import classNames from "classnames";
 
-const Footer = ({ extraClassNames, refFooter }) => {
+const Footer = ({ extraClassNames }) => {
   return (
     <footer
-      ref={refFooter}
       className={classNames(
         "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
