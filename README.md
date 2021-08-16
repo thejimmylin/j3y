@@ -1,34 +1,26 @@
-
 # j3y
 
 https://www.jimmylin.org
 
-This is a personal website/blog about me, built with `Next.js` and `MDX`.
-
-## Author
-
-[@j3ygithub](https://www.github.com/j3ygithub)
+A personal website/blog about me, built with `Next.js` and `MDX`.
 
 ## Installation
 
-```
-git clone https://github.com/j3ygithub/j3y
-cd j3y
-npm ci
-```
-## Runing
+You can install `j3y` with `npm`.
 
-```
-npm run dev
+```bash
+  git clone https://github.com/j3ygithub/j3y
+  cd j3y
+  npm ci
 ```
 
-## Meta
+## Run Locally
 
-Jimmy Lin <contact@jimmylin.org>
+You can run it locally.
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
-
-[https://github.com/j3ygithub](https://github.com/j3ygithub)
+```bash
+  npm run dev
+```
 
 ## Contributing
 
@@ -37,3 +29,11 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+## License
+
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) license. See `LICENSE` for more information.
+
+## Authors
+
+- [@j3ygithub](https://www.github.com/j3ygithub)
