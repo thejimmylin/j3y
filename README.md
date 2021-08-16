@@ -5,9 +5,9 @@ https://www.jimmylin.org
 
 This is a personal website/blog about me, built with `Next.js` and `MDX`.
 
-## Authors
+## Author
 
-- [@j3ygithub](https://www.github.com/j3ygithub)
+[@j3ygithub](https://www.github.com/j3ygithub)
 
 ## Installation
 
