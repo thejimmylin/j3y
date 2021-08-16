@@ -1,3 +1,5 @@
+import avatar from "../public/avatar-1440x1440.jpg"
+
 export const metadatas = [
   {
     slug: "docker-image-with-nodejs-and-python",
@@ -21,8 +23,7 @@ export const metadatas = [
   {
     slug: "ubuntu-db-odbc-issues",
     title: "Ubuntu DB ODBC issues",
-    subtitle:
-      "ODBC could be annoying, these article list out some ODBC issues I got.",
+    subtitle: "ODBC could be annoying, these article list out some ODBC issues I got.",
   },
   {
     slug: "tar-things",
@@ -34,8 +35,11 @@ export const metadatas = [
   },
   {
     slug: "about-me",
-    title: "About me"
-  }
+    title: "About me",
+    thumbnail: avatar,
+    subtitle:
+      "I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.",
+  },
 ];
 
 export default metadatas;
