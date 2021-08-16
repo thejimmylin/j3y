@@ -2,7 +2,11 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
+  purge: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./_data/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   darkMode: "class",
   theme: {
     fontFamily: {
@@ -125,7 +129,7 @@ module.exports = {
                 color: theme("colors.moonlight"),
               },
               backgroundColor: theme("colors.night.light"),
-              boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+              boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
             },
           },
         },
