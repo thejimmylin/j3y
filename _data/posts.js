@@ -8,7 +8,7 @@ export const metadatas = [
   },
   {
     slug: "how-to-push-a-docker-image",
-    title: "How to push a docker image?",
+    title: "How to push a Docker image?",
   },
   {
     slug: "how-to-create-a-docker-image",
