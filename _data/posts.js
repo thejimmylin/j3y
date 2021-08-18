@@ -1,45 +1,76 @@
-import avatar from "../public/avatar-1440x1440.jpg"
+import avatar from "../public/avatar-1440x1440.jpg";
 
-export const metadatas = [
+const metadatas = [
   {
     slug: "docker-image-with-nodejs-and-python",
     title: "Docker image with Node.js and Python",
     subtitle: "Sometimes you want to customize your own base image",
+    thumbnail: null,
   },
   {
     slug: "how-to-push-a-docker-image",
     title: "How to push a Docker image?",
+    subtitle: "",
+    thumbnail: null,
   },
   {
     slug: "how-to-create-a-docker-image",
     title: "How to create a Docker image?",
+    subtitle: "",
+    thumbnail: null,
   },
   {
     slug: "install-docker-engine-on-a-ubuntu-2004",
     title: "Install Docker engine on a Ubuntu 20.04",
     subtitle:
       "You need docker engine to build docker image, run image as a container and so on.",
+    thumbnail: null,
   },
   {
     slug: "ubuntu-db-odbc-issues",
     title: "Ubuntu DB ODBC issues",
-    subtitle: "ODBC could be annoying, these article list out some ODBC issues I got.",
+    subtitle:
+      "ODBC could be annoying, these article list out some ODBC issues I got.",
+    thumbnail: null,
   },
   {
     slug: "tar-things",
     title: "Tar things",
+    subtitle: "",
+    thumbnail: null,
   },
   {
     slug: "javascript-5-ways-to-define-a-function",
     title: "JavaScript 5 ways to define a function",
+    subtitle: "",
+    thumbnail: null,
   },
   {
     slug: "about-me",
     title: "About me",
-    thumbnail: avatar,
     subtitle:
       "I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.",
+    thumbnail: avatar,
   },
 ];
 
-export default metadatas;
+const metadataIncludes = (metadata, text) => {
+  if (text === "") {
+    return true;
+  }
+  if (metadata.title.toLowerCase().includes(text.toLowerCase())) {
+    return true;
+  }
+  if (metadata.subtitle.toLowerCase().includes(text.toLowerCase())) {
+    return true;
+  }
+  return false;
+};
+
+const getRelatedMetadatas = (metadatas, textSearched) => {
+  return metadatas.filter((metadata) =>
+    metadataIncludes(metadata, textSearched)
+  );
+};
+
+export { metadatas, metadataIncludes, getRelatedMetadatas };
