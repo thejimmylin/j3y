@@ -45,7 +45,7 @@ const Footer = ({ extraClassNames }) => {
               <i className="bi bi-facebook"></i>
             </a>
           </p>
-          <p className="text-xs font-extralight mt-8">© 2021 All rights reserved.</p>
+          <p className="text-xs mt-8">© 2021 All rights reserved.</p>
         </div>
       </div>
     </footer>

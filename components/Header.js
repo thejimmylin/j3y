@@ -9,13 +9,13 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
   return (
     <header
       className={classNames(
-        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        "font-pretty font-semibold text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
       )}
       ref={refHeader}
     >
       <div className="flex items-baseline gap-4 px-8 justify-between">
-        <p className="font-medium text-center whitespace-nowrap my-5 text-2xl transform hover:scale-105">
+        <p className="my-5 text-2xl transform hover:scale-105">
           <Link href="/">
             <a>
               <span className="animate-fadein-1000-200">J</span>
@@ -30,7 +30,7 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
             </a>
           </Link>
         </p>
-        <p className="font-medium text-center whitespace-nowrap my-5 text-xl text-indigo-600 dark:text-yellow-500 transform hover:scale-105">
+        <p className="text-center whitespace-nowrap my-5 text-xl text-indigo-500 dark:text-yellow-300 transform hover:scale-105">
           <Link href="/posts">
             <a className="animate-fadein-1000-1000">
               Posts

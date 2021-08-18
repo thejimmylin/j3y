@@ -11,9 +11,9 @@ const PostsSearched = ({ metadatas, textSearched }) => {
   if (!relatedMetadatas.length) {
     return (
       <article className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm">
-        <h1 className="text-4xl font-semibold mb-10">Sorry, there are no posts related. 🥲</h1>
+        <h1 className="text-4xl font-semibold mb-10">Sorry, there are no posts related.</h1>
         <div className="mb-5">
-          <Image src={sorry} />
+          <Image className="rounded-sm" src={sorry} />
         </div>
       </article>
     );

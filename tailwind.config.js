@@ -83,23 +83,23 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            fontWeight: 400,
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.ink"),
-            fontWeight: 300,
-            "h1, h2, h3, h4, h5, h6, blockquote": {
-              color: theme("colors.ink"),
-              bold: {
-                color: theme("colors.ink"),
-              },
+            a: {
+              fontWeight: 400,
+              color: theme("colors.indigo.400"),
+              "&:hover": { color: theme("colors.indigo.500") },
+              textDecoration: "none"
             },
-            "h1, h2": {
-              fontWeight: 600,
+            "h6, h5": {
+              fontWeight: 400,
             },
-            "h3, h4": {
+            "h4, h3": {
               fontWeight: 500,
             },
-            "h5, h6": {
-              fontWeight: 400,
+            "h2, h1": {
+              fontWeight: 600,
             },
             ol: {
               li: {
@@ -110,14 +110,6 @@ module.exports = {
               li: {
                 "&:before": { backgroundColor: theme("colors.ink") },
               },
-            },
-            a: {
-              fontWeight: 300,
-              color: theme("colors.pencil"),
-              "&:hover": { color: theme("colors.ink") },
-            },
-            hr: {
-              borderColor: theme("colors.moonlight"),
             },
             code: {
               fontFamily: theme("fontFamily.code").join(", "),
@@ -131,21 +123,28 @@ module.exports = {
               backgroundColor: theme("colors.night.light"),
               boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
             },
+            blockquote: {
+              color: theme("colors.ink"),
+              borderColor: theme("colors.ink"),
+            },
+            hr: {
+              borderColor: theme("colors.moonlight"),
+            },
           },
         },
         dark: {
           css: {
             fontFamily: theme("fontFamily.pretty").join(", "),
             color: theme("colors.light"),
-            "h1, h2, h3, h4, h5, h6": {
+            a: {
+              color: theme("colors.yellow.400"),
+              "&:hover": { color: theme("colors.yellow.300") },
+            },
+            "h1, h2, h3, h4, h5, h6, blockquote": {
               color: theme("colors.light"),
-              strong: {
+              bold: {
                 color: theme("colors.light"),
               },
-            },
-            a: {
-              color: theme("colors.moonlight"),
-              "&:hover": { color: theme("colors.light") },
             },
             ol: {
               li: {
@@ -157,14 +156,15 @@ module.exports = {
                 "&:before": { backgroundColor: theme("colors.light") },
               },
             },
+            code: {
+              color: theme("colors.pink.500"),
+            },
             blockquote: {
               color: theme("colors.light"),
+              borderColor: theme("colors.light"),
             },
             hr: {
               borderColor: theme("colors.pencil"),
-            },
-            code: {
-              color: theme("colors.pink.500"),
             },
           },
         },
