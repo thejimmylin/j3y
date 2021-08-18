@@ -33,7 +33,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       {metadata.slug && (
         <p className="flex justify-end">
           <Link href={`/posts/${metadata.slug}`}>
-            <a className="underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light">
+            <a className="text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300">
               more
             </a>
           </Link>
