@@ -14,7 +14,7 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
       )}
       ref={refHeader}
     >
-      <div className="flex items-baseline gap-4 px-8 justify-between">
+      <div className="flex whitespace-nowrap items-baseline gap-4 px-8 justify-between">
         <p className="my-5 text-2xl transform hover:scale-105">
           <Link href="/">
             <a>
@@ -30,7 +30,7 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
             </a>
           </Link>
         </p>
-        <p className="text-center whitespace-nowrap my-5 text-xl text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300 transform hover:scale-105">
+        <p className="text-center my-5 text-xl text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300 transform hover:scale-105">
           <Link href="/posts">
             <a className="animate-fadein-1000-1000">
               Posts
