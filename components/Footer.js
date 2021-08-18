@@ -4,21 +4,16 @@ const Footer = ({ extraClassNames }) => {
   return (
     <footer
       className={classNames(
-        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        "font-semibold font-pretty text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
       )}
     >
       <div className="p-8">
         <div className="flex flex-col flex-wrap items-end content-end gap-2">
-          <p className="text-5xl font-medium hover:text-black dark:hover:text-white cursor-default">
+          <p className="text-5xl hover:text-black dark:hover:text-white cursor-default">
             Jimmy Lin
           </p>
-          <a
-            href="mailto:contact@jimmylin.org"
-            className="underline hover:text-black dark:hover:text-white"
-          >
-            contact@jimmylin.org
-          </a>
+          <p>contact@jimmylin.org</p>
           <p className="text-ink dark:text-light text-4xl flex gap-2">
             <a
               href="https://github.com/j3ygithub"
