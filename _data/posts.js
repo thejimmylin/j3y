@@ -2,6 +2,12 @@ import avatar from "../public/avatar-1440x1440.jpg";
 
 const metadatas = [
   {
+    slug: "typescript-function-annotations",
+    title: "TypeScript Function Annotations",
+    subtitle: "",
+    thumbnail: null,
+  },
+  {
     slug: "docker-image-with-nodejs-and-python",
     title: "Docker image with Node.js and Python",
     subtitle: "Sometimes you want to customize your own base image",
