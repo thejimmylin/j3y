@@ -2,6 +2,12 @@ import avatar from "../public/avatar-1440x1440.jpg";
 
 const metadatas = [
   {
+    slug: "use-fira-code-in-vscode",
+    title: "Use Fira Code in VSCode",
+    subtitle: "",
+    thumbnail: null,
+  },
+  {
     slug: "typescript-function-annotations",
     title: "TypeScript Function Annotations",
     subtitle: "",

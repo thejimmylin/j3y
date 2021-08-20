@@ -116,6 +116,7 @@ module.exports = {
               color: theme("colors.purple.600"),
             },
             pre: {
+              fontFamily: theme("fontFamily.code").join(", "),
               color: theme("colors.moonlight"),
               code: {
                 color: theme("colors.moonlight"),
