@@ -11,7 +11,9 @@ const PostsSearched = ({ metadatas, textSearched }) => {
   if (!relatedMetadatas.length) {
     return (
       <article className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm">
-        <h1 className="text-4xl font-semibold mb-10">Sorry, there are no posts related.</h1>
+        <h1 className="text-4xl font-semibold mb-10">
+          Sorry, there are no posts related.
+        </h1>
         <div className="mb-5">
           <Image className="rounded-sm" src={sorry} />
         </div>
@@ -23,7 +25,11 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       key={metadata.slug}
       className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm"
     >
-      <h1 className="text-4xl font-semibold mb-10">{metadata.title}</h1>
+      <h1
+        className="text-4xl font-semibold mb-10"
+      >
+        {metadata.isDraft ? `Draft - ${metadata.title}` : metadata.title}
+      </h1>
       {metadata.thumbnail && (
         <div className="mb-5">
           <Image src={metadata.thumbnail} />
@@ -34,13 +40,13 @@ const PostsSearched = ({ metadatas, textSearched }) => {
         <p className="flex justify-end">
           <Link href={`/posts/${metadata.slug}`}>
             <a className="text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300">
-              more
+              Read more
             </a>
           </Link>
         </p>
       )}
     </article>
-  ));
+  )).reverse();
 };
 
 const Posts = ({ isDark, setIsDark, metadatas }) => {
