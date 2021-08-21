@@ -65,7 +65,7 @@ const HeroBanner = ({
         <div className="flex">
           <Link href="/posts">
           <a
-            className="font-medium flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
+            className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
           >
             My posts
           </a>

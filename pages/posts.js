@@ -65,17 +65,15 @@ const Posts = ({ isDark, setIsDark, metadatas }) => {
       <Header isDark={isDark} setIsDark={setIsDark} />
       <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20">
         <div className="max-w-screen-md mx-auto">
-          <div className="m-8">
-            <div className="flex items-center w-72 bg-paper-light dark:bg-night-light transition-bg shadow-sm">
-              <span className="text-lg text-pencil dark:text-moonlight pl-4">
-                <i className="bi bi-search"></i>
-              </span>
-              <input
-                className="text-xl text-ink dark:text-light bg-paper-light dark:bg-night-light transition-bg placeholder-pencil dark:placeholder-moonlight w-72 p-4 outline-none"
-                onChange={search}
-                placeholder="Search..."
-              />
-            </div>
+          <div className="flex items-center max-w-sm bg-paper dark:bg-night-light transition-bg p-4 shadow-sm rounded-md">
+            <span className="text-pencil dark:text-moonlight mx-4">
+              <i className="bi bi-search"></i>
+            </span>
+            <input
+              className="text-xl text-ink dark:text-light bg-paper-light dark:bg-night-light transition-bg placeholder-pencil dark:placeholder-moonlight w-full outline-none"
+              onChange={search}
+              placeholder="Search"
+            />
           </div>
           <PostsSearched metadatas={metadatas} textSearched={textSearched} />
         </div>
