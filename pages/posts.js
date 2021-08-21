@@ -15,7 +15,7 @@ const Posts = ({ isDark, setIsDark, metadatas }) => {
       <Header isDark={isDark} setIsDark={setIsDark} />
       <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20">
         <div className="max-w-screen-md mx-auto">
-          <div className="flex items-center max-w-sm bg-paper dark:bg-night-light transition-bg p-4 shadow-sm rounded-md">
+          <div className="flex items-center max-w-xs bg-paper dark:bg-night-light transition-bg p-4 shadow-sm rounded-md">
             <span className="text-pencil dark:text-moonlight mx-4">
               <i className="bi bi-search"></i>
             </span>
