@@ -1,7 +1,8 @@
 import Link from "next/link";
 import classNames from "classnames";
 
-const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
+const Header = ({ useIsDark, extraClassNames, refHeader }) => {
+  const [isDark, setIsDark] = useIsDark;
   const toggleDarkMode = () => {
     setIsDark(!isDark);
   };

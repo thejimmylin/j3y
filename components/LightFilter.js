@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-const LightFilter = ({ isDark, windowScrollY }) => {
+const LightFilter = ({ useIsDark, windowScrollY }) => {
+  const [isDark, _] = useIsDark;
   const [innerHeight, setInnerHeight] = useState(1080);
   useEffect(() => {
     setInnerHeight(window.innerHeight);

@@ -6,15 +6,16 @@ import LightFilter from "./LightFilter";
 import wall from "../public/wall-1440x810.jpg";
 
 const HeroBanner = ({
-  isDark,
+  useIsDark,
   windowScrollY,
   scrollIntoHeader,
 }) => {
+  const [isDark, _] = useIsDark;
   const [loaded, setLoaded] = useState(false);
 
   return (
     <header className="relative h-screen font-pretty">
-      <LightFilter isDark={isDark} windowScrollY={windowScrollY} />
+      <LightFilter useIsDark={useIsDark} windowScrollY={windowScrollY} />
       <div
         className="absolute w-full h-screen -z-10 bg-night"
         style={{ transform: `translateY(${windowScrollY / 2}px)` }}

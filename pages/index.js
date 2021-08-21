@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
+import MainLayout from "../components/MainLayout";
+import PostLayout from "../components/PostLayout";
+import Article from "../_data/posts/about-me.mdx";
 import Footer from "../components/Footer";
-import AboutMe from "../_data/posts/about-me.mdx";
 
-const HomePage = ({ isDark, setIsDark }) => {
+const HomePage = ({ useIsDark }) => {
   const [windowScrollY, setWindowScrollY] = useState(0);
   const handleWindowScroll = () => {
     setWindowScrollY(window.scrollY);
@@ -23,20 +25,16 @@ const HomePage = ({ isDark, setIsDark }) => {
   return (
     <>
       <HeroBanner
-        isDark={isDark}
+        useIsDark={useIsDark}
         windowScrollY={windowScrollY}
         scrollIntoHeader={scrollIntoHeader}
       />
-      <Header isDark={isDark} setIsDark={setIsDark} refHeader={refHeader}/>
-      <main
-        className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20"
-      >
-        <div className="max-w-screen-md mx-auto">
-          <article className="prose dark:prose-dark p-8">
-            <AboutMe />
-          </article>
-        </div>
-      </main>
+      <Header useIsDark={useIsDark} refHeader={refHeader}/>
+      <MainLayout>
+        <PostLayout>
+          <Article />
+        </PostLayout>
+      </MainLayout>
       <Footer />
     </>
   );

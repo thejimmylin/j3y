@@ -1,26 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MainLayout from "../components/MainLayout";
+import PostLayout from "../components/PostLayout";
+import sorry from "../public/sorry-1920x1440.jpg";
 
-const Custom404 = ({ isDark, setIsDark }) => {
+const Custom404 = ({ useIsDark }) => {
   return (
     <>
-      <Header isDark={isDark} setIsDark={setIsDark} />
-      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg h-screen py-20">
-        <div className="max-w-screen-md p-4 mx-auto">
-          <p className="mx-4 my-8 text-4xl font-medium">404</p>
-          <p className="mx-4 my-8">Page not found.</p>
-          <p className="mx-4 my-8">
+      <Header useIsDark={useIsDark} />
+      <MainLayout>
+        <PostLayout>
+          <h1>Sorry, no pages found.</h1>
+          <div className="mb-5">
+            <Image className="rounded-sm" src={sorry} />
+          </div>
+          <p>
             Maybe you want to go back to the{" "}
             <Link href="/">
               <a className="underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light">
                 homepage
               </a>
-            </Link>{" "}
+            </Link>
             ?
           </p>
-        </div>
-      </main>
+        </PostLayout>
+      </MainLayout>
       <Footer />
     </>
   );
