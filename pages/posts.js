@@ -20,33 +20,38 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       </article>
     );
   }
-  return relatedMetadatas.map((metadata) => (
-    <article
-      key={metadata.slug}
-      className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm"
-    >
-      <h1
-        className="text-4xl font-semibold mb-10"
+  return relatedMetadatas
+    .map((metadata) => (
+      <article
+        key={metadata.slug}
+        className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm"
       >
-        {metadata.isDraft ? `Draft - ${metadata.title}` : metadata.title}
-      </h1>
-      {metadata.thumbnail && (
-        <div className="mb-5">
-          <Image src={metadata.thumbnail} />
-        </div>
-      )}
-      <p className="mb-5">{metadata.subtitle}</p>
-      {metadata.slug && (
-        <p className="flex justify-end">
+        {metadata.isDraft && (
+          <p className="text-pencil dark:text-moonlight">
+            Note: This is a draft, its content may be updated at any time.
+          </p>
+        )}
+        <h1 className="text-4xl font-semibold mb-10">
           <Link href={`/posts/${metadata.slug}`}>
-            <a className="text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300">
-              Continue reading
-            </a>
+            <a>{metadata.title}</a>
           </Link>
-        </p>
-      )}
-    </article>
-  )).reverse();
+        </h1>
+        {metadata.thumbnail && (
+          <div className="mb-5">
+            <Image src={metadata.thumbnail} />
+          </div>
+        )}
+        {metadata.subtitle && <p className="mb-5">{metadata.subtitle}</p>}
+        {metadata.slug && (
+          <p className="flex justify-end text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300">
+            <Link href={`/posts/${metadata.slug}`}>
+              <a>Read more</a>
+            </Link>
+          </p>
+        )}
+      </article>
+    ))
+    .reverse();
 };
 
 const Posts = ({ isDark, setIsDark, metadatas }) => {
