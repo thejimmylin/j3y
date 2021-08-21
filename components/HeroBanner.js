@@ -5,14 +5,11 @@ import classNames from "classnames";
 import LightFilter from "./LightFilter";
 import wall from "../public/wall-1440x810.jpg";
 
-const HeroBanner = ({
-  useIsDark,
-  windowScrollY,
-  scrollIntoHeader,
-}) => {
-  const [isDark, _] = useIsDark;
+const HeroBanner = ({ useIsDark, windowScrollY, refHeader }) => {
   const [loaded, setLoaded] = useState(false);
-
+  const scrollIntoHeader = () => {
+    refHeader.current.scrollIntoView();
+  };
   return (
     <header className="relative h-screen font-pretty">
       <LightFilter useIsDark={useIsDark} windowScrollY={windowScrollY} />
@@ -59,17 +56,13 @@ const HeroBanner = ({
           <span className="animate-fadein-1000-650">.</span>
         </p>
         <p className="mb-16 text-sm text-center text-light">
-          <span className="animate-fadein-2000-1500">
-            Welcome to my blog.
-          </span>
+          <span className="animate-fadein-2000-1500">Welcome to my blog.</span>
         </p>
         <div className="flex">
           <Link href="/posts">
-          <a
-            className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900"
-          >
-            My posts
-          </a>
+            <a className="flex items-center justify-center w-32 h-12 m-1 bg-light hover:bg-white animate-fadein-1000-900">
+              My posts
+            </a>
           </Link>
 
           <button

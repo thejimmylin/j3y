@@ -1,35 +1,23 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
 import Article from "../_data/posts/about-me.mdx";
 import Footer from "../components/Footer";
+import useWindowScrollY from "../hooks/useWindowScrollY";
 
 const HomePage = ({ useIsDark }) => {
-  const [windowScrollY, setWindowScrollY] = useState(0);
-  const handleWindowScroll = () => {
-    setWindowScrollY(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleWindowScroll);
-    return () => {
-      window.removeEventListener("scroll", handleWindowScroll);
-    };
-  }, []);
+  const [windowScrollY] = useWindowScrollY();
   const refHeader = useRef(null);
-  const scrollIntoHeader = () => {
-    refHeader.current.scrollIntoView();
-  };
-
   return (
     <>
       <HeroBanner
         useIsDark={useIsDark}
         windowScrollY={windowScrollY}
-        scrollIntoHeader={scrollIntoHeader}
+        refHeader={refHeader}
       />
-      <Header useIsDark={useIsDark} refHeader={refHeader}/>
+      <Header useIsDark={useIsDark} refHeader={refHeader} />
       <MainLayout>
         <PostLayout>
           <Article />
