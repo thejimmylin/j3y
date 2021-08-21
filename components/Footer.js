@@ -4,7 +4,7 @@ const Footer = ({ extraClassNames }) => {
   return (
     <footer
       className={classNames(
-        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        "font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg",
         extraClassNames
       )}
     >

@@ -46,7 +46,7 @@ module.exports = {
       },
       transitionProperty: {
         filter: "filter",
-        bg: "backgroundColor",
+        bg: "background-color",
       },
       transitionDuration: {
         2000: "2000ms",

@@ -6,7 +6,7 @@ const Custom404 = ({ isDark, setIsDark }) => {
   return (
     <>
       <Header isDark={isDark} setIsDark={setIsDark} />
-      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night h-screen py-20">
+      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg h-screen py-20">
         <div className="max-w-screen-md p-4 mx-auto">
           <p className="mx-4 my-8 text-4xl font-medium">404</p>
           <p className="mx-4 my-8">Page not found.</p>

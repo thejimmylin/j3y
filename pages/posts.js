@@ -10,7 +10,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
   const relatedMetadatas = getRelatedMetadatas(metadatas, textSearched);
   if (!relatedMetadatas.length) {
     return (
-      <article className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm">
+      <article className="bg-paper-light dark:bg-night-light transition-bg p-8 my-8 rounded-md shadow-sm">
         <h1 className="text-4xl font-semibold mb-10">
           Sorry, there are no posts related.
         </h1>
@@ -24,7 +24,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
     .map((metadata) => (
       <article
         key={metadata.slug}
-        className="bg-paper-light dark:bg-night-light p-8 my-8 rounded-md shadow-sm"
+        className="bg-paper-light dark:bg-night-light transition-bg p-8 my-8 rounded-md shadow-sm"
       >
         {metadata.isDraft && (
           <p className="text-pencil dark:text-moonlight">
@@ -63,15 +63,15 @@ const Posts = ({ isDark, setIsDark, metadatas }) => {
   return (
     <>
       <Header isDark={isDark} setIsDark={setIsDark} />
-      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20">
+      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20">
         <div className="max-w-screen-md mx-auto">
           <div className="m-8">
-            <div className="flex items-center w-72 bg-paper-light dark:bg-night-light shadow-sm">
+            <div className="flex items-center w-72 bg-paper-light dark:bg-night-light transition-bg shadow-sm">
               <span className="text-lg text-pencil dark:text-moonlight pl-4">
                 <i className="bi bi-search"></i>
               </span>
               <input
-                className="text-xl text-ink dark:text-light bg-paper-light dark:bg-night-light placeholder-pencil dark:placeholder-moonlight w-72 p-4 outline-none"
+                className="text-xl text-ink dark:text-light bg-paper-light dark:bg-night-light transition-bg placeholder-pencil dark:placeholder-moonlight w-72 p-4 outline-none"
                 onChange={search}
                 placeholder="Search..."
               />
