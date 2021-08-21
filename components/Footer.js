@@ -4,17 +4,17 @@ const Footer = ({ extraClassNames }) => {
   return (
     <footer
       className={classNames(
-        "font-semibold font-pretty text-ink bg-paper dark:text-light dark:bg-night",
+        "font-pretty text-ink bg-paper dark:text-light dark:bg-night",
         extraClassNames
       )}
     >
-      <div className="p-8">
+      <div className="px-8 py-5">
         <div className="flex flex-col flex-wrap items-end content-end gap-2">
-          <p className="text-5xl hover:text-black dark:hover:text-white cursor-default">
+          <p className="text-4xl font-semibold cursor-default">
             Jimmy Lin
           </p>
-          <p>contact@jimmylin.org</p>
-          <p className="text-ink dark:text-light text-4xl flex gap-2">
+          <p className="text-sm">contact@jimmylin.org</p>
+          <p className="text-3xl flex gap-2">
             <a
               href="https://github.com/j3ygithub"
               target="_blank"
@@ -40,7 +40,7 @@ const Footer = ({ extraClassNames }) => {
               <i className="bi bi-facebook"></i>
             </a>
           </p>
-          <p className="text-xs mt-8">© 2021 All rights reserved.</p>
+          <p className="text-xs mt-5">© 2021 Jimmy Lin</p>
         </div>
       </div>
     </footer>
