@@ -1,20 +1,11 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import PostLayout from "../../components/PostLayout";
 import Article from "../../_data/posts/typescript-function-annotations.mdx"
 
 const Post = ({ isDark, setIsDark }) => {
   return (
-    <>
-      <Header isDark={isDark} setIsDark={setIsDark} />
-      <main className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20">
-        <div className="max-w-screen-md mx-auto">
-          <article className="prose dark:prose-dark p-8">
-            <Article />
-          </article>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <PostLayout isDark={isDark} setIsDark={setIsDark}>
+      <Article />
+    </PostLayout>
   );
 };
 
