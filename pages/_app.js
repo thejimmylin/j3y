@@ -16,7 +16,8 @@ const components = {
 };
 
 const App = ({ Component, pageProps }) => {
-  const [isDark, setIsDark] = useState(true);
+  const useIsDark = useState(true);
+  const [isDark, _] = useIsDark;
   return (
     <>
       <Head>
@@ -38,7 +39,7 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <div className={classNames({ dark: isDark })}>
         <MDXProvider components={components}>
-          <Component {...pageProps} isDark={isDark} setIsDark={setIsDark} />
+          <Component {...pageProps} useIsDark={useIsDark} />
         </MDXProvider>
       </div>
     </>
