@@ -9,12 +9,12 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
   return (
     <header
       className={classNames(
-        "font-pretty font-semibold text-ink bg-paper dark:text-light dark:bg-night sticky top-0 z-10",
+        "font-pretty font-semibold text-ink bg-paper dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
         extraClassNames
       )}
       ref={refHeader}
     >
-      <div className="flex whitespace-nowrap items-baseline gap-4 px-8 justify-between">
+      <div className="flex justify-between items-end gap-4 px-8 whitespace-nowrap">
         <p className="my-5 text-2xl transform hover:scale-105">
           <Link href="/">
             <a>
@@ -32,12 +32,10 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
         </p>
         <p className="text-center my-5 text-xl text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300 transform hover:scale-105">
           <Link href="/posts">
-            <a className="animate-fadein-1000-1000">
-              Posts
-            </a>
+            <a className="animate-fadein-1000-1000">Posts</a>
           </Link>
         </p>
-        <div className="flex items-center self-center animate-fadein-1000-700 my-5 ml-auto">
+        <div className="flex items-center animate-fadein-1000-700 my-5 ml-auto">
           <div className="relative inline-block w-10 mr-2 align-middle transition duration-200 ease-in select-none">
             <input
               type="checkbox"
@@ -52,7 +50,7 @@ const Header = ({ isDark, setIsDark, extraClassNames, refHeader }) => {
               className="block h-6 overflow-hidden rounded-full cursor-pointer bg-gray-300"
             ></label>
           </div>
-          <label htmlFor="toggle" className="text-x">
+          <label htmlFor="toggle">
             {isDark ? (
               <i className="bi bi-moon-fill"></i>
             ) : (

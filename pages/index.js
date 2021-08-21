@@ -29,7 +29,7 @@ const HomePage = ({ isDark, setIsDark }) => {
       />
       <Header isDark={isDark} setIsDark={setIsDark} refHeader={refHeader}/>
       <main
-        className="font-pretty text-ink bg-paper dark:text-light dark:bg-night min-h-screen py-20"
+        className="font-pretty text-ink bg-paper dark:text-light dark:bg-night transition-bg min-h-screen py-20"
       >
         <div className="max-w-screen-md mx-auto">
           <article className="prose dark:prose-dark p-8">
