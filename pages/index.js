@@ -9,15 +9,15 @@ import useWindowScrollY from "../hooks/useWindowScrollY";
 
 const HomePage = ({ useIsDark }) => {
   const [windowScrollY] = useWindowScrollY();
-  const refHeader = useRef(null);
+  const headerRef = useRef(null);
   return (
     <>
       <HeroBanner
         useIsDark={useIsDark}
         windowScrollY={windowScrollY}
-        refHeader={refHeader}
+        headerRef={headerRef}
       />
-      <Header useIsDark={useIsDark} refHeader={refHeader} />
+      <Header useIsDark={useIsDark} headerRef={headerRef} />
       <MainLayout>
         <PostLayout>
           <Article />

@@ -5,10 +5,10 @@ import classNames from "classnames";
 import LightFilter from "./LightFilter";
 import wall from "../public/wall-1440x810.jpg";
 
-const HeroBanner = ({ useIsDark, windowScrollY, refHeader }) => {
+const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
   const [loaded, setLoaded] = useState(false);
   const scrollIntoHeader = () => {
-    refHeader.current.scrollIntoView();
+    headerRef.current.scrollIntoView();
   };
   return (
     <header className="relative h-screen font-pretty">
