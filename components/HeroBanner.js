@@ -5,13 +5,13 @@ import classNames from "classnames";
 import LightFilter from "./LightFilter";
 import wall from "../public/wall-1440x810.jpg";
 
-const HeroBanner = ({ useIsDark, windowScrollY, refHeader }) => {
+const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
   const [loaded, setLoaded] = useState(false);
   const scrollIntoHeader = () => {
-    refHeader.current.scrollIntoView();
+    headerRef.current.scrollIntoView();
   };
   return (
-    <header className="relative h-screen font-pretty">
+    <header className="relative h-screen font-sans">
       <LightFilter useIsDark={useIsDark} windowScrollY={windowScrollY} />
       <div
         className="absolute w-full h-screen -z-10 bg-night"
@@ -39,7 +39,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, refHeader }) => {
         </div>
       </div>
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-2/5">
-        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-medium text-light text-center whitespace-nowrap">
+        <p className="mb-4 text-4xl xs:text-5xl sm:text-6xl font-semibold text-light text-center whitespace-nowrap">
           <span className="animate-fadein-1000-0">I</span>
           <span className="animate-fadein-1000-50">'</span>
           <span className="animate-fadein-1000-100">m</span>
@@ -55,7 +55,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, refHeader }) => {
           <span className="animate-fadein-1000-600">n</span>
           <span className="animate-fadein-1000-650">.</span>
         </p>
-        <p className="mb-16 text-sm text-center text-light">
+        <p className="mb-16 text-center text-light">
           <span className="animate-fadein-2000-1500">Welcome to my blog.</span>
         </p>
         <div className="flex">

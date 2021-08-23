@@ -10,8 +10,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      pretty: ["poppins", "sans-serif"],
-      code: ["Fira Code", "monospace"],
+      sans: ["poppins", "sans-serif"],
+      mono: ["Fira Code", "monospace"],
     },
     screens: {
       xs: "475px",
@@ -85,7 +85,7 @@ module.exports = {
         DEFAULT: {
           css: {
             fontWeight: 400,
-            fontFamily: theme("fontFamily.pretty").join(", "),
+            fontFamily: theme("fontFamily.sans").join(", "),
             color: theme("colors.ink"),
             a: {
               fontWeight: 400,
@@ -93,13 +93,10 @@ module.exports = {
               "&:hover": { color: theme("colors.indigo.500") },
               textDecoration: "none"
             },
-            "h6, h5": {
+            "h6, h5, h4": {
               fontWeight: 400,
             },
-            "h4, h3": {
-              fontWeight: 500,
-            },
-            "h2, h1": {
+            "h3, h2, h1": {
               fontWeight: 600,
             },
             ol: {
@@ -113,11 +110,11 @@ module.exports = {
               },
             },
             code: {
-              fontFamily: theme("fontFamily.code").join(", "),
+              fontFamily: theme("fontFamily.mono").join(", "),
               color: theme("colors.purple.600"),
             },
             pre: {
-              fontFamily: theme("fontFamily.code").join(", "),
+              fontFamily: theme("fontFamily.mono").join(", "),
               color: theme("colors.moonlight"),
               code: {
                 color: theme("colors.moonlight"),
@@ -136,7 +133,7 @@ module.exports = {
         },
         dark: {
           css: {
-            fontFamily: theme("fontFamily.pretty").join(", "),
+            fontFamily: theme("fontFamily.sans").join(", "),
             color: theme("colors.light"),
             a: {
               color: theme("colors.yellow.400"),

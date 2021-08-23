@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classNames from "classnames";
 
-const Header = ({ useIsDark, extraClassNames, refHeader }) => {
+const Header = ({ useIsDark, extraClassNames, headerRef }) => {
   const [isDark, setIsDark] = useIsDark;
   const toggleDarkMode = () => {
     setIsDark(!isDark);
@@ -10,10 +10,10 @@ const Header = ({ useIsDark, extraClassNames, refHeader }) => {
   return (
     <header
       className={classNames(
-        "font-pretty font-semibold text-ink bg-paper dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
+        "font-sans font-semibold text-ink bg-paper dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
         extraClassNames
       )}
-      ref={refHeader}
+      ref={headerRef}
     >
       <div className="flex justify-between items-end gap-4 px-8 whitespace-nowrap">
         <p className="my-5 text-2xl transform hover:scale-105">
