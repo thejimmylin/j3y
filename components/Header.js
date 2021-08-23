@@ -10,7 +10,7 @@ const Header = ({ useIsDark, extraClassNames, headerRef }) => {
   return (
     <header
       className={classNames(
-        "font-pretty font-semibold text-ink bg-paper dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
+        "font-sans font-semibold text-ink bg-paper dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
         extraClassNames
       )}
       ref={headerRef}

@@ -11,7 +11,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
     headerRef.current.scrollIntoView();
   };
   return (
-    <header className="relative h-screen font-pretty">
+    <header className="relative h-screen font-sans">
       <LightFilter useIsDark={useIsDark} windowScrollY={windowScrollY} />
       <div
         className="absolute w-full h-screen -z-10 bg-night"
