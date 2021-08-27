@@ -74,6 +74,13 @@ const metadatas = [
     thumbnail: null,
     isDraft: false,
   },
+  {
+    slug: "the-development-tools-i-like",
+    title: "The development tools I like",
+    subtitle: "",
+    thumbnail: null,
+    isDraft: true,
+  },
 ];
 
 const metadataIncludes = (metadata, text) => {
