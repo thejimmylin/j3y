@@ -4,15 +4,24 @@ import { useState } from "react";
 import Head from "next/head";
 import classNames from "classnames";
 import { MDXProvider } from "@mdx-js/react";
-import CodeBlock from "../components/CodeBlock";
+import CodeBlockLight from "../components/MDXProviderComponents/CodeBlockLight";
+import CodeBlockDark from "../components/MDXProviderComponents/CodeBlockDark";
 
-const components = {
+const componentsLight = {
   a: (props) => (
     <a href={props.href} target="_blank" rel="noreferrer noopenner">
       {props.children}
     </a>
   ),
-  pre: CodeBlock,
+  pre: CodeBlockLight,
+};
+const componentsDark = {
+  a: (props) => (
+    <a href={props.href} target="_blank" rel="noreferrer noopenner">
+      {props.children}
+    </a>
+  ),
+  pre: CodeBlockDark,
 };
 
 const App = ({ Component, pageProps }) => {
@@ -35,14 +44,14 @@ const App = ({ Component, pageProps }) => {
           content="https://jimmylin.org/avatar-1440x1440.jpg"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
           rel="stylesheet"
         />
       </Head>
       <div className={classNames({ dark: isDark })}>
-        <MDXProvider components={components}>
+        <MDXProvider components={isDark ? componentsDark : componentsLight}>
           <Component {...pageProps} useIsDark={useIsDark} />
         </MDXProvider>
       </div>
