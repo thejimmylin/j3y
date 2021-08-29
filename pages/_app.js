@@ -15,12 +15,9 @@ const componentsLight = {
   ),
   pre: CodeBlockLight,
 };
+
 const componentsDark = {
-  a: (props) => (
-    <a href={props.href} target="_blank" rel="noreferrer noopenner">
-      {props.children}
-    </a>
-  ),
+  ...componentsLight,
   pre: CodeBlockDark,
 };
 
