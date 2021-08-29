@@ -1,6 +1,5 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
-// import theme from "prism-react-renderer/themes/vsDark";
-import vsDarkCustom from "./vsDarkCustom";
+import themeDark from "./themeDark";
 
 const CodeBlockDark = ({ children }) => {
   const code = children.props.children.trim();
@@ -8,7 +7,7 @@ const CodeBlockDark = ({ children }) => {
   const matches = className.match(/language-(?<lang>.*)/);
   const language = matches?.groups?.lang || "";
   return (
-    <Highlight {...defaultProps} code={code} language={language} theme={vsDarkCustom}>
+    <Highlight {...defaultProps} code={code} language={language} theme={themeDark}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (

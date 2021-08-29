@@ -1,8 +1,9 @@
+// This theme is from https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/themes/vsDark.js
 const theme = {
   plain: {
     color: "#9CDCFE",
     // Changed
-    backgroundColor: "#121c26"
+    backgroundColor: "#121C26"
   },
   styles: [
     {
@@ -14,7 +15,10 @@ const theme = {
     {
       types: ["comment"],
       style: {
-        color: "rgb(106, 153, 85)",
+        // Changed
+        color: "rgb(128, 128, 128)",
+        // Changed
+        fontStyle: "italic",
       },
     },
     {
