@@ -1,7 +1,7 @@
 version: '3'
 services:
-  j3y:
+  backend:
     build: .
     ports:
       - "3000:3000"
-    container_name: j3y
+    container_name: backend
