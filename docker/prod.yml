@@ -6,7 +6,8 @@ services:
       # Use repo's root as `context` because docker can't do COPY from parent directory.
       context: ../
       # Specify the location of `Dockerfile`, because it is not in the `context`.
-      dockerfile: ./docker/web/Dockerfile
+      dockerfile: ./docker/web/prod.Dockerfile
+    container_name: web-prod
     volumes:
       # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
       - ./web/templates:/etc/nginx/templates:ro
