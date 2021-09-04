@@ -1,0 +1,17 @@
+[Unit]
+# A free-form string describing the service.
+Description=My web service with docker
+# A space-separated list of unit names that configures the ordering of dependencies between services.
+After=docker.service
+
+[Install]
+# Defines the service as dependent of another service.
+# This usually define the target to trigger an enabled service to run.
+# These options are analogous to the Requires and Wants in the [Units] section.
+WantedBy=multi-user.target
+
+[Service]
+# The commands and arguments executed when the service starts.
+ExecStart=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml up --remove-orphans --build
+# The commands and arguments to execute when the service stops.
+ExecStop=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml down
