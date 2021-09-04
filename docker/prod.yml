@@ -28,7 +28,7 @@ services:
       - SSL_CERTIFICATE_PATH
       - SSL_CERTIFICATE_KEY_PATH
       - CERBOT_HOST
-      - OTHER_HOST
+      - WEB_HOST
   certbot:
     # Use official certbot base image to serve.
     # https://hub.docker.com/r/certbot/certbot/
