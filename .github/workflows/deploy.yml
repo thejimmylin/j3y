@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy_with_ssh:
+    name: Deploy with SSH
+    runs-on: ubuntu-latest
+    env:
+      HOST: ${{ secrets.HOST }}
+      USERNAME: ${{ secrets.USERNAME }}
+      KEY: ${{ secrets.KEY }}
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$KEY" > ~/.ssh/key
+          chmod 600 ~/.ssh/key
+          cat >>~/.ssh/config <<END
+          Host dst
+            HostName $HOST
+            User $USERNAME
+            IdentityFile ~/.ssh/key
+            StrictHostKeyChecking no
+          END
+      - name: Run remote commands with SSH
+        run: |
+          ssh dst "git -C ~/repos/j3y pull"
+          ssh dst "sudo docker-compose -f ~/repos/j3y/docker/prod.yml build"
+          ssh dst "sudo systemctl stop web.service"
+          ssh dst "sudo systemctl start web.service"

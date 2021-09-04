@@ -1,10 +1,6 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
 import themeLight from "./themeLight";
 
-const capitalize = (chars) => {
-  return chars[0].toUpperCase() + chars.slice(1).toLowerCase();
-}
-
 const CodeBlockLight = ({ children }) => {
   const code = children.props.children.trim();
   const className = children.props.className || "";
@@ -13,7 +9,7 @@ const CodeBlockLight = ({ children }) => {
   return (
     <div className="relative">
       <span className="text-xs absolute -top-2 right-2 text-moonlight select-none">
-        {capitalize(language)}
+        {language ? language.toUpperCase() : ""}
       </span>
       <Highlight
         {...defaultProps}
