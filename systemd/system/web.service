@@ -1,6 +1,6 @@
 [Unit]
 # A free-form string describing the service.
-Description=My web service with docker
+Description=Web service with docker
 # A space-separated list of unit names that configures the ordering of dependencies between services.
 After=docker.service
 
@@ -12,6 +12,6 @@ WantedBy=multi-user.target
 
 [Service]
 # The commands and arguments executed when the service starts.
-ExecStart=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml up --remove-orphans --build
+ExecStart=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml up --remove-orphans --build
 # The commands and arguments to execute when the service stops.
-ExecStop=/usr/local/bin/docker-compose -f /home/jimub/repos/j3y/docker/prod.yml down
+ExecStop=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml down
