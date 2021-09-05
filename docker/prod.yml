@@ -11,6 +11,9 @@ services:
     image: j3ydocker/j3y-node-web:latest
     # Prefix it with the project name for namespace.
     container_name: j3y-node-web
+    environment:
+      # Used by Prisma to connect to DB.
+      DATABASE_URL: postgresql://admin:admin@postgres-db:5432/j3ydb
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine

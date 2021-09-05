@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  node-web:
+    build:
+      # Use repo's root as `context` because docker can't do COPY from parent directory.
+      context: ../
+      # Specify the location of `Dockerfile`, because it is not in the `context`.
+      dockerfile: ./docker/node-web-dev/Dockerfile
+    # Specify a image name.
+    # Prefix it with the project name for namespace.
+    # Suffix it with `dev` for not confuse Docker with the normal one.
+    container_name: j3y-node-web-dev
+    ports:
+      # Expose port 3000 for Next.js.
+      - 3000:3000
+    volumes:
+      # Code hot reload.
+      - ..:/app
