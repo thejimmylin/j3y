@@ -7,10 +7,8 @@ services:
       context: ../
       # Specify the location of `Dockerfile`, because it is not in the `context`.
       dockerfile: ./docker/web/prod.Dockerfile
+    # Specify a custom container name to let Docker confuse it with `web-dev`.
     container_name: web-prod
-    volumes:
-      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
-      - ./web/templates:/etc/nginx/templates:ro
   proxy:
     # Use official Nginx base image to serve. The `alpine` version make the container smaller.
     # https://hub.docker.com/_/nginx
@@ -18,8 +16,8 @@ services:
     volumes:
       # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
       - ./proxy/templates:/etc/nginx/templates:ro
-      # We want share this folder with certbot to get SSL certificates files.
-      - letsencrypt:/etc/letsencrypt:ro
+      # We want to share this folder with certbot to get SSL certificates files.
+      - certbot-letsencrypt:/etc/letsencrypt:ro
     ports:
       - 80:80
       - 443:443
@@ -38,7 +36,7 @@ services:
     # Certbot put SSL certificate files in `/etc/letsencrypt`.
     # We want share this folder with our host & other containers.
     volumes:
-      - letsencrypt:/etc/letsencrypt
+      - certbot-letsencrypt:/etc/letsencrypt
     # We want certbot to run as `standalone` mode, which deal with `challange` with its own
     # built-in web server, instead of ours. And we pass all necessary arguments to run it
     # without console interactive. To learn more about these arguments:
@@ -55,4 +53,4 @@ services:
       - --keep-until-expiring
 
 volumes:
-  letsencrypt:
+  certbot-letsencrypt:

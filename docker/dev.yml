@@ -1,22 +1,30 @@
-version: '3'
+version: "3"
 
 services:
   web:
     build:
+      # Use repo's root as `context` because docker can't do COPY from parent directory.
       context: ../
+      # Specify the location of `Dockerfile`, because it is not in the `context`.
       dockerfile: ./docker/web/dev.Dockerfile
+    # Specify a custom container name to let Docker confuse it with `web-prod`.
     container_name: web-dev
     ports:
+      # Next.js uses port 3000.
       - "3000:3000"
     volumes:
+      # Hot reload for development.
       - ..:/app
   
   db:
-    image: postgres:13.4-alpine
+    image: postgres:alpine
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
     volumes:
-      - ./db/volumes/data:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data
     ports:
       - 5432:5432
+
+volumes:
+  db-data:
