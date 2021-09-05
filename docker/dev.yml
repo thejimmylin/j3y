@@ -10,3 +10,13 @@ services:
       - "3000:3000"
     volumes:
       - ..:/app
+  
+  db:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./db/volumes/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
