@@ -1,14 +1,17 @@
 version: "3"
 
 services:
-  certbot:
+  certbot-letsencrypt:
     # Use official certbot base image to serve.
     # https://hub.docker.com/r/certbot/certbot/
     image: certbot/certbot
-    # Certbot put SSL certificate files in `/etc/letsencrypt`.
-    # We want share this folder with our host & other containers.
+    # Prefix it with the project name for namespace.
+    # Suffix it with `init` to not confuse Docker with the normal one.
+    container_name: j3y-certbot-letsencrypt-init
     volumes:
-      - letsencrypt:/etc/letsencrypt
+      # Certbot put SSL certificate files in `/etc/letsencrypt`.
+      # We want share this folder with our host & other containers.
+      - certbot-letsencrypt:/etc/letsencrypt
     # We want certbot to run as `standalone` mode, which deal with `challange` with its own
     # built-in web server, instead of ours. And we pass all necessary arguments to run it
     # without console interactive. To learn more about these arguments:
@@ -27,4 +30,6 @@ services:
       - --keep-until-expiring
 
 volumes:
-  letsencrypt:
+  certbot-letsencrypt:
+    # Prefix it with the project name for namespace.
+    name: j3y-certbot-letsencrypt
