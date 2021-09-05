@@ -7,9 +7,11 @@ services:
       context: ../
       # Specify the location of `Dockerfile`, because it is not in the `context`.
       dockerfile: ./docker/node-web-dev/Dockerfile
+    # Specify a image name.
+    image: j3ydocker/j3y-node-web-dev:latest
     # Prefix it with the project name for namespace.
     # Suffix it with `dev` for not confuse Docker with the normal one.
-    container_name: node-web-dev
+    container_name: j3y-node-web-dev
     ports:
       # Expose port 3000 for Next.js.
       - 3000:3000
