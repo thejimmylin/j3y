@@ -6,7 +6,7 @@ services:
       # Use repo's root as `context` because docker can't do COPY from parent directory.
       context: ../
       # Specify the location of `Dockerfile`, because it is not in the `context`.
-      dockerfile: ./docker/node-web/prod.Dockerfile
+      dockerfile: ./docker/node-web/Dockerfile
     # Prefix it with the project name for namespace.
     container_name: j3y-node-web
   nginx-proxy:
