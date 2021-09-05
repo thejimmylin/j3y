@@ -22,11 +22,3 @@ __pycache__/
 
 # Secrets
 /secrets.json
-
-# Nginx & UWSGI & Gunicorn
-/nginx/*
-/uwsgi/*
-/gunicorn/*
-
-# Docker
-/docker/**/volumes

@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  nginx-proxy:
+    # https://hub.docker.com/_/nginx
+    image: nginx:alpine
+    # Prefix it with the project name for namespace.
+    container_name: j3y-nginx-proxy
+    volumes:
+      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
+      - ./nginx-proxy/volumes/templates:/etc/nginx/templates:ro
+      # We want to share this folder with certbot to get SSL certificates files.
+      - certbot-letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - 80:80
+      - 443:443
+      # We pass these environment variables as is. You can just declare them on your host,
+      # but usually you want to do this with a `./.env` beside this file.
+    environment:
+      - SSL_CERTIFICATE_PATH
+      - SSL_CERTIFICATE_KEY_PATH
+      - CERBOT_HOST
+      - WEB_HOST
+      - WEB_PORT
+
+volumes:
+  certbot-letsencrypt:
+    # Prefix it with the project name for namespace.
+    name: j3y-certbot-letsencrypt

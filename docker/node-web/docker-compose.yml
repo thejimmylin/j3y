@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  node-web:
+    build:
+      # Use repo's root as `context` because docker can't do COPY from parent directory.
+      context: ../
+      # Specify the location of `Dockerfile`, because it is not in the `context`.
+      dockerfile: ./docker/node-web/Dockerfile
+    # Specify a image name.
+    image: j3ydocker/j3y-node-web:latest
+    # Prefix it with the project name for namespace.
+    container_name: j3y-node-web
+    environment:
+      # Used by Prisma to connect to DB.
+      DATABASE_URL: postgresql://admin:admin@postgres-db:5432/j3ydb
