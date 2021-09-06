@@ -38,7 +38,6 @@ class JsonConfigAdmin:
                 f"Your response ({response}) was not one of the expected responses: "
                 f"{yes}, {no}"
             )
-        return self
 
     def update(self, indent=4, encoding=None):
         warning = (
