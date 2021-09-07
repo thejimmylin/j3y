@@ -7,9 +7,9 @@ A personal website/blog about me, built with `Next.js` and `MDX`.
 
 ## Screenshots
 
-![index](https://github.com/j3ygithub/j3y/blob/main/docs/images/index.png)
+![index](https://github.com/j3ygithub/j3y/blob/main/.docs/images/index.png)
 
-![post](https://github.com/j3ygithub/j3y/blob/main/docs/images/post.png)
+![post](https://github.com/j3ygithub/j3y/blob/main/.docs/images/post.png)
 
 ## Installation
 
