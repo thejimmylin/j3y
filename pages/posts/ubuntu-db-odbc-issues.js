@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/ubuntu-db-odbc-issues.mdx"
+import Article from "../../components/mdx/posts/ubuntu-db-odbc-issues.mdx"
 
 const Post = ({ useIsDark }) => {
   return (

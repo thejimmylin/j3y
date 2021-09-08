@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/use-fira-code-in-vscode.mdx"
+import Article from "../../components/mdx/posts/use-fira-code-in-vscode.mdx"
 
 const Post = ({ useIsDark }) => {
   return (

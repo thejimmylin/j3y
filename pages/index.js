@@ -1,11 +1,11 @@
 import { useRef } from "react";
+import useWindowScrollY from "../hooks/useWindowScrollY";
 import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
-import Article from "../_data/posts/about-me.mdx";
 import Footer from "../components/Footer";
-import useWindowScrollY from "../hooks/useWindowScrollY";
+import Article from "../components/mdx/posts/about-me.mdx";
 
 const HomePage = ({ useIsDark }) => {
   const [windowScrollY] = useWindowScrollY();

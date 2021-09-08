@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/javascript-5-ways-to-define-a-function.mdx"
+import Article from "../../components/mdx/posts/javascript-5-ways-to-define-a-function.mdx"
 
 const Post = ({ useIsDark }) => {
   return (
