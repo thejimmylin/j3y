@@ -1,7 +1,7 @@
-import prisma from "../../utils/prisma";
+import client from "../../prisma/client";
 
 const handler = async (req, res) => {
-  const result = await prisma.user.findMany();
+  const result = await client.user.findMany();
   res.json(result);
 };
 
