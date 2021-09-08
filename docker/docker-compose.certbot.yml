@@ -7,7 +7,7 @@ services:
     image: certbot/certbot
     # Prefix it with the project name for namespace.
     # Suffix it with `init` to not confuse Docker with the normal one.
-    container_name: j3y-certbot-letsencrypt-init
+    container_name: j3y-certbot-letsencrypt
     volumes:
       # Certbot put SSL certificate files in `/etc/letsencrypt`.
       # We want share this folder with our host & other containers.
