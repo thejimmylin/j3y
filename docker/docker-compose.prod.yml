@@ -8,7 +8,8 @@ services:
     image: j3ydocker/j3y-node-web:latest
     environment:
       # Used by Prisma to connect to DB.
-      DATABASE_URL: postgresql://admin:admin@postgres-db:5432/j3ydb
+      - DATABASE_URL: postgresql://admin:admin@postgres-db:5432/j3ydb
+    env_file: ../.env
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
@@ -28,12 +29,14 @@ services:
       - CERBOT_HOST
       - WEB_HOST
       - WEB_PORT
+    env_file: ../.env
   postgres-db:
     # https://hub.docker.com/_/postgres
     image: postgres:alpine
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    env_file: ../.env
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
