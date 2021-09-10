@@ -1,17 +1,14 @@
-# services
+# docker
 
-This directory is about docker services.
+This directory is about docker
 
 ## The structure
 
-The structure of this directory:
+1. `docker-compose.*.yml`: The `docker-compose` files.
+2. `<service_name>/Dockerfile`: The `Dockerfile` of `<service_name>`.
+3. `<service_name>/volumes`: The `volumes` of `<service_name>`.
 
-1. `README.md`: This file.
-2. `docker-compose.*.yml`: The `docker-compose` files.
-3. `<service_name>/Dockerfile`: The `Dockerfile` of `<service_name>`.
-4. `<service_name>/volumes`: The `volumes` of `<service_name>`.
-
-## service naming rules
+## The Service naming rules
 
 They are always:
 
