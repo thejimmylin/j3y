@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres-db-dev:
+    # https://hub.docker.com/_/postgres
+    image: postgres:alpine
+    container_name: postgres-db-dev
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres-data-dev:/var/lib/postgresql/data
+    ports: 
+      - 5432:5432
+
+volumes:
+  postgres-data-dev:
+    name: postgres-data-dev

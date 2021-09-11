@@ -8,9 +8,8 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.0",
-    "@prisma/client": "^3.0.1",
+    "@prisma/client": "^3.0.2",
     "@tailwindcss/typography": "^0.4.1",
-    "agordi": "^1.0.7",
     "bootstrap-icons": "^1.5.0",
     "classnames": "^2.3.1",
     "next": "^11.1.0",
@@ -21,7 +20,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "prisma": "^3.0.1",
+    "prisma": "^3.0.2",
     "tailwindcss": "^2.2.4"
   }
 }
