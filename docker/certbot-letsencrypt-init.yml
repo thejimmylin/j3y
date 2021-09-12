@@ -29,7 +29,7 @@ services:
       - MY_DOMAINS=jimmylin.org
       - MY_EMAIL=b00502013@gmail.com
     ports:
-      80:80
+      - 80:80
 
 volumes:
   certbot-letsencrypt:
