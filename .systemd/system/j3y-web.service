@@ -12,6 +12,6 @@ WantedBy=multi-user.target
 
 [Service]
 # The commands and arguments executed when the service starts.
-ExecStart=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml up --remove-orphans --build
+ExecStart=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml up
 # The commands and arguments to execute when the service stops.
 ExecStop=/usr/local/bin/docker-compose -f /home/j3y/repos/j3y/docker/prod.yml down
