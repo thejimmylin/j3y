@@ -25,4 +25,7 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
+    environment:
+      - MY_DOMAINS
+      - MY_EMAIL
     env_file: ../.env
