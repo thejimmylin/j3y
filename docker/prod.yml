@@ -26,9 +26,8 @@ services:
       - --no-eff-email
       - --keep-until-expiring
     environment:
-      - MY_DOMAINS
-      - MY_EMAIL
-    env_file: ../.env
+      - MY_DOMAINS=jimmylin.org
+      - MY_EMAIL=b00502013@gmail.com
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
@@ -47,7 +46,6 @@ services:
       - CERBOT_HOST=http://certbot-letsencrypt
       - WEB_HOST=http://node-web
       - WEB_PORT=3000
-    env_file: ../.env
   node-web:
     build:
       context: ../
