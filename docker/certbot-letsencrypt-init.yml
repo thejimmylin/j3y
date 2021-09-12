@@ -28,7 +28,6 @@ services:
     environment:
       - MY_DOMAINS
       - MY_EMAIL
-    env_file: ../.env
 
 volumes:
   certbot-letsencrypt:
