@@ -32,4 +32,3 @@ jobs:
           ssh dst "sudo docker-compose -f ~/repos/j3y/docker/prod.yml build"
           ssh dst "sudo systemctl stop j3y-web.service"
           ssh dst "sudo systemctl start j3y-web.service"
-          ssh dst "sudo docker system prune -f"
