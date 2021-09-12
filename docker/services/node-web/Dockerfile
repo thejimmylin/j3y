@@ -1,4 +1,4 @@
-FROM node:lts AS deps
+FROM node:lts AS installer
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
@@ -6,7 +6,7 @@ RUN npm ci
 FROM node:lts AS builder
 WORKDIR /app
 COPY . .
-COPY --from=deps /app/node_modules ./node_modules
+COPY --from=installer /app/node_modules ./node_modules
 RUN npm run build
 
 FROM node:lts-alpine AS runner

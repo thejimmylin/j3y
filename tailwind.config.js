@@ -5,7 +5,6 @@ module.exports = {
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./_data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
@@ -91,7 +90,7 @@ module.exports = {
               fontWeight: 400,
               color: theme("colors.indigo.400"),
               "&:hover": { color: theme("colors.indigo.500") },
-              textDecoration: "none"
+              textDecoration: "none",
             },
             "h6, h5, h4": {
               fontWeight: 400,

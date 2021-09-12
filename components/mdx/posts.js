@@ -1,4 +1,4 @@
-import avatar from "../public/avatar-1440x1440.jpg";
+import avatar from "../../public/avatar-1440x1440.jpg";
 
 const metadatas = [
   {

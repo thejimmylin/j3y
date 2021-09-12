@@ -1,4 +1,4 @@
-name: Deploy
+name: CD on main push
 
 on:
   push:
@@ -6,15 +6,15 @@ on:
     - main
 
 jobs:
-  deploy_with_ssh:
-    name: Deploy with SSH
+  ssh-deployment:
+    name: SSH deployment
     runs-on: ubuntu-latest
     env:
       HOST: ${{ secrets.HOST }}
       USERNAME: ${{ secrets.USERNAME }}
       KEY: ${{ secrets.KEY }}
     steps:
-      - name: Configure SSH
+      - name: Set up SSH
         run: |
           mkdir -p ~/.ssh/
           echo "$KEY" > ~/.ssh/key
@@ -32,3 +32,5 @@ jobs:
           ssh dst "sudo docker-compose -f ~/repos/j3y/docker/prod.yml build"
           ssh dst "sudo systemctl stop web.service"
           ssh dst "sudo systemctl start web.service"
+          ssh dst "sudo docker exec node-web npx prisma generate"
+          ssh dst "sudo docker exec node-web npx db push"

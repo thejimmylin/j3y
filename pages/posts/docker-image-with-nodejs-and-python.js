@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/docker-image-with-nodejs-and-python.mdx"
+import Article from "../../components/mdx/posts/docker-image-with-nodejs-and-python.mdx"
 
 const Post = ({ useIsDark }) => {
   return (

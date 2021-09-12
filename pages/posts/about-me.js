@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/about-me.mdx";
+import Article from "../../components/mdx/posts/about-me.mdx";
 
 const Post = ({ useIsDark }) => {
   return (

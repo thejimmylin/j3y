@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { metadatas } from "../_data/posts";
+import { metadatas } from "../components/mdx/posts";
 import MainLayout from "../components/MainLayout";
 import SearchBar from "../components/SearchBar";
 import PostsSearched from "../components/PostSearched";

@@ -1,43 +1,16 @@
-version: "3"
+version: "3.9"
 
 services:
-  web:
-    build:
-      # Use repo's root as `context` because docker can't do COPY from parent directory.
-      context: ../
-      # Specify the location of `Dockerfile`, because it is not in the `context`.
-      dockerfile: ./docker/web/Dockerfile
-    volumes:
-      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
-      - ./web/templates:/etc/nginx/templates:ro
-  proxy:
-    # Use official Nginx base image to serve. The `alpine` version make the container smaller.
-    # https://hub.docker.com/_/nginx
-    image: nginx:alpine
-    volumes:
-      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
-      - ./proxy/templates:/etc/nginx/templates:ro
-      # We want share this folder with certbot to get SSL certificates files.
-      - letsencrypt:/etc/letsencrypt:ro
-    ports:
-      - 80:80
-      - 443:443
-      # We pass these environment variables as is. You can just declare them on your host,
-      # but usually you want to do this with a `./.env` beside this file.
-    environment:
-      - SSL_CERTIFICATE_PATH
-      - SSL_CERTIFICATE_KEY_PATH
-      - CERBOT_HOST
-      - WEB_HOST
-      - WEB_PORT
-  certbot:
+  certbot-letsencrypt:
     # Use official certbot base image to serve.
     # https://hub.docker.com/r/certbot/certbot/
     image: certbot/certbot
-    # Certbot put SSL certificate files in `/etc/letsencrypt`.
-    # We want share this folder with our host & other containers.
+    # Prefix it with the project name for namespace.
+    container_name: certbot-letsencrypt
     volumes:
-      - letsencrypt:/etc/letsencrypt
+      # Certbot put SSL certificate files in `/etc/letsencrypt`.
+      # We want share this folder with our host & other containers.
+      - certbot-letsencrypt:/etc/letsencrypt
     # We want certbot to run as `standalone` mode, which deal with `challange` with its own
     # built-in web server, instead of ours. And we pass all necessary arguments to run it
     # without console interactive. To learn more about these arguments:
@@ -52,6 +25,44 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
+    env_file: ../.env
+  nginx-proxy:
+    # https://hub.docker.com/_/nginx
+    image: nginx:alpine
+    container_name: nginx-proxy
+    volumes:
+      # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
+      - ./nginx-proxy/volumes/templates:/etc/nginx/templates:ro
+      # We want to share this folder with certbot to get SSL certificates files.
+      - certbot-letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - SSL_CERTIFICATE_PATH=/etc/letsencrypt/live/${MY_DOMAINS}/fullchain.pem
+      - SSL_CERTIFICATE_KEY_PATH=/etc/letsencrypt/live/${MY_DOMAINS}/privkey.pem
+      - CERBOT_HOST=http://certbot-letsencrypt
+      - WEB_HOST=http://node-web
+      - WEB_PORT=3000
+    env_file: ../.env
+  node-web:
+    build:
+      context: ../
+      dockerfile: ./docker/services/node-web/Dockerfile
+    image: j3ydocker/j3y-node-web:latest
+    container_name: node-web
+  postgres-db:
+    # https://hub.docker.com/_/postgres
+    image: postgres:alpine
+    container_name: postgres-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
 
 volumes:
-  letsencrypt:
+  postgres-data:
+    name: postgres-data
+  certbot-letsencrypt:
+    name: letsencrypt

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getRelatedMetadatas } from "../_data/posts";
+import { getRelatedMetadatas } from "../components/mdx/posts";
 import sorry from "../public/sorry-1920x1440.jpg";
 
 const PostsSearched = ({ metadatas, textSearched }) => {

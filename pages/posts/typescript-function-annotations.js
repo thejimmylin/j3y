@@ -3,7 +3,7 @@ import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 
-import Article from "../../_data/posts/typescript-function-annotations.mdx"
+import Article from "../../components/mdx/posts/typescript-function-annotations.mdx"
 
 const Post = ({ useIsDark }) => {
   return (

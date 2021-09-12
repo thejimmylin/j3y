@@ -4,8 +4,8 @@ import { useState } from "react";
 import Head from "next/head";
 import classNames from "classnames";
 import { MDXProvider } from "@mdx-js/react";
-import CodeBlockLight from "../components/MDXProviderComponents/CodeBlockLight";
-import CodeBlockDark from "../components/MDXProviderComponents/CodeBlockDark";
+import CodeBlockLight from "../components/mdx/provider-components/CodeBlockLight";
+import CodeBlockDark from "../components/mdx/provider-components/CodeBlockDark";
 
 const componentsLight = {
   a: (props) => (
