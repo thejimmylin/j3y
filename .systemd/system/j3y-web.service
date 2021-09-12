@@ -1,6 +1,6 @@
 [Unit]
 # A free-form string describing the service.
-Description=Web service with docker
+Description=J3y web service with docker
 # A space-separated list of unit names that configures the ordering of dependencies between services.
 After=docker.service
 

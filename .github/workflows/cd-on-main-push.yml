@@ -1,4 +1,4 @@
-name: Deploy
+name: CD on main push
 
 on:
   push:
@@ -6,15 +6,15 @@ on:
     - main
 
 jobs:
-  deploy_with_ssh:
-    name: Deploy with SSH
+  ssh-deployment:
+    name: SSH deployment
     runs-on: ubuntu-latest
     env:
       HOST: ${{ secrets.HOST }}
       USERNAME: ${{ secrets.USERNAME }}
       KEY: ${{ secrets.KEY }}
     steps:
-      - name: Configure SSH
+      - name: Set up SSH
         run: |
           mkdir -p ~/.ssh/
           echo "$KEY" > ~/.ssh/key
