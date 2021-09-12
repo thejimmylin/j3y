@@ -25,14 +25,13 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
-    env_file: ../.env
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
     container_name: nginx-proxy
     volumes:
       # Let Nginx output the result of executing `envsubst` to /etc/nginx/conf.d for serving.
-      - ./nginx-proxy/volumes/templates:/etc/nginx/templates:ro
+      - ./services/nginx-proxy/volumes/templates:/etc/nginx/templates:ro
       # We want to share this folder with certbot to get SSL certificates files.
       - certbot-letsencrypt:/etc/letsencrypt:ro
     ports:
@@ -44,7 +43,6 @@ services:
       - CERBOT_HOST=http://certbot-letsencrypt
       - WEB_HOST=http://node-web
       - WEB_PORT=3000
-    env_file: ../.env
   node-web:
     build:
       context: ../

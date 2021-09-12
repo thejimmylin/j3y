@@ -25,4 +25,9 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
-    env_file: ../.env
+    ports:
+      - 80:80
+
+volumes:
+  certbot-letsencrypt:
+    name: letsencrypt
