@@ -23,5 +23,5 @@ __pycache__/
 # Secrets
 /secrets.json
 
-# ENV
-.env
+# global .env
+/.env

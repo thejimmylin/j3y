@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 services:
   certbot-letsencrypt-init:
@@ -7,9 +7,6 @@ services:
     image: certbot/certbot
     # Prefix it with the project name for namespace.
     container_name: certbot-letsencrypt-init
-    environment:
-      - MY_DOMAINS=jimmylin.org
-      - MY_EMAIL=b00502013@gmail.com
     volumes:
       # Certbot put SSL certificate files in `/etc/letsencrypt`.
       # We want share this folder with our host & other containers.

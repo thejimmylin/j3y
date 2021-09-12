@@ -25,9 +25,6 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
-    environment:
-      - MY_DOMAINS=jimmylin.org
-      - MY_EMAIL=b00502013@gmail.com
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
