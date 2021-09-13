@@ -21,16 +21,13 @@ model User {
   email String  @unique
   name  String?
   Post  Post[]
+  Image Image[]
 }
 
-model Reference {
-  id  Int    @id @default(autoincrement())
-  name String
-  url String
-}
-
-model File {
-  id  Int    @id @default(autoincrement())
-  name String
-  url String
+model Image {
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
+  url      String?
+  authorId Int?
+  User     User?   @relation(fields: [authorId], references: [id])
 }
