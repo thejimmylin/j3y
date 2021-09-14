@@ -8,7 +8,7 @@ RUN npm ci
 FROM node:alpine AS builder
 WORKDIR /app
 COPY . .
-COPY --from=installer /app/node_modules ./node_modules
+COPY --from=deps /app/node_modules ./node_modules
 RUN npm run build
 
 FROM node:lts-alpine AS runner
