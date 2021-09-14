@@ -17,7 +17,7 @@ services:
         context: ../
         dockerfile: ./docker/services/<service_name>/Dockerfile
 ...
-``` 
+```
 
 ## ./systemd
 

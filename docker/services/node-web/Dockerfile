@@ -1,9 +1,11 @@
-FROM node:lts AS installer
+FROM node:alpine AS deps
+# Check https://github.com/nodejs/docker-node#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-FROM node:lts AS builder
+FROM node:alpine AS builder
 WORKDIR /app
 COPY . .
 COPY --from=installer /app/node_modules ./node_modules
