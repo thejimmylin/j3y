@@ -38,8 +38,8 @@ services:
       - 80:80
       - 443:443
     environment:
-      - SSL_CERTIFICATE_PATH=/etc/letsencrypt/live/${MY_DOMAINS}/fullchain.pem
-      - SSL_CERTIFICATE_KEY_PATH=/etc/letsencrypt/live/${MY_DOMAINS}/privkey.pem
+      - SSL_CERTIFICATE_PATH=/etc/letsencrypt/live/${DOMAINS}/fullchain.pem
+      - SSL_CERTIFICATE_KEY_PATH=/etc/letsencrypt/live/${EMAIL}/privkey.pem
       - CERBOT_HOST=http://certbot-letsencrypt
       - WEB_HOST=http://node-web
       - WEB_PORT=3000
