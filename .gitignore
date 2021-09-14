@@ -4,24 +4,14 @@
 # VSCode things
 /.vscode/settings.json
 
-# Python
-__pycache__/
-/.venv/
-
-# Django things
-/db.sqlite3
-/static/*
-
-# NPM stuff
-/node_modules/*
-/dist/*
-/build/*
+# NPM dependency directory
+/node_modules
 
 # Next.js
-/.next/
+/.next
 
 # Secrets
 /secrets.json
 
-# global .env
+# Dotenv
 /.env

@@ -1,12 +1,12 @@
 version: "3.9"
 
 services:
-  certbot-letsencrypt-init:
+  certbot-letsencrypt:
     # Use official certbot base image to serve.
     # https://hub.docker.com/r/certbot/certbot/
     image: certbot/certbot
     # Prefix it with the project name for namespace.
-    container_name: certbot-letsencrypt-init
+    container_name: certbot-letsencrypt
     volumes:
       # Certbot put SSL certificate files in `/etc/letsencrypt`.
       # We want share this folder with our host & other containers.

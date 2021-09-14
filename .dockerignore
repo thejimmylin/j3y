@@ -1,0 +1,13 @@
+*
+!/components
+!/hooks
+!/pages
+!/prisma
+!/public
+!/styles
+!/next.config.js
+!/package-lock.json
+!/package.json
+!/postcss.config.js
+!/README.md
+!/tailwind.config.js

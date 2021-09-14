@@ -1,6 +1,19 @@
 version: "3.9"
 
 services:
+  node-web-dev:
+    image: j3ydocker/j3y-node-web-dev:latest
+    build:
+      context: ../
+      dockerfile: ./docker/services/node-web-dev/Dockerfile
+    container_name: node-web-dev
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres-db-dev:5432/j3ydb
+    volumes:
+      - ../components:/app/components
+      - ../pages:/app/pages
   postgres-db-dev:
     # https://hub.docker.com/_/postgres
     image: postgres:alpine
@@ -10,8 +23,6 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - postgres-data-dev:/var/lib/postgresql/data
-    ports: 
-      - 5432:5432
 
 volumes:
   postgres-data-dev:
