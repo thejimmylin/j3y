@@ -31,7 +31,7 @@ const Header = ({ useIsDark, extraClassNames, headerRef }) => {
             </a>
           </Link>
         </p>
-        <p className="text-center my-5 text-xl text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300 transform hover:scale-105">
+        <p className="text-center my-5 text-xl text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300 transform hover:scale-105">
           <Link href="/posts">
             <a className="animate-fadein-1000-1000">Posts</a>
           </Link>
