@@ -78,7 +78,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
           onClick={scrollIntoHeader}
           className="text-4xl text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
-          <i className="bi bi-chevron-compact-down"></i>
+          <i className="fas fa-chevron-down"></i>
         </span>
       </div>
     </header>

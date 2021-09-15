@@ -51,11 +51,11 @@ const Header = ({ useIsDark, extraClassNames, headerRef }) => {
               className="block h-6 overflow-hidden rounded-full cursor-pointer bg-gray-300"
             ></label>
           </div>
-          <label htmlFor="toggle">
+          <label htmlFor="toggle" className="mt-1">
             {isDark ? (
-              <i className="bi bi-moon-fill"></i>
+              <i className="fas fa-moon text-xl"></i>
             ) : (
-              <i className="bi bi-sun-fill"></i>
+              <i className="fas fa-sun text-xl"></i>
             )}
           </label>
         </div>

@@ -6,11 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.0",
     "@prisma/client": "^3.0.2",
     "@tailwindcss/typography": "^0.4.1",
-    "bootstrap-icons": "^1.5.0",
     "classnames": "^2.3.1",
     "next": "^11.1.0",
     "prism-react-renderer": "^1.2.1",
