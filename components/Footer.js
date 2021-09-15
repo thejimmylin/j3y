@@ -12,7 +12,7 @@ const Footer = () => {
               rel="noreferrer"
               className="transform hover:scale-110"
             >
-              <i className="bi bi-github"></i>
+              <i className="fab fa-github"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/jimmy-lin-5779a61b5/"
@@ -20,7 +20,7 @@ const Footer = () => {
               rel="noreferrer"
               className="transform hover:scale-110"
             >
-              <i className="bi bi-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </a>
             <a
               href="https://www.facebook.com/j3y.fb"
@@ -28,7 +28,7 @@ const Footer = () => {
               rel="noreferrer"
               className="transform hover:scale-110"
             >
-              <i className="bi bi-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </a>
           </p>
           <p className="text-xs mt-5">© 2021 Jimmy Lin</p>
