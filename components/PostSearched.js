@@ -44,7 +44,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
             </div>
           )}
           {metadata.subtitle && <p className="mb-5">{metadata.subtitle}</p>}
-          <p className="flex justify-end text-indigo-400 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-300">
+          <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
             <Link href={`/posts/${metadata.slug}`}>
               <a>Read more</a>
             </Link>

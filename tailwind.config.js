@@ -35,9 +35,9 @@ module.exports = {
           dark: "#0c1218",
         },
         paper: {
-          light: "#fef9ec",
-          DEFAULT: "#fdf6e3",
-          dark: "#fcf3d9",
+          light: "#fffdfa",
+          DEFAULT: "#fefaf1",
+          dark: "#fdfef7",
         },
       },
       zIndex: {
@@ -88,8 +88,8 @@ module.exports = {
             color: theme("colors.ink"),
             a: {
               fontWeight: 400,
-              color: theme("colors.indigo.400"),
-              "&:hover": { color: theme("colors.indigo.500") },
+              color: theme("colors.blue.600"),
+              "&:hover": { color: theme("colors.blue.700") },
               textDecoration: "none",
             },
             "h6, h5, h4": {
