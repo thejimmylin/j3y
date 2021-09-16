@@ -92,6 +92,12 @@ module.exports = {
               "&:hover": { color: theme("colors.blue.700") },
               textDecoration: "none",
             },
+            "h1, h2, h3, h4, h5, h6, blockquote": {
+              color: theme("colors.ink"),
+              strong: {
+                color: theme("colors.ink"),
+              },
+            },
             "h6, h5, h4": {
               fontWeight: 400,
             },
@@ -140,7 +146,7 @@ module.exports = {
             },
             "h1, h2, h3, h4, h5, h6, blockquote": {
               color: theme("colors.light"),
-              bold: {
+              strong: {
                 color: theme("colors.light"),
               },
             },

@@ -10,9 +10,9 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       <>
         <div className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm">
           <article className="p-8">
-            <h1 className="text-4xl font-semibold mb-8">
+            <h2 className="text-2xl font-semibold mb-8">
               Sorry, there are no posts related.
-            </h1>
+            </h2>
             <div>
               <Image className="rounded-sm" src={sorry} />
             </div>
@@ -33,11 +33,11 @@ const PostsSearched = ({ metadatas, textSearched }) => {
               Note: This is a draft, its content may be updated at any time.
             </span>
           )}
-          <h1 className="text-4xl font-semibold mb-8">
+          <h2 className="text-2xl font-semibold mb-8">
             <Link href={`/posts/${metadata.slug}`}>
               <a>{metadata.title}</a>
             </Link>
-          </h1>
+          </h2>
           {metadata.thumbnail && (
             <div className="mb-5">
               <Image src={metadata.thumbnail} />
