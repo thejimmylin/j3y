@@ -10,7 +10,6 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       <>
         <div className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm">
           <article className="p-8">
-            <h1 className="text-4xl font-semibold mb-8">
               Sorry, there are no posts related.
             </h1>
             <div>
