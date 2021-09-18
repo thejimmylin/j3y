@@ -23,7 +23,7 @@ const componentsDark = {
 
 const App = ({ Component, pageProps }) => {
   const useIsDark = useState(true);
-  const [isDark, _] = useIsDark;
+  const [isDark, _setIsDark] = useIsDark;
   return (
     <>
       <Head>

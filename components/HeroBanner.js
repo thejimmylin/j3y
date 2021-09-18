@@ -8,7 +8,7 @@ import wall from "../public/wall-1440x810.jpg";
 const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
   const [loaded, setLoaded] = useState(false);
   const scrollIntoHeader = () => {
-    headerRef.current.scrollIntoView();
+    headerRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <header className="relative h-screen font-sans">
@@ -79,7 +79,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
           onClick={scrollIntoHeader}
           className="text-4xl text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
-          <i className="fas fa-chevron-down"></i>
+          <i className="fas fa-chevron-down text-lg"></i>
         </span>
       </div>
     </header>

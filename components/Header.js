@@ -16,6 +16,9 @@ const Header = ({ useIsDark, headerRef }) => {
     };
     const observer = new IntersectionObserver(callback);
     observer.observe(staticHeader);
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
