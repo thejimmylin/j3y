@@ -4,21 +4,22 @@ https://www.jimmylin.org
 
 A personal website/blog about me, built with `Next.js` and `MDX`.
 
-
 ## Screenshots
 
 ![index](https://github.com/j3ygithub/j3y/blob/main/.docs/images/index.png)
 
-![post](https://github.com/j3ygithub/j3y/blob/main/.docs/images/post.png)
+![post1](https://github.com/j3ygithub/j3y/blob/main/.docs/images/post1.png)
+
+![post2](https://github.com/j3ygithub/j3y/blob/main/.docs/images/post2.png)
 
 ## Installation
 
 You can install `j3y` with `npm`.
 
 ```
-  git clone https://github.com/j3ygithub/j3y
-  cd j3y
-  npm ci
+git clone https://github.com/j3ygithub/j3y
+cd j3y
+npm ci
 ```
 
 ## Run Locally
@@ -26,7 +27,7 @@ You can install `j3y` with `npm`.
 You can run it locally.
 
 ```
-  npm run dev
+npm run dev
 ```
 
 ## Contributing
