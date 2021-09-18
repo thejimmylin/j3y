@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 const useWindowScrollY = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
-  const handleWindowScroll = () => {
+  const onWindowScroll = () => {
     setWindowScrollY(window.scrollY);
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleWindowScroll);
+    window.addEventListener("scroll", onWindowScroll);
     return () => {
-      window.removeEventListener("scroll", handleWindowScroll);
+      window.removeEventListener("scroll", onWindowScroll);
     };
   }, []);
   return [windowScrollY, setWindowScrollY];
