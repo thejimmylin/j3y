@@ -28,14 +28,14 @@ const Header = ({ useIsDark, headerRef }) => {
       <header ref={staticHeaderRef}></header>
       <header
         className={classNames(
-          "font-sans font-semibold text-ink dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
+          "font-sans text-ink dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
           { "bg-paper dark:bg-night": !isScrolled },
           { "bg-paper-light dark:bg-night-light": isScrolled }
         )}
         ref={headerRef}
       >
         <div className="flex justify-between items-baseline gap-4 px-8 whitespace-nowrap">
-          <p className="my-5 text-xl xs:text-2xl transform hover:text-black dark:hover:text-white hover:scale-105 select-none">
+          <p className="my-5 font-semibold text-lg xs:text-2xl transform hover:text-black dark:hover:text-white select-none">
             <Link href="/">
               <a>
                 <span className="animate-fadein-1000-200">J</span>
@@ -52,15 +52,37 @@ const Header = ({ useIsDark, headerRef }) => {
           </p>
           <p
             className={classNames(
-              "text-center my-5 text-md xs:text-lg text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300 hover:scale-105 transform",
-              { "animate-pulse": asPath.startsWith("/posts") }
+              "text-center font-semibold my-5 text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
+              {
+                "text-blue-700 dark:text-yellow-300": asPath === "/",
+              },
+              {
+                "text-blue-600 dark:text-yellow-400": !(asPath === "/"),
+              }
+            )}
+          >
+            <Link href="/">
+              <a className="animate-fadein-1000-1000">Home</a>
+            </Link>
+          </p>
+          <p
+            className={classNames(
+              "text-center font-semibold my-5 text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
+              {
+                "text-blue-700 dark:text-yellow-300":
+                  asPath.startsWith("/posts"),
+              },
+              {
+                "text-blue-600 dark:text-yellow-400":
+                  !asPath.startsWith("/posts"),
+              }
             )}
           >
             <Link href="/posts">
-              <a className="animate-fadein-1000-1000">POSTS</a>
+              <a className="animate-fadein-1000-1000">Posts</a>
             </Link>
           </p>
-          <div className="flex items-center animate-fadein-1000-700 my-5 ml-auto">
+          <div className="flex items-center my-5 ml-auto">
             <DarkModeToggler useIsDark={useIsDark} />
           </div>
         </div>

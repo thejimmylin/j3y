@@ -50,10 +50,6 @@ const App = ({ Component, pageProps }) => {
           href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
           rel="stylesheet"
         />
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        />
       </Head>
       <div className={classNames({ dark: isDark })}>
         <MDXProvider components={isDark ? componentsDark : componentsLight}>
