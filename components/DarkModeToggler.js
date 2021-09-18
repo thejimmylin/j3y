@@ -6,9 +6,9 @@ const DarkModeToggler = ({ useIsDark }) => {
   return (
     <div className="cursor-pointer select-none hover:scale-105" onClick={onClick}>
       {isDark ? (
-        <span className="material-icons">dark_mode</span>
+        <span className="material-icons transform -rotate-45 transition-transform hover:rotate-0 duration-500">nightlight_round</span>
       ) : (
-        <span className="material-icons">light_mode</span>
+        <span className="material-icons transform -rotate-45 transition-transform hover:rotate-0 duration-500">wb_sunny</span>
       )}
     </div>
   );

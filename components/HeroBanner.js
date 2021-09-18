@@ -77,9 +77,9 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
       <div className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-4/5">
         <span
           onClick={scrollIntoHeader}
-          className="text-4xl text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
+          className="text-light hover:text-white cursor-pointer animate-fadein-1000-900 transform hover:translate-y-0.5"
         >
-          <i className="fas fa-chevron-down text-lg"></i>
+          <span className="material-icons">expand_more</span>
         </span>
       </div>
     </header>
