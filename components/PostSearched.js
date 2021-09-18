@@ -30,8 +30,8 @@ const PostsSearched = ({ metadatas, textSearched }) => {
         <article className="p-8">
           {metadata.isDraft && (
             <span className="text-pencil dark:text-moonlight text-xs">
-              <i className="fas fa-exclamation-circle"></i> This is a draft, its
-              content may be updated at any time.
+              <i className="fas fa-exclamation-circle"></i> Is-draft: The
+              content may be updated any time.
             </span>
           )}
           <h2 className="text-2xl font-semibold mb-8">
