@@ -25,7 +25,7 @@ const Header = ({ useIsDark, headerRef }) => {
         className={classNames(
           "font-sans font-semibold text-ink dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
           { "bg-paper dark:bg-night": !isScrolled },
-          { "bg-paper-light dark:bg-night-light shadow": isScrolled }
+          { "bg-paper-light dark:bg-night-light": isScrolled }
         )}
         ref={headerRef}
       >
