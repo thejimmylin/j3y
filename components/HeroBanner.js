@@ -34,7 +34,8 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
             layout="fill"
             objectFit="cover"
             placeholder="blur"
-            onLoad={() => setLoaded(true)}
+            onLoadingComplete={() => setLoaded(true)}
+            priority={true}
           />
         </div>
       </div>

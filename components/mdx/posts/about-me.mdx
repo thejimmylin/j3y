@@ -10,7 +10,7 @@ import fortiadminExample from "../../../public/fortiadmin-example-1920x1080.png"
 # About me
 
 <div className="my-5">
-  <Image src={avatar} alt="avatar" className="rounded-sm" />
+  <Image src={avatar} alt="avatar" className="rounded-sm" priority={true} />
 </div>
 
 # Hello world
@@ -29,7 +29,7 @@ I have five years of programming experience, mostly in Python.
     <div className="text-sm">Sep. 2011 - Jun. 2016</div>
   </div>
   <div className="w-12 h-12 xs:w-24 xs:h-24 relative">
-    <Image src={ntu} alt="ntu" layout="fill" objectFit="contain" />
+    <Image src={ntu} alt="ntu" layout="fill" objectFit="contain" priority={true} />
   </div>
 </div>
 
@@ -43,7 +43,7 @@ I have five years of programming experience, mostly in Python.
     <div className="text-sm">Jun. 2017 - Jun. 2021</div>
   </div>
   <div className="w-20 h-12 xs:w-40 xs:h-24 relative">
-    <Image src={chief} alt="chief" layout="fill" objectFit="contain" />
+    <Image src={chief} alt="chief" layout="fill" objectFit="contain" priority={true} />
   </div>
 </div>
 
@@ -106,11 +106,11 @@ Here are some screenshots of them:
 ## CTDB
 
 <div className="my-5">
-  <Image src={ctdbI18n} alt="ctdbI18n" className="rounded-sm" />
+  <Image src={ctdbI18n} alt="ctdbI18n" className="rounded-sm" priority={true} />
 </div>
 
 <div className="my-5">
-  <Image src={ctdbLog} alt="ctdbLog" className="rounded-sm" />
+  <Image src={ctdbLog} alt="ctdbLog" className="rounded-sm" priority={true} />
 </div>
 
 CTDB is mainly built with [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [Vue.js](https://vuejs.org/), containing several useful applications, such as Diary, Reminder, Telecom, News, Archive, etc. It also has its own log system. It is mainly used by engineers in the technical department of the company.
@@ -126,11 +126,11 @@ i18n / Log system
 ## FortiAdmin
 
 <div className="my-5">
-  <Image src={fortiadminExample} alt="fortiadminExample" className="rounded-sm" />
+  <Image src={fortiadminExample} alt="fortiadminExample" className="rounded-sm" priority={true} />
 </div>
 
 <div className="my-5">
-  <Image src={fortiadminLogin} alt="fortiadminLogin" className="rounded-sm" />
+  <Image src={fortiadminLogin} alt="fortiadminLogin" className="rounded-sm" priority={true} />
 </div>
 
 FortiAdmin is mainly built with [Django](https://www.djangoproject.com/), [shlex](https://docs.python.org/3/library/shlex.html), [Forti](https://www.fortinet.com/) REST API which is a multi-tenant portal for Fortigate/Fortios. With FortiAdmin, It is possible to set their own config without interfere with each other for different users.

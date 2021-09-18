@@ -14,7 +14,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
               Sorry, there are no posts related.
             </h2>
             <div>
-              <Image className="rounded-sm" src={sorry} />
+              <Image className="rounded-sm" src={sorry} priority={true} />
             </div>
           </article>
         </div>
@@ -29,8 +29,9 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       >
         <article className="p-8">
           {metadata.isDraft && (
-            <span className="text-pencil dark:text-moonlight">
-              Note: This is a draft, its content may be updated at any time.
+            <span className="text-pencil dark:text-moonlight text-xs">
+              <i className="fas fa-exclamation-circle"></i> This is a draft, its
+              content may be updated at any time.
             </span>
           )}
           <h2 className="text-2xl font-semibold mb-8">
@@ -40,10 +41,10 @@ const PostsSearched = ({ metadatas, textSearched }) => {
           </h2>
           {metadata.thumbnail && (
             <div className="mb-5">
-              <Image src={metadata.thumbnail} />
+              <Image src={metadata.thumbnail} priority={true} />
             </div>
           )}
-          {metadata.subtitle && <p className="mb-5">{metadata.subtitle}</p>}
+          {metadata.subtitle && <p className="mb-5 text-sm text-pencil dark:text-moonlight">{metadata.subtitle}</p>}
           <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
             <Link href={`/posts/${metadata.slug}`}>
               <a>Read more</a>
