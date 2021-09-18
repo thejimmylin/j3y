@@ -22,7 +22,7 @@ const metadatas = [
     title: "Tar things",
     subtitle: "",
     thumbnail: null,
-    isDraft: true,
+    isDraft: false,
   },
   {
     slug: "install-docker-engine-on-a-ubuntu-2004",
@@ -79,7 +79,7 @@ const metadatas = [
     title: "The development tools I like",
     subtitle: "",
     thumbnail: null,
-    isDraft: true,
+    isDraft: false,
   },
 ];
 

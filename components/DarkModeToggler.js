@@ -1,7 +1,7 @@
 const DarkModeToggler = ({ useIsDark }) => {
   const [isDark, setIsDark] = useIsDark;
   const onChange = () => {
-    setIsDark((previousIsDark) => !previousIsDark);
+    setIsDark((prevIsDark) => !prevIsDark);
   };
   return (
     <>
