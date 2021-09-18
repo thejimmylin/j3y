@@ -4,7 +4,7 @@ import classNames from "classnames";
 const Header = ({ useIsDark, extraClassNames, headerRef }) => {
   const [isDark, setIsDark] = useIsDark;
   const toggleDarkMode = () => {
-    setIsDark(!isDark);
+    setIsDark((previousIsDark) => !previousIsDark);
   };
 
   return (
