@@ -14,7 +14,7 @@ const Custom404 = ({ useIsDark }) => {
         <PostLayout>
           <h1>Sorry, no pages found.</h1>
           <div className="mb-5">
-            <Image className="rounded-sm" src={sorry} />
+            <Image className="rounded-sm" src={sorry} priority={true} />
           </div>
           <p>
             Maybe you want to go back to the{" "}

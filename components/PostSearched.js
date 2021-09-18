@@ -14,7 +14,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
               Sorry, there are no posts related.
             </h2>
             <div>
-              <Image className="rounded-sm" src={sorry} />
+              <Image className="rounded-sm" src={sorry} priority={true} />
             </div>
           </article>
         </div>
@@ -40,7 +40,7 @@ const PostsSearched = ({ metadatas, textSearched }) => {
           </h2>
           {metadata.thumbnail && (
             <div className="mb-5">
-              <Image src={metadata.thumbnail} />
+              <Image src={metadata.thumbnail} priority={true} />
             </div>
           )}
           {metadata.subtitle && <p className="mb-5">{metadata.subtitle}</p>}
