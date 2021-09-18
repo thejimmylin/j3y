@@ -5,7 +5,7 @@ const metadatas = [
     slug: "about-me",
     title: "About me",
     subtitle:
-      "I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so.",
+      "I'm Jimmy. I love programming. I like to create things and programming gives me the chance to do so. I have five years of programming experience, mostly in Python.",
     thumbnail: avatar,
     isDraft: false,
   },
@@ -49,7 +49,8 @@ const metadatas = [
   {
     slug: "docker-image-with-nodejs-and-python",
     title: "Docker image with Node.js and Python",
-    subtitle: "Sometimes you want to customize your own base image",
+    subtitle:
+      "Sometimes you want to customize your own base image. This article tells you how to build a image including `Python3.8`, `Node.js 14.x`based on a `Ubuntu 20.04` official base image.",
     thumbnail: null,
     isDraft: false,
   },
@@ -63,21 +64,21 @@ const metadatas = [
   {
     slug: "typescript-function-annotations",
     title: "TypeScript Function Annotations",
-    subtitle: "",
+    subtitle: "The ways of annotating a function are more than one, and it's a little confusing to pick one to use.",
     thumbnail: null,
     isDraft: true,
   },
   {
     slug: "use-fira-code-in-vscode",
     title: "Use Fira Code in VSCode",
-    subtitle: "",
+    subtitle: "Fira Code is a monospaced font that is easier to code with.",
     thumbnail: null,
     isDraft: false,
   },
   {
     slug: "the-development-tools-i-like",
     title: "The development tools I like",
-    subtitle: "",
+    subtitle: "Today, there are many tools available to help smooth out the development process.",
     thumbnail: null,
     isDraft: false,
   },

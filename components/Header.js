@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import classNames from "classnames";
 import DarkModeToggler from "./DarkModeToggler";
@@ -6,6 +7,7 @@ import DarkModeToggler from "./DarkModeToggler";
 const Header = ({ useIsDark, headerRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const staticHeaderRef = useRef(null);
+  const { asPath } = useRouter();
 
   useEffect(() => {
     const staticHeader = staticHeaderRef.current;
@@ -32,8 +34,8 @@ const Header = ({ useIsDark, headerRef }) => {
         )}
         ref={headerRef}
       >
-        <div className="flex justify-between items-end gap-4 px-8 whitespace-nowrap">
-          <p className="my-5 text-xl xs:text-2xl transform hover:scale-105 select-none">
+        <div className="flex justify-between items-baseline gap-4 px-8 whitespace-nowrap">
+          <p className="my-5 text-xl xs:text-2xl transform hover:text-black dark:hover:text-white hover:scale-105 select-none">
             <Link href="/">
               <a>
                 <span className="animate-fadein-1000-200">J</span>
@@ -48,7 +50,12 @@ const Header = ({ useIsDark, headerRef }) => {
               </a>
             </Link>
           </p>
-          <p className="text-center my-5 text-md xs:text-lg text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300 hover:scale-105 transform">
+          <p
+            className={classNames(
+              "text-center my-5 text-md xs:text-lg text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300 hover:scale-105 transform",
+              { "animate-pulse": asPath.startsWith("/posts") }
+            )}
+          >
             <Link href="/posts">
               <a className="animate-fadein-1000-1000">POSTS</a>
             </Link>
