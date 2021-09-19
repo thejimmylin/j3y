@@ -19,7 +19,9 @@ services:
       - certonly
       - --standalone
       - --domains
-      - ${DOMAINS}
+      - ${ROOT_DOMAIN}
+      - --domains
+      - ${WWW_DOMAIN}
       - --email
       - ${EMAIL}
       - --agree-tos
@@ -38,8 +40,8 @@ services:
       - 80:80
       - 443:443
     environment:
-      - SSL_CERTIFICATE_PATH=/etc/letsencrypt/live/${DOMAINS}/fullchain.pem
-      - SSL_CERTIFICATE_KEY_PATH=/etc/letsencrypt/live/${DOMAINS}/privkey.pem
+      - ROOT_DOMAIN
+      - WWW_DOMAIN
       - CERBOT_HOST=http://certbot-letsencrypt
       - WEB_HOST=http://node-web
       - WEB_PORT=3000

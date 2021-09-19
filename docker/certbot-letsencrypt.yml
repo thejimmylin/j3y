@@ -19,7 +19,9 @@ services:
       - certonly
       - --standalone
       - --domains
-      - ${DOMAINS}
+      - ${ROOT_DOMAIN}
+      - --domains
+      - ${WWW_DOMAIN}
       - --email
       - ${EMAIL}
       - --agree-tos
