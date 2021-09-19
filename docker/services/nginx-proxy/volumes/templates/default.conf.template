@@ -21,8 +21,8 @@ server {
     listen 443 ssl;
 
     server_name www.jimmylin.org;
-    ssl_certificate /etc/letsencrypt/live/${WWW_DOMAIN}/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/${WWW_DOMAIN}/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/${ROOT_DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${ROOT_DOMAIN}/privkey.pem;
 
     # Forward requests to `web` container.
     location / {
