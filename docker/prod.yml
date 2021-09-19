@@ -27,7 +27,8 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
-      - --expand=false
+      - --expand
+      - --renew-with-new-domains
   nginx-proxy:
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
