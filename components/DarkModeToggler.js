@@ -7,6 +7,7 @@ const DarkModeToggler = ({ useIsDark }) => {
     <div
       className="cursor-pointer select-none hover:scale-105"
       onClick={onClick}
+      style={{ WebkitTapHighlightColor: "transparent" }}
     >
       <div
         key={isDark}
