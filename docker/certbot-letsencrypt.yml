@@ -27,6 +27,8 @@ services:
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
+      - --renew-with-new-domains
+      - --verbose
     ports:
       - 80:80
 
