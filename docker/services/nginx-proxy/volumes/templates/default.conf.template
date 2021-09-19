@@ -20,11 +20,24 @@ server {
 server {
     listen 443 ssl;
 
-    ssl_certificate ${SSL_CERTIFICATE_PATH};
-    ssl_certificate_key ${SSL_CERTIFICATE_KEY_PATH};
+    server_name www.jimmylin.org;
+    ssl_certificate /etc/letsencrypt/live/${WWW_DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${WWW_DOMAIN}/privkey.pem;
 
     # Forward requests to `web` container.
     location / {
         proxy_pass ${WEB_HOST}:${WEB_PORT};
+    }
+}
+
+# For those who go to our website with IP address and non-www domain, redirect them to our www domain.
+server {
+    listen 443 ssl;
+
+    ssl_certificate /etc/letsencrypt/live/${ROOT_DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${ROOT_DOMAIN}/privkey.pem;
+
+    location / {
+        return 301 https://${WWW_DOMAIN}$request_uri;
     }
 }

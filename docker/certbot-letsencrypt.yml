@@ -19,12 +19,16 @@ services:
       - certonly
       - --standalone
       - --domains
-      - ${DOMAINS}
+      - ${ROOT_DOMAIN}
+      - --domains
+      - ${WWW_DOMAIN}
       - --email
       - ${EMAIL}
       - --agree-tos
       - --no-eff-email
       - --keep-until-expiring
+      - --expand
+      - --renew-with-new-domains
     ports:
       - 80:80
 
