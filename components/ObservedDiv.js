@@ -1,24 +1,24 @@
 import { useEffect, useRef } from "react";
 
-const ScrollDetector = ({ setIsScrolled }) => {
+const ObservedDiv = ({ setIsIntersecting }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
     const div = divRef.current;
     const callback = (entries) => {
       entries.forEach((entry) => {
-        const isScrolled = !entry.isIntersecting;
-        setIsScrolled(isScrolled);
+        setIsIntersecting(entry.isIntersecting);
       });
     };
     const observer = new IntersectionObserver(callback);
     observer.observe(div);
-    return () => {
+    const cleanup = () => {
       observer.disconnect();
     };
+    return cleanup;
   }, []);
 
   return <div ref={divRef}></div>;
 };
 
-export default ScrollDetector;
+export default ObservedDiv;

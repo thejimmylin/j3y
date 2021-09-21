@@ -4,18 +4,18 @@ import Link from "next/link";
 import classNames from "classnames";
 import Brand from "./Brand";
 import DarkModeToggler from "./DarkModeToggler";
-import ScrollDetector from "./ScrollDetector";
+import ObservedDiv from "./ObservedDiv";
 
 const Header = ({ useIsDark, headerRef }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const { asPath } = useRouter();
   const headerClassName = classNames(
     "font-sans text-ink dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
     {
-      "bg-paper dark:bg-night": !isScrolled,
+      "bg-paper dark:bg-night": isIntersecting,
     },
     {
-      "bg-paper-light dark:bg-night-light": isScrolled,
+      "bg-paper-light dark:bg-night-light": !isIntersecting,
     }
   );
   const homeClassName = classNames(
@@ -39,7 +39,7 @@ const Header = ({ useIsDark, headerRef }) => {
 
   return (
     <>
-      <ScrollDetector setIsScrolled={setIsScrolled} />
+      <ObservedDiv setIsIntersecting={setIsIntersecting} />
       <header className={headerClassName} ref={headerRef}>
         <ul className="flex justify-between items-baseline gap-4 px-8 whitespace-nowrap">
           <li className="font-semibold text-lg xs:text-2xl hover:text-black dark:hover:text-white select-none">
