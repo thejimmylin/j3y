@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <footer className="font-sans text-ink bg-paper dark:text-light dark:bg-night transition-bg">
-      <div className="px-8 py-5">
-        <div className="flex flex-col flex-wrap items-end content-end gap-2">
+      <div className="max-w-screen-lg mx-auto">
+        <div className="flex flex-col flex-wrap items-end content-end gap-2 px-8 py-5">
           <p className="text-4xl font-semibold cursor-default select-none">Jimmy Lin</p>
           <p className="text-sm">contact@jimmylin.org</p>
           <p className="text-3xl flex gap-2">

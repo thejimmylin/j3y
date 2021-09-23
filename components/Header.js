@@ -41,24 +41,26 @@ const Header = ({ useIsDark, headerRef }) => {
     <>
       <ObservedDiv setIsIntersecting={setIsIntersecting} />
       <header className={headerClassName} ref={headerRef}>
-        <ul className="flex justify-between items-baseline gap-4 px-8 whitespace-nowrap">
-          <li className="font-semibold text-lg xs:text-2xl hover:text-black dark:hover:text-white select-none">
-            <Brand />
-          </li>
-          <li className={homeClassName}>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li className={postsClassName}>
-            <Link href="/posts">
-              <a>Posts</a>
-            </Link>
-          </li>
-          <li className="flex items-center my-5 ml-auto">
-            <DarkModeToggler useIsDark={useIsDark} />
-          </li>
-        </ul>
+        <div className="max-w-screen-lg mx-auto">
+          <ul className="whitespace-nowrap flex justify-between items-baseline gap-4 px-8">
+            <li className="font-semibold text-lg xs:text-2xl hover:text-black dark:hover:text-white select-none">
+              <Brand />
+            </li>
+            <li className={homeClassName}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li className={postsClassName}>
+              <Link href="/posts">
+                <a>Posts</a>
+              </Link>
+            </li>
+            <li className="flex items-center my-5 ml-auto">
+              <DarkModeToggler useIsDark={useIsDark} />
+            </li>
+          </ul>
+        </div>
       </header>
     </>
   );
