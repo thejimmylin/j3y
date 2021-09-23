@@ -7,14 +7,12 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
-    "@next-auth/prisma-adapter": "^0.5.2-next.15",
     "@next/mdx": "^11.1.0",
-    "@prisma/client": "^3.0.2",
+    "@prisma/client": "^3.1.1",
     "@tailwindcss/typography": "^0.4.1",
     "bootstrap-icons": "^1.5.0",
     "classnames": "^2.3.1",
     "next": "^11.1.0",
-    "next-auth": "^4.0.0-beta.2",
     "nodemailer": "^6.6.3",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
@@ -23,7 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "prisma": "^3.0.2",
+    "prisma": "^3.1.1",
     "tailwindcss": "^2.2.4"
   }
 }
