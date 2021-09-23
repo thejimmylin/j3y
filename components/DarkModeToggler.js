@@ -14,9 +14,13 @@ const DarkModeToggler = ({ useIsDark }) => {
         className="text-xl animate-risein-300-100 transition-transform transform"
       >
         {isDark ? (
-          <i className="bi bi-moon-fill"></i>
+          <span>
+            <i className="bi bi-moon-fill"></i>
+          </span>
         ) : (
-          <i className="bi bi-sun-fill"></i>
+          <span className="text-yellow-500">
+            <i className="bi bi-sun-fill"></i>
+          </span>
         )}
       </div>
     </div>
