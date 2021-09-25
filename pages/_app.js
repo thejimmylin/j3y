@@ -3,23 +3,6 @@ import "../styles/globals.css";
 import { useState } from "react";
 import Head from "next/head";
 import classNames from "classnames";
-import { MDXProvider } from "@mdx-js/react";
-import CodeBlockLight from "../components/mdx/provider-components/CodeBlockLight";
-import CodeBlockDark from "../components/mdx/provider-components/CodeBlockDark";
-
-const componentsLight = {
-  a: (props) => (
-    <a href={props.href} target="_blank" rel="noreferrer noopenner">
-      {props.children}
-    </a>
-  ),
-  pre: CodeBlockLight,
-};
-
-const componentsDark = {
-  ...componentsLight,
-  pre: CodeBlockDark,
-};
 
 const App = ({ Component, pageProps }) => {
   const useIsDark = useState(true);
@@ -52,9 +35,7 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <div className={classNames({ dark: isDark })}>
-        <MDXProvider components={isDark ? componentsDark : componentsLight}>
-          <Component {...pageProps} useIsDark={useIsDark} />
-        </MDXProvider>
+        <Component {...pageProps} useIsDark={useIsDark} />
       </div>
     </>
   );

@@ -1,7 +1,3 @@
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx$/,
-});
-module.exports = withMDX({
+module.exports = {
   reactStrictMode: true,
-  pageExtensions: ["js", "jsx", "mdx"],
-});
+}
