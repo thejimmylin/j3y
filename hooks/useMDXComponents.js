@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
-import CodeBlockDark from "../components/markdown-components/CodeBlockDark";
-import CodeBlockLight from "../components/markdown-components/CodeBlockLight";
+import CodeBlockDark from "../components/mdx-components/CodeBlockDark";
+import CodeBlockLight from "../components/mdx-components/CodeBlockLight";
 
 const useMDXComponents = ({ code, isDark }) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);

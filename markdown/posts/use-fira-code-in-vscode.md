@@ -1,5 +1,6 @@
 ---
 title: Use Fira Code in VSCode
+subtitle: Fira Code is a monospaced font that is easier to code with.
 ---
 
 # Use Fira Code in VSCode
