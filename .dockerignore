@@ -1,8 +1,8 @@
 *
 !/components
 !/hooks
+!/markdown
 !/pages
-!/prisma
 !/public
 !/styles
 !/next.config.js
