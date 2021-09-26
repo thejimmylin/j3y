@@ -1,3 +1,7 @@
+---
+title: How to push a Docker image?
+---
+
 # How to push a Docker image?
 
 1. After you create a docker image, you may want to store it on the docker hub.

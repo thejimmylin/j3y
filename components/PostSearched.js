@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getRelatedMetadatas } from "../components/mdx/posts";
 import sorry from "../public/sorry-1920x1440.jpg";
 
-const PostsSearched = ({ metadatas, textSearched }) => {
-  const relatedMetadatas = getRelatedMetadatas(metadatas, textSearched);
-  if (!relatedMetadatas.length) {
+const PostsSearched = ({ postInfos, textSearched }) => {
+  const relatedPosts = postInfos.filter((post) => {
+    const title = post?.frontmatter?.title || "";
+    if (title.toLowerCase().includes(textSearched.toLowerCase())) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  if (!relatedPosts.length) {
     return (
       <>
         <div className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm">
@@ -21,35 +27,30 @@ const PostsSearched = ({ metadatas, textSearched }) => {
       </>
     );
   }
-  return relatedMetadatas
-    .map((metadata) => (
+  return relatedPosts
+    .map((post) => (
       <div
-        key={metadata.slug}
+        key={post.slug}
         className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm"
       >
         <article className="p-8">
-          {metadata.isDraft && (
+          {post.frontmatter.isDraft && (
             <span className="text-pencil dark:text-moonlight text-xs">
               This is a draft that may be updated at any time.
             </span>
           )}
           <h2 className="text-2xl font-semibold mb-8">
-            <Link href={`/posts/${metadata.slug}`}>
-              <a>{metadata.title}</a>
+            <Link href={`/posts/${post.slug}`}>
+              <a>{post.frontmatter.title}</a>
             </Link>
           </h2>
-          {metadata.thumbnail && (
-            <div className="mb-5">
-              <Image src={metadata.thumbnail} priority={true} />
-            </div>
-          )}
-          {metadata.subtitle && (
+          {post.frontmatter.subtitle && (
             <p className="mb-5 text-sm text-pencil dark:text-moonlight">
-              {metadata.subtitle}
+              {post.frontmatter.subtitle}
             </p>
           )}
           <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
-            <Link href={`/posts/${metadata.slug}`}>
+            <Link href={`/posts/${post.slug}`}>
               <a>Read more</a>
             </Link>
           </p>

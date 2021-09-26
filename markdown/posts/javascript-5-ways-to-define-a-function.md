@@ -1,3 +1,7 @@
+---
+title: JavaScript 5 ways to define a function
+---
+
 # JavaScript 5 ways to define a function
 
 1. Function declaration

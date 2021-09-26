@@ -1,3 +1,8 @@
+---
+title: Ubuntu DB ODBC issues
+subtitle: "ODBC could be annoying, these article list out some ODBC issues I got."
+---
+
 # Ubuntu DB ODBC issues
 
 ODBC could be annoying, these article list out some ODBC issues I got.

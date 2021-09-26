@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { metadatas } from "../components/mdx/posts";
 import MainLayout from "../components/MainLayout";
 import SearchBar from "../components/SearchBar";
 import PostsSearched from "../components/PostSearched";
+import { getPostInfos } from "../markdown";
 
-const Posts = ({ useIsDark, metadatas }) => {
+const Posts = ({ useIsDark, postInfos }) => {
   const useTextSearch = useState("");
   const [textSearched, _] = useTextSearch;
   return (
@@ -14,7 +14,7 @@ const Posts = ({ useIsDark, metadatas }) => {
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <SearchBar useTextSearch={useTextSearch} />
-        <PostsSearched metadatas={metadatas} textSearched={textSearched} />
+        <PostsSearched postInfos={postInfos} textSearched={textSearched} />
       </MainLayout>
       <Footer />
     </>
@@ -22,8 +22,9 @@ const Posts = ({ useIsDark, metadatas }) => {
 };
 
 export const getStaticProps = async () => {
+  const postInfos = getPostInfos();
   return {
-    props: { metadatas },
+    props: { postInfos },
   };
 };
 
