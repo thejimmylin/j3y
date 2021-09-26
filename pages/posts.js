@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import SearchBar from "../components/SearchBar";
 import PostsSearched from "../components/PostSearched";
-import { getAllPosts } from "../markdown";
+import { getPostInfos } from "../markdown";
 
-const Posts = ({ useIsDark, posts }) => {
+const Posts = ({ useIsDark, postInfos }) => {
   const useTextSearch = useState("");
   const [textSearched, _] = useTextSearch;
   return (
@@ -14,7 +14,7 @@ const Posts = ({ useIsDark, posts }) => {
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <SearchBar useTextSearch={useTextSearch} />
-        <PostsSearched posts={posts} textSearched={textSearched} />
+        <PostsSearched postInfos={postInfos} textSearched={textSearched} />
       </MainLayout>
       <Footer />
     </>
@@ -22,9 +22,9 @@ const Posts = ({ useIsDark, posts }) => {
 };
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts();
+  const postInfos = getPostInfos();
   return {
-    props: { posts },
+    props: { postInfos },
   };
 };
 

@@ -2,19 +2,19 @@ import Header from "../../components/Header";
 import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
-import { useMemo } from "react";
-import { getMDXComponent } from "mdx-bundler/client";
-import { getAllPosts, getOnePost } from "../../markdown";
+import { getPostInfos, getPost } from "../../markdown";
+import useMDXComponents from "../../hooks/useMDXComponents"
 
 const Post = ({ useIsDark, post }) => {
   const code = post.code;
-  const Component = useMemo(() => getMDXComponent(code), [code]);
+  const isDark = useIsDark[0];
+  const MDXComponent = useMDXComponents({ code, isDark });
   return (
     <>
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <PostLayout>
-          <Component />
+          <MDXComponent />
         </PostLayout>
       </MainLayout>
       <Footer />
@@ -23,14 +23,14 @@ const Post = ({ useIsDark, post }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getOnePost(params.slug);
+  const post = await getPost(params.slug);
   return {
     props: { post },
   };
 };
 
 export const getStaticPaths = async () => {
-  const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }));
+  const paths = getPostInfos().map(({ slug }) => ({ params: { slug } }));
   return {
     paths,
     fallback: false,

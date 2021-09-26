@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import sorry from "../public/sorry-1920x1440.jpg";
 
-const PostsSearched = ({ posts, textSearched }) => {
-  const relatedPosts = posts.filter((post) => {
+const PostsSearched = ({ postInfos, textSearched }) => {
+  const relatedPosts = postInfos.filter((post) => {
     const title = post?.frontmatter?.title || "";
     if (title.toLowerCase().includes(textSearched.toLowerCase())) {
       return true;

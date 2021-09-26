@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
+import useMDXComponent from "../hooks/useMDXComponents";
 
 const HomePage = ({ useIsDark }) => {
   const [windowScrollY] = useWindowScrollY();
@@ -18,8 +19,7 @@ const HomePage = ({ useIsDark }) => {
       />
       <Header useIsDark={useIsDark} headerRef={headerRef} />
       <MainLayout>
-        <PostLayout>
-        </PostLayout>
+        <PostLayout></PostLayout>
       </MainLayout>
       <Footer />
     </>
