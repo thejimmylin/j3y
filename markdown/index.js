@@ -4,30 +4,30 @@ import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
 import gfm from "remark-gfm";
 
-export const POSTS_PATH = path.join(process.cwd(), "markdown/posts");
+const POSTS_PATH = path.join(process.cwd(), "markdown/posts");
+const POST_EXTNAME = ".md";
 
-export const getSourceOfFile = (fileName) => {
+const getFile = (fileName) => {
   return fs.readFileSync(path.join(POSTS_PATH, fileName));
 };
 
-export const getAllPosts = () => {
+const getAllPosts = () => {
   return fs
     .readdirSync(POSTS_PATH)
-    .filter((path) => /\.md$/.test(path))
+    .filter((fileName) => path.extname(fileName) === POST_EXTNAME)
     .map((fileName) => {
-      const source = getSourceOfFile(fileName);
-      const slug = fileName.replace(/\.md$/, "");
-      const { data } = matter(source);
+      const slug = path.basename(fileName, path.extname(fileName));
+      const frontmatter = matter(getFile(fileName)).data;
 
       return {
-        frontmatter: data,
-        slug: slug,
+        slug,
+        frontmatter,
       };
     });
 };
 
-export const getSinglePost = async (slug) => {
-  const source = getSourceOfFile(slug + ".md");
+const getOnePost = async (slug) => {
+  const source = getFile(slug + POST_EXTNAME);
   const { code, frontmatter } = await bundleMDX(source, {
     cwd: POSTS_PATH,
     xdmOptions: (options) => {
@@ -37,7 +37,9 @@ export const getSinglePost = async (slug) => {
   });
 
   return {
-    frontmatter,
     code,
+    frontmatter,
   };
 };
+
+export { getAllPosts, getOnePost };

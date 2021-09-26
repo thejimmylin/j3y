@@ -4,9 +4,10 @@ import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
-import { getAllPosts, getSinglePost } from "../../markdown";
+import { getAllPosts, getOnePost } from "../../markdown";
 
-const Post = ({ useIsDark, code, frontmatter }) => {
+const Post = ({ useIsDark, post }) => {
+  const code = post.code;
   const Component = useMemo(() => getMDXComponent(code), [code]);
   return (
     <>
@@ -22,9 +23,9 @@ const Post = ({ useIsDark, code, frontmatter }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePost(params.slug);
+  const post = await getOnePost(params.slug);
   return {
-    props: { ...post },
+    props: { post },
   };
 };
 
