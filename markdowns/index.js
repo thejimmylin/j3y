@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
 import remarkGfm from "remark-gfm";
 
-const BASE_DIR = path.join(process.cwd(), "markdown/posts");
+const BASE_DIR = path.join(process.cwd(), "markdowns");
 const POST_EXTNAME = ".md";
 
 const getFile = (fileName) => {

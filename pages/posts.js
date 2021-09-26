@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import SearchBar from "../components/SearchBar";
 import PostsSearched from "../components/PostSearched";
-import { getPostInfos } from "../markdown";
+import { getPostInfos } from "../markdowns";
 
 const Posts = ({ useIsDark, postInfos }) => {
   const useTextSearch = useState("");
