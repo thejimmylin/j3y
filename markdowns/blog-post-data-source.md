@@ -1,10 +1,8 @@
 ---
-title: blog-post-data-source
+title: Blog post data source
 ---
 
 # Blog post data source
-
-[TLDR](https://www.notion.so/2a67bc9d40084ca5a3022f6eba5b1811)
 
 # MDX
 
@@ -20,7 +18,7 @@ title: blog-post-data-source
 2. Text content is stored as Markdown but is mixed with the other codes.
 3. Your code is ugly.
 4. You can update your posts online.
-5. There are many bugs.
+5. There are some bugs.
 
 # react-markdown
 
