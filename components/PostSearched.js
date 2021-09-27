@@ -24,11 +24,6 @@ const PostsSearched = ({ postInfos, textSearched }) => {
     );
   }
   return relatedPosts
-    .sort(
-      (a, b) =>
-        Date.parse(b.frontmatter.createdAt) -
-        Date.parse(a.frontmatter.createdAt)
-    )
     .map((post, index) => (
       <div
         key={index}
