@@ -1,6 +1,8 @@
 ---
 title: Docker image with Node.js and Python
 subtitle: Sometimes you want to customize your own base image. This article tells you how to build a image including `Python3.8`, `Node.js 14.x`based on a `Ubuntu 20.04` official base image.
+createdBy: Jimmy Lin
+createdAt: 2021-08-09 21:32
 ---
 
 # Docker image with Node.js and Python

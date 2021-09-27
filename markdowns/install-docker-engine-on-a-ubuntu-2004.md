@@ -1,6 +1,8 @@
 ---
 title: Install Docker engine on a Ubuntu 20.04
 subtitle: You need docker engine to build docker image, run image as a container and so on.
+createdBy: Jimmy Lin
+createdAt: 2021-08-15 21:31
 ---
 
 # Install Docker engine on a Ubuntu 20.04

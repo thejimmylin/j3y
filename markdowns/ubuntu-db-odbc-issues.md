@@ -1,6 +1,8 @@
 ---
 title: Ubuntu DB ODBC issues
 subtitle: "ODBC could be annoying, these article list out some ODBC issues I got."
+createdBy: Jimmy Lin
+createdAt: 2021-08-08 03:52
 ---
 
 # Ubuntu DB ODBC issues
