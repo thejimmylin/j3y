@@ -1,6 +1,8 @@
 ---
 title: Typescript function annotations
 subtitle: The ways of annotating a function are more than one, and it's a little confusing to pick one to use.
+createdBy: Jimmy Lin
+createdAt: 2021-08-31 22:43
 ---
 
 # Typescript function annotations

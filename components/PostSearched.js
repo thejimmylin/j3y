@@ -5,11 +5,7 @@ import sorry from "../public/sorry-1920x1440.jpg";
 const PostsSearched = ({ postInfos, textSearched }) => {
   const relatedPosts = postInfos.filter((post) => {
     const title = post?.frontmatter?.title || "";
-    if (title.toLowerCase().includes(textSearched.toLowerCase())) {
-      return true;
-    } else {
-      return false;
-    }
+    return title.toLowerCase().includes(textSearched.toLowerCase());
   });
   if (!relatedPosts.length) {
     return (
@@ -28,6 +24,11 @@ const PostsSearched = ({ postInfos, textSearched }) => {
     );
   }
   return relatedPosts
+    .sort(
+      (a, b) =>
+        Date.parse(b.frontmatter.createdAt) -
+        Date.parse(a.frontmatter.createdAt)
+    )
     .map((post) => (
       <div
         key={post.slug}
@@ -39,11 +40,14 @@ const PostsSearched = ({ postInfos, textSearched }) => {
               This is a draft that may be updated at any time.
             </span>
           )}
-          <h2 className="text-2xl font-semibold mb-8">
+          <h2 className="text-2xl font-semibold mb-1">
             <Link href={`/posts/${post.slug}`}>
               <a>{post.frontmatter.title}</a>
             </Link>
           </h2>
+          <p className="mb-5 text-xs text-pencil dark:text-moonlight">
+            {post.frontmatter.createdBy} {post.frontmatter.createdAt}
+          </p>
           {post.frontmatter.subtitle && (
             <p className="mb-5 text-sm text-pencil dark:text-moonlight">
               {post.frontmatter.subtitle}
@@ -56,8 +60,7 @@ const PostsSearched = ({ postInfos, textSearched }) => {
           </p>
         </article>
       </div>
-    ))
-    .reverse();
+    ));
 };
 
 export default PostsSearched;
