@@ -23,6 +23,9 @@ const Posts = ({ useIsDark, postInfos }) => {
 
 export const getStaticProps = async () => {
   const postInfos = getPostInfos();
+  const compareFn = (a, b) =>
+    Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt);
+  postInfos.sort(compareFn);
   return {
     props: { postInfos },
   };

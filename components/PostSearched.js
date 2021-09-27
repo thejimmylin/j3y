@@ -23,39 +23,38 @@ const PostsSearched = ({ postInfos, textSearched }) => {
       </>
     );
   }
-  return relatedPosts
-    .map((post, index) => (
-      <div
-        key={index}
-        className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm"
-      >
-        <article className="p-8">
-          {post.frontmatter.isDraft && (
-            <span className="text-pencil dark:text-moonlight text-xs">
-              This is a draft that may be updated at any time.
-            </span>
-          )}
-          <h2 className="text-2xl font-semibold mb-1">
-            <Link href={`/posts/${post.slug}`}>
-              <a>{post.frontmatter.title}</a>
-            </Link>
-          </h2>
-          <p className="mb-5 text-xs text-pencil dark:text-moonlight">
-            {post.frontmatter.createdBy} {post.frontmatter.createdAt}
+  return relatedPosts.map((post, index) => (
+    <div
+      key={index}
+      className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm"
+    >
+      <article className="p-8">
+        {post.frontmatter.isDraft && (
+          <span className="text-pencil dark:text-moonlight text-xs">
+            This is a draft that may be updated at any time.
+          </span>
+        )}
+        <h2 className="text-2xl font-semibold mb-1">
+          <Link href={`/posts/${post.slug}`}>
+            <a>{post.frontmatter.title}</a>
+          </Link>
+        </h2>
+        <p className="mb-5 text-xs text-pencil dark:text-moonlight">
+          {post.frontmatter.createdAt}
+        </p>
+        {post.frontmatter.subtitle && (
+          <p className="mb-5 text-sm text-pencil dark:text-moonlight">
+            {post.frontmatter.subtitle}
           </p>
-          {post.frontmatter.subtitle && (
-            <p className="mb-5 text-sm text-pencil dark:text-moonlight">
-              {post.frontmatter.subtitle}
-            </p>
-          )}
-          <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
-            <Link href={`/posts/${post.slug}`}>
-              <a>Read more</a>
-            </Link>
-          </p>
-        </article>
-      </div>
-    ));
+        )}
+        <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
+          <Link href={`/posts/${post.slug}`}>
+            <a>Read more</a>
+          </Link>
+        </p>
+      </article>
+    </div>
+  ));
 };
 
 export default PostsSearched;
