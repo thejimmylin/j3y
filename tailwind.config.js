@@ -1,20 +1,15 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   mode: "jit",
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
     fontFamily: {
       sans: ["poppins", "sans-serif"],
       mono: ["Fira Code", "monospace"],
-    },
-    screens: {
-      xs: "475px",
-      ...defaultTheme.screens,
     },
     extend: {
       inset: {
@@ -148,6 +143,18 @@ module.exports = {
             hr: {
               borderColor: theme("colors.moonlight"),
             },
+            th: {
+              verticalAlign: "top",
+            },
+            "thead, tbody, tr": {
+              borderWidth: "0 !important",
+            },
+            "th, td": {
+              color: theme("colors.ink"),
+              borderWidth: "1px",
+              borderColor: theme("colors.moonlight"),
+              padding: ".5rem 1rem !important",
+            },
           },
         },
         dark: {
@@ -183,6 +190,18 @@ module.exports = {
             },
             hr: {
               borderColor: theme("colors.pencil"),
+            },
+            th: {
+              verticalAlign: "top",
+            },
+            "thead, tbody, tr": {
+              borderWidth: "0 !important",
+            },
+            "th, td": {
+              color: theme("colors.light"),
+              borderWidth: "1px",
+              borderColor: theme("colors.pencil"),
+              padding: ".5rem 1rem !important",
             },
           },
         },
