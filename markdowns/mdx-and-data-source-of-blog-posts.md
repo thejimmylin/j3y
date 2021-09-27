@@ -12,12 +12,12 @@ Here are some data source I consider to use in my blog posts.
 
 ## TL;DR
 
-| Source         | Support content     | Content stored | Online update | Github stars |
-| -------------- | ------------------- | -------------- | ------------- | ------------ |
-| MDX            | Anything            | As Markdown    | No            | 11.5k        |
-| mdx-bundler    | Almost anything     | As Markdown    | Yes           | 0.7k         |
-| react-markdown | Plain markdown only | As Markdown    | Yes           | 7.7k         |
-| Quill          | Many but limited    | HTML-like text | Yes           | 30.9k        |
+| Type           | Support content     | Stored as | Online update | Github stars |
+| -------------- | ------------------- | --------- | ------------- | ------------ |
+| MDX            | Anything            | Markdown  | No            | 11.5k        |
+| mdx-bundler    | Almost anything     | Markdown  | Yes           | 0.7k         |
+| react-markdown | Plain markdown only | Markdown  | Yes           | 7.7k         |
+| Quill          | Many but limited    | HTML      | Yes           | 30.9k        |
 
 ## What is MDX?
 

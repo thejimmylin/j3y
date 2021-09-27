@@ -9,10 +9,20 @@ const useMDXComponents = ({ code, isDark }) => {
   if (isDark) {
     components = {
       pre: CodeBlockDark,
+      table: ({ children }) => (
+        <div className="overflow-x-scroll">
+          <table>{children}</table>
+        </div>
+      ),
     };
   } else {
     components = {
       pre: CodeBlockLight,
+      table: ({ children }) => (
+        <div className="overflow-x-scroll">
+          <table>{children}</table>
+        </div>
+      ),
     };
   }
   return () => <MDXComponent components={components} />;
