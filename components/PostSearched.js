@@ -29,9 +29,9 @@ const PostsSearched = ({ postInfos, textSearched }) => {
         Date.parse(b.frontmatter.createdAt) -
         Date.parse(a.frontmatter.createdAt)
     )
-    .map((post) => (
+    .map((post, index) => (
       <div
-        key={post.slug}
+        key={index}
         className="bg-paper-light dark:bg-night-light transition-bg my-8 rounded-md shadow-sm"
       >
         <article className="p-8">
