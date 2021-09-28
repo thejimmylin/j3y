@@ -7,15 +7,15 @@ import DarkModeToggler from "./DarkModeToggler";
 import ObservedDiv from "./ObservedDiv";
 
 const Header = ({ useIsDark, headerRef }) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(true);
   const { asPath } = useRouter();
   const headerClassName = classNames(
-    "font-sans text-ink dark:text-light dark:bg-night transition-bg sticky top-0 z-10",
+    "font-sans text-ink dark:text-light dark:bg-night transition-header duration-header sticky top-0 z-10",
     {
       "bg-paper dark:bg-night": isIntersecting,
     },
     {
-      "bg-paper-light dark:bg-night-light": !isIntersecting,
+      "bg-paper-light dark:bg-night-light shadow py-1.5": !isIntersecting,
     }
   );
   const homeClassName = classNames(

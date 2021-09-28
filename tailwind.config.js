@@ -41,9 +41,11 @@ module.exports = {
       transitionProperty: {
         filter: "filter",
         bg: "background-color",
+        header: "background-color, padding, box-shadow"
       },
       transitionDuration: {
         2000: "2000ms",
+        header: "150ms, 500ms, 500ms"
       },
       keyframes: {
         fadein: {
