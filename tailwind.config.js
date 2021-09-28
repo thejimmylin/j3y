@@ -140,7 +140,7 @@ module.exports = {
             },
             blockquote: {
               p: {
-                margin: "1rem"
+                margin: "1rem",
               },
               color: theme("colors.ink"),
               borderWidth: "0 0 0 3px",
@@ -150,11 +150,22 @@ module.exports = {
             hr: {
               borderColor: theme("colors.moonlight"),
             },
-            th: {
-              verticalAlign: "top",
-            },
-            "thead, tbody, tr": {
-              borderWidth: "0 !important",
+            table: {
+              thead: {
+                borderWidth: "0",
+                tr: {
+                  borderWidth: "0",
+                  th: {
+                    verticalAlign: "top",
+                  },
+                },
+              },
+              tbody: {
+                borderWidth: "0",
+                tr: {
+                  borderWidth: "0",
+                },
+              },
             },
             "th, td": {
               color: theme("colors.ink"),
@@ -193,7 +204,7 @@ module.exports = {
             },
             blockquote: {
               p: {
-                margin: "1rem"
+                margin: "1rem",
               },
               color: theme("colors.light"),
               borderWidth: "0 0 0 3px",
@@ -203,11 +214,22 @@ module.exports = {
             hr: {
               borderColor: theme("colors.pencil"),
             },
-            th: {
-              verticalAlign: "top",
-            },
-            "thead, tbody, tr": {
-              borderWidth: "0 !important",
+            table: {
+              thead: {
+                borderWidth: "0",
+                tr: {
+                  borderWidth: "0",
+                  th: {
+                    verticalAlign: "top",
+                  },
+                },
+              },
+              tbody: {
+                borderWidth: "0",
+                tr: {
+                  borderWidth: "0",
+                },
+              },
             },
             "th, td": {
               color: theme("colors.light"),
