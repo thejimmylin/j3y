@@ -23,7 +23,7 @@ const Li = ({ children }) => <li className="mb-5">{children}</li>;
 
 const Blockquote = ({ children }) => {
   return (
-    <blockquote className="border-l-2 border-gray-200 dark:border-gray-800 pt-6 px-6 pb-1 mb-5 italic">
+    <blockquote className="text-sm border-l-2 border-gray-200 dark:border-gray-800 pt-6 px-6 pb-1 mb-5 italic">
       {children}
     </blockquote>
   );
