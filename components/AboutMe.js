@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import A from "./A";
+import { P, H1, H2, H3, A } from "./article-components";
 import avatar from "../public/avatar-1440x1440.jpg";
 import ntu from "../public/ntu-360x360.png";
 import chief from "../public/chief-500x300.png";
@@ -12,7 +12,7 @@ import fortiadminExample from "../public/fortiadmin-example-1920x1080.png";
 const AboutMe = () => {
   return (
     <>
-      <h1>About me</h1>
+      <H1>About me</H1>
       <div className="mb-8">
         <Image
           src={avatar}
@@ -21,13 +21,13 @@ const AboutMe = () => {
           priority={true}
         />
       </div>
-      <h1>Hello world</h1>
-      <p>
+      <H1>Hello world</H1>
+      <P>
         I'm Jimmy. I love programming. I like to create things and programming
         gives me the chance to do so.
-      </p>
-      <p>I have five years of programming experience, mostly in Python.</p>
-      <h1>Education</h1>
+      </P>
+      <P>I have five years of programming experience, mostly in Python.</P>
+      <H1>Education</H1>
       <div className="my-5 flex gap-8 justify-between items-center">
         <div>
           <div>
@@ -62,15 +62,15 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <p>
+      <P>
         I work for their cloud service department. I maintain and develop
         products and services about{" "}
         <A href="https://www.chief.com.tw/cloud/">Chief Cloud.</A>
-      </p>
-      <h1>Skills</h1>
-      <p>Here are my skills and the techniques I use:</p>
-      <h2>Python</h2>
-      <p>
+      </P>
+      <H1>Skills</H1>
+      <P>Here are my skills and the techniques I use:</P>
+      <H2>Python</H2>
+      <P>
         <A href="https://www.python.org/">Python</A> is my primary programming
         language. I am familiar with Python's language features and many of its
         standard libraries such as{" "}
@@ -84,32 +84,32 @@ const AboutMe = () => {
          and many other code style conventions. I follow the{" "}
         <A href="https://en.wikipedia.org/wiki/KISS_principle">KISS</A>. I keep
         my code clean, modular and reusable.
-      </p>
-      <h2>Django</h2>
-      <p>
+      </P>
+      <H2>Django</H2>
+      <P>
         <A href="https://www.djangoproject.com/">Django</A> is a Python's web
         framework I've spent most of my time with. I've been doing web
         development with Django for over 5 years. I can build modern,
         well-tested web application with it.
-      </p>
-      <h2>Django REST Framwork</h2>
-      <p>
+      </P>
+      <H2>Django REST Framwork</H2>
+      <P>
         Django is pretty good, but when you combine it with 
         <A href="https://www.django-rest-framework.org/">
           Django REST Framework
         </A>
         , it gets even better. Modern web applications often require REST APIs,
         and this is where the Django REST Framework comes in.
-      </p>
-      <h2>SQL</h2>
-      <p>
+      </P>
+      <H2>SQL</H2>
+      <P>
         Django has a great model/ORM system, which makes it possible to creating
         a web application without writing SQL. But sometimes SQL knowledge is
         important, too. It is true especially when it comes to a extremely
         complicated queriy or some performance issue.
-      </p>
-      <h2>React.js / Next.js</h2>
-      <p>
+      </P>
+      <H2>React.js / Next.js</H2>
+      <P>
         Now, when it comes to frontend things, 
         <A href="https://reactjs.org/">React.js</A> is my favorite. Its
         philosophy is so graceful, making you enjoy coding and building things
@@ -120,51 +120,51 @@ const AboutMe = () => {
           SSG/SSR
         </A>
          things, which is pretty annoying to implement on our own.
-      </p>
-      <h2>Vue.js</h2>
-      <p>
+      </P>
+      <H2>Vue.js</H2>
+      <P>
         In addition to React.js, I also use 
         <A href="https://vuejs.org/">Vue.js</A>. I personally like React.js
         more, but they are both very powerful andd reliable frameworks.
-      </p>
-      <h2>Tailwind CSS</h2>
-      <p>
+      </P>
+      <H2>Tailwind CSS</H2>
+      <P>
         <A href="https://tailwindcss.com/">Tailwind CSS</A> is another tool that
         I love and use a lot. It is similar to 
         <A href="https://getbootstrap.com/">Bootstrap</A>, but it is much more
         flexible and easy to customize, which prevents you from building a lot
         of similar web.
-      </p>
-      <h2>HTML / CSS / JavaScript</h2>
-      <p>
+      </P>
+      <H2>HTML / CSS / JavaScript</H2>
+      <P>
         In addition to developing with frontend frameworks, I also know about
         HTML/CSS/JavaScript. I think, after all, frameworks are based on these
         three elements, so it is important to have a solid understanding of
         them.
-      </p>
-      <h2>GitHub Actions</h2>
-      <p>
+      </P>
+      <H2>GitHub Actions</H2>
+      <P>
         I use <A href="https://docs.github.com/en/actions">Github actions</A> to
         handle CI/CD things. I believe that deployment is just as important as
         development. If a feature can't be delivered to the users, the resources
         spent on development will be wasted.
-      </p>
-      <h2>Docker</h2>
-      <p>
+      </P>
+      <H2>Docker</H2>
+      <P>
         I mostly run my services in <A href="https://www.docker.com/">Docker</A>
         , which frees me from a lot of environment and compatibility concerns.
         Docker greatly increases the portability and flexibility of the
         services.
-      </p>
-      <h2>GCP</h2>
-      <p>
+      </P>
+      <H2>GCP</H2>
+      <P>
         <A href="https://cloud.google.com/gcp">GCP</A> is where most of my
         services are hosted. This website is such a example. I usually use their
         compute engines with Docker.
-      </p>
-      <h1>Portfolios</h1>
-      <p>Here are some screenshots of them:</p>
-      <h2>CTDB</h2>
+      </P>
+      <H1>Portfolios</H1>
+      <P>Here are some screenshots of them:</P>
+      <H2>CTDB</H2>
       <div className="mb-8">
         <Image
           src={ctdbI18n}
@@ -181,7 +181,7 @@ const AboutMe = () => {
           priority={true}
         />
       </div>
-      <p>
+      <P>
         CTDB is mainly built with 
         <A href="https://www.djangoproject.com/">Django</A>, 
         <A href="https://www.django-rest-framework.org/">
@@ -191,18 +191,18 @@ const AboutMe = () => {
         applications, such as Diary, Reminder, Telecom, News, Archive, etc. It
         also has its own log system. It is mainly used by engineers in the
         technical department of the company.
-      </p>
-      <h3>Features:</h3>
-      <p>i18n / Log system</p>
-      <h3>Tech stack:</h3>
-      <p>
+      </P>
+      <H3>Features:</H3>
+      <P>i18n / Log system</P>
+      <H3>Tech stack:</H3>
+      <P>
         <A href="https://www.djangoproject.com/">Django</A> /{" "}
         <A href="https://www.django-rest-framework.org/">
           Django REST Framework
         </A>{" "}
         / <A href="https://vuejs.org/">Vue.js</A>
-      </p>
-      <h2>FortiAdmin</h2>
+      </P>
+      <H2>FortiAdmin</H2>
       <div className="mb-8">
         <Image
           src={fortiadminExample}
@@ -219,7 +219,7 @@ const AboutMe = () => {
           priority={true}
         />
       </div>
-      <p>
+      <P>
         FortiAdmin is mainly built with 
         <A href="https://www.djangoproject.com/">Django</A>
         , <A href="https://docs.python.org/3/library/shlex.html">shlex</A>
@@ -227,22 +227,22 @@ const AboutMe = () => {
         multi-tenant portal for Fortigate/Fortios. With FortiAdmin, It is
         possible to set their own config without interfere with each other for
         different users.
-      </p>
-      <h3>Features</h3>
-      <p>
+      </P>
+      <H3>Features</H3>
+      <P>
         Multi-tenant / <A href="https://www.fortinet.com/">Forti</A> REST API
-      </p>
-      <h3>Tech stack:</h3>
-      <p>
+      </P>
+      <H3>Tech stack:</H3>
+      <P>
         <A href="https://www.djangoproject.com/">Django</A> /{" "}
         <A href="https://docs.python.org/3/library/shlex.html">shlex</A> /{" "}
         <A href="https://www.fortinet.com/">Forti</A>
-      </p>
-      <h1>Thank you</h1>
-      <p>
+      </P>
+      <H1>Thank you</H1>
+      <P>
         thank you for giving a chance to introduce myself. I really appreciate
         that. Feel free to contact me if you want.
-      </p>
+      </P>
     </>
   );
 };
