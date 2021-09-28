@@ -1,5 +1,5 @@
-import CodeBlockDark from "./CodeBlockDark";
-import CodeBlockLight from "./CodeBlockLight";
+import PreDark from "./PreDark";
+import PreLight from "./PreLight";
 
 const P = ({ children }) => <p className="mb-5">{children}</p>;
 
@@ -70,7 +70,7 @@ const Code = ({ children }) => (
   </code>
 );
 
-const componentsBase = {
+const getArticleComponents = ({ isDark }) => ({
   p: P,
   h1: H1,
   h2: H2,
@@ -87,17 +87,8 @@ const componentsBase = {
   td: Td,
   a: A,
   code: Code,
-};
-
-const componentsDark = {
-  ...componentsBase,
-  pre: CodeBlockDark,
-};
-
-const componentsLight = {
-  ...componentsBase,
-  pre: CodeBlockLight,
-};
+  pre: isDark ? PreDark : PreLight,
+});
 
 export {
   P,
@@ -116,6 +107,7 @@ export {
   Td,
   A,
   Code,
-  componentsDark,
-  componentsLight,
+  PreDark,
+  PreLight,
+  getArticleComponents,
 };

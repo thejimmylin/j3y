@@ -82,7 +82,7 @@ var theme = {
   ],
 };
 
-const CodeBlockLight = ({ children }) => {
+const PreLight = ({ children }) => {
   const code = children.props.children.trim();
   const className = children.props.className || "";
   const matches = className.match(/language-(?<lang>.*)/);
@@ -114,4 +114,4 @@ const CodeBlockLight = ({ children }) => {
   );
 };
 
-export default CodeBlockLight;
+export default PreLight;

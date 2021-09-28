@@ -105,7 +105,7 @@ const theme = {
   ],
 };
 
-const CodeBlockDark = ({ children }) => {
+const PreDark = ({ children }) => {
   const code = children.props.children.trim();
   const className = children.props.className || "";
   const matches = className.match(/language-(?<lang>.*)/);
@@ -137,4 +137,4 @@ const CodeBlockDark = ({ children }) => {
   );
 };
 
-export default CodeBlockDark;
+export default PreDark;
