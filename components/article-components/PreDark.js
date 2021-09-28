@@ -121,8 +121,8 @@ const PreDark = ({ children }) => {
         language={language}
         theme={theme}
       >
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className="p-5 text-sm" style={style}>
+        {({ style, tokens, getLineProps, getTokenProps }) => (
+          <pre className="p-5 text-sm overflow-x-scroll" style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
