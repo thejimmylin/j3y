@@ -21,14 +21,16 @@ const Ul = ({ children }) => <ul className="list-disc">{children}</ul>;
 
 const Li = ({ children }) => <li className="mb-5">{children}</li>;
 
-const Blockquote = ({ children }) => (
-  <blockquote className="border-l-2 border-gray-200 dark:border-gray-800 pt-6 pb-1 pr-6 pl-6 mb-5 italic">
-    {children}
-  </blockquote>
-);
+const Blockquote = ({ children }) => {
+  return (
+    <blockquote className="border-l-2 border-gray-200 dark:border-gray-800 pt-6 px-6 pb-1 mb-5 italic">
+      {children}
+    </blockquote>
+  );
+};
 
 const Table = ({ children }) => (
-  <div className="overflow-x-scroll mb-8 whitespace-nowrap">
+  <div className="overflow-x-scroll mb-8 whitespace-nowrap text-sm">
     <table>{children}</table>
   </div>
 );
