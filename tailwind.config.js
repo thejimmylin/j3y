@@ -41,9 +41,11 @@ module.exports = {
       transitionProperty: {
         filter: "filter",
         bg: "background-color",
+        header: "background-color, padding, box-shadow",
       },
       transitionDuration: {
         2000: "2000ms",
+        header: "150ms, 500ms, 500ms",
       },
       keyframes: {
         fadein: {
@@ -137,8 +139,13 @@ module.exports = {
               boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
             },
             blockquote: {
+              p: {
+                margin: "1rem"
+              },
               color: theme("colors.ink"),
-              borderColor: theme("colors.ink"),
+              borderWidth: "0 0 0 3px",
+              borderColor: theme("colors.gray.200"),
+              padding: "1px",
             },
             hr: {
               borderColor: theme("colors.moonlight"),
@@ -152,7 +159,7 @@ module.exports = {
             "th, td": {
               color: theme("colors.ink"),
               borderWidth: "1px",
-              borderColor: theme("colors.moonlight"),
+              borderColor: theme("colors.gray.200"),
               padding: ".5rem 1rem !important",
             },
           },
@@ -185,8 +192,13 @@ module.exports = {
               color: theme("colors.pink.500"),
             },
             blockquote: {
+              p: {
+                margin: "1rem"
+              },
               color: theme("colors.light"),
-              borderColor: theme("colors.light"),
+              borderWidth: "0 0 0 3px",
+              borderColor: theme("colors.gray.800"),
+              padding: "1px",
             },
             hr: {
               borderColor: theme("colors.pencil"),
@@ -200,7 +212,7 @@ module.exports = {
             "th, td": {
               color: theme("colors.light"),
               borderWidth: "1px",
-              borderColor: theme("colors.pencil"),
+              borderColor: theme("colors.gray.800"),
               padding: ".5rem 1rem !important",
             },
           },
