@@ -1,30 +1,10 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
-import CodeBlockDark from "../components/mdx-components/CodeBlockDark";
-import CodeBlockLight from "../components/mdx-components/CodeBlockLight";
+import { componentsDark, componentsLight } from "../components/mdx-components";
 
 const useMDXComponents = ({ code, isDark }) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
-  let components;
-  if (isDark) {
-    components = {
-      pre: CodeBlockDark,
-      table: ({ children }) => (
-        <div className="overflow-x-scroll">
-          <table>{children}</table>
-        </div>
-      ),
-    };
-  } else {
-    components = {
-      pre: CodeBlockLight,
-      table: ({ children }) => (
-        <div className="overflow-x-scroll">
-          <table>{children}</table>
-        </div>
-      ),
-    };
-  }
+  const components = isDark ? componentsDark : componentsLight;
   return () => <MDXComponent components={components} />;
 };
 

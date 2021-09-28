@@ -27,7 +27,7 @@ According to [https://mdxjs.com/](https://mdxjs.com/):
 
 That is to say, with MDX, you can write something like this:
 
-```markdown
+```jsx
 # Hello, **world**!
 
 Below is an example of JSX embedded in Markdown.

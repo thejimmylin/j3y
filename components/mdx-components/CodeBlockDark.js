@@ -18,7 +18,7 @@ const CodeBlockDark = ({ children }) => {
         theme={themeDark}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style}>
+          <pre className="p-5 text-sm" style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
