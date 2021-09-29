@@ -1,10 +1,13 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config.js";
 
+const tailwindTheme = resolveConfig(tailwindConfig).theme;
 const theme = {
   plain: {
     color: "#9CDCFE",
     // Changed
-    backgroundColor: "#121C26",
+    backgroundColor: tailwindTheme.colors.night.light,
   },
   styles: [
     {
@@ -122,7 +125,7 @@ const PreDark = ({ children }) => {
         theme={theme}
       >
         {({ style, tokens, getLineProps, getTokenProps }) => (
-          <pre className="p-5 text-sm overflow-x-scroll" style={style}>
+          <pre className="p-5 text-sm overflow-x-scroll rounded-lg shadow-sm" style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
