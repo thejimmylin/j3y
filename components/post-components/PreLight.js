@@ -91,7 +91,7 @@ const PreLight = ({ children }) => {
   const matches = className.match(/language-(?<lang>.*)/);
   const language = matches?.groups?.lang || "";
   return (
-    <div className="relative">
+    <div className="relative mb-5">
       <span className="text-xs italic bg-paper-light rounded-sm pl-2.5 pr-3.5 pt-0.5 absolute top-0 left-0 transform -translate-y-1/2 text-moonlight select-none">
         {language ? language.toUpperCase() : "Code"}
       </span>
