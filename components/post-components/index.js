@@ -24,8 +24,8 @@ const Li = ({ children }) => <li className="mb-5">{children}</li>;
 const Blockquote = ({ children }) => {
   return (
     <div className="relative">
-      <blockquote className="text-sm italic bg-paper-light dark:bg-night-light shadow-sm rounded-lg pt-6 px-6 pb-1 mb-5">
-        <span className="text-3xl text-pencil dark:text-moonlight select-none  absolute top-0 left-0 transform -translate-y-1/4">
+      <blockquote className="text-sm italic bg-paper-light dark:bg-night-light shadow-sm rounded-sm pt-6 px-5 pb-1 mb-5">
+        <span className="text-3xl text-pencil dark:text-moonlight select-none absolute top-0 left-0 transform -translate-y-1/4">
           “
         </span>
         {children}
@@ -49,13 +49,13 @@ const Tbody = ({ children }) => <tbody>{children}</tbody>;
 const Tr = ({ children }) => <tr>{children}</tr>;
 
 const Th = ({ children }) => (
-  <th className="py-2 px-4 align-top text-left border border-gray-100 dark:border-gray-900">
+  <th className="py-2.5 px-5 align-top text-left border border-gray-100 dark:border-gray-900">
     {children}
   </th>
 );
 
 const Td = ({ children }) => (
-  <td className="py-2 px-4 border border-gray-100 dark:border-gray-900">
+  <td className="py-2.5 px-5 border border-gray-100 dark:border-gray-900">
     {children}
   </td>
 );
