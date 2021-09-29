@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/static/favicon.ico" />
         <title>Jimmy Lin</title>
         <meta name="title" content="I'm Jimmy Lin." />
         <meta name="description" content="Welcome to my blog." />
@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }) => {
         />
         <meta
           property="og:image"
-          content="https://jimmylin.org/avatar-1440x1440.jpg"
+          content="https://jimmylin.org/static/avatar-1440x1440.jpg"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

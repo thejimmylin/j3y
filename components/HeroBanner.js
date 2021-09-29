@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
 import LightFilter from "./LightFilter";
-import wall from "../public/wall-1440x810.jpg";
+import wall from "../public/static/wall-1440x810.jpg";
 
 const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
   const [loaded, setLoaded] = useState(false);

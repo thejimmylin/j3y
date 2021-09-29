@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import { P, H1, H2, H3, A } from "./article-components";
-import avatar from "../public/avatar-1440x1440.jpg";
-import ntu from "../public/ntu-360x360.png";
-import chief from "../public/chief-500x300.png";
-import ctdbI18n from "../public/ctdb-i18n-1920x1080.png";
-import ctdbLog from "../public/ctdb-log-1920x1080.png";
-import fortiadminLogin from "../public/fortiadmin-login-1920x1080.png";
-import fortiadminExample from "../public/fortiadmin-example-1920x1080.png";
+import { P, H1, H2, H3, A } from "./post-components";
+import avatar from "../public/static/avatar-1440x1440.jpg";
+import ntu from "../public/static/ntu-360x360.png";
+import chief from "../public/static/chief-500x300.png";
+import ctdbI18n from "../public/static/ctdb-i18n-1920x1080.png";
+import ctdbLog from "../public/static/ctdb-log-1920x1080.png";
+import fortiadminLogin from "../public/static/fortiadmin-login-1920x1080.png";
+import fortiadminExample from "../public/static/fortiadmin-example-1920x1080.png";
 
 const AboutMe = () => {
   return (

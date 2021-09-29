@@ -23,15 +23,22 @@ const Li = ({ children }) => <li className="mb-5">{children}</li>;
 
 const Blockquote = ({ children }) => {
   return (
-    <blockquote className="text-sm border-l-2 border-gray-200 dark:border-gray-800 pt-6 px-6 pb-1 mb-5 italic">
-      {children}
-    </blockquote>
+    <div className="relative">
+      <blockquote className="text-sm italic bg-paper-light dark:bg-night-light shadow-sm rounded-lg pt-6 px-6 pb-1 mb-5">
+        <span className="text-3xl text-pencil dark:text-moonlight select-none  absolute top-0 left-0 transform -translate-y-1/4">
+          “
+        </span>
+        {children}
+      </blockquote>
+    </div>
   );
 };
 
 const Table = ({ children }) => (
-  <div className="overflow-x-scroll mb-8 whitespace-nowrap text-sm">
-    <table>{children}</table>
+  <div className="overflow-x-scroll mb-8 shadow-sm">
+    <table className="text-sm bg-paper-light dark:bg-night-light min-w-full rounded-lg whitespace-nowrap">
+      {children}
+    </table>
   </div>
 );
 
@@ -42,13 +49,13 @@ const Tbody = ({ children }) => <tbody>{children}</tbody>;
 const Tr = ({ children }) => <tr>{children}</tr>;
 
 const Th = ({ children }) => (
-  <th className="py-2 px-4 align-top text-left border border-gray-200 dark:border-gray-800">
+  <th className="py-2 px-4 align-top text-left border border-gray-100 dark:border-gray-900">
     {children}
   </th>
 );
 
 const Td = ({ children }) => (
-  <td className="py-2 px-4 border border-gray-200 dark:border-gray-800">
+  <td className="py-2 px-4 border border-gray-100 dark:border-gray-900">
     {children}
   </td>
 );

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
-import { getArticleComponents } from "../components/article-components";
+import { getArticleComponents } from "../components/post-components";
 
 const useMDXComponents = ({ code, isDark }) => {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
