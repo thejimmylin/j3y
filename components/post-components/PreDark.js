@@ -115,8 +115,8 @@ const PreDark = ({ children }) => {
   const language = matches?.groups?.lang || "";
   return (
     <div className="relative">
-      <span className="text-xs absolute -top-2 right-2 text-pencil select-none">
-        {language ? language.toUpperCase() : ""}
+      <span className="text-xs italic bg-night-light rounded-sm pl-2.5 pr-3.5 pt-0.5 absolute top-0 left-0 transform -translate-y-1/2 text-pencil select-none">
+        {language ? language.toUpperCase() : "Code"}
       </span>
       <Highlight
         {...defaultProps}
@@ -125,7 +125,10 @@ const PreDark = ({ children }) => {
         theme={theme}
       >
         {({ style, tokens, getLineProps, getTokenProps }) => (
-          <pre className="p-5 text-sm overflow-x-scroll rounded-lg shadow-sm" style={style}>
+          <pre
+            className="p-5 text-sm overflow-x-scroll rounded-sm shadow-sm"
+            style={style}
+          >
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
