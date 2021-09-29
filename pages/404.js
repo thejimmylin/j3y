@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
-import sorry from "../public/sorry-1920x1440.jpg";
+import sorry from "../public/static/sorry-1920x1440.jpg";
+import { H1, P, A } from "../components/post-components";
 
 const Custom404 = ({ useIsDark }) => {
   return (
@@ -12,19 +13,19 @@ const Custom404 = ({ useIsDark }) => {
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <PostLayout>
-          <h1>Sorry, no pages found.</h1>
+          <H1>Sorry, no pages found.</H1>
           <div className="mb-5">
             <Image className="rounded-sm" src={sorry} priority={true} />
           </div>
-          <p>
+          <P>
             Maybe you want to go back to the{" "}
-            <Link href="/">
-              <a className="underline text-pencil hover:text-ink dark:text-moonlight dark:hover:text-light">
-                homepage
-              </a>
-            </Link>
+            <span className="text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
+              <Link href="/">
+                <a>homepage</a>
+              </Link>
+            </span>
             ?
-          </p>
+          </P>
         </PostLayout>
       </MainLayout>
       <Footer />

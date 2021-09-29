@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
-import { getPostInfos, getPost } from "../../markdowns";
+import { getPostInfos, getPost } from "../../utils/posts";
 import useMDXComponents from "../../hooks/useMDXComponents"
 
 const Post = ({ useIsDark, post }) => {

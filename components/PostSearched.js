@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import sorry from "../public/sorry-1920x1440.jpg";
+import sorry from "../public/static/sorry-1920x1440.jpg";
 
 const PostsSearched = ({ postInfos, textSearched }) => {
   const relatedPosts = postInfos.filter((post) => {
