@@ -36,7 +36,7 @@ const Blockquote = ({ children }) => {
 
 const Table = ({ children }) => (
   <div className="overflow-x-scroll mb-8 shadow-sm">
-    <table className="text-sm bg-paper-light dark:bg-night-light min-w-full rounded-lg whitespace-nowrap">
+    <table className="text-sm bg-paper-light dark:bg-night-light min-w-full whitespace-nowrap">
       {children}
     </table>
   </div>

@@ -1,12 +1,12 @@
 ---
-title: MDX and the data source of blog posts
+title: The data source of blog posts
 createdBy: Jimmy Lin
 createdAt: 2021-09-26 21:17
 isDraft: true
 subtitle: Here are some data source I consider to use in my blog posts.
 ---
 
-# MDX and the data source of blog posts
+# The data source of blog posts
 
 Here are some data source I consider to use in my blog posts.
 
