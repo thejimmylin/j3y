@@ -79,7 +79,7 @@ const Code = ({ children }) => (
   </code>
 );
 
-const getArticleComponents = ({ isDark }) => ({
+const getPostComponents = ({ isDark }) => ({
   p: P,
   h1: H1,
   h2: H2,
@@ -118,5 +118,5 @@ export {
   Code,
   PreDark,
   PreLight,
-  getArticleComponents,
+  getPostComponents,
 };

@@ -22,7 +22,7 @@ To use it with VSCode, you need to:
 
    or, with [chocolatey](https://chocolatey.org/) if you are on Windows.
 
-   ```
+   ```cmd
    choco install firacode
    ```
 2. After installing it, you should probably reboot to get the font loaded.
