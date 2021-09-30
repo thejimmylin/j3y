@@ -2,13 +2,13 @@ import Header from "../../components/Header";
 import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
+import useMDXComponent from "../../hooks/useMDXComponent";
 import { getPostInfos, getPost } from "../../utils/posts";
-import useMDXComponents from "../../hooks/useMDXComponents"
 
 const Post = ({ useIsDark, post }) => {
   const code = post.code;
   const isDark = useIsDark[0];
-  const MDXComponent = useMDXComponents({ code, isDark });
+  const MDXComponent = useMDXComponent({ code, isDark });
   return (
     <>
       <Header useIsDark={useIsDark} />
