@@ -2,6 +2,7 @@
 title: How to create a docker image?
 createdBy: Jimmy Lin
 createdAt: 2021-08-01 13:44
+hasCover: true
 ---
 
 # How to create a docker image?

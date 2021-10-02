@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import sorry from "../public/static/sorry-1920x1440.jpg";
 
-const PostsSearched = ({ postInfos, textSearched }) => {
+const PostsDetailed = ({ postInfos, textSearched }) => {
   const relatedPosts = postInfos.filter((post) => {
     const title = post?.frontmatter?.title || "";
     return title.toLowerCase().includes(textSearched.toLowerCase());
@@ -23,6 +23,9 @@ const PostsSearched = ({ postInfos, textSearched }) => {
       </>
     );
   }
+  const cover = import(
+    "../public/static/post-cover/how-to-create-a-docker-image.jpg"
+  );
   return relatedPosts.map((post, index) => (
     <div
       key={index}
@@ -42,6 +45,15 @@ const PostsSearched = ({ postInfos, textSearched }) => {
         <p className="mb-5 text-xs text-pencil dark:text-moonlight">
           {post.frontmatter.createdAt}
         </p>
+        {post.frontmatter.hasCover && (
+          <div className="relative mb-5 pb-9/16">
+            <Image
+              src={`/static/post-cover/${post.slug}.jpg`}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        )}
         {post.frontmatter.subtitle && (
           <p className="mb-5 text-sm text-pencil dark:text-moonlight">
             {post.frontmatter.subtitle}
@@ -57,4 +69,4 @@ const PostsSearched = ({ postInfos, textSearched }) => {
   ));
 };
 
-export default PostsSearched;
+export default PostsDetailed;

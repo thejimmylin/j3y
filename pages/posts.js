@@ -3,18 +3,19 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import SearchBar from "../components/SearchBar";
-import PostsSearched from "../components/PostSearched";
+import PostsDetailed from "../components/PostsDetailed";
 import { getPostInfos } from "../utils/posts";
 
 const Posts = ({ useIsDark, postInfos }) => {
   const useTextSearch = useState("");
-  const [textSearched, _] = useTextSearch;
+  const [textSearched, _setTextSearched] = useTextSearch;
+  const [isDark, _setIsDark] = useIsDark;
   return (
     <>
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <SearchBar useTextSearch={useTextSearch} />
-        <PostsSearched postInfos={postInfos} textSearched={textSearched} />
+        <PostsDetailed isDark={isDark} postInfos={postInfos} textSearched={textSearched} />
       </MainLayout>
       <Footer />
     </>
