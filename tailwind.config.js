@@ -12,6 +12,9 @@ module.exports = {
       mono: ["Fira Code", "monospace"],
     },
     extend: {
+      spacing: {
+        "9/16": "56.25%"
+      },
       inset: {
         "1/5": "20%",
         "2/5": "40%",
