@@ -1,56 +1,33 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { bundleMDX } from "mdx-bundler";
-import remarkGfm from "remark-gfm";
 
 const BASE_DIR = path.join(process.cwd(), "posts");
 const POST_EXTNAME = ".md";
 
-const getFile = (fileName) => {
-  const fullPath = path.join(BASE_DIR, fileName);
-  const file = fs.readFileSync(fullPath);
-  return file;
-};
-
-const isPostFile = (fileName) => {
-  const extname = path.extname(fileName);
-  return extname === POST_EXTNAME;
-};
-
-const getBasename = (fileName) => {
-  return path.basename(fileName, path.extname(fileName));
-};
-
-const getFrontmatter = (fileName) => {
-  return matter(getFile(fileName)).data;
-};
-
 const getPostInfos = () => {
   const fileNames = fs.readdirSync(BASE_DIR);
-  const postFileNames = fileNames.filter((fileName) => isPostFile(fileName));
+  const postFileNames = fileNames.filter(
+    (fileName) => path.extname(fileName) === POST_EXTNAME
+  );
   const postInfos = postFileNames.map((fileName) => {
+    const slug = path.basename(fileName, path.extname(fileName));
+    const fullPath = path.join(BASE_DIR, fileName);
+    const file = fs.readFileSync(fullPath);
+    const frontmatter = matter(file).data;
     return {
-      slug: getBasename(fileName),
-      frontmatter: getFrontmatter(fileName),
+      slug,
+      frontmatter,
     };
   });
   return postInfos;
 };
 
-const getPost = async (slug) => {
-  const mdxSource = getFile(slug + POST_EXTNAME);
-  const { code, frontmatter } = await bundleMDX(mdxSource, {
-    cwd: BASE_DIR,
-    xdmOptions: (options) => {
-      options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkGfm];
-      return options;
-    },
-  });
-  return {
-    code,
-    frontmatter,
-  };
+const getPostContent = async (slug) => {
+  const fullPath = path.join(BASE_DIR, slug + POST_EXTNAME);
+  const file = fs.readFileSync(fullPath);
+  const postContent = matter(file).content;
+  return postContent;
 };
 
-export { getPostInfos, getPost };
+export { getPostInfos, getPostContent };

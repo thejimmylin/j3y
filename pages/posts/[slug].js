@@ -2,19 +2,24 @@ import Header from "../../components/Header";
 import MainLayout from "../../components/MainLayout";
 import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
-import useMDXComponent from "../../hooks/useMDXComponent";
-import { getPostInfos, getPost } from "../../utils/posts";
+import { getPostInfos, getPostContent } from "../../utils/posts";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { getPostComponents } from "../../components/post-components";
 
-const Post = ({ useIsDark, post }) => {
-  const code = post.code;
-  const isDark = useIsDark[0];
-  const MDXComponent = useMDXComponent({ code, isDark });
+const Post = ({ useIsDark, postContent }) => {
+  const [isDark, _setIsDark] = useIsDark;
+  const postComponents = getPostComponents({ isDark });
   return (
     <>
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <PostLayout>
-          <MDXComponent />
+          <ReactMarkdown
+            children={postContent}
+            remarkPlugins={[remarkGfm]}
+            components={postComponents}
+          />
         </PostLayout>
       </MainLayout>
       <Footer />
@@ -23,9 +28,9 @@ const Post = ({ useIsDark, post }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
+  const postContent = await getPostContent(params.slug);
   return {
-    props: { post },
+    props: { postContent },
   };
 };
 
