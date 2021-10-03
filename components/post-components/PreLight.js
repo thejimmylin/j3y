@@ -86,8 +86,8 @@ const theme = {
 };
 
 const PreLight = ({ children }) => {
-  const code = children.props.children.trim();
-  const className = children.props.className || "";
+  const code = children[0].props.children[0].trim();
+  const className = children[0].props.className || "";
   const matches = className.match(/language-(?<lang>.*)/);
   const language = matches?.groups?.lang || "";
   return (

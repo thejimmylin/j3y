@@ -7,15 +7,15 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
+    "@types/react": "^17.0.27",
     "bootstrap-icons": "^1.5.0",
     "classnames": "^2.3.1",
-    "esbuild": "^0.12.29",
     "gray-matter": "^4.0.3",
-    "mdx-bundler": "^6.0.1",
     "next": "^11.1.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-markdown": "^7.0.1",
     "remark-gfm": "^2.0.0"
   },
   "devDependencies": {
