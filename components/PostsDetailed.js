@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import sorry from "../public/static/sorry-1920x1440.jpg";
 
-const PostsDetailed = ({ postInfos, textSearched }) => {
-  const relatedPosts = postInfos.filter((post) => {
+const PostsDetailed = ({ postOutlines, textSearched }) => {
+  const relatedPosts = postOutlines.filter((post) => {
     const title = post?.frontmatter?.title || "";
     return title.toLowerCase().includes(textSearched.toLowerCase());
   });
@@ -23,9 +23,6 @@ const PostsDetailed = ({ postInfos, textSearched }) => {
       </>
     );
   }
-  const cover = import(
-    "../public/static/post-cover/how-to-create-a-docker-image.jpg"
-  );
   return relatedPosts.map((post, index) => (
     <div
       key={index}
