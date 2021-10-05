@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import classNames from "classnames";
@@ -8,7 +8,11 @@ import ObservedDiv from "./ObservedDiv";
 
 const Header = ({ useIsDark, headerRef }) => {
   const [isIntersecting, setIsIntersecting] = useState(true);
-  const { asPath } = useRouter();
+  const [asPath, setAsPath] = useState("")
+  const router = useRouter();
+  useEffect(() => {
+    setAsPath(router.asPath)
+  })
   const headerClassName = classNames(
     "font-sans text-ink dark:text-light dark:bg-night transition-header duration-header sticky top-0 z-10",
     {
