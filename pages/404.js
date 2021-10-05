@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
 import sorry from "../public/static/sorry-1920x1440.jpg";
-import { H1, P, A } from "../components/post-components";
+import { H1, P, A } from "../components/markdown-components";
 
 const Custom404 = ({ useIsDark }) => {
   return (
