@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { P, H1, H2, H3, A } from "./post-components";
+import { P, H1, H2, H3, A } from "./markdown-components";
 import avatar from "../public/static/avatar-1440x1440.jpg";
 import ntu from "../public/static/ntu-360x360.png";
 import chief from "../public/static/chief-500x300.png";

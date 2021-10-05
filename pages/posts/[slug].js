@@ -4,7 +4,7 @@ import PostLayout from "../../components/PostLayout";
 import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getPostComponents } from "../../components/post-components";
+import { getMarkdownComponents } from "../../components/markdown-components";
 import {
   getSinglePostContent,
   getAllPostOutlines,
@@ -12,7 +12,7 @@ import {
 
 const Post = ({ useIsDark, postContent }) => {
   const [isDark, _setIsDark] = useIsDark;
-  const postComponents = getPostComponents({ isDark });
+  const components = getMarkdownComponents({ isDark });
   return (
     <>
       <Header useIsDark={useIsDark} />
@@ -21,7 +21,7 @@ const Post = ({ useIsDark, postContent }) => {
           <ReactMarkdown
             children={postContent}
             remarkPlugins={[remarkGfm]}
-            components={postComponents}
+            components={components}
           />
         </PostLayout>
       </MainLayout>
