@@ -8,11 +8,11 @@ import ObservedDiv from "./ObservedDiv";
 
 const Header = ({ useIsDark, headerRef }) => {
   const [isIntersecting, setIsIntersecting] = useState(true);
-  const [asPath, setAsPath] = useState("")
+  const [asPath, setAsPath] = useState("");
   const router = useRouter();
   useEffect(() => {
-    setAsPath(router.asPath)
-  })
+    setAsPath(router.asPath);
+  });
   const headerClassName = classNames(
     "font-sans text-ink dark:text-light dark:bg-night transition-header duration-header sticky top-0 z-10",
     {
