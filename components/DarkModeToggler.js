@@ -1,11 +1,11 @@
-import useBodyClassName from "../hooks/useBodyClassName";
+import useBodyProps from "../hooks/useBodyProps";
 
 const DarkModeToggler = ({ useIsDark }) => {
   const [isDark, setIsDark] = useIsDark;
   const onClick = () => {
     setIsDark((prevIsDark) => !prevIsDark);
   };
-  useBodyClassName(() => (isDark ? "bg-night" : "bg-paper"));
+  useBodyProps(() => ({ className: isDark ? "bg-night" : "bg-paper" }));
   return (
     <div
       className="cursor-pointer select-none hover:scale-105"
