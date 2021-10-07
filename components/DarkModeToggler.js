@@ -1,4 +1,4 @@
-import useBodyProps from "../hooks/useBodyProps";
+import useBodyProps from "../hooks/use-body-props";
 
 const DarkModeToggler = ({ useIsDark }) => {
   const [isDark, setIsDark] = useIsDark;

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useWindowScrollY from "../hooks/useWindowScrollY";
+import useWindowScrollY from "../hooks/use-window-scroll-y";
 import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
