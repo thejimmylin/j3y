@@ -45,6 +45,7 @@ const AboutMe = () => {
           />
         </div>
       </div>
+      <H1>Experience</H1>
       <div className="my-5 flex gap-8 justify-between items-center">
         <div>
           <div>
