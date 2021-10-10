@@ -3,7 +3,8 @@ import Image from "next/image";
 import { P, H1, H2, H3, A } from "./markdown-components";
 import avatar from "../public/static/avatar-1440x1440.jpg";
 import ntu from "../public/static/ntu-360x360.png";
-import chief from "../public/static/chief-500x300.png";
+import chief from "../public/static/chief-450x200.png";
+import shopee from "../public/static/shopee-360x360.png";
 import ctdbI18n from "../public/static/ctdb-i18n-1920x1080.png";
 import ctdbLog from "../public/static/ctdb-log-1920x1080.png";
 import fortiadminLogin from "../public/static/fortiadmin-login-1920x1080.png";
@@ -26,16 +27,19 @@ const AboutMe = () => {
         I'm Jimmy. I love programming. I like to create things and programming
         gives me the chance to do so.
       </P>
-      <P>I have five years of programming experience, mostly in Python.</P>
+      <P>
+        I have five years of programming experience, mostly in{" "}
+        <A href="https://www.python.org/">Python</A> and web development.
+      </P>
       <H1>Education</H1>
-      <div className="my-5 flex gap-8 justify-between items-center">
+      <div className="mb-5 flex gap-8 justify-between items-center">
         <div>
           <div>
             <A href="https://www.ntu.edu.tw/">NTU</A>, Taipei. Mech Eng.
           </div>
           <div className="text-sm">Sep. 2011 - Jun. 2016</div>
         </div>
-        <div className="w-12 h-12 xs:w-24 xs:h-24 relative my-5">
+        <div className="w-24 h-24 xs:w-36 xs:h-36 relative mb-5">
           <Image
             src={ntu}
             alt="ntu"
@@ -46,14 +50,15 @@ const AboutMe = () => {
         </div>
       </div>
       <H1>Experience</H1>
-      <div className="my-5 flex gap-8 justify-between items-center">
+      <div className="mb-5 flex gap-8 justify-between items-center">
         <div>
           <div>
             <A href="https://www.chief.com.tw/">Chief Telecom</A>
           </div>
           <div className="text-sm">Jun. 2017 - Jun. 2021</div>
+          <P>Cloud service engineer.</P>
         </div>
-        <div className="w-12 h-12 xs:w-24 xs:h-24 relative my-5">
+        <div className="w-24 h-24 xs:w-36 xs:h-36 relative mb-5">
           <Image
             src={chief}
             alt="chief"
@@ -63,11 +68,24 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <P>
-        I work for their cloud service department. I maintain and develop
-        products and services about{" "}
-        <A href="https://www.chief.com.tw/cloud/">Chief Cloud.</A>
-      </P>
+      <div className="mb-5 flex gap-8 justify-between items-center">
+        <div>
+          <div>
+            <A href="https://shopee.tw/">Shopee Taiwan</A>
+          </div>
+          <div className="text-sm">Oct. 2021 -</div>
+          <P>Backend engineer.</P>
+        </div>
+        <div className="w-24 h-24 xs:w-36 xs:h-36 relative mb-5">
+          <Image
+            src={shopee}
+            alt="shopee"
+            layout="fill"
+            objectFit="contain"
+            priority={true}
+          />
+        </div>
+      </div>
       <H1>Skills</H1>
       <P>Here are my skills and the techniques I use:</P>
       <H2>Python</H2>
