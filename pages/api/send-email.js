@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 
 const NODEMAILER_AUTH_USER = process.env.NODEMAILER_AUTH_USER;
 const NODEMAILER_AUTH_PASS = process.env.NODEMAILER_AUTH_PASS;
+const FROM = "no-reply@jimmy.org"
 const TO = "b00502013@gmail.com";
 const SUBJECT = "Hello world";
 const TEXT = `This is testing E-mail sent by nodemailer at ${new Date()}.`;
@@ -18,6 +19,7 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = async () => {
   const mailOptions = {
+    from: FROM,
     to: TO,
     subject: SUBJECT,
     text: TEXT,
