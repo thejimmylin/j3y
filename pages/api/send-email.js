@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
     user: NODEMAILER_AUTH_USER,
     pass: NODEMAILER_AUTH_PASS,
   },
-  secure: true,
+  secureConnection: true,
 });
 
 const sendEmail = async () => {
