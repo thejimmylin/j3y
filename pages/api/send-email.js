@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
-const sendEmail = async () => {
+const handler = async (req, res) => {
   const mailOptions = {
     from: FROM,
     to: TO,
@@ -36,10 +36,7 @@ const sendEmail = async () => {
       }
     });
   });
-};
 
-const handler = async (req, res) => {
-  await sendEmail();
   return res.status(200).json({
     msg: `Sending a E-mail to ${TO} with nodemailer using user=${NODEMAILER_AUTH_USER}, pass=${NODEMAILER_AUTH_PASS}`,
   });
