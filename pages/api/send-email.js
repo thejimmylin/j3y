@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 const NODEMAILER_AUTH_USER = process.env.NODEMAILER_AUTH_USER;
 const NODEMAILER_AUTH_PASS = process.env.NODEMAILER_AUTH_PASS;
-const FROM = "no-reply@jimmy.org"
+const FROM = "no-reply@jimmy.org";
 const TO = "b00502013@gmail.com";
 const SUBJECT = "Hello world";
 const TEXT = `This is testing E-mail sent by nodemailer at ${new Date()}.`;
@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
     user: NODEMAILER_AUTH_USER,
     pass: NODEMAILER_AUTH_PASS,
   },
-  secureConnection: true,
+  secure: true,
 });
 
 const sendEmail = async () => {
@@ -24,7 +24,18 @@ const sendEmail = async () => {
     subject: SUBJECT,
     text: TEXT,
   };
-  transporter.sendMail(mailOptions);
+
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
+  });
 };
 
 const handler = async (req, res) => {
