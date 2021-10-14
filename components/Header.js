@@ -22,15 +22,6 @@ const Header = ({ useIsDark, headerRef }) => {
       "bg-paper-light dark:bg-night-light shadow py-1.5": !isIntersecting,
     }
   );
-  const homeClassName = classNames(
-    "animate-fadein-1000-1000 font-semibold text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
-    {
-      "text-blue-700 dark:text-yellow-300": asPath === "/",
-    },
-    {
-      "text-blue-600 dark:text-yellow-400": !(asPath === "/"),
-    }
-  );
   const postsClassName = classNames(
     "animate-fadein-1000-1000 font-semibold text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
     {
@@ -38,6 +29,15 @@ const Header = ({ useIsDark, headerRef }) => {
     },
     {
       "text-blue-600 dark:text-yellow-400": !asPath.startsWith("/posts"),
+    }
+  );
+  const contactClassName = classNames(
+    "animate-fadein-1000-1000 font-semibold text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
+    {
+      "text-blue-700 dark:text-yellow-300": asPath.startsWith("/contact"),
+    },
+    {
+      "text-blue-600 dark:text-yellow-400": !asPath.startsWith("/contact"),
     }
   );
 
@@ -50,14 +50,14 @@ const Header = ({ useIsDark, headerRef }) => {
             <li className="font-semibold text-lg xs:text-2xl hover:text-black dark:hover:text-white select-none">
               <Brand />
             </li>
-            <li className={homeClassName}>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
             <li className={postsClassName}>
               <Link href="/posts">
                 <a>Posts</a>
+              </Link>
+            </li>
+            <li className={postsClassName}>
+              <Link href="/contact">
+                <a>Contact</a>
               </Link>
             </li>
             <li className="flex items-center my-5 ml-auto">
