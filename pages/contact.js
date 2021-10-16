@@ -6,43 +6,56 @@ import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
 import { H1, P } from "../components/markdown-components";
 
-const HomePage = ({ useIsDark }) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const Contact = ({ useIsDark }) => {
+
   const [email, setEmail] = useState("");
-  const isEmailWanted = () => {
-    return isSubmitting && email === "";
-  };
-  const isEmailValid = () => {
-    return !isSubmitting || email && email.includes("@") && email.includes(".");
-  };
-  const emailClassName = classNames(
-    "placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4",
-    { "text-ink dark:text-light": isEmailValid() },
-    { "text-red-500 border border-red-500": !isEmailValid() }
-  );
-  const getEmailErrors = () => {
-    const errors = [];
-    if (isEmailWanted()) {
-      return ["Please provide an email."];
+  const getEmailError = () => {
+    if (!email) {
+      return "Please provide an email.";
     }
-    if (!isEmailValid) {
-      return "Please provide a valid email.";
+    if (!(email.includes("@") && email.includes("."))) {
+      return "Please provide an valid email";
     }
     return "";
   };
-  const emailOnChange = (e) => {
-    const value = e.target.value;
-    setIsSubmitting(false);
-    setEmail(value);
+  const getEmailClassName = () => {
+    const isValid = email && email.includes("@") && email.includes(".");
+    return classNames({
+      "placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4": true,
+      "text-ink dark:text-light": isValid,
+      "text-red-500 border border-red-500": !isValid,
+    });
   };
+  const emailOnChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   const [message, setMessage] = useState("");
+  const getMessageError = () => {
+    if (!message) {
+      return "Please provide a message.";
+    }
+    return "";
+  };
+  const getMessageClassName = () => {
+    const isValid = message && message.includes("@") && message.includes(".");
+    return classNames({
+      "placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4": true,
+      "text-ink dark:text-light": isValid,
+      "text-red-500 border border-red-500": isValid,
+    });
+  };
+  const messageOnChange = (e) => {
+    setMessage(e.target.value);
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     console.log(
       `Sending a Email to ${email} with below message:\n\n${message}`
     );
   };
+
   return (
     <>
       <Header useIsDark={useIsDark} />
@@ -56,28 +69,35 @@ const HomePage = ({ useIsDark }) => {
                 <div>
                   <input
                     type="email"
-                    placeholder="Your Email"
-                    className={emailClassName}
+                    placeholder="Email"
+                    className={getEmailClassName()}
                     value={email}
                     onChange={emailOnChange}
                   />
-                  {getEmailErrors() && (
+                  {getEmailError() && (
                     <div>
                       <small className="text-red-500 text-xs">
-                        {getEmailErrors()}
+                        {getEmailError()}
                       </small>
                     </div>
                   )}
                 </div>
-
-                <textarea
-                  type="text"
-                  rows="4"
-                  placeholder="Message"
-                  className="text-moonlight bg-paper-light dark:text-pencil dark:bg-night-light outline-none py-2 px-4 placeholder-current transition-bg"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
+                <div>
+                  <textarea
+                    rows="4"
+                    placeholder="Message"
+                    className={getMessageClassName()}
+                    value={message}
+                    onChange={messageOnChange}
+                  />
+                  {getMessageError() && (
+                    <div>
+                      <small className="text-red-500 text-xs">
+                        {getMessageError()}
+                      </small>
+                    </div>
+                  )}
+                </div>
                 <button
                   type="submit"
                   className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg"
@@ -94,4 +114,4 @@ const HomePage = ({ useIsDark }) => {
   );
 };
 
-export default HomePage;
+export default Contact;
