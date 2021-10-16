@@ -7,34 +7,38 @@ import Footer from "../components/Footer";
 import { H1, P } from "../components/markdown-components";
 
 const HomePage = ({ useIsDark }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState("");
   const isEmailWanted = () => {
-    return email === "";
+    return isSubmitting && email === "";
   };
   const isEmailValid = () => {
-    return email === "" || email && email.includes("@") && email.includes(".");
+    return !isSubmitting || email && email.includes("@") && email.includes(".");
   };
   const emailClassName = classNames(
     "placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4",
     { "text-ink dark:text-light": isEmailValid() },
     { "text-red-500 border border-red-500": !isEmailValid() }
   );
-  const getEmailHelpText = () => {
+  const getEmailErrors = () => {
+    const errors = [];
     if (isEmailWanted()) {
-      return "Please provide an email."
+      return ["Please provide an email."];
     }
     if (!isEmailValid) {
-      return "Please provide a valid email."
+      return "Please provide a valid email.";
     }
-    return ""
-  }
+    return "";
+  };
   const emailOnChange = (e) => {
     const value = e.target.value;
+    setIsSubmitting(false);
     setEmail(value);
   };
   const [message, setMessage] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     console.log(
       `Sending a Email to ${email} with below message:\n\n${message}`
     );
@@ -57,10 +61,10 @@ const HomePage = ({ useIsDark }) => {
                     value={email}
                     onChange={emailOnChange}
                   />
-                  {getEmailHelpText() && (
+                  {getEmailErrors() && (
                     <div>
                       <small className="text-red-500 text-xs">
-                        {getEmailHelpText()}
+                        {getEmailErrors()}
                       </small>
                     </div>
                   )}
