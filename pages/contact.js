@@ -8,21 +8,31 @@ import { H1, P } from "../components/markdown-components";
 
 const HomePage = ({ useIsDark }) => {
   const [email, setEmail] = useState("");
-  const [emailIsValid, setEmailIsValid] = useState(true);
+  const isEmailWanted = () => {
+    return email === "";
+  };
+  const isEmailValid = () => {
+    return email === "" || email && email.includes("@") && email.includes(".");
+  };
   const emailClassName = classNames(
-    "text-moonlight bg-paper-light dark:text-pencil dark:bg-night-light outline-none py-2 px-4 placeholder-current transition-bg",
-    { "border-red-500": emailIsValid }
+    "placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4",
+    { "text-ink dark:text-light": isEmailValid() },
+    { "text-red-500 border border-red-500": !isEmailValid() }
   );
-  const [message, setMessage] = useState("");
+  const getEmailHelpText = () => {
+    if (isEmailWanted()) {
+      return "Please provide an email."
+    }
+    if (!isEmailValid) {
+      return "Please provide a valid email."
+    }
+    return ""
+  }
   const emailOnChange = (e) => {
     const value = e.target.value;
     setEmail(value);
-    if (value && value.includes("@") && value.includes(".")) {
-      setEmailIsValid(true);
-    } else {
-      setEmailIsValid(false);
-    }
   };
+  const [message, setMessage] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(
@@ -39,13 +49,23 @@ const HomePage = ({ useIsDark }) => {
           <div className="mt-8">
             <form noValidate onSubmit={onSubmit}>
               <div className="flex flex-col gap-4">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className={emailClassName}
-                  value={email}
-                  onChange={emailOnChange}
-                />
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className={emailClassName}
+                    value={email}
+                    onChange={emailOnChange}
+                  />
+                  {getEmailHelpText() && (
+                    <div>
+                      <small className="text-red-500 text-xs">
+                        {getEmailHelpText()}
+                      </small>
+                    </div>
+                  )}
+                </div>
+
                 <textarea
                   type="text"
                   rows="4"
