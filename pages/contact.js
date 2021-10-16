@@ -5,40 +5,53 @@ import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
 import { H1, P } from "../components/markdown-components";
 
-const Contact = ({ useIsDark }) => {
-  const [isEmailDone, setIsEmailDone] = useState(false);
-  const [email, setEmail] = useState("");
-  const getEmailError = () => {
-    if (isEmailDone && !email) return "Please provide an email.";
-    if (email && !(email.includes("@") && email.includes(".")))
-      return "Please provide an valid email.";
-    return "";
-  };
-  const emailOnChange = (e) => {
-    setEmail(e.target.value);
-    setIsEmailDone(false);
-  };
+const EmailInstruction = ({ basedOnValue }) => {
+  if (!basedOnValue) {
+    return <div className="text-red-500 text-xs">Please provide an email.</div>;
+  }
+  const emailPattern = /^\S+@\S+\.\S+$/;
+  if (!emailPattern.test(basedOnValue)) {
+    return <div className="text-red-500 text-xs">Please provide a valid email.</div>;
+  }
+  return <div className="text-green-500 text-xs">Good!</div>;
+};
 
-  const [isMessageDone, setIsMessageDone] = useState(false);
+const MessageInstruction = ({ basedOnValue }) => {
+  if (!basedOnValue) {
+    return <div className="text-red-500 text-xs">Please provide some messages.</div>;
+  }
+  return <div className="text-green-500 text-xs">Good!</div>;
+};
+
+const SubmitInstruction = ({ isSent }) => {
+  if (isSent) {
+    return <div className="text-green-500 text-xs">Successfully sent!</div>;
+  }
+  return null;
+};
+
+const Contact = ({ useIsDark }) => {
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const getMessageError = () => {
-    if (isMessageDone && !message) return "Please provide a message.";
-    if (!message) return "Please provide a message.";
-    return "";
-  };
-  const messageOnChange = (e) => {
-    setMessage(e.target.value);
-    setIsMessageDone(false);
-  };
+  const [isSent, setIsSent] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setIsEmailDone(true);
-    console.log(
-      `Sending a Email to ${email} with below message:\n\n${message}`
-    );
+    fetch("/api/contact", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        message,
+      }),
+    }).then((res) => {
+      if (res.status === 200) {
+        setIsSent(true)
+      }
+    });
   };
-
   return (
     <>
       <Header useIsDark={useIsDark} />
@@ -55,15 +68,11 @@ const Contact = ({ useIsDark }) => {
                     placeholder="Email"
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4"
                     value={email}
-                    onChange={emailOnChange}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
                   />
-                  {getEmailError() && (
-                    <div>
-                      <small className="text-red-500 text-xs">
-                        {getEmailError()}
-                      </small>
-                    </div>
-                  )}
+                  <EmailInstruction basedOnValue={email} />
                 </div>
                 <div>
                   <textarea
@@ -71,22 +80,32 @@ const Contact = ({ useIsDark }) => {
                     placeholder="Message"
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4"
                     value={message}
-                    onChange={messageOnChange}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                    }}
                   />
-                  {getMessageError() && (
-                    <div>
-                      <small className="text-red-500 text-xs">
-                        {getMessageError()}
-                      </small>
-                    </div>
-                  )}
+                  <MessageInstruction basedOnValue={message} />
                 </div>
-                <button
-                  type="submit"
-                  className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg"
-                >
-                  Submit
-                </button>
+                <div>
+                  <button
+                    type="submit"
+                    className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
+                  >
+                    Submit
+                  </button>
+                  <SubmitInstruction isSent={isSent} />
+                </div>
+                <div>
+                  <button
+                    className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
+                    onClick={() => {
+                      setEmail("");
+                      setMessage("");
+                    }}
+                  >
+                    Clear all
+                  </button>
+                </div>
               </div>
             </form>
           </div>
