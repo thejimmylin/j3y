@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classNames from "classnames";
 import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
@@ -7,10 +8,20 @@ import { H1, P } from "../components/markdown-components";
 
 const HomePage = ({ useIsDark }) => {
   const [email, setEmail] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(true);
+  const emailClassName = classNames(
+    "text-moonlight bg-paper-light dark:text-pencil dark:bg-night-light outline-none py-2 px-4 placeholder-current transition-bg",
+    { "border-red-500": emailIsValid }
+  );
   const [message, setMessage] = useState("");
   const emailOnChange = (e) => {
-    setEmail(e.target.value);
-
+    const value = e.target.value;
+    setEmail(value);
+    if (value && value.includes("@") && value.includes(".")) {
+      setEmailIsValid(true);
+    } else {
+      setEmailIsValid(false);
+    }
   };
   const onSubmit = (e) => {
     e.preventDefault();
@@ -31,9 +42,9 @@ const HomePage = ({ useIsDark }) => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="text-moonlight bg-paper-light dark:text-pencil dark:bg-night-light outline-none py-2 px-4 placeholder-current transition-bg"
+                  className={emailClassName}
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={emailOnChange}
                 />
                 <textarea
                   type="text"

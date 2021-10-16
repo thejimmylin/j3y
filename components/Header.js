@@ -14,7 +14,7 @@ const Header = ({ useIsDark, headerRef }) => {
     setAsPath(router.asPath);
   });
   const headerClassName = classNames(
-    "font-sans text-ink dark:text-light dark:bg-night transition-header duration-header sticky top-0 z-10",
+    "font-sans text-ink dark:text-light transition-header duration-header sticky top-0 z-10",
     {
       "bg-paper dark:bg-night": isIntersecting,
     },
@@ -55,7 +55,7 @@ const Header = ({ useIsDark, headerRef }) => {
                 <a>Posts</a>
               </Link>
             </li>
-            <li className={postsClassName}>
+            <li className={contactClassName}>
               <Link href="/contact">
                 <a>Contact</a>
               </Link>
