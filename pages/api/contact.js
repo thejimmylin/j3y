@@ -36,7 +36,7 @@ const handler = async (req, res) => {
   });
 
   return res.status(200).json({
-    msg: `Sending a E-mail to ${TO} with nodemailer using user=${NODEMAILER_AUTH_USER}, pass=${NODEMAILER_AUTH_PASS}`,
+    msg: `Sending a E-mail to ${TO} with nodemailer using.`,
   });
 };
 
