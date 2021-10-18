@@ -4,14 +4,15 @@ const NODEMAILER_AUTH_USER = process.env.NODEMAILER_AUTH_USER;
 const NODEMAILER_AUTH_PASS = process.env.NODEMAILER_AUTH_PASS;
 const TO = "b00502013@gmail.com";
 
+https://nodemailer.com/smtp/
 const transporter = nodemailer.createTransport({
-  port: 465,
   host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
     user: NODEMAILER_AUTH_USER,
     pass: NODEMAILER_AUTH_PASS,
   },
-  secure: true,
 });
 
 const handler = async (req, res) => {
