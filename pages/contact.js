@@ -60,6 +60,24 @@ const Contact = ({ useIsDark }) => {
       setIsSent(true);
     }
   };
+  const [isModalHidden, setIsModalHidden] = useState(true);
+  const Modal = ({ isModalHidden, setIsModalHidden }) => {
+    if (!isModalHidden) {
+      return (
+        <div
+          onClick={() => {
+            setIsModalHidden(true);
+          }}
+          className="absolute inset-0 bg-gray-400 bg-opacity-20 z-10 flex justify-center items-center"
+        >
+          <div className="bg-paper dark:bg-night w-full sm:w-96 sm:h-96">
+            <H1>Great!</H1>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
   return (
     <>
       <Header useIsDark={useIsDark} />
@@ -102,6 +120,21 @@ const Contact = ({ useIsDark }) => {
                     Send
                   </button>
                   <SubmitInstruction isSent={isSent} />
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsModalHidden(false);
+                    }}
+                    className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
+                  >
+                    Open Modal
+                  </button>
+                  <Modal
+                    isModalHidden={isModalHidden}
+                    setIsModalHidden={setIsModalHidden}
+                  />
                 </div>
               </div>
             </form>
