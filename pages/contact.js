@@ -22,9 +22,7 @@ const EmailInstruction = ({ value }) => {
 const MessageInstruction = ({ value }) => {
   if (!value) {
     return (
-      <div className="text-red-500 text-xs">
-        Please provide some messages.
-      </div>
+      <div className="text-red-500 text-xs">Please provide a message.</div>
     );
   }
   return <div className="text-green-500 text-xs">Good!</div>;
@@ -32,7 +30,11 @@ const MessageInstruction = ({ value }) => {
 
 const SubmitInstruction = ({ isSent }) => {
   if (isSent) {
-    return <div className="text-green-500 text-xs">Successfully sent!</div>;
+    return (
+      <div className="text-green-500 text-xs">
+        The message has been sent successfully!
+      </div>
+    );
   }
   return null;
 };
@@ -42,9 +44,9 @@ const Contact = ({ useIsDark }) => {
   const [message, setMessage] = useState("");
   const [isSent, setIsSent] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    fetch("/api/contact", {
+    const res = await fetch("/api/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -53,11 +55,10 @@ const Contact = ({ useIsDark }) => {
         email,
         message,
       }),
-    }).then((res) => {
-      if (res.status === 200) {
-        setIsSent(true);
-      }
     });
+    if (res.status === 200) {
+      setIsSent(true);
+    }
   };
   return (
     <>
@@ -98,20 +99,9 @@ const Contact = ({ useIsDark }) => {
                     type="submit"
                     className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
                   >
-                    Submit
+                    Send
                   </button>
                   <SubmitInstruction isSent={isSent} />
-                </div>
-                <div>
-                  <button
-                    className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
-                    onClick={() => {
-                      setEmail("");
-                      setMessage("");
-                    }}
-                  >
-                    Clear all
-                  </button>
                 </div>
               </div>
             </form>
