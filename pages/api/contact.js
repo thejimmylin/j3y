@@ -1,10 +1,10 @@
+// https://nodemailer.com/smtp/
 import nodemailer from "nodemailer";
 
 const NODEMAILER_AUTH_USER = process.env.NODEMAILER_AUTH_USER;
 const NODEMAILER_AUTH_PASS = process.env.NODEMAILER_AUTH_PASS;
-const TO = "b00502013@gmail.com";
+const MY_EMAIL = "b00502013@gmail.com";
 
-// https://nodemailer.com/smtp/
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -15,34 +15,35 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const handler = async (req, res) => {
-  if (req.method === "POST") {
-    const mailOptions = {
-      to: TO,
-      subject: `Sent by ${req.body.email} at ${new Date()}.`,
-      text: req.body.message,
-    };
-    // await new Promise((resolve, reject) => {
-    //   transporter.sendMail(mailOptions, (err, info) => {
-    //     if (err) {
-    //       console.error(err);
-    //       reject(err);
-    //     } else {
-    //       console.log(info);
-    //       resolve(info);
-    //     }
-    //   });
-    // });
+const sendMeEmail = async ({ subject, message }) => {
+  const mailOptions = {
+    to: MY_EMAIL,
+    subject,
+    text: message,
+  };
+  await new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.error(err);
+        reject(err);
       } else {
         console.log(info);
+        resolve(info);
       }
     });
-    return res.status(200).json({
-      msg: `Sending a E-mail to ${TO} with nodemailer using.`,
+  });
+};
+
+const handler = async (req, res) => {
+  if (req.method === "POST") {
+    const { email, message } = req.body;
+    const now = new Date();
+    const subject = `A contact message sent by ${email} at ${now}.`;
+    await sendMeEmail({
+      subject,
+      message,
     });
+    return res.status(200).end();
   }
   return res.status(405).end();
 };
