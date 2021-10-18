@@ -38,7 +38,7 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     const { email, message } = req.body;
     const now = new Date();
-    const subject = `A contact message sent by ${email} at ${now}.`;
+    const subject = `[Jimmy Lin] A contact message sent by ${email} at ${now}.`;
     await sendMeEmail({
       subject,
       message,
