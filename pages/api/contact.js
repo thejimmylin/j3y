@@ -22,16 +22,23 @@ const handler = async (req, res) => {
       subject: `Sent by ${req.body.email} at ${new Date()}.`,
       text: req.body.message,
     };
-    await new Promise((resolve, reject) => {
-      transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-          console.error(err);
-          reject(err);
-        } else {
-          console.log(info);
-          resolve(info);
-        }
-      });
+    // await new Promise((resolve, reject) => {
+    //   transporter.sendMail(mailOptions, (err, info) => {
+    //     if (err) {
+    //       console.error(err);
+    //       reject(err);
+    //     } else {
+    //       console.log(info);
+    //       resolve(info);
+    //     }
+    //   });
+    // });
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(info);
+      }
     });
     return res.status(200).json({
       msg: `Sending a E-mail to ${TO} with nodemailer using.`,
