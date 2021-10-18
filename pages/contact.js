@@ -5,20 +5,27 @@ import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
 import { H1, P } from "../components/markdown-components";
 
-const EmailInstruction = ({ basedOnValue }) => {
-  if (!basedOnValue) {
+const EmailInstruction = ({ value }) => {
+  if (!value) {
     return <div className="text-red-500 text-xs">Please provide an email.</div>;
   }
   const emailPattern = /^\S+@\S+\.\S+$/;
-  if (!emailPattern.test(basedOnValue)) {
-    return <div className="text-red-500 text-xs">Please provide a valid email.</div>;
+  const isEmail = emailPattern.test(value);
+  if (!isEmail) {
+    return (
+      <div className="text-red-500 text-xs">Please provide a valid email.</div>
+    );
   }
   return <div className="text-green-500 text-xs">Good!</div>;
 };
 
-const MessageInstruction = ({ basedOnValue }) => {
-  if (!basedOnValue) {
-    return <div className="text-red-500 text-xs">Please provide some messages.</div>;
+const MessageInstruction = ({ value }) => {
+  if (!value) {
+    return (
+      <div className="text-red-500 text-xs">
+        Please provide some messages.
+      </div>
+    );
   }
   return <div className="text-green-500 text-xs">Good!</div>;
 };
@@ -48,7 +55,7 @@ const Contact = ({ useIsDark }) => {
       }),
     }).then((res) => {
       if (res.status === 200) {
-        setIsSent(true)
+        setIsSent(true);
       }
     });
   };
@@ -72,19 +79,19 @@ const Contact = ({ useIsDark }) => {
                       setEmail(e.target.value);
                     }}
                   />
-                  <EmailInstruction basedOnValue={email} />
+                  <EmailInstruction value={email} />
                 </div>
                 <div>
                   <textarea
                     rows="4"
                     placeholder="Message"
-                    className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4"
+                    className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none block w-full py-2 px-4"
                     value={message}
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
                   />
-                  <MessageInstruction basedOnValue={message} />
+                  <MessageInstruction value={message} />
                 </div>
                 <div>
                   <button
