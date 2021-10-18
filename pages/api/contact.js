@@ -4,7 +4,7 @@ const NODEMAILER_AUTH_USER = process.env.NODEMAILER_AUTH_USER;
 const NODEMAILER_AUTH_PASS = process.env.NODEMAILER_AUTH_PASS;
 const TO = "b00502013@gmail.com";
 
-https://nodemailer.com/smtp/
+// https://nodemailer.com/smtp/
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
