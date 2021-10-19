@@ -52,10 +52,21 @@ const Modal = ({ isHidden, setIsHidden }) => {
       onClick={() => {
         setIsHidden(true);
       }}
-      className="absolute inset-0 bg-gray-400 bg-opacity-10 z-10 flex justify-center items-center"
+      className="absolute inset-0 bg-gray-400 bg-opacity-0 z-10 flex justify-center items-center"
     >
-      <div className="bg-paper dark:bg-night w-64 h-48 rounded-md flex justify-center items-center">
-        <H1>Sucess!</H1>
+      <div className="relative shadow bg-paper dark:bg-night w-96 h-60 rounded-md flex justify-center items-center">
+        <div
+          onClick={() => {
+            setIsHidden(true);
+          }}
+          className="absolute cursor-pointer top-2 right-2 text-pencil dark:text-moonlight"
+        >
+          <i class="bi bi-x"></i>
+        </div>
+        <div>
+          <H1>Great!</H1>
+          <P>The message has been sent successfully.</P>
+        </div>
       </div>
     </div>
   );
