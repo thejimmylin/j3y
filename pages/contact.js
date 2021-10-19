@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
+import useBodyProps from "../hooks/use-body-props";
 import { H1, P } from "../components/markdown-components";
 
 const EmailInstruction = ({ value }) => {
@@ -39,11 +40,32 @@ const SubmitInstruction = ({ isSent }) => {
   return null;
 };
 
+const Modal = ({ isHidden, setIsHidden }) => {
+  const getProps = isHidden
+    ? () => ({})
+    : () => ({
+        className: "fixed inset-0",
+      });
+  useBodyProps(getProps);
+  return isHidden ? null : (
+    <div
+      onClick={() => {
+        setIsHidden(true);
+      }}
+      className="absolute inset-0 bg-gray-400 bg-opacity-10 z-10 flex justify-center items-center"
+    >
+      <div className="bg-paper dark:bg-night w-64 h-48 rounded-md flex justify-center items-center">
+        <H1>Sucess!</H1>
+      </div>
+    </div>
+  );
+};
+
 const Contact = ({ useIsDark }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSent, setIsSent] = useState(false);
-
+  const [isHidden, setIsHidden] = useState(true);
   const onSubmit = async (e) => {
     e.preventDefault();
     const res = await fetch("/api/contact", {
@@ -59,24 +81,6 @@ const Contact = ({ useIsDark }) => {
     if (res.status === 200) {
       setIsSent(true);
     }
-  };
-  const [isModalHidden, setIsModalHidden] = useState(true);
-  const Modal = ({ isModalHidden, setIsModalHidden }) => {
-    if (!isModalHidden) {
-      return (
-        <div
-          onClick={() => {
-            setIsModalHidden(true);
-          }}
-          className="absolute inset-0 bg-gray-400 bg-opacity-20 z-10 flex justify-center items-center"
-        >
-          <div className="bg-paper dark:bg-night w-full sm:w-96 sm:h-96">
-            <H1>Great!</H1>
-          </div>
-        </div>
-      );
-    }
-    return null;
   };
   return (
     <>
@@ -125,16 +129,13 @@ const Contact = ({ useIsDark }) => {
                   <button
                     type="button"
                     onClick={() => {
-                      setIsModalHidden(false);
+                      setIsHidden(false);
                     }}
                     className="text-ink bg-paper-light dark:text-light dark:bg-night-light outline-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-bg w-full"
                   >
                     Open Modal
                   </button>
-                  <Modal
-                    isModalHidden={isModalHidden}
-                    setIsModalHidden={setIsModalHidden}
-                  />
+                  <Modal isHidden={isHidden} setIsHidden={setIsHidden} />
                 </div>
               </div>
             </form>
