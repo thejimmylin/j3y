@@ -35,11 +35,13 @@ It it convenient but if there are many of these cases, the codes may seem messed
 ```python
 UNKNOWN_AGE = -1
 
+
 def get_age(person_info: dict):
     if "age" in person_info:
         return person_info["age"]
     else:
         return UNKNOWN_AGE
+
 
 def get_ticket_numbers(person_infos):
     ...
@@ -56,11 +58,13 @@ Or even better. We can use an exception. It should be something like this:
 class UnknownAge(Exception):
     pass
 
+
 def get_age(person_info: dict):
     if "age" in person_info:
         return person_info["age"]
     else:
         raise UnknownAge
+
 
 def get_ticket_numbers(person_infos, adult_age=18):
     ticket_numbers = {"adult": 0, "child": 0}
