@@ -7,7 +7,7 @@ const Footer = () => {
           <p className="text-sm">contact@jimmylin.org</p>
           <p className="text-3xl flex gap-2">
             <a
-              href="https://github.com/j3ygithub"
+              href="https://github.com/j3ygh"
               target="_blank"
               rel="noreferrer"
               className="transform hover:scale-110"
