@@ -1,17 +1,12 @@
-# Mac things
+# OS
 .DS_Store
 
-# VSCode things
+# IDE
 /.vscode/settings.json
 
-# NPM dependency directory
+# Node
 /node_modules
 
-# Next.js
+# Next
 /.next
-
-# Secrets
-/secrets.json
-
-# Dotenv
-/.env
+.env.local
