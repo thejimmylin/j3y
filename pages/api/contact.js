@@ -29,8 +29,10 @@ const handler = async (req, res) => {
     res.status(200).end();
   } catch (error) {
     console.error(error);
-    const msg = error.response ? error.response.body : "";
-    res.status(400).json({ msg });
+    if (error.response) {
+      console.error(error.response.body);
+    }
+    res.status(400).end();
   }
 };
 
