@@ -1,36 +1,37 @@
-// TODO: use import
-const sgClient = require("@sendgrid/mail");
+import sgMail from "@sendgrid/mail";
 
-const getMySgClient = () => {
-  sgClient.setApiKey(process.env.MY_SENDGRID_API_KEY);
-  return sgClient;
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const sendMail = (msg) => {
+  return new Promise((resolve, reject) => {
+    sgMail.send(msg).then(
+      (response) => {
+        resolve(response);
+      },
+      (error) => {
+        reject(error);
+      }
+    );
+  });
 };
 
-const mySgClient = getMySgClient();
-
 const handler = async (req, res) => {
-  // TODO: use better log to handle different http methods.
-  if (req.method === "POST") {
-    const { email, message } = req.body;
-    const msg = {
-      to: email,
-      from: "contact@jimmylin.org",
-      subject: `[jimmylin.org] ${email} contacts you.]`,
-      text: message,
-      html: `<p>${message}</p>`,
-    };
-    // TODO: use async/await
-    mySgClient
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-    return res.status(200).end();
+  const { email, message } = req.body;
+  const msg = {
+    to: "b00502013@gmail.com",
+    from: "contact@jimmylin.org",
+    subject: `${email} wants to contact you!`,
+    text: message,
+    html: `<p>${message}<p/>`,
+  };
+  try {
+    await sendMail(msg);
+    res.status(200).end();
+  } catch (error) {
+    console.error(error);
+    const msg = error.response ? error.response.body : "";
+    res.status(400).json({ msg });
   }
-  res.status(405).end();
 };
 
 export default handler;
