@@ -1,3 +1,4 @@
+// TODO: use import
 const sgClient = require("@sendgrid/mail");
 
 const getMySgClient = () => {
@@ -8,6 +9,7 @@ const getMySgClient = () => {
 const mySgClient = getMySgClient();
 
 const handler = async (req, res) => {
+  // TODO: use better http method flow
   if (req.method === "POST") {
     const { email, message } = req.body;
     const msg = {
