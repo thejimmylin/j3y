@@ -9,7 +9,7 @@ const getMySgClient = () => {
 const mySgClient = getMySgClient();
 
 const handler = async (req, res) => {
-  // TODO: use better http method flow
+  // TODO: use better log to handle different http methods.
   if (req.method === "POST") {
     const { email, message } = req.body;
     const msg = {
