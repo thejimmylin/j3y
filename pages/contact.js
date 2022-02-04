@@ -83,7 +83,7 @@ const Contact = ({ useIsDark }) => {
                 </div>
                 <div>
                   <textarea
-                    rows="4"
+                    rows="6"
                     placeholder="Message"
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none block w-full py-2 px-4"
                     value={message}

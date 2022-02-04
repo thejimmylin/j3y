@@ -1,5 +1,7 @@
 import sgMail from "@sendgrid/mail";
 
+const MY_EMAIL = "b00502013@gmail.com";
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const sendMail = (msg) => {
@@ -18,11 +20,11 @@ const sendMail = (msg) => {
 const handler = async (req, res) => {
   const { email, message } = req.body;
   const msg = {
-    to: "b00502013@gmail.com",
-    from: "contact@jimmylin.org",
+    to: MY_EMAIL,
+    from: "notifications@jimmylin.org",
     subject: `${email} wants to contact you!`,
-    text: message,
-    html: `<p>${message}<p/>`,
+    text: `${email}: ${message}`,
+    html: `<p>${email}: ${message}<p/>`,
   };
   try {
     await sendMail(msg);
