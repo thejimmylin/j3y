@@ -22,9 +22,7 @@ const EmailInstruction = ({ value }) => {
 const MessageInstruction = ({ value }) => {
   if (!value) {
     return (
-      <div className="text-red-500 text-xs">
-        Please provide some messages.
-      </div>
+      <div className="text-red-500 text-xs">Please provide some messages.</div>
     );
   }
   return <div className="text-green-500 text-xs">Good!</div>;
@@ -56,6 +54,8 @@ const Contact = ({ useIsDark }) => {
     }).then((res) => {
       if (res.status === 200) {
         setIsSent(true);
+        setEmail("");
+        setMessage("");
       }
     });
   };
@@ -83,7 +83,7 @@ const Contact = ({ useIsDark }) => {
                 </div>
                 <div>
                   <textarea
-                    rows="6"
+                    rows="8"
                     placeholder="Message"
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none block w-full py-2 px-4"
                     value={message}
