@@ -5,7 +5,7 @@ const DarkModeToggler = ({ useIsDark }) => {
   const onClick = () => {
     setIsDark((prevIsDark) => !prevIsDark);
   };
-  useBodyProps(() => ({ className: isDark ? "bg-night" : "bg-paper" }));
+  useBodyProps(() => ({ className: isDark ? "bg-black" : "bg-white" }));
   return (
     <div
       className="cursor-pointer select-none hover:scale-105"
