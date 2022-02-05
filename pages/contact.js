@@ -28,9 +28,12 @@ const MessageInstruction = ({ value }) => {
   return <div className="text-green-500 text-xs">Good!</div>;
 };
 
-const SubmitInstruction = ({ isSent }) => {
+const SubmitInstruction = ({ isSent, setIsSent }) => {
   if (isSent) {
-    return <div className="text-green-500 text-xs">Successfully sent!</div>;
+    setTimeout(() => {
+      setIsSent(false);
+    }, 1500);
+    return <div className="text-green-500 text-xs opacity-100 animate-fadeout-1500-0">Successfully sent!</div>;
   }
   return null;
 };
@@ -100,7 +103,7 @@ const Contact = ({ useIsDark }) => {
                   >
                     Submit
                   </button>
-                  <SubmitInstruction isSent={isSent} />
+                  <SubmitInstruction isSent={isSent} setIsSent={setIsSent} />
                 </div>
                 <div>
                   <button

@@ -55,6 +55,10 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        fadeout: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
         risein: {
           "0%": {
             opacity: 0,
@@ -89,6 +93,7 @@ module.exports = {
         "fadein-1000-950": "fadein 1000ms 950ms ease-in-out 1 both",
         "fadein-1000-1000": "fadein 1000ms 1000ms ease-in-out 1 both",
         "fadein-2000-1500": "fadein 2000ms 1500ms ease-in-out 1 both",
+        "fadeout-1500-0": "fadeout 1500ms 0ms ease-in-out 1 both",
         "risein-300-100": "risein 300ms 100ms ease-in-out 1 both",
       },
     },
