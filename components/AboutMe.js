@@ -1,14 +1,16 @@
 import Image from "next/image";
 
-import { P, H1, H2, H3, A } from "./markdown-components";
+import { P, H1, H2, A } from "./markdown-components";
 import avatar from "../public/static/avatar-1440x1440.jpg";
 import ntu from "../public/static/ntu-360x360.png";
 import chief from "../public/static/chief-450x200.png";
 import shopee from "../public/static/shopee-360x360.png";
-import ctdbI18n from "../public/static/ctdb-i18n-1920x1080.png";
-import ctdbLog from "../public/static/ctdb-log-1920x1080.png";
-import fortiadminLogin from "../public/static/fortiadmin-login-1920x1080.png";
-import fortiadminExample from "../public/static/fortiadmin-example-1920x1080.png";
+import j3yIndex from "../public/static/j3y-index-1920x1029.png";
+import j3yPost1 from "../public/static/j3y-post1-1920x1029.png";
+import ctdbLogin from "../public/static/ctdb-login-1920x1029.png";
+import ctdbReminder from "../public/static/ctdb-reminder-1920x1029.png";
+import ctdbDiaryI18n from "../public/static/ctdb-diary-i18n-1920x1029.png";
+import ctdbLog from "../public/static/ctdb-log-1920x1029.png";
 
 const AboutMe = () => {
   return (
@@ -182,26 +184,82 @@ const AboutMe = () => {
         compute engines with Docker.
       </P>
       <H1>Portfolios</H1>
-      <P>Here are some screenshots of them:</P>
-      <H2>CTDB</H2>
+      <H2>
+        <A href="https://github.com/j3ygh/j3y">J3Y</A>
+      </H2>
+      <P>My personal blog, mainly built with Next.js.</P>
       <div className="mb-8">
         <Image
-          src={ctdbI18n}
-          alt={ctdbI18n}
+          src={j3yIndex}
+          alt={j3yIndex}
           className="rounded-lg"
           priority={true}
         />
+        <P>
+          I post things here. They are usually about programming and
+          development.
+        </P>
       </div>
       <div className="mb-8">
         <Image
-          src={ctdbLog}
-          alt={ctdbLog}
+          src={j3yPost1}
+          alt={j3yPost1}
           className="rounded-lg"
           priority={true}
         />
       </div>
       <P>
-        CTDB is mainly built with 
+        It is mainly built with 
+        <A href="https://nextjs.org">Next.js</A>
+        , <A href="https://tailwindcss.com">Tailwind CSS</A> and{" "}
+        <A href="https://mdxjs.com">MDX</A>, hosted by{" "}
+        <A href="https://vercel.com">Vercel </A>. I write and post things here.{" "}
+        <A href="https://mdxjs.com">MDX</A> makes it easy to write markdown
+        files and use them in <A href="https://nextjs.org">Next.js</A>.
+      </P>
+      <H2>
+        <A href="https://github.com/j3ygh/ctdb">CTDB</A>
+      </H2>
+      <div className="mb-8">
+        <Image
+          src={ctdbLogin}
+          alt={ctdbLogin}
+          className="rounded-lg"
+          priority={true}
+        />
+        <P>The login page.</P>
+      </div>
+      <div className="mb-8 flex flex-wrap">
+        <div className="w-1/2">
+          <Image
+            src={ctdbReminder}
+            alt={ctdbReminder}
+            className="rounded-lg"
+            priority={true}
+          />
+          <P>Reminder, one of the applications.</P>
+        </div>
+        <div className="w-1/2">
+          <Image
+            src={ctdbDiaryI18n}
+            alt={ctdbDiaryI18n}
+            className="rounded-lg"
+            priority={true}
+          />
+          <P>Every application works with i18n.</P>
+        </div>
+        <div className="w-1/2">
+          <Image
+            src={ctdbLog}
+            alt={ctdbLog}
+            className="rounded-lg"
+            priority={true}
+          />
+          <P>Every data change will be logged.</P>
+        </div>
+      </div>
+      <P>
+        It is mainly built with 
         <A href="https://www.djangoproject.com/">Django</A>, 
         <A href="https://www.django-rest-framework.org/">
           Django REST Framework
@@ -210,52 +268,6 @@ const AboutMe = () => {
         applications, such as Diary, Reminder, Telecom, News, Archive, etc. It
         also has its own log system. It is mainly used by engineers in the
         technical department of the company.
-      </P>
-      <H3>Features:</H3>
-      <P>i18n / Log system</P>
-      <H3>Tech stack:</H3>
-      <P>
-        <A href="https://www.djangoproject.com/">Django</A> /{" "}
-        <A href="https://www.django-rest-framework.org/">
-          Django REST Framework
-        </A>{" "}
-        / <A href="https://vuejs.org/">Vue.js</A>
-      </P>
-      <H2>FortiAdmin</H2>
-      <div className="mb-8">
-        <Image
-          src={fortiadminExample}
-          alt={fortiadminExample}
-          className="rounded-lg"
-          priority={true}
-        />
-      </div>
-      <div className="mb-8">
-        <Image
-          src={fortiadminLogin}
-          alt={fortiadminLogin}
-          className="rounded-lg"
-          priority={true}
-        />
-      </div>
-      <P>
-        FortiAdmin is mainly built with 
-        <A href="https://www.djangoproject.com/">Django</A>
-        , <A href="https://docs.python.org/3/library/shlex.html">shlex</A>
-        , <A href="https://www.fortinet.com/">Forti</A> REST API which is a
-        multi-tenant portal for Fortigate/Fortios. With FortiAdmin, It is
-        possible to set their own config without interfere with each other for
-        different users.
-      </P>
-      <H3>Features</H3>
-      <P>
-        Multi-tenant / <A href="https://www.fortinet.com/">Forti</A> REST API
-      </P>
-      <H3>Tech stack:</H3>
-      <P>
-        <A href="https://www.djangoproject.com/">Django</A> /{" "}
-        <A href="https://docs.python.org/3/library/shlex.html">shlex</A> /{" "}
-        <A href="https://www.fortinet.com/">Forti</A>
       </P>
       <H1>Thank you</H1>
       <P>
