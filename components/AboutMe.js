@@ -229,34 +229,32 @@ const AboutMe = () => {
         />
         <P>The login page.</P>
       </div>
-      <div className="mb-8 flex flex-wrap">
-        <div className="w-1/2">
-          <Image
-            src={ctdbReminder}
-            alt={ctdbReminder}
-            className="rounded-lg"
-            priority={true}
-          />
-          <P>Reminder, one of the applications.</P>
-        </div>
-        <div className="w-1/2">
-          <Image
-            src={ctdbDiaryI18n}
-            alt={ctdbDiaryI18n}
-            className="rounded-lg"
-            priority={true}
-          />
-          <P>Every application works with i18n.</P>
-        </div>
-        <div className="w-1/2">
-          <Image
-            src={ctdbLog}
-            alt={ctdbLog}
-            className="rounded-lg"
-            priority={true}
-          />
-          <P>Every data change will be logged.</P>
-        </div>
+      <div className="mb-8">
+        <Image
+          src={ctdbReminder}
+          alt={ctdbReminder}
+          className="rounded-lg"
+          priority={true}
+        />
+        <P>Reminder, one of the applications.</P>
+      </div>
+      <div className="mb-8">
+        <Image
+          src={ctdbDiaryI18n}
+          alt={ctdbDiaryI18n}
+          className="rounded-lg"
+          priority={true}
+        />
+        <P>Every application works with i18n.</P>
+      </div>
+      <div className="mb-8">
+        <Image
+          src={ctdbLog}
+          alt={ctdbLog}
+          className="rounded-lg"
+          priority={true}
+        />
+        <P>Every data change will be logged.</P>
       </div>
       <P>
         It is mainly built with 
