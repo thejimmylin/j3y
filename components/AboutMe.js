@@ -14,11 +14,11 @@ const AboutMe = () => {
   return (
     <>
       <H1>About me</H1>
-      <div className="mb-8">
+      <div className="mb-8 max-w-lg">
         <Image
           src={avatar}
           alt={avatar}
-          className="rounded-lg"
+          className="rounded-full"
           priority={true}
         />
       </div>
@@ -53,24 +53,6 @@ const AboutMe = () => {
       <div className="mb-5 flex gap-8 justify-between items-center">
         <div>
           <div>
-            <A href="https://www.chief.com.tw/">Chief Telecom</A>
-          </div>
-          <div className="text-sm">Jun. 2017 - Jun. 2021</div>
-          <P>Cloud service engineer.</P>
-        </div>
-        <div className="w-24 h-24 xs:w-36 xs:h-36 relative mb-5">
-          <Image
-            src={chief}
-            alt="chief"
-            layout="fill"
-            objectFit="contain"
-            priority={true}
-          />
-        </div>
-      </div>
-      <div className="mb-5 flex gap-8 justify-between items-center">
-        <div>
-          <div>
             <A href="https://shopee.tw/">Shopee Taiwan</A>
           </div>
           <div className="text-sm">Oct. 2021 -</div>
@@ -80,6 +62,24 @@ const AboutMe = () => {
           <Image
             src={shopee}
             alt="shopee"
+            layout="fill"
+            objectFit="contain"
+            priority={true}
+          />
+        </div>
+      </div>
+      <div className="mb-5 flex gap-8 justify-between items-center">
+        <div>
+          <div>
+            <A href="https://www.chief.com.tw/">Chief Telecom</A>
+          </div>
+          <div className="text-sm">Jun. 2017 - Jun. 2021</div>
+          <P>Cloud service engineer.</P>
+        </div>
+        <div className="w-24 h-24 xs:w-36 xs:h-36 relative mb-5">
+          <Image
+            src={chief}
+            alt="chief"
             layout="fill"
             objectFit="contain"
             priority={true}
