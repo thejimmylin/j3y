@@ -5,7 +5,10 @@ import PostLayout from "../components/PostLayout";
 import Footer from "../components/Footer";
 import { H1, P } from "../components/markdown-components";
 
-const EmailInstruction = ({ value }) => {
+const EmailInstruction = ({ value, emailEdited }) => {
+  if (!emailEdited) {
+    return null;
+  }
   if (!value) {
     return <div className="text-red-500 text-xs">Please provide an email.</div>;
   }
@@ -19,7 +22,10 @@ const EmailInstruction = ({ value }) => {
   return <div className="text-green-500 text-xs">Good!</div>;
 };
 
-const MessageInstruction = ({ value }) => {
+const MessageInstruction = ({ value, messageEdited }) => {
+  if (!messageEdited) {
+    return null;
+  }
   if (!value) {
     return (
       <div className="text-red-500 text-xs">Please provide some messages.</div>
@@ -33,14 +39,20 @@ const SubmitInstruction = ({ isSent, setIsSent }) => {
     setTimeout(() => {
       setIsSent(false);
     }, 1500);
-    return <div className="text-green-500 text-xs opacity-100 animate-fadeout-1500-0">Successfully sent!</div>;
+    return (
+      <div className="text-green-500 text-xs opacity-100 animate-fadeout-1500-0">
+        Successfully sent!
+      </div>
+    );
   }
   return null;
 };
 
 const Contact = ({ useIsDark }) => {
   const [email, setEmail] = useState("");
+  const [emailEdited, setEmailEdited] = useState(false);
   const [message, setMessage] = useState("");
+  const [messageEdited, setMessageEdited] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
   const onSubmit = (e) => {
@@ -58,7 +70,9 @@ const Contact = ({ useIsDark }) => {
       if (res.status === 200) {
         setIsSent(true);
         setEmail("");
+        setEmailEdited(false);
         setMessage("");
+        setMessageEdited(false);
       }
     });
   };
@@ -79,10 +93,11 @@ const Contact = ({ useIsDark }) => {
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none w-full py-2 px-4"
                     value={email}
                     onChange={(e) => {
+                      setEmailEdited(true);
                       setEmail(e.target.value);
                     }}
                   />
-                  <EmailInstruction value={email} />
+                  <EmailInstruction value={email} emailEdited={emailEdited} />
                 </div>
                 <div>
                   <textarea
@@ -91,10 +106,11 @@ const Contact = ({ useIsDark }) => {
                     className="placeholder-moonlight dark:placeholder-pencil bg-paper-light dark:bg-night-light transition-bg outline-none block w-full py-2 px-4"
                     value={message}
                     onChange={(e) => {
+                      setMessageEdited(true);
                       setMessage(e.target.value);
                     }}
                   />
-                  <MessageInstruction value={message} />
+                  <MessageInstruction value={message} messageEdited={messageEdited} />
                 </div>
                 <div>
                   <button
