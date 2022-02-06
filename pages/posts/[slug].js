@@ -18,11 +18,9 @@ const Post = ({ useIsDark, postContent }) => {
       <Header useIsDark={useIsDark} />
       <MainLayout>
         <PostLayout>
-          <ReactMarkdown
-            children={postContent}
-            remarkPlugins={[remarkGfm]}
-            components={components}
-          />
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+            {postContent}
+          </ReactMarkdown>
         </PostLayout>
       </MainLayout>
       <Footer />
