@@ -5,7 +5,7 @@ const LightFilter = ({ useIsDark, windowScrollY }) => {
   const [innerHeight, setInnerHeight] = useState(1080);
   useEffect(() => {
     setInnerHeight(window.innerHeight);
-  });
+  }, [setInnerHeight]);
   return (
     <>
       <div
