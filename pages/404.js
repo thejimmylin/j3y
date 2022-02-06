@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import PostLayout from "../components/PostLayout";
-import sorry from "../public/static/sorry-1920x1440.jpg";
-import { H1, P, A } from "../components/markdown-components";
+import iAmSorry from "../public/static/i-am-sorry-1920x1440.jpg";
+import { H1, P } from "../components/markdown-components";
 
 const Custom404 = ({ useIsDark }) => {
   return (
@@ -15,7 +15,7 @@ const Custom404 = ({ useIsDark }) => {
         <PostLayout>
           <H1>Sorry, no pages found.</H1>
           <div className="mb-5">
-            <Image className="rounded-sm" src={sorry} priority={true} />
+            <Image className="rounded-sm" src={iAmSorry} alt="i-am-sorry" priority={true} />
           </div>
           <P>
             Maybe you want to go back to the{" "}
