@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import sorry from "../public/static/sorry-1920x1440.jpg";
+import iAmSorry from "../public/static/i-am-sorry-1920x1440.jpg";
 
 const PostsDetailed = ({ postOutlines, textSearched }) => {
   const relatedPosts = postOutlines.filter((post) => {
@@ -16,7 +16,7 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
               Sorry, there are no posts related.
             </h2>
             <div>
-              <Image className="rounded-sm" src={sorry} priority={true} />
+              <Image className="rounded-sm" src={iAmSorry} alt="i-am-sorry" priority={true} />
             </div>
           </article>
         </div>
@@ -46,6 +46,7 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
           <div className="relative mb-5 pb-9/16">
             <Image
               src={`/static/post-cover/${post.slug}.jpg`}
+              alt="post"
               layout="fill"
               objectFit="contain"
             />

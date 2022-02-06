@@ -26,7 +26,7 @@ const AboutMe = () => {
       </div>
       <H1>Hello world</H1>
       <P>
-        I'm Jimmy. I love programming. I like to create things and programming
+        I&apos;m Jimmy. I love programming. I like to create things and programming
         gives me the chance to do so.
       </P>
       <P>
@@ -93,7 +93,7 @@ const AboutMe = () => {
       <H2>Python</H2>
       <P>
         <A href="https://www.python.org/">Python</A> is my primary programming
-        language. I am familiar with Python's language features and many of its
+        language. I am familiar with Python&apos;s language features and many of its
         standard libraries such as{" "}
         <A href="https://docs.python.org/3/library/unittest.html">unittest</A>
         , <A href="https://docs.python.org/3/library/logging.html">
@@ -108,8 +108,8 @@ const AboutMe = () => {
       </P>
       <H2>Django</H2>
       <P>
-        <A href="https://www.djangoproject.com/">Django</A> is a Python's web
-        framework I've spent most of my time with. I've been doing web
+        <A href="https://www.djangoproject.com/">Django</A> is a Python&apos;s web
+        framework I&apos;ve spent most of my time with. I&apos;ve been doing web
         development with Django for over 5 years. I can build modern,
         well-tested web application with it.
       </P>
@@ -167,7 +167,7 @@ const AboutMe = () => {
       <P>
         I use <A href="https://docs.github.com/en/actions">Github actions</A> to
         handle CI/CD things. I believe that deployment is just as important as
-        development. If a feature can't be delivered to the users, the resources
+        development. If a feature can&apos;t be delivered to the users, the resources
         spent on development will be wasted.
       </P>
       <H2>Docker</H2>
