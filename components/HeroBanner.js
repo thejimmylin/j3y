@@ -65,7 +65,7 @@ const HeroBanner = ({ useIsDark, windowScrollY, headerRef }) => {
               My posts
             </a>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" passHref>
             <button className="w-32 h-12 m-1 border-2 focus:outline-none text-light hover:text-white border-light hover:border-white text-md animate-fadein-1000-800">
               Contact
             </button>
