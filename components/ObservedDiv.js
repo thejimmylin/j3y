@@ -16,7 +16,7 @@ const ObservedDiv = ({ setIsIntersecting }) => {
       observer.disconnect();
     };
     return cleanup;
-  }, []);
+  }, [setIsIntersecting]);
 
   return <div ref={divRef}></div>;
 };

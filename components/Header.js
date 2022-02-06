@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import classNames from "classnames";
@@ -8,11 +8,7 @@ import ObservedDiv from "./ObservedDiv";
 
 const Header = ({ useIsDark, headerRef }) => {
   const [isIntersecting, setIsIntersecting] = useState(true);
-  const [asPath, setAsPath] = useState("");
   const router = useRouter();
-  useEffect(() => {
-    setAsPath(router.asPath);
-  });
   const headerClassName = classNames(
     "font-sans text-ink dark:text-light transition-header duration-header sticky top-0 z-10",
     {
@@ -25,19 +21,19 @@ const Header = ({ useIsDark, headerRef }) => {
   const postsClassName = classNames(
     "animate-fadein-1000-1000 font-semibold text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
     {
-      "text-blue-700 dark:text-yellow-300": asPath.startsWith("/posts"),
+      "text-blue-700 dark:text-yellow-300": router.asPath.startsWith("/posts"),
     },
     {
-      "text-blue-600 dark:text-yellow-400": !asPath.startsWith("/posts"),
+      "text-blue-600 dark:text-yellow-400": !router.asPath.startsWith("/posts"),
     }
   );
   const contactClassName = classNames(
     "animate-fadein-1000-1000 font-semibold text-sm xs:text-lg hover:text-blue-700 dark:hover:text-yellow-300",
     {
-      "text-blue-700 dark:text-yellow-300": asPath.startsWith("/contact"),
+      "text-blue-700 dark:text-yellow-300": router.asPath.startsWith("/contact"),
     },
     {
-      "text-blue-600 dark:text-yellow-400": !asPath.startsWith("/contact"),
+      "text-blue-600 dark:text-yellow-400": !router.asPath.startsWith("/contact"),
     }
   );
 
