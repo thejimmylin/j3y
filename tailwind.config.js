@@ -1,6 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,7 +12,7 @@ module.exports = {
     },
     extend: {
       spacing: {
-        "9/16": "56.25%"
+        "9/16": "56.25%",
       },
       inset: {
         "1/5": "20%",
@@ -97,9 +96,6 @@ module.exports = {
         "risein-300-100": "risein 300ms 100ms ease-in-out 1 both",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
