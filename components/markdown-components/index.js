@@ -72,7 +72,7 @@ const A = ({ children, href }) => (
 );
 
 const Code = ({ children }) => (
-  <code className="text-purple-500 dark:text-pink-500">
+  <code className="text-sm text-purple-500 dark:text-pink-500">
     <span className="select-none">`</span>
     {children}
     <span className="select-none">`</span>

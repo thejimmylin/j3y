@@ -37,8 +37,6 @@ To use it with VSCode, you need to:
    ```
 
    Optionally, you may want to enable "font ligatures".
-   
-   It is a technique about how fonts would be shown, which makes something like making `=` and `>` shown as a `=>`:
 
    This case, you should do:
 
