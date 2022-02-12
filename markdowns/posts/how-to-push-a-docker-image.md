@@ -1,8 +1,8 @@
 ---
 title: How to push a Docker image?
+subtitle: Pushing a Docker image is easy.
 createdBy: Jimmy Lin
 createdAt: 2021-08-02 17:10
-hasCover: true
 ---
 
 # How to push a Docker image?

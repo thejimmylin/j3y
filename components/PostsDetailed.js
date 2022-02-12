@@ -42,16 +42,6 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
         <p className="mb-5 text-xs text-pencil dark:text-moonlight">
           {post.frontmatter.createdAt}
         </p>
-        {post.frontmatter.hasCover && (
-          <div className="relative mb-5 pb-9/16">
-            <Image
-              src={`/static/post-cover/${post.slug}.jpg`}
-              alt="post"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        )}
         {post.frontmatter.subtitle && (
           <p className="mb-5 text-sm text-pencil dark:text-moonlight">
             {post.frontmatter.subtitle}

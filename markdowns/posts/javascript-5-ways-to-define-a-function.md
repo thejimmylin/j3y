@@ -1,5 +1,6 @@
 ---
 title: JavaScript 5 ways to define a function
+subtitle: There are many ways to define a function in Javascript.
 createdBy: Jimmy Lin
 createdAt: 2021-08-24 11:12
 ---

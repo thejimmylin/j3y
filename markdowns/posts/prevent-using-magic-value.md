@@ -1,5 +1,6 @@
 ---
 title: Prevent using magic value
+subtitle: Magic value is not a good idea.
 createdBy: Jimmy Lin
 createdAt: 2021-12-08 16:45
 ---

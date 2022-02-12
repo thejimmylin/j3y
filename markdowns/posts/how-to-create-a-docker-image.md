@@ -1,8 +1,8 @@
 ---
-title: How to create a docker image?
+title: How to create a Docker image?
+subtitle: Create a Docker image by yourself.
 createdBy: Jimmy Lin
 createdAt: 2021-08-01 13:44
-hasCover: true
 ---
 
 # How to create a docker image?
