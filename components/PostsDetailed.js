@@ -41,10 +41,10 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
       return classNames(basic, extra);
     } else {
       const extra = [
-        "from-indigo-600", "to-indigo-400",
-        "hover:from-indigo-500", "hover:to-indigo-300",
-        "dark:from-amber-400", "dark:to-amber-200",
-        "dark:hover:from-amber-300", "dark:hover:to-amber-100",
+        "from-blue-700", "to-blue-400",
+        "hover:from-blue-600", "hover:to-blue-300",
+        "dark:from-yellow-500", "dark:to-yellow-200",
+        "dark:hover:from-yellow-400", "dark:hover:to-yellow-100",
       ]
       return classNames(basic, extra);
     }
@@ -73,7 +73,7 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
             {post.frontmatter.subtitle}
           </p>
         )}
-        <p className="flex justify-end text-blue-500 hover:text-blue-600 dark:text-yellow-300 dark:hover:text-yellow-200">
+        <p className="flex justify-end text-blue-400 hover:text-blue-300 dark:text-yellow-200 dark:hover:text-yellow-100">
           <Link href={`/posts/${post.slug}`}>
             <a>Read more</a>
           </Link>
