@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import iAmSorry from "../public/static/i-am-sorry-1920x1440.jpg";
+import classNames from "classnames";
 
 const PostsDetailed = ({ postOutlines, textSearched }) => {
   const relatedPosts = postOutlines.filter((post) => {
@@ -16,13 +17,38 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
               Sorry, there are no posts related.
             </h2>
             <div>
-              <Image className="rounded-sm" src={iAmSorry} alt="i-am-sorry" priority={true} />
+              <Image
+                className="rounded-sm"
+                src={iAmSorry}
+                alt="i-am-sorry"
+                priority={true}
+              />
             </div>
           </article>
         </div>
       </>
     );
   }
+  const getClassNames = (index) => {
+    const basic = ["text-transparent", "bg-clip-text", "bg-gradient-to-br"];
+    if (index % 2 === 0) {
+      const extra = [
+        "from-blue-600", "to-blue-400",
+        "hover:from-blue-500", "hover:to-blue-300",
+        "dark:from-yellow-400", "dark:to-yellow-200",
+        "dark:hover:from-yellow-300", "dark:hover:to-yellow-100",
+      ]
+      return classNames(basic, extra);
+    } else {
+      const extra = [
+        "from-indigo-600", "to-indigo-400",
+        "hover:from-indigo-500", "hover:to-indigo-300",
+        "dark:from-amber-400", "dark:to-amber-200",
+        "dark:hover:from-amber-300", "dark:hover:to-amber-100",
+      ]
+      return classNames(basic, extra);
+    }
+  };
   return relatedPosts.map((post, index) => (
     <div
       key={index}
@@ -36,28 +62,18 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
         )}
         <h2 className="text-2xl font-semibold mb-1">
           <Link href={`/posts/${post.slug}`}>
-            <a>{post.frontmatter.title}</a>
+            <a className={getClassNames(index)}>{post.frontmatter.title}</a>
           </Link>
         </h2>
         <p className="mb-5 text-xs text-pencil dark:text-moonlight">
           {post.frontmatter.createdAt}
         </p>
-        {post.frontmatter.hasCover && (
-          <div className="relative mb-5 pb-9/16">
-            <Image
-              src={`/static/post-cover/${post.slug}.jpg`}
-              alt="post"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        )}
         {post.frontmatter.subtitle && (
           <p className="mb-5 text-sm text-pencil dark:text-moonlight">
             {post.frontmatter.subtitle}
           </p>
         )}
-        <p className="flex justify-end text-blue-600 hover:text-blue-700 dark:text-yellow-400 dark:hover:text-yellow-300">
+        <p className="flex justify-end text-blue-500 hover:text-blue-600 dark:text-yellow-300 dark:hover:text-yellow-200">
           <Link href={`/posts/${post.slug}`}>
             <a>Read more</a>
           </Link>

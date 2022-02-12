@@ -3,7 +3,6 @@ title: Guard clause
 subtitle: A guard clause helps you removing one level of nesting and resulting in flatter code.
 createdBy: Jimmy Lin
 createdAt: 2021-12-01 17:52
-hasCover: false
 ---
 
 # Guard clause

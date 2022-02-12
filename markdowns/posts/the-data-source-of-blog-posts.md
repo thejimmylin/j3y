@@ -1,10 +1,9 @@
 ---
 title: The data source of blog posts
+subtitle: Here are some data source I consider to use in my blog posts.
 createdBy: Jimmy Lin
 createdAt: 2021-09-26 21:17
 isDraft: true
-subtitle: Here are some data source I consider to use in my blog posts.
-hasCover: true
 ---
 
 # The data source of blog posts

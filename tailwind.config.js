@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["poppins", "sans-serif"],
-      mono: ["Fira Code", "monospace"],
+      mono: ["fira mono", "monospace"],
     },
     extend: {
       spacing: {
