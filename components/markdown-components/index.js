@@ -62,7 +62,7 @@ const Td = ({ children }) => (
 
 const A = ({ children, href }) => (
   <a
-    className="text-blue-600 dark:text-yellow-400 hover:text-blue-700 dark:hover:text-yellow-300"
+    className="text-blue-600 dark:text-yellow-400 hover:text-blue-700 dark:hover:text-yellow-300 break-words"
     href={href}
     target="_blank"
     rel="noopener noreferrer"
