@@ -30,22 +30,37 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
     );
   }
   const getClassNames = (index) => {
-    const basic = ["text-transparent", "bg-clip-text", "bg-gradient-to-br"];
+    const basic = [
+      "text-2xl",
+      "font-semibold",
+      "mb-1",
+      "text-transparent",
+      "bg-clip-text",
+      "bg-gradient-to-br",
+    ];
     if (index % 2 === 0) {
       const extra = [
-        "from-blue-600", "to-blue-400",
-        "hover:from-blue-500", "hover:to-blue-300",
-        "dark:from-yellow-400", "dark:to-yellow-200",
-        "dark:hover:from-yellow-300", "dark:hover:to-yellow-100",
-      ]
+        "from-blue-600",
+        "to-blue-400",
+        "hover:from-blue-500",
+        "hover:to-blue-300",
+        "dark:from-yellow-400",
+        "dark:to-yellow-200",
+        "dark:hover:from-yellow-300",
+        "dark:hover:to-yellow-100",
+      ];
       return classNames(basic, extra);
     } else {
       const extra = [
-        "from-blue-700", "to-blue-400",
-        "hover:from-blue-600", "hover:to-blue-300",
-        "dark:from-yellow-500", "dark:to-yellow-200",
-        "dark:hover:from-yellow-400", "dark:hover:to-yellow-100",
-      ]
+        "from-blue-700",
+        "to-blue-400",
+        "hover:from-blue-600",
+        "hover:to-blue-300",
+        "dark:from-yellow-500",
+        "dark:to-yellow-200",
+        "dark:hover:from-yellow-400",
+        "dark:hover:to-yellow-100",
+      ];
       return classNames(basic, extra);
     }
   };
@@ -60,9 +75,9 @@ const PostsDetailed = ({ postOutlines, textSearched }) => {
             This is a draft that may be updated at any time.
           </span>
         )}
-        <h2 className="text-2xl font-semibold mb-1">
+        <h2 className={getClassNames(index)}>
           <Link href={`/posts/${post.slug}`}>
-            <a className={getClassNames(index)}>{post.frontmatter.title}</a>
+            <a>{post.frontmatter.title}</a>
           </Link>
         </h2>
         <p className="mb-5 text-xs text-pencil dark:text-moonlight">
